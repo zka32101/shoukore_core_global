@@ -9,3 +9,5 @@
 - `GuardianGate`（保護者ゲート）、`ScreenTimeGuard`（利用時間制限）、`AgeGate`（年齢確認）、`InMemoryConsentStore` を追加。
 - `l10n/app_{ja,pt_BR}.arb`、`curriculum/{ja,pt_BR}.json`、`regional/{ja,pt_BR}.yaml` 雛形を追加。
 - `parseCurriculum` / `parseRegionalProfile` ローダーを追加。
+- `DailyBoundary`（profile駆動の日付境界、固定5:00廃止）、`DailyMissionRules`、`CoinWallet`、`GrowthStageCalculator` を追加（growth）。
+- `InMemoryNotificationScheduler`、`DailyReminderPlanner` を追加（notify）。
