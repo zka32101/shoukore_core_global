@@ -34,10 +34,23 @@ void main() {
 
       expect(find.byKey(const Key('feedbackText')), findsOneWidget);
 
-      // ホームに戻ってロケールをjaに切り替えると、日本語カリキュラム・arb文言に切り替わる。
+      // ホームに戻って週次レポートを開くと、直前の回答が集計に反映されている。
       await tester.tap(find.byType(BackButton));
       await tester.pumpAndSettle();
 
+      await tester.scrollUntilVisible(find.byKey(const Key('weeklyReportTile')), 300.0);
+      await tester.tap(find.byKey(const Key('weeklyReportTile')));
+      await tester.pumpAndSettle();
+
+      expect(find.byKey(const Key('weeklyReportAccuracyText')), findsOneWidget);
+      expect(find.byKey(const Key('weeklyReportUnit_mat_numeros_1')), findsOneWidget);
+      expect(find.byKey(const Key('weeklyReportNoDataText')), findsNothing);
+
+      await tester.tap(find.byType(BackButton));
+      await tester.pumpAndSettle();
+      await tester.scrollUntilVisible(find.byKey(const Key('unit_mat_numeros_1')), -300.0);
+
+      // ロケールをjaに切り替えると、日本語カリキュラム・arb文言に切り替わる。
       await tester.tap(find.byKey(const Key('localeJaButton')));
       await tester.pumpAndSettle();
 

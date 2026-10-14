@@ -17,5 +17,34 @@
   "consentTitle": "保護者の同意が必要です",
   "consentBody": "お子さまの学習データは端末内に保存されます。同意いただける場合は「同意する」を選んでください。",
   "consentAcceptButton": "同意する",
-  "consentDeclineButton": "同意しない"
+  "consentDeclineButton": "同意しない",
+  "weeklyReportTile": "週次レポート（保護者向け）",
+  "weeklyReportTitle": "週次レポート",
+  "weeklyReportAccuracy": "正答率: {percent}%（{correct}/{total}問）",
+  "@weeklyReportAccuracy": {
+    "description": "週次レポートの全体正答率",
+    "placeholders": {
+      "percent": {"type": "int"},
+      "correct": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "weeklyReportUnitLine": "{unitId}: {percent}%（{correct}/{total}問）",
+  "@weeklyReportUnitLine": {
+    "description": "週次レポートの単元別行",
+    "placeholders": {
+      "unitId": {"type": "String"},
+      "percent": {"type": "int"},
+      "correct": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "weeklyReportTopMisconception": "よくある誤解: {tag}",
+  "@weeklyReportTopMisconception": {
+    "description": "単元内で最も多い誤解タイプ",
+    "placeholders": {
+      "tag": {"type": "String"}
+    }
+  },
+  "weeklyReportNoData": "この1週間の学習記録はまだありません。"
 }

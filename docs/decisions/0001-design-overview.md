@@ -88,6 +88,14 @@ BNCC公式PDF（basenacionalcomum.mec.gov.br）・州教育局サイト・Nova E
 （`BNCC_EI_EF_110518_versaofinal_site.pdf`, Matemática anos iniciais,
 p.276〜297付近）を取得し、`habilidadeCodes`と単元内容を機械的に照合すること。
 
+## 週次レポート/弱点ノートのexample結合確認とQuestionCache
+
+`WeeklyReportBuilder.build()`は`questionLookup`（questionId→Question）を要求するが、
+`QuestionSource`は生成した問題を保持しないインターフェースのため、サンプルアプリ側に
+`QuestionCache`（出題時に登録する簡易Map）を追加して結合確認に対応した。本番アプリでは
+`ProgressStore`実装側（drift等）に問題スナップショット（misconceptionTags含む）を
+永続化する設計にするのが望ましく、`QuestionCache`はあくまでexample用の簡易実装である。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

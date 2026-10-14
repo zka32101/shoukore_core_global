@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shoukore_core_global/shoukore_core_global.dart';
 
+import 'question_cache.dart';
+
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({
     super.key,
@@ -8,12 +10,14 @@ class QuestionScreen extends StatefulWidget {
     required this.source,
     required this.progressStore,
     required this.clock,
+    required this.questionCache,
   });
 
   final Unit unit;
   final QuestionSource source;
   final ProgressStore progressStore;
   final Clock clock;
+  final QuestionCache questionCache;
 
   @override
   State<QuestionScreen> createState() => _QuestionScreenState();
@@ -36,6 +40,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
       unitId: widget.unit.id,
       targetDifficulty: mastery.score == 0 ? 0.5 : mastery.score,
     );
+    widget.questionCache.register(question);
     setState(() {
       _question = question;
       _mastery = mastery;
