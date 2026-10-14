@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoukore_core_global/shoukore_core_global.dart';
 
+import 'explanation_resolver.dart';
 import 'growth_repository.dart';
 import 'l10n/app_localizations.dart';
 import 'question_cache.dart';
@@ -125,6 +126,27 @@ class _QuestionScreenState extends State<QuestionScreen> {
                     ),
                   if (_feedback != null)
                     Text(_feedback!, key: const Key('feedbackText')),
+                  if (_feedback != null && question.explanationId.isNotEmpty)
+                    Builder(builder: (context) {
+                      final explanation = resolveExplanation(
+                        AppLocalizations.of(context)!,
+                        question.explanationId,
+                      );
+                      if (explanation == null) return const SizedBox.shrink();
+                      return Padding(
+                        padding: const EdgeInsets.only(top: 8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              AppLocalizations.of(context)!.explanationSectionTitle,
+                              style: Theme.of(context).textTheme.titleMedium,
+                            ),
+                            Text(explanation, key: const Key('explanationText')),
+                          ],
+                        ),
+                      );
+                    }),
                   if (_overcomeMisconception != null)
                     Text(
                       AppLocalizations.of(context)!.misconceptionOvercome(_overcomeMisconception!),

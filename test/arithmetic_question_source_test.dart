@@ -32,6 +32,7 @@ void main() {
       operator: ArithmeticOperator.add,
       minOperand: 1,
       maxOperand: 10,
+      explanationId: 'explanation_add',
     ),
     'tpl_div': const ArithmeticTemplate(
       id: 'tpl_div',
@@ -73,6 +74,11 @@ void main() {
       expect(q.choices.toSet().length, q.choices.length, reason: '選択肢は重複しない');
       expect(source.checkAnswer(q, q.answer), isTrue);
     }
+  });
+
+  test('生成された問題はテンプレのexplanationIdを引き継ぐ', () async {
+    final q = await source.generate(unitId: 'mat_add_1', targetDifficulty: 0.5);
+    expect(q.explanationId, 'explanation_add');
   });
 
   test('除算問題は必ず割り切れる（商が答え）', () async {

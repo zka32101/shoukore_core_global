@@ -48,5 +48,10 @@
   "dataPrivacyEraseCancelButton": "Cancelar",
   "dataPrivacyErasedMessage": "Dados de aprendizagem excluídos",
   "dataPrivacyCopyJsonButton": "Copiar conteúdo exportado como JSON",
-  "dataPrivacyExportCopiedMessage": "Conteúdo exportado copiado para a área de transferência"
+  "dataPrivacyExportCopiedMessage": "Conteúdo exportado copiado para a área de transferência",
+  "explanationSectionTitle": "Explicação",
+  "explanationAdd": "A soma é a operação que junta duas ou mais quantidades para encontrar o total. Por exemplo, 3+5 significa \"somar 5 a 3\", e o resultado é 8.",
+  "explanationSubtract": "A subtração é a operação que encontra quanto resta ao retirar uma quantidade de outra. Por exemplo, 8-3 significa \"tirar 3 de 8\", e o resultado é 5.",
+  "explanationMultiply": "A multiplicação é uma forma rápida de somar o mesmo número várias vezes. Por exemplo, 3×4 significa \"somar 3 quatro vezes\", e o resultado é 12.",
+  "explanationDivide": "A divisão é a operação que separa uma quantidade em partes iguais. Por exemplo, 12÷4 significa \"separar 12 em 4 partes iguais\", e o resultado é 3."
 }
