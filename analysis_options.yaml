@@ -9,3 +9,4 @@ analyzer:
   exclude:
     - "**/*.g.dart"
     - "lib/src/store/drift/*.g.dart"
+    - "example/**"
