@@ -32,6 +32,7 @@ export 'src/growth/growth_snapshot.dart';
 export 'src/growth/growth_stage.dart';
 export 'src/growth/growth_store.dart';
 export 'src/growth/in_memory_growth_store.dart';
+export 'src/growth/learning_streak.dart';
 export 'src/guardian/guardian_gate.dart';
 export 'src/guardian/screen_time_guard.dart';
 export 'src/guardian/weekly_report.dart';

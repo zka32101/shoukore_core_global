@@ -8,6 +8,8 @@ class GrowthSnapshot {
     this.missionDay,
     this.missionCompletedCount = 0,
     this.missionRewardClaimed = false,
+    this.currentStreakDays = 0,
+    this.lastStudiedDay,
   });
 
   /// 未保存・初回起動時の既定状態。
@@ -20,4 +22,8 @@ class GrowthSnapshot {
   final DateTime? missionDay;
   final int missionCompletedCount;
   final bool missionRewardClaimed;
+
+  /// 現在の学習ストリーク（何日連続で学習したか）。`LearningStreak`の状態。
+  final int currentStreakDays;
+  final DateTime? lastStudiedDay;
 }

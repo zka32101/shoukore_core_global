@@ -26,6 +26,8 @@ void runGrowthStoreContractTests(
       expect(snapshot.missionDay, isNull);
       expect(snapshot.missionCompletedCount, 0);
       expect(snapshot.missionRewardClaimed, isFalse);
+      expect(snapshot.currentStreakDays, 0);
+      expect(snapshot.lastStudiedDay, isNull);
     });
 
     test('saveした内容をloadで復元できる', () async {
@@ -36,6 +38,8 @@ void runGrowthStoreContractTests(
         missionDay: missionDay,
         missionCompletedCount: 3,
         missionRewardClaimed: true,
+        currentStreakDays: 4,
+        lastStudiedDay: missionDay,
       ));
 
       final snapshot = await store.load();
@@ -44,6 +48,8 @@ void runGrowthStoreContractTests(
       expect(snapshot.missionDay!.isAtSameMomentAs(missionDay), isTrue);
       expect(snapshot.missionCompletedCount, 3);
       expect(snapshot.missionRewardClaimed, isTrue);
+      expect(snapshot.currentStreakDays, 4);
+      expect(snapshot.lastStudiedDay!.isAtSameMomentAs(missionDay), isTrue);
     });
 
     test('saveを繰り返すと最新の内容で上書きされる', () async {

@@ -61,6 +61,9 @@ void main() {
       expect(find.byKey(const Key('growthStatusText')), findsOneWidget);
       expect(find.textContaining('stage: egg'), findsOneWidget);
 
+      // 学習ストリーク: 1問回答した時点で1日目のストリークになる。
+      expect(find.textContaining('streak: 1'), findsOneWidget);
+
       // ホームに戻って週次レポートを開くと、直前の回答が集計に反映されている。
       await tester.tap(find.byType(BackButton));
       await tester.pumpAndSettle();
