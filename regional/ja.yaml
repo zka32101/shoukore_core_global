@@ -1,0 +1,8 @@
+# 開発用（日本語ロケール）の地域コンプライアンス設定。
+locale: ja
+ageOfConsent: 16
+guardianConsentRequired: false
+dailyResetHour: 5
+timeZone: Asia/Tokyo
+screenTimeLimitMinutes: 0
+profilingAdsAllowed: false

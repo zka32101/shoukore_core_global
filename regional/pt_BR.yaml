@@ -1,0 +1,18 @@
+# ブラジル(pt-BR)の地域コンプライアンス設定。
+# ECA Digital（Lei 15.211/2025）・LGPD第14条を前提に厳しめ既定。
+# 法令の最終解釈は現地弁護士の確認が前提（docs/decisions/0001-design-overview.md参照）。
+locale: pt_BR
+
+# LGPD第14条: 12歳未満は「子ども」として保護者の同意が原則必要。
+ageOfConsent: 12
+guardianConsentRequired: true
+
+# DailyMission等の日付境界時刻（0-23）。固定5:00は廃止。
+dailyResetHour: 0
+timeZone: America/Sao_Paulo
+
+# ECA Digitalの保護者監督ツール対応。0は制限なし。既定は無制限（アプリ側で保護者が設定）。
+screenTimeLimitMinutes: 0
+
+# ECA Digital: 子どもを狙ったプロファイリング広告は禁止。
+profilingAdsAllowed: false

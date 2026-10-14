@@ -1,0 +1,21 @@
+{
+  "@@locale": "ja",
+  "guardianGateTitle": "保護者の方へ",
+  "@guardianGateTitle": {
+    "description": "保護者ゲートのタイトル"
+  },
+  "guardianGateInstruction": "次の計算の答えを入力してください: {a} × {b}",
+  "@guardianGateInstruction": {
+    "description": "保護者ゲートの計算問題文",
+    "placeholders": {
+      "a": {"type": "int"},
+      "b": {"type": "int"}
+    }
+  },
+  "guardianGateWrongAnswer": "答えが正しくありません。もう一度お試しください。",
+  "guardianGateConfirmButton": "確認",
+  "consentTitle": "保護者の同意が必要です",
+  "consentBody": "お子さまの学習データは端末内に保存されます。同意いただける場合は「同意する」を選んでください。",
+  "consentAcceptButton": "同意する",
+  "consentDeclineButton": "同意しない"
+}
