@@ -108,6 +108,25 @@ void main() {
 
       await tester.scrollUntilVisible(find.byKey(const Key('unit_mat_numeros_1')), -300.0);
 
+      // 学習データ管理画面: 書き出し内容の確認・保護者同意の撤回ができる。
+      await tester.scrollUntilVisible(find.byKey(const Key('dataPrivacyTile')), 500.0);
+      await tester.tap(find.byKey(const Key('dataPrivacyTile')));
+      await tester.pumpAndSettle();
+
+      expect(find.text('Consentimento dos responsáveis: concedido'), findsOneWidget);
+      expect(find.text('Registros de aprendizagem: 1'), findsOneWidget);
+
+      await tester.tap(find.byKey(const Key('revokeConsentButton')));
+      await tester.pumpAndSettle();
+      expect(
+        find.text('Consentimento dos responsáveis: não confirmado/não necessário'),
+        findsOneWidget,
+      );
+
+      await tester.tap(find.byType(BackButton));
+      await tester.pumpAndSettle();
+      await tester.scrollUntilVisible(find.byKey(const Key('unit_mat_numeros_1')), -300.0);
+
       // ロケールをjaに切り替えると、日本語カリキュラム・arb文言に切り替わる。
       await tester.tap(find.byKey(const Key('localeJaButton')));
       await tester.pumpAndSettle();
