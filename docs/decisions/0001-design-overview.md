@@ -240,6 +240,41 @@ misconceptionTagsを設定していない（本格導入は別途の課題）。
 単体テストと`LocalNotificationScheduler`の責務であり、ここではスケジュール
 状態の表示のみを確認する。
 
+## 教科別アプリ/レポジトリ分割と本コアの境界
+
+想定アーキテクチャは「教科ごとにアプリとレポジトリを分け、本コア
+（`shoukore_core_global`）を共通ライブラリとして各アプリから利用する」
+というものである。算数（Matemática）アプリはこのリポジトリの`example/`を
+雛形に独立したレポジトリへ切り出す想定で、理科・国語など他教科のアプリも
+同様に別レポジトリとして新設する。
+
+この方針に基づき、本コアが抱えるべき責務と抱えるべきでない責務を以下の
+ように線引きする。
+
+- 本コアに残すもの（教科非依存）: `progress`/`adaptive`/`guardian`/
+  `growth`/`notify`の各モジュール、`ProgressStore`/`ConsentStore`/
+  `NotificationScheduler`等の抽象インターフェースとそのInMemory/drift/
+  実機実装、`RegionalProfile`等の地域設定の読み込み基盤、`QuestionSource`
+  インターフェース自体（教科を問わず出題を抽象化する契約）。
+- 本コアから将来切り出すもの（教科固有）: `curriculum/pt_BR.json`等の
+  算数カリキュラムJSONと、`ArithmeticQuestionSource`/
+  `GeometryQuestionSource`/`MeasurementQuestionSource`/
+  `SequenceQuestionSource`/`StatisticsQuestionSource`といった算数向け
+  `QuestionSource`実装群。これらは「算数アプリ」のドメイン知識であり、
+  理科や国語のアプリには不要などころか無関係である。
+
+現時点ではこれらの算数固有コードは本コアに残したままである（`example/`が
+算数アプリの雛形を兼ねているため）。算数アプリを独立レポジトリとして
+新設するタイミングで、上記の教科固有コードをそのレポジトリ側へ移設し、
+本コアからは削除する。移設の際は、`QuestionSource`インターフェース・
+`Question`/`Unit`等のモデル型・`CurriculumRepository`が期待するJSON
+スキーマ定義は本コア側の契約として残し、具体的なカリキュラムデータと
+QuestionSource実装のみを移動する。
+
+今後、本コアに新たな教科固有カリキュラム（理科・国語等）や教科固有の
+`QuestionSource`実装を追加することはしない。新しい教科のアプリは、本コアの
+抽象インターフェースを実装する形で独自レポジトリ側に実装する。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

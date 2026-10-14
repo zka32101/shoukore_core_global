@@ -60,3 +60,7 @@
 - `example/`にNotificationScheduler/DailyReminderPlannerのUI結合確認を追加。
   ホーム画面にデイリーミッションのリマインド通知タイルを追加し、タップで
   `InMemoryNotificationScheduler`への通知予約/解除を切り替えられるようにした。
+- ADRに「教科別アプリ/レポジトリ分割と本コアの境界」の設計メモを追加。
+  算数固有のカリキュラムJSON・QuestionSource実装群は将来独立レポジトリへ
+  移設する対象であることを明記し、今後本コアに他教科の教科固有コードを
+  追加しない方針を整理した。
