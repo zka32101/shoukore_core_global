@@ -169,6 +169,20 @@ ANPD関連の解説記事）で裏付けを確認した。公式法令原文（P
 `RegionalProfile`（`DailyBoundary`の日付境界に使用）は初回ロード時のものを
 保持し続け、ロケール切替のたびに作り直すことはしない。
 
+## ProgressStore契約テスト
+
+`ProgressStore`の実装（`DriftProgressStore`, `InMemoryProgressStore`）が同じ
+契約を満たすことを保証するため、`test/progress_store_contract_test.dart`に
+共通のテストスイート（`runProgressStoreContractTests`）を用意し、両実装に
+対して実行する。従来は各実装ごとに別々のテストファイルで検証しており、
+片方にだけ仕様変更が反映され契約が乖離するリスクがあった。新しい
+`ProgressStore`実装を追加する際はこの関数を呼ぶテストを追加すること。
+
+`InMemoryProgressStore`はこれまでサンプルアプリ(`example/`)内にのみ存在したが、
+テスト・プロトタイピング用途や軽量アプリ向けの選択肢として、コア側
+（`lib/src/progress/in_memory_progress_store.dart`）にも追加した。
+`example/`側の実装はそのまま残している（example独自の初期化経路を保ちたいため）。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

@@ -16,6 +16,7 @@ export 'src/question/sequence_question_source.dart';
 export 'src/question/sequence_template.dart';
 export 'src/question/statistics_question_source.dart';
 export 'src/question/statistics_template.dart';
+export 'src/progress/in_memory_progress_store.dart';
 export 'src/progress/progress_store.dart';
 export 'src/notify/daily_reminder_planner.dart';
 export 'src/notify/in_memory_notification_scheduler.dart';
