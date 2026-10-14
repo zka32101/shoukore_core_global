@@ -60,6 +60,9 @@
 - `example/`にNotificationScheduler/DailyReminderPlannerのUI結合確認を追加。
   ホーム画面にデイリーミッションのリマインド通知タイルを追加し、タップで
   `InMemoryNotificationScheduler`への通知予約/解除を切り替えられるようにした。
+- `example/`にデータ書き出し/削除・同意撤回のUI結合確認を追加。保護者向けの
+  `DataPrivacyScreen`を追加し、同意状態・書き出し対象の学習記録件数の確認、
+  保護者同意の撤回、確認ダイアログを経た全データ削除を行えるようにした。
 - ADRに「教科別アプリ/レポジトリ分割と本コアの境界」の設計メモを追加。
   算数固有のカリキュラムJSON・QuestionSource実装群は将来独立レポジトリへ
   移設する対象であることを明記し、今後本コアに他教科の教科固有コードを

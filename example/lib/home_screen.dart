@@ -5,6 +5,7 @@ import 'package:shoukore_core_global/shoukore_core_global.dart' hide InMemoryPro
 
 import 'age_gate_dialog.dart';
 import 'curriculum_repository.dart';
+import 'data_privacy_screen.dart';
 import 'growth_repository.dart';
 import 'guardian_dialog.dart';
 import 'in_memory_progress_store.dart';
@@ -285,6 +286,21 @@ class _HomeScreenState extends State<HomeScreen> {
                     key: const Key('dailyReminderStatusText'),
                   ),
                   onTap: _toggleDailyReminder,
+                ),
+                ListTile(
+                  key: const Key('dataPrivacyTile'),
+                  title: Text(l10n.dataPrivacyTile),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => DataPrivacyScreen(
+                        consentStore: _consentStore,
+                        progressStore: _progressStore,
+                        onDataErased: () {
+                          if (mounted) setState(() => _consent = null);
+                        },
+                      ),
+                    ),
+                  ),
                 ),
                 ListTile(
                   key: const Key('guardianGateTile'),
