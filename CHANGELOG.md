@@ -35,3 +35,7 @@
 - BNCCカリキュラムの第2回検証パスとして、複数の独立した教育系サイトで
   内容が一致した`mat_numeros_4`/`mat_numeros_5`/`mat_algebra_2`を
   `verified: true`に更新（unverified 16→13単元、詳細はADR参照）。
+- LGPD第14条・ECA Digital（Lei 15.211/2025）の法令確認状況をADRに整理。
+  `regional/pt_BR.yaml`の既定値はLGPD第14条とは整合する一方、ECA Digitalの
+  アプリダウンロード同意要件の対象年齢が未確定であることを明記（コード変更なし、
+  弁護士確認待ちの事項として記録）。
