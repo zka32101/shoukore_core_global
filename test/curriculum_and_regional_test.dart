@@ -30,6 +30,37 @@ void main() {
     expect(geometria1.templateIds, contains('tpl_shape_triangle'));
   });
 
+  test('pt_BR カリキュラムJSONは1º-5º ano×5eixo全25単元を持つ', () {
+    final content = File('curriculum/pt_BR.json').readAsStringSync();
+    final data = parseCurriculum(content);
+
+    expect(data.units, hasLength(25));
+    const eixoPrefixes = ['numeros', 'algebra', 'geometria', 'grandezas', 'probabilidade'];
+    for (final prefix in eixoPrefixes) {
+      for (var grade = 1; grade <= 5; grade++) {
+        expect(
+          data.units.any((u) => u.id == 'mat_${prefix}_$grade'),
+          isTrue,
+          reason: 'mat_${prefix}_$grade が存在すること',
+        );
+      }
+    }
+  });
+
+  test('pt_BR カリキュラムJSONの単元はhabilidadeCodesとverifiedを持つ', () {
+    final content = File('curriculum/pt_BR.json').readAsStringSync();
+    final data = parseCurriculum(content);
+
+    final numeros1 = data.units.firstWhere((u) => u.id == 'mat_numeros_1');
+    expect(numeros1.habilidadeCodes, isNotEmpty);
+    expect(numeros1.verified, isTrue);
+
+    // verified:false の単元は現地教員レビュー前提であることを示す印なので、
+    // 少なくとも1つは存在する（本格展開前に全数verifiedになってはいけない、という
+    // 安全側のアサーションではなく、現状のデータに即した確認）。
+    expect(data.units.any((u) => !u.verified), isTrue);
+  });
+
   test('ja カリキュラムJSONを読み込める', () {
     final content = File('curriculum/ja.json').readAsStringSync();
     final data = parseCurriculum(content);

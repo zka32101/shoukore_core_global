@@ -13,6 +13,8 @@ class Unit {
     this.order = 0,
     this.estimatedQuestions = 0,
     this.templateIds = const [],
+    this.habilidadeCodes = const [],
+    this.verified = false,
   });
 
   factory Unit.fromJson(Map<String, dynamic> j) => Unit(
@@ -24,6 +26,8 @@ class Unit {
         order: (j['order'] as int?) ?? 0,
         estimatedQuestions: (j['estimatedQuestions'] as int?) ?? 0,
         templateIds: (j['templateIds'] as List<dynamic>?)?.cast<String>() ?? const [],
+        habilidadeCodes: (j['habilidadeCodes'] as List<dynamic>?)?.cast<String>() ?? const [],
+        verified: (j['verified'] as bool?) ?? false,
       );
 
   final String id;
@@ -36,6 +40,14 @@ class Unit {
 
   /// この単元で使える問題テンプレID一覧。
   final List<String> templateIds;
+
+  /// 対応するBNCC habilidadeコード（例: `EF01MA09`）。カリキュラム一次資料との
+  /// 対応関係を記録するためのもので、出題ロジックからは参照しない。
+  final List<String> habilidadeCodes;
+
+  /// この単元のhabilidade対応・学年配当が一次資料（BNCC公式PDF等）で
+  /// 確認済みかどうか。false の単元は現地教員レビューが前提。
+  final bool verified;
 }
 
 enum QuestionType { choice, numeric, order }

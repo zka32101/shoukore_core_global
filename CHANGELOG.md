@@ -25,3 +25,6 @@
   複数テンプレ種別(`kind`)を判定できるよう拡張。
 - `LocalNotificationScheduler`（`flutter_local_notifications`を使った`NotificationScheduler`の
   端末内実装、`shoukore_core_global_notify.dart`に分離）を追加。
+- `curriculum/pt_BR.json`をBNCC 1º-5º ano × 5 eixo全25単元に本格拡充。
+  `Unit`に`habilidadeCodes`/`verified`を追加し、一次資料で確認できた単元と
+  要検証（現地教員レビュー前提）の単元を区別できるようにした（ADR参照）。
