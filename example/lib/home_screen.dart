@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // 実装（テスト・プロトタイピング用途向け）を隠す。
 import 'package:shoukore_core_global/shoukore_core_global.dart' hide InMemoryProgressStore;
 
+import 'age_gate_dialog.dart';
 import 'curriculum_repository.dart';
 import 'growth_repository.dart';
 import 'guardian_dialog.dart';
@@ -29,12 +30,15 @@ class _HomeScreenState extends State<HomeScreen> {
   CurriculumData? _curriculum;
   ArithmeticQuestionSource? _source;
   GrowthRepository? _growthRepository;
+  RegionalProfile? _regionalProfile;
 
   // progressStoreは単元ツリーのロケールに関わらず端末内に1つだけ持つ
   // （学習記録はロケール切替の影響を受けない）。drift実装自体はコア側のテストで
   // 検証済みのため、サンプルアプリではUI結合確認に専念するInMemory実装を使う。
   final ProgressStore _progressStore = InMemoryProgressStore();
   final QuestionCache _questionCache = QuestionCache();
+  final ConsentStore _consentStore = InMemoryConsentStore();
+  ConsentRecord? _consent;
 
   // 課金状態はアプリ側の責務（ADR参照）。コアは`Entitlement`を読むだけなので、
   // サンプルアプリでは購入フローの代わりにpremiumトグルで模擬する。
@@ -60,16 +64,30 @@ class _HomeScreenState extends State<HomeScreen> {
     // growth（コイン・成長段階）は端末単位の進捗であり、学習記録と同様に
     // ロケール切替の影響を受けない。既に生成済みなら使い回す。
     GrowthRepository? growthRepository = _growthRepository;
-    if (growthRepository == null) {
-      final profile = await _repository.loadRegionalProfile(locale);
-      growthRepository = GrowthRepository(clock: _clock, profile: profile);
+    RegionalProfile? regionalProfile = _regionalProfile;
+    if (growthRepository == null || regionalProfile == null) {
+      regionalProfile ??= await _repository.loadRegionalProfile(locale);
+      growthRepository ??= GrowthRepository(clock: _clock, profile: regionalProfile);
     }
     if (!mounted) return;
     setState(() {
       _curriculum = curriculum;
       _source = source;
       _growthRepository = growthRepository;
+      _regionalProfile = regionalProfile;
     });
+  }
+
+  Future<void> _runAgeGateFlow() async {
+    await showAgeGateFlow(
+      context,
+      profile: _regionalProfile!,
+      clock: _clock,
+      consentStore: _consentStore,
+    );
+    final consent = await _consentStore.getConsent();
+    if (!mounted) return;
+    setState(() => _consent = consent);
   }
 
   @override
@@ -164,6 +182,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                ),
+                ListTile(
+                  key: const Key('ageVerificationTile'),
+                  title: Text(l10n.ageVerificationTile),
+                  subtitle: Text(
+                    (_consent?.parentalConsentGiven ?? false)
+                        ? l10n.consentStatusGiven
+                        : l10n.consentStatusNotGiven,
+                    key: const Key('consentStatusText'),
+                  ),
+                  onTap: _runAgeGateFlow,
                 ),
                 ListTile(
                   key: const Key('guardianGateTile'),

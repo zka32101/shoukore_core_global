@@ -71,6 +71,23 @@ void main() {
       await tester.pumpAndSettle();
       await tester.scrollUntilVisible(find.byKey(const Key('unit_mat_numeros_1')), -300.0);
 
+      // 年齢確認: 2020年生まれ（6歳、pt_BRの同意年齢12歳未満）は保護者同意が必要。
+      await tester.scrollUntilVisible(find.byKey(const Key('ageVerificationTile')), 300.0);
+      expect(find.byKey(const Key('consentStatusText')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('ageVerificationTile')));
+      await tester.pumpAndSettle();
+
+      await tester.enterText(find.byKey(const Key('birthYearField')), '2020');
+      await tester.tap(find.byKey(const Key('ageGateConfirmButton')));
+      await tester.pumpAndSettle();
+
+      expect(find.byKey(const Key('consentAcceptButton')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('consentAcceptButton')));
+      await tester.pumpAndSettle();
+
+      expect(find.text('Consentimento dos responsáveis: concedido'), findsOneWidget);
+      await tester.scrollUntilVisible(find.byKey(const Key('unit_mat_numeros_1')), -300.0);
+
       // ロケールをjaに切り替えると、日本語カリキュラム・arb文言に切り替わる。
       await tester.tap(find.byKey(const Key('localeJaButton')));
       await tester.pumpAndSettle();

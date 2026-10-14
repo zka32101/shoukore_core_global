@@ -47,5 +47,11 @@
     }
   },
   "weeklyReportNoData": "この1週間の学習記録はまだありません。",
-  "entitlementLockedMessage": "この教科はロックされています。購入すると解放されます。"
+  "entitlementLockedMessage": "この教科はロックされています。購入すると解放されます。",
+  "ageGateTitle": "生まれた年を教えてください",
+  "ageGateBirthYearHint": "例: 2016",
+  "ageGateConfirmButton": "次へ",
+  "ageVerificationTile": "年齢確認",
+  "consentStatusGiven": "保護者の同意: 済み",
+  "consentStatusNotGiven": "保護者の同意: 未確認/不要"
 }

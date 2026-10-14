@@ -24,5 +24,11 @@
   "weeklyReportUnitLine": "{unitId}: {percent}% ({correct}/{total} questões)",
   "weeklyReportTopMisconception": "Erro mais comum: {tag}",
   "weeklyReportNoData": "Ainda não há registros de aprendizagem nesta semana.",
-  "entitlementLockedMessage": "Esta matéria está bloqueada. Compre para desbloquear."
+  "entitlementLockedMessage": "Esta matéria está bloqueada. Compre para desbloquear.",
+  "ageGateTitle": "Qual é o seu ano de nascimento?",
+  "ageGateBirthYearHint": "Ex: 2016",
+  "ageGateConfirmButton": "Avançar",
+  "ageVerificationTile": "Verificação de idade",
+  "consentStatusGiven": "Consentimento dos responsáveis: concedido",
+  "consentStatusNotGiven": "Consentimento dos responsáveis: não confirmado/não necessário"
 }
