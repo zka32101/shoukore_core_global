@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shoukore_core_global/shoukore_core_global.dart';
+// example独自の軽量InMemoryProgressStoreを使うため、コアが同名で公開している
+// 実装（テスト・プロトタイピング用途向け）を隠す。
+import 'package:shoukore_core_global/shoukore_core_global.dart' hide InMemoryProgressStore;
 
 import 'curriculum_repository.dart';
 import 'growth_repository.dart';
