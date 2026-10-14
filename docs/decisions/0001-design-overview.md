@@ -216,6 +216,17 @@ misconceptionTagsを設定していない（本格導入は別途の課題）。
 ブロック挙動自体はコア側の単体テスト（`guardian_privacy_test.dart`）で
 検証済みのロジックに委ねている。
 
+## AgeGate/ConsentStoreのexample結合確認
+
+`AgeGate`（生まれ年から保護者同意の要否を判定）と`ConsentStore`
+（同意記録）はコア側に実装・単体テスト済みだったが、UI結合確認が
+未着手だった（`consentTitle`等のarb文言も定義済みのまま未使用だった）。
+`example/lib/age_gate_dialog.dart`に、生まれ年入力→`AgeGate`判定→
+（必要なら）保護者同意ダイアログ→`ConsentStore.setConsent`、という
+一連のフローを実装し、ホーム画面に同意状態を表示するタイルを追加した。
+同意不要と判定された場合も`parentalConsentGiven: false`で記録し、
+「未確認/不要」という表示上の区別は同意状態ではなく表示ロジック側で行う。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

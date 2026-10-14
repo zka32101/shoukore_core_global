@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // 実装（テスト・プロトタイピング用途向け）を隠す。
 import 'package:shoukore_core_global/shoukore_core_global.dart' hide InMemoryProgressStore;
 
+import 'age_gate_dialog.dart';
 import 'curriculum_repository.dart';
 import 'growth_repository.dart';
 import 'guardian_dialog.dart';
@@ -44,6 +45,8 @@ class _HomeScreenState extends State<HomeScreen> {
   // 検証済みのため、サンプルアプリではUI結合確認に専念するInMemory実装を使う。
   final ProgressStore _progressStore = InMemoryProgressStore();
   final QuestionCache _questionCache = QuestionCache();
+  final ConsentStore _consentStore = InMemoryConsentStore();
+  ConsentRecord? _consent;
 
   // 課金状態はアプリ側の責務（ADR参照）。コアは`Entitlement`を読むだけなので、
   // サンプルアプリでは購入フローの代わりにpremiumトグルで模擬する。
@@ -81,6 +84,18 @@ class _HomeScreenState extends State<HomeScreen> {
       _growthRepository = growthRepository;
       _regionalProfile = regionalProfile;
     });
+  }
+
+  Future<void> _runAgeGateFlow() async {
+    await showAgeGateFlow(
+      context,
+      profile: _regionalProfile!,
+      clock: _clock,
+      consentStore: _consentStore,
+    );
+    final consent = await _consentStore.getConsent();
+    if (!mounted) return;
+    setState(() => _consent = consent);
   }
 
   ScreenTimeGuard get _screenTimeGuard {
@@ -220,6 +235,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                ),
+                ListTile(
+                  key: const Key('ageVerificationTile'),
+                  title: Text(l10n.ageVerificationTile),
+                  subtitle: Text(
+                    (_consent?.parentalConsentGiven ?? false)
+                        ? l10n.consentStatusGiven
+                        : l10n.consentStatusNotGiven,
+                    key: const Key('consentStatusText'),
+                  ),
+                  onTap: _runAgeGateFlow,
                 ),
                 ListTile(
                   key: const Key('guardianGateTile'),

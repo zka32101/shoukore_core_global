@@ -55,5 +55,11 @@
       "tag": {"type": "String"}
     }
   },
-  "screenTimeLimitReached": "今日の利用時間の上限に達しました。保護者の方にご相談ください。"
+  "screenTimeLimitReached": "今日の利用時間の上限に達しました。保護者の方にご相談ください。",
+  "ageGateTitle": "生まれた年を教えてください",
+  "ageGateBirthYearHint": "例: 2016",
+  "ageGateConfirmButton": "次へ",
+  "ageVerificationTile": "年齢確認",
+  "consentStatusGiven": "保護者の同意: 済み",
+  "consentStatusNotGiven": "保護者の同意: 未確認/不要"
 }
