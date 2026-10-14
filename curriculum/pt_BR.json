@@ -5,11 +5,11 @@
     {"id": "matematica", "eixos": ["numeros", "algebra", "geometria", "grandezas_medidas", "probabilidade_estatistica"]}
   ],
   "templates": [
-    {"kind": "arithmetic", "id": "tpl_add_1_10", "operator": "add", "minOperand": 1, "maxOperand": 10},
-    {"kind": "arithmetic", "id": "tpl_add_1_100", "operator": "add", "minOperand": 1, "maxOperand": 100},
-    {"kind": "arithmetic", "id": "tpl_sub_1_20", "operator": "subtract", "minOperand": 1, "maxOperand": 20},
-    {"kind": "arithmetic", "id": "tpl_mul_1_10", "operator": "multiply", "minOperand": 1, "maxOperand": 10},
-    {"kind": "arithmetic", "id": "tpl_div_1_10", "operator": "divide", "minOperand": 1, "maxOperand": 10},
+    {"kind": "arithmetic", "id": "tpl_add_1_10", "operator": "add", "minOperand": 1, "maxOperand": 10, "explanationId": "explanation_add"},
+    {"kind": "arithmetic", "id": "tpl_add_1_100", "operator": "add", "minOperand": 1, "maxOperand": 100, "explanationId": "explanation_add"},
+    {"kind": "arithmetic", "id": "tpl_sub_1_20", "operator": "subtract", "minOperand": 1, "maxOperand": 20, "explanationId": "explanation_subtract"},
+    {"kind": "arithmetic", "id": "tpl_mul_1_10", "operator": "multiply", "minOperand": 1, "maxOperand": 10, "explanationId": "explanation_multiply"},
+    {"kind": "arithmetic", "id": "tpl_div_1_10", "operator": "divide", "minOperand": 1, "maxOperand": 10, "explanationId": "explanation_divide"},
 
     {"kind": "sequence", "id": "tpl_sequence_1_5", "startMin": 1, "startMax": 5, "stepMin": 1, "stepMax": 2, "length": 3},
     {"kind": "sequence", "id": "tpl_sequence_1_10", "startMin": 1, "startMax": 10, "stepMin": 1, "stepMax": 3, "length": 4},
