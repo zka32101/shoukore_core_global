@@ -30,7 +30,7 @@ void main() {
       // 単元数が増え一覧が画面に収まらないため、保護者ゲートのタイルはスクロールして確認する。
       await tester.scrollUntilVisible(find.byKey(const Key('guardianGateTile')), 300.0);
       expect(find.text('Para os responsáveis'), findsOneWidget);
-      await tester.scrollUntilVisible(find.byKey(const Key('unit_mat_numeros_1')), -300.0);
+      await tester.scrollUntilVisible(find.byKey(const Key('unit_mat_numeros_1')), -500.0);
 
       // 単元をタップすると出題され、回答するとprogressのmasteryが更新される。
       await tester.tap(find.byKey(const Key('unit_mat_numeros_1')));
@@ -95,6 +95,17 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.text('Consentimento dos responsáveis: concedido'), findsOneWidget);
+
+      // デイリーミッションのリマインド通知: 既定は未設定、タップで設定/解除を切り替えられる。
+      await tester.scrollUntilVisible(find.byKey(const Key('dailyReminderTile')), 300.0);
+      expect(find.text('Nenhuma notificação agendada'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('dailyReminderTile')));
+      await tester.pumpAndSettle();
+      expect(find.text('Nenhuma notificação agendada'), findsNothing);
+      await tester.tap(find.byKey(const Key('dailyReminderTile')));
+      await tester.pumpAndSettle();
+      expect(find.text('Nenhuma notificação agendada'), findsOneWidget);
+
       await tester.scrollUntilVisible(find.byKey(const Key('unit_mat_numeros_1')), -300.0);
 
       // ロケールをjaに切り替えると、日本語カリキュラム・arb文言に切り替わる。

@@ -61,5 +61,15 @@
   "ageGateConfirmButton": "次へ",
   "ageVerificationTile": "年齢確認",
   "consentStatusGiven": "保護者の同意: 済み",
-  "consentStatusNotGiven": "保護者の同意: 未確認/不要"
+  "consentStatusNotGiven": "保護者の同意: 未確認/不要",
+  "dailyReminderTile": "デイリーミッションのリマインド通知",
+  "dailyReminderScheduled": "通知設定済み（{hour}時{minute}分）",
+  "@dailyReminderScheduled": {
+    "description": "リマインド通知の設定済み状態",
+    "placeholders": {
+      "hour": {"type": "int"},
+      "minute": {"type": "int"}
+    }
+  },
+  "dailyReminderNotScheduled": "通知は設定されていません"
 }
