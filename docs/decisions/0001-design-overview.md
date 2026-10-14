@@ -370,6 +370,22 @@ growthモジュールに「何日連続で学習したか」を計算する純�
 正誤を問わず全ての回答で更新するようにした（コイン・ミッション進捗は
 正解時のみ更新する既存の`recordCorrectAnswer()`とは独立した経路）。
 
+## ScreenTimeStoreの追加とexample結合確認
+
+`ScreenTimeGuard`は利用時間の制限判定のみを行う純関数で、計測値の永続化先を
+規定していなかった。これにより、example側は`_usedToday`という端末内メモリの
+`Duration`フィールドに積算するだけで、再起動で消えるうえ日次リセットも
+行われなかった（`DailyMissionRules`等とは異なり、日が変わっても
+`_usedToday`がリセットされないバグが潜在していた）。`ProgressStore`/
+`GrowthStore`と同様のパターンで`ScreenTimeStore`抽象
+（`ScreenTimeSnapshot`の読み書き・`clearAll`）を追加し、
+`InMemoryScreenTimeStore`と`DriftScreenTimeStore`（`progress.sqlite`内に
+`screen_time_states`テーブルを追加、schemaVersion 5へ移行、単一行保持）の
+2実装を用意した。example側に`ScreenTimeRepository`を追加し、
+`ScreenTimeRepository.load()`/`addUsage()`でミッション日の変化を検知して
+利用時間をリセットするように修正した。両実装は
+`test/screen_time_store_contract_test.dart`の契約テストで検証している。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
