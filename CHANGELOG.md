@@ -39,6 +39,10 @@
   `regional/pt_BR.yaml`の既定値はLGPD第14条とは整合する一方、ECA Digitalの
   アプリダウンロード同意要件の対象年齢が未確定であることを明記（コード変更なし、
   弁護士確認待ちの事項として記録）。
+- `example/`にgrowth（`DailyMissionRules`/`CoinWallet`/`GrowthStageCalculator`）の
+  UI結合確認を追加。`GrowthRepository`（端末内の簡易な状態保持）を介して、
+  正解のたびにミッション進捗・コイン・成長段階が更新される様子を
+  出題画面・ホーム画面の両方に表示する。
 - `example/`にEntitlement（課金状態）連動の単元ロックUIを追加。premiumトグルで
   購入フローを模擬し、`Entitlement.isUnlocked`に応じて単元タップ時の
   ロックメッセージ表示/出題画面遷移を切り替える結合確認を追加した。

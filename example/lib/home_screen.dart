@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shoukore_core_global/shoukore_core_global.dart';
 
 import 'curriculum_repository.dart';
+import 'growth_repository.dart';
 import 'guardian_dialog.dart';
 import 'in_memory_progress_store.dart';
 import 'l10n/app_localizations.dart';
@@ -25,6 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Locale? _loadedLocale;
   CurriculumData? _curriculum;
   ArithmeticQuestionSource? _source;
+  GrowthRepository? _growthRepository;
 
   // progressStoreは単元ツリーのロケールに関わらず端末内に1つだけ持つ
   // （学習記録はロケール切替の影響を受けない）。drift実装自体はコア側のテストで
@@ -53,10 +55,18 @@ class _HomeScreenState extends State<HomeScreen> {
       unitsByLocale: {localeKey: curriculum.units},
       templates: curriculum.templates,
     );
+    // growth（コイン・成長段階）は端末単位の進捗であり、学習記録と同様に
+    // ロケール切替の影響を受けない。既に生成済みなら使い回す。
+    GrowthRepository? growthRepository = _growthRepository;
+    if (growthRepository == null) {
+      final profile = await _repository.loadRegionalProfile(locale);
+      growthRepository = GrowthRepository(clock: _clock, profile: profile);
+    }
     if (!mounted) return;
     setState(() {
       _curriculum = curriculum;
       _source = source;
+      _growthRepository = growthRepository;
     });
   }
 
@@ -97,6 +107,13 @@ class _HomeScreenState extends State<HomeScreen> {
           ? const Center(child: CircularProgressIndicator())
           : ListView(
               children: [
+                ListTile(
+                  key: const Key('growthStatusTile'),
+                  title: Text(
+                    'stage: ${_growthRepository!.stage.name}, '
+                    'coins: ${_growthRepository!.wallet.balance}',
+                  ),
+                ),
                 for (final unit in curriculum.units.where((u) => u.templateIds.isNotEmpty))
                   ListTile(
                     key: Key('unit_${unit.id}'),
@@ -105,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     trailing: _entitlement.isUnlocked(unit.subjectId)
                         ? null
                         : const Icon(Icons.lock, key: Key('lockIcon')),
-                    onTap: () {
+                    onTap: () async {
                       if (!_entitlement.isUnlocked(unit.subjectId)) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
@@ -115,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         );
                         return;
                       }
-                      Navigator.of(context).push(
+                      await Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (_) => QuestionScreen(
                             unit: unit,
@@ -123,9 +140,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             progressStore: _progressStore,
                             clock: _clock,
                             questionCache: _questionCache,
+                            growthRepository: _growthRepository!,
                           ),
                         ),
                       );
+                      // 出題画面でgrowth状態（stage/coins）が更新されている可能性があるため、
+                      // ホームに戻った際に再描画する。
+                      if (mounted) setState(() {});
                     },
                   ),
                 ListTile(
