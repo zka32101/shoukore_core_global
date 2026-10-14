@@ -54,5 +54,6 @@
     "placeholders": {
       "tag": {"type": "String"}
     }
-  }
+  },
+  "screenTimeLimitReached": "今日の利用時間の上限に達しました。保護者の方にご相談ください。"
 }

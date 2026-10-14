@@ -52,3 +52,5 @@
 - `ArithmeticQuestionSource`の減算に典型的な誤解タグ（`subtraction_as_addition`）
   を追加し、`WeakNotesAnalyzer.isOvercome()`の判定結果を`example/`の出題画面に
   「誤解を克服しました」バッジとして表示する結合確認を追加した。
+- `example/`にScreenTimeGuardのUI結合確認を追加。出題画面の滞在時間を積算し、
+  制限模擬トグルで残り時間表示・超過時のロックメッセージを確認できるようにした。
