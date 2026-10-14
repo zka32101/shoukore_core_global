@@ -129,4 +129,65 @@ void main() {
       expect(custom.stageFor(3), GrowthStage.adult);
     });
   });
+
+  group('LearningStreak', () {
+    const boundary = DailyBoundary(ptProfile);
+
+    test('初回の学習でストリークが1になる', () {
+      const streak = LearningStreak();
+      final updated = streak.recordStudy(
+        now: DateTime.utc(2026, 10, 14, 10),
+        boundary: boundary,
+      );
+      expect(updated.currentStreakDays, 1);
+      expect(updated.lastStudiedDay, DateTime.utc(2026, 10, 14));
+    });
+
+    test('同じミッション日内の2回目以降の学習はストリークを変えない', () {
+      const streak = LearningStreak(
+        currentStreakDays: 3,
+        lastStudiedDay: null,
+      );
+      final first = streak.recordStudy(
+        now: DateTime.utc(2026, 10, 14, 8),
+        boundary: boundary,
+      );
+      final second = first.recordStudy(
+        now: DateTime.utc(2026, 10, 14, 20),
+        boundary: boundary,
+      );
+      expect(second.currentStreakDays, first.currentStreakDays);
+      expect(second.lastStudiedDay, first.lastStudiedDay);
+    });
+
+    test('前回の学習日の翌ミッション日に学習するとストリークが+1される', () {
+      const streak = LearningStreak(
+        currentStreakDays: 2,
+        lastStudiedDay: null,
+      );
+      final day1 = streak.recordStudy(
+        now: DateTime.utc(2026, 10, 14, 10),
+        boundary: boundary,
+      );
+      final day2 = day1.recordStudy(
+        now: DateTime.utc(2026, 10, 15, 10),
+        boundary: boundary,
+      );
+      expect(day2.currentStreakDays, 2);
+      expect(day2.lastStudiedDay, DateTime.utc(2026, 10, 15));
+    });
+
+    test('1日以上間隔が空くとストリークは1にリセットされる', () {
+      const streak = LearningStreak();
+      final day1 = streak.recordStudy(
+        now: DateTime.utc(2026, 10, 14, 10),
+        boundary: boundary,
+      );
+      final day3 = day1.recordStudy(
+        now: DateTime.utc(2026, 10, 16, 10),
+        boundary: boundary,
+      );
+      expect(day3.currentStreakDays, 1);
+    });
+  });
 }

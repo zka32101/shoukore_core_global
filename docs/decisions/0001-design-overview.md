@@ -357,6 +357,19 @@ Storeモジュール同様、結合テストで検証しやすい`InMemoryGrowth
 `explanationId`フィールド自体は既に持っているが、今回は未設定のままとした
 （算数アプリ側で順次拡充する想定）。
 
+## 学習ストリーク(LearningStreak)の追加
+
+growthモジュールに「何日連続で学習したか」を計算する純関数`LearningStreak`を
+追加した。`DailyMissionRules`等と同様、永続化やタイマー管理は持たず、
+`recordStudy(now, boundary)`で次の状態を返すだけのimmutableな値オブジェクトと
+した。同じミッション日内の2回目以降の学習はストリークを増やさず、前回の学習日の
+翌ミッション日なら+1、それより間隔が空けば1にリセットする。
+`GrowthSnapshot`/`GrowthStore`（drift実装は`growth_states`テーブルに
+`currentStreakDays`/`lastStudiedDay`列を追加、schemaVersion 4へ移行）に
+状態を持たせ、example側の`GrowthRepository.recordStudyActivity()`から
+正誤を問わず全ての回答で更新するようにした（コイン・ミッション進捗は
+正解時のみ更新する既存の`recordCorrectAnswer()`とは独立した経路）。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
