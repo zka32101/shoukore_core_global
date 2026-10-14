@@ -32,6 +32,10 @@ class _HomeScreenState extends State<HomeScreen> {
   final ProgressStore _progressStore = InMemoryProgressStore();
   final QuestionCache _questionCache = QuestionCache();
 
+  // 課金状態はアプリ側の責務（ADR参照）。コアは`Entitlement`を読むだけなので、
+  // サンプルアプリでは購入フローの代わりにpremiumトグルで模擬する。
+  Entitlement _entitlement = const Entitlement(unlockedSubjectIds: {});
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -74,6 +78,19 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () => widget.onLocaleChanged(const Locale('pt', 'BR')),
             child: const Text('PT-BR', style: TextStyle(color: Colors.white)),
           ),
+          TextButton(
+            key: const Key('premiumToggleButton'),
+            onPressed: () => setState(() {
+              _entitlement = Entitlement(
+                unlockedSubjectIds: _entitlement.unlockedSubjectIds,
+                isPremium: !_entitlement.isPremium,
+              );
+            }),
+            child: Text(
+              _entitlement.isPremium ? 'premium: ON' : 'premium: OFF',
+              style: const TextStyle(color: Colors.white),
+            ),
+          ),
         ],
       ),
       body: curriculum == null
@@ -85,17 +102,31 @@ class _HomeScreenState extends State<HomeScreen> {
                     key: Key('unit_${unit.id}'),
                     title: Text(unit.id),
                     subtitle: Text('grade ${unit.grade}'),
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => QuestionScreen(
-                          unit: unit,
-                          source: _source!,
-                          progressStore: _progressStore,
-                          clock: _clock,
-                          questionCache: _questionCache,
+                    trailing: _entitlement.isUnlocked(unit.subjectId)
+                        ? null
+                        : const Icon(Icons.lock, key: Key('lockIcon')),
+                    onTap: () {
+                      if (!_entitlement.isUnlocked(unit.subjectId)) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            key: const Key('entitlementLockedSnackBar'),
+                            content: Text(l10n.entitlementLockedMessage),
+                          ),
+                        );
+                        return;
+                      }
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => QuestionScreen(
+                            unit: unit,
+                            source: _source!,
+                            progressStore: _progressStore,
+                            clock: _clock,
+                            questionCache: _questionCache,
+                          ),
                         ),
-                      ),
-                    ),
+                      );
+                    },
                   ),
                 ListTile(
                   key: const Key('weeklyReportTile'),
