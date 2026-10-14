@@ -34,9 +34,18 @@ void main() {
 
       expect(find.byKey(const Key('feedbackText')), findsOneWidget);
 
+      // 出題画面にgrowth状態（stage/coins/mission進捗）が表示される。
+      // 閾値(10問)に満たないため、正誤に関わらずstageはeggのまま。
+      expect(find.byKey(const Key('growthStatusText')), findsOneWidget);
+      expect(find.textContaining('stage: egg'), findsOneWidget);
+
       // ホームに戻って週次レポートを開くと、直前の回答が集計に反映されている。
       await tester.tap(find.byType(BackButton));
       await tester.pumpAndSettle();
+
+      // ホームにもgrowth状態タイルが表示され、出題画面と状態を共有している。
+      await tester.scrollUntilVisible(find.byKey(const Key('growthStatusTile')), -300.0);
+      expect(find.byKey(const Key('growthStatusTile')), findsOneWidget);
 
       await tester.scrollUntilVisible(find.byKey(const Key('weeklyReportTile')), 300.0);
       await tester.tap(find.byKey(const Key('weeklyReportTile')));
