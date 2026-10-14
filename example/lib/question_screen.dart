@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shoukore_core_global/shoukore_core_global.dart';
 
 import 'growth_repository.dart';
+import 'l10n/app_localizations.dart';
 import 'question_cache.dart';
 
 class QuestionScreen extends StatefulWidget {
@@ -27,9 +28,12 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
+  static const _weakNotesAnalyzer = WeakNotesAnalyzer();
+
   Question? _question;
   Mastery? _mastery;
   String? _feedback;
+  String? _overcomeMisconception;
 
   @override
   void initState() {
@@ -65,9 +69,27 @@ class _QuestionScreenState extends State<QuestionScreen> {
       widget.growthRepository.recordCorrectAnswer();
     }
     final mastery = await widget.progressStore.getMastery(widget.unit.id);
+
+    // 直近の誤解傾向から最頻出タイプを求め、それを克服済み（直近N問連続正解かつ
+    // それ以前に同タグの誤答があった）と判定できればバッジ表示する。
+    final attempts = await widget.progressStore.getAttempts(widget.unit.id);
+    final note = _weakNotesAnalyzer.analyze(
+      unitId: widget.unit.id,
+      attempts: attempts,
+      questionLookup: widget.questionCache.lookup,
+    );
+    final topMisconception = _weakNotesAnalyzer.topMisconception(note);
+    final overcome = topMisconception != null &&
+        _weakNotesAnalyzer.isOvercome(
+          attemptsNewestFirst: attempts,
+          questionLookup: widget.questionCache.lookup,
+          misconceptionTag: topMisconception,
+        );
+
     setState(() {
       _feedback = correct ? 'correct' : 'incorrect';
       _mastery = mastery;
+      _overcomeMisconception = overcome ? topMisconception : null;
     });
   }
 
@@ -103,6 +125,11 @@ class _QuestionScreenState extends State<QuestionScreen> {
                     ),
                   if (_feedback != null)
                     Text(_feedback!, key: const Key('feedbackText')),
+                  if (_overcomeMisconception != null)
+                    Text(
+                      AppLocalizations.of(context)!.misconceptionOvercome(_overcomeMisconception!),
+                      key: const Key('misconceptionOvercomeBadge'),
+                    ),
                   const SizedBox(height: 16),
                   ElevatedButton(
                     key: const Key('nextQuestionButton'),
