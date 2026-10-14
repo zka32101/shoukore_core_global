@@ -85,7 +85,16 @@ class ArithmeticQuestionSource implements QuestionSource {
         answer = q;
     }
 
-    final choices = _buildChoices(answer);
+    // 典型的な誤解に対応する誤答候補（WeakNotesAnalyzerでの弱点傾向の集計に使う）。
+    // 引き算を足し算と取り違える誤り（a + bを計算してしまう）が代表例。
+    // （bは常にa以下に生成されるため、b - aは負になり得る選択肢として不適切）
+    final misconceptionChoice = switch (template.operator) {
+      ArithmeticOperator.subtract when a + b != answer => a + b,
+      _ => null,
+    };
+    const misconceptionTag = 'subtraction_as_addition';
+
+    final choices = _buildChoices(answer, misconceptionChoice: misconceptionChoice);
     _sequence++;
     return Question(
       id: 'q_${unitId}_$_sequence',
@@ -96,11 +105,17 @@ class ArithmeticQuestionSource implements QuestionSource {
       answer: answer.toString(),
       explanationId: template.explanationId,
       params: {'a': a.toString(), 'b': b.toString()},
+      misconceptionTags: misconceptionChoice != null && choices.contains(misconceptionChoice)
+          ? {misconceptionChoice.toString(): misconceptionTag}
+          : const {},
     );
   }
 
-  List<int> _buildChoices(int answer) {
+  List<int> _buildChoices(int answer, {int? misconceptionChoice}) {
     final set = <int>{answer};
+    if (misconceptionChoice != null && misconceptionChoice >= 0) {
+      set.add(misconceptionChoice);
+    }
     final offsets = [1, -1, 2, -2, 10, -10];
     var i = 0;
     while (set.length < 4 && i < offsets.length) {

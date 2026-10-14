@@ -17,6 +17,13 @@ void main() {
       titleKey: 'unit_div_3',
       templateIds: ['tpl_div'],
     ),
+    const Unit(
+      id: 'mat_sub_2',
+      subjectId: 'matematica',
+      grade: 2,
+      titleKey: 'unit_sub_2',
+      templateIds: ['tpl_sub'],
+    ),
   ];
 
   final templates = {
@@ -31,6 +38,12 @@ void main() {
       operator: ArithmeticOperator.divide,
       minOperand: 1,
       maxOperand: 10,
+    ),
+    'tpl_sub': const ArithmeticTemplate(
+      id: 'tpl_sub',
+      operator: ArithmeticOperator.subtract,
+      minOperand: 1,
+      maxOperand: 20,
     ),
   };
 
@@ -67,6 +80,22 @@ void main() {
       final q = await source.generate(unitId: 'mat_div_3', targetDifficulty: 0.8);
       expect(int.parse(q.answer), greaterThanOrEqualTo(1));
     }
+  });
+
+  test('引き算問題は足し算と取り違えた誤答にsubtraction_as_additionタグが付く', () async {
+    var foundTaggedChoice = false;
+    for (var i = 0; i < 50; i++) {
+      final q = await source.generate(unitId: 'mat_sub_2', targetDifficulty: 0.5);
+      final a = int.parse(q.params['a']!);
+      final b = int.parse(q.params['b']!);
+      final addedUp = (a + b).toString();
+      if (q.misconceptionTags.containsKey(addedUp)) {
+        expect(q.misconceptionTags[addedUp], 'subtraction_as_addition');
+        expect(addedUp, isNot(q.answer));
+        foundTaggedChoice = true;
+      }
+    }
+    expect(foundTaggedChoice, isTrue, reason: '十分な試行回数があれば少なくとも1回はタグ付き誤答が選択肢に含まれる');
   });
 
   test('未知の単元IDで例外を投げる', () {

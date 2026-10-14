@@ -48,5 +48,12 @@
   },
   "weeklyReportNoData": "この1週間の学習記録はまだありません。",
   "entitlementLockedMessage": "この教科はロックされています。購入すると解放されます。",
+  "misconceptionOvercome": "「{tag}」の誤解を克服しました！",
+  "@misconceptionOvercome": {
+    "description": "直近の誤解タイプを克服した際のバッジ文言",
+    "placeholders": {
+      "tag": {"type": "String"}
+    }
+  },
   "screenTimeLimitReached": "今日の利用時間の上限に達しました。保護者の方にご相談ください。"
 }
