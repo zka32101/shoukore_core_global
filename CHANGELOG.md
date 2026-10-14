@@ -11,3 +11,6 @@
 - `parseCurriculum` / `parseRegionalProfile` ローダーを追加。
 - `DailyBoundary`（profile駆動の日付境界、固定5:00廃止）、`DailyMissionRules`、`CoinWallet`、`GrowthStageCalculator` を追加（growth）。
 - `InMemoryNotificationScheduler`、`DailyReminderPlanner` を追加（notify）。
+- `example/` にja/pt_BRサンプルアプリを追加し、単元一覧→出題→採点→progress記録→
+  保護者ゲート→ロケール切替の結合をwidgetテストで確認（実装順⑧）。
+- `l10n/app_pt.arb`（ベースロケール、gen-l10nの要件）を追加。

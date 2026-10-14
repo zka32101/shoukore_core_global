@@ -38,3 +38,16 @@ flutter analyze
 dart run tool/check_l10n.dart
 flutter test
 ```
+
+## サンプルアプリ（結合確認）
+
+`example/` に ja/pt_BR 両ロケールでの単元一覧→出題→採点→progress記録→
+保護者ゲートの結合を確認する最小アプリがある。コアが同梱する
+`curriculum/`・`regional/`・`l10n/` をパッケージアセット経由でそのまま読み込む。
+
+```
+cd example
+flutter pub get
+flutter analyze
+flutter test
+```

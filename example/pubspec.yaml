@@ -1,0 +1,25 @@
+name: shoukore_core_global_example
+description: "shoukore_core_global の結合確認用サンプルアプリ（ja/pt_BR）。"
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.9.0
+  flutter: ">=3.35.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  shoukore_core_global:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  lints: ^6.0.0
+
+flutter:
+  generate: true
+  uses-material-design: true

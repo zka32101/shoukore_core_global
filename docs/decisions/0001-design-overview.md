@@ -37,6 +37,16 @@
 （素のimmutableクラス、Store抽象分離）のみ参考にし、本コアは完全新規実装とする
 （2026-10-14 セッション内で確認・決定）。
 
+## 結合確認（example/）での既知の留意点
+
+`example/` のwidget結合テストで、複数の `testWidgets` に分けて毎回 `pumpWidget`
+するとFlutter test環境のアセット読み込みが2回目以降で干渉し、`pumpAndSettle`が
+ハングする現象を確認した。シナリオを1つの`testWidgets`に連結し、`pumpWidget`を
+1回だけ呼ぶ構成で回避している。将来テストを増やす際もこの制約に注意する。
+
+`ProgressStore`のdrift実装自体はコア側の単体テストで検証済みのため、
+`example/`では`InMemoryProgressStore`（軽量実装）を使い、widget結合確認に専念している。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
