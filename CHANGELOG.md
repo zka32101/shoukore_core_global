@@ -67,6 +67,9 @@
   算数固有のカリキュラムJSON・QuestionSource実装群は将来独立レポジトリへ
   移設する対象であることを明記し、今後本コアに他教科の教科固有コードを
   追加しない方針を整理した。
+- growthモジュールに`GrowthStore`抽象（`InMemoryGrowthStore`/`DriftGrowthStore`）
+  を追加し、`ProgressStore`/`ConsentStore`と同様に永続化先を差し替え可能にした。
+  `example/`の`GrowthRepository`を`GrowthStore`への保存・復元に書き換えた。
 - `exportUserData`の結果をJSON文字列化する`exportUserDataAsJson`を追加した。
   `example/`の`DataPrivacyScreen`に書き出し内容をクリップボードへコピーする
   ボタンを追加し、UI結合確認を行った。
