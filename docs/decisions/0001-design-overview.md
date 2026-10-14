@@ -240,6 +240,16 @@ misconceptionTagsを設定していない（本格導入は別途の課題）。
 単体テストと`LocalNotificationScheduler`の責務であり、ここではスケジュール
 状態の表示のみを確認する。
 
+## データ書き出し/削除・同意撤回のexample結合確認
+
+`exportUserData`/`eraseAllUserData`（LGPD上の権利行使対応）と
+`ConsentStore.revokeConsent`はコア側に実装・単体テスト済みだったが、UI結合確認が
+未着手だった。保護者向けの`DataPrivacyScreen`をexampleに追加し、同意状態・
+書き出し対象の学習記録件数の確認、保護者同意の撤回、確認ダイアログを経た
+全データ削除を行えるようにした。実際のファイル保存・共有（`exportUserData`が
+返す`Map`をJSON化してOSの共有シートに渡す等）はアプリ側の責務であり、ここでは
+書き出し対象データの件数表示までを確認する。
+
 ## 教科別アプリ/レポジトリ分割と本コアの境界
 
 想定アーキテクチャは「教科ごとにアプリとレポジトリを分け、本コア

@@ -71,5 +71,22 @@
       "minute": {"type": "int"}
     }
   },
-  "dailyReminderNotScheduled": "通知は設定されていません"
+  "dailyReminderNotScheduled": "通知は設定されていません",
+  "dataPrivacyTile": "学習データの管理（保護者向け）",
+  "dataPrivacyTitle": "学習データの管理",
+  "dataPrivacyExportSectionTitle": "書き出し内容の確認",
+  "dataPrivacyProgressCount": "学習記録: {count}件",
+  "@dataPrivacyProgressCount": {
+    "description": "書き出し対象の学習記録件数",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "dataPrivacyRevokeConsentButton": "保護者の同意を取り消す",
+  "dataPrivacyEraseAllButton": "学習データを全て削除する",
+  "dataPrivacyEraseConfirmTitle": "本当に削除しますか？",
+  "dataPrivacyEraseConfirmBody": "同意記録と学習記録がすべて削除されます。この操作は取り消せません。",
+  "dataPrivacyEraseConfirmButton": "削除する",
+  "dataPrivacyEraseCancelButton": "キャンセル",
+  "dataPrivacyErasedMessage": "学習データを削除しました"
 }
