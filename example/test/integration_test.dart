@@ -59,6 +59,15 @@ void main() {
       await tester.scrollUntilVisible(find.byKey(const Key('growthStatusTile')), -300.0);
       expect(find.byKey(const Key('growthStatusTile')), findsOneWidget);
 
+      // 既定(pt_BR)はscreenTimeLimitMinutes:0（無制限）のため、利用時間タイルは
+      // 制限なしの状態で表示される。デモ用トグルをONにすると1分制限が模擬される。
+      expect(find.byKey(const Key('screenTimeStatusTile')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('screenTimeLimitToggleButton')));
+      await tester.pumpAndSettle();
+      expect(find.textContaining('remaining: 1min'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('screenTimeLimitToggleButton')));
+      await tester.pumpAndSettle();
+
       await tester.scrollUntilVisible(find.byKey(const Key('weeklyReportTile')), 300.0);
       await tester.tap(find.byKey(const Key('weeklyReportTile')));
       await tester.pumpAndSettle();

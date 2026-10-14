@@ -26,6 +26,7 @@
   "weeklyReportNoData": "Ainda não há registros de aprendizagem nesta semana.",
   "entitlementLockedMessage": "Esta matéria está bloqueada. Compre para desbloquear.",
   "misconceptionOvercome": "Você superou o erro de \"{tag}\"!",
+  "screenTimeLimitReached": "Você atingiu o limite de uso de hoje. Converse com seus responsáveis.",
   "ageGateTitle": "Qual é o seu ano de nascimento?",
   "ageGateBirthYearHint": "Ex: 2016",
   "ageGateConfirmButton": "Avançar",

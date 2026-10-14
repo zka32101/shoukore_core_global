@@ -32,6 +32,14 @@ class _HomeScreenState extends State<HomeScreen> {
   GrowthRepository? _growthRepository;
   RegionalProfile? _regionalProfile;
 
+  // ScreenTimeGuardの利用時間計測はアプリ側の責務（ADR参照）。ここでは出題画面を
+  // 開いていた時間の合計を簡易に積算する（端末単位、再起動で消える）。
+  Duration _usedToday = Duration.zero;
+
+  // pt_BRの既定ではscreenTimeLimitMinutesが0（無制限）のため、結合確認用に
+  // 保護者が制限を設定した状態を模擬するトグルを用意する。
+  bool _screenTimeLimitDemoEnabled = false;
+
   // progressStoreは単元ツリーのロケールに関わらず端末内に1つだけ持つ
   // （学習記録はロケール切替の影響を受けない）。drift実装自体はコア側のテストで
   // 検証済みのため、サンプルアプリではUI結合確認に専念するInMemory実装を使う。
@@ -90,6 +98,23 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() => _consent = consent);
   }
 
+  ScreenTimeGuard get _screenTimeGuard {
+    final profile = _regionalProfile!;
+    final effectiveProfile = _screenTimeLimitDemoEnabled
+        ? RegionalProfile(
+            locale: profile.locale,
+            ageOfConsent: profile.ageOfConsent,
+            guardianConsentRequired: profile.guardianConsentRequired,
+            dailyResetHour: profile.dailyResetHour,
+            timeZone: profile.timeZone,
+            // 結合確認用に短い制限（1分）を模擬する。
+            screenTimeLimitMinutes: 1,
+            profilingAdsAllowed: profile.profilingAdsAllowed,
+          )
+        : profile;
+    return ScreenTimeGuard(effectiveProfile);
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
@@ -121,6 +146,16 @@ class _HomeScreenState extends State<HomeScreen> {
               style: const TextStyle(color: Colors.white),
             ),
           ),
+          TextButton(
+            key: const Key('screenTimeLimitToggleButton'),
+            onPressed: () => setState(() {
+              _screenTimeLimitDemoEnabled = !_screenTimeLimitDemoEnabled;
+            }),
+            child: Text(
+              _screenTimeLimitDemoEnabled ? 'limit: 1min' : 'limit: OFF',
+              style: const TextStyle(color: Colors.white),
+            ),
+          ),
         ],
       ),
       body: curriculum == null
@@ -132,6 +167,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: Text(
                     'stage: ${_growthRepository!.stage.name}, '
                     'coins: ${_growthRepository!.wallet.balance}',
+                  ),
+                ),
+                ListTile(
+                  key: const Key('screenTimeStatusTile'),
+                  title: Text(
+                    'screen time used: ${_usedToday.inMinutes}min, '
+                    'remaining: ${_screenTimeGuard.remaining(_usedToday).inMinutes}min',
                   ),
                 ),
                 for (final unit in curriculum.units.where((u) => u.templateIds.isNotEmpty))
@@ -152,6 +194,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         );
                         return;
                       }
+                      if (_screenTimeGuard.isOverLimit(_usedToday)) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            key: const Key('screenTimeLimitSnackBar'),
+                            content: Text(l10n.screenTimeLimitReached),
+                          ),
+                        );
+                        return;
+                      }
+                      final openedAt = _clock.now();
                       await Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (_) => QuestionScreen(
@@ -164,6 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       );
+                      _usedToday += _clock.now().difference(openedAt);
                       // 出題画面でgrowth状態（stage/coins）が更新されている可能性があるため、
                       // ホームに戻った際に再描画する。
                       if (mounted) setState(() {});
