@@ -397,6 +397,16 @@ growthモジュールに「何日連続で学習したか」を計算する純�
 `ReviewState`の永続化・UIへの反映（復習リストの表示等）はアプリ側の責務であり、
 本コアは「次にいつ復習すべきか」の計算のみを提供する。
 
+## AchievementEvaluatorの追加
+
+既存の`GrowthSnapshot`（ストリーク・累計正答数）から達成済みバッジを判定する
+純関数`AchievementEvaluator`をgrowthモジュールに追加した。バッジ自体の
+解除状態を保存する専用ストアは作らず、`GrowthStore`が既に保持している
+`GrowthSnapshot`から毎回再計算する設計とした（`AdaptiveDifficulty`が
+`Attempt`履歴から都度難易度を算出するのと同じ方針）。バッジの文言・アイコン
+等はアプリ側のl10n/UIの責務とし、本コアは`AchievementId`（enum）と判定・
+差分検出（`newlyUnlocked`）のロジックのみを提供する。
+
 ## ProfileStoreの追加（複数子どもプロファイル対応の土台）
 
 1台の端末を複数の子どもで共有する家庭向けに、`ProfileStore`抽象

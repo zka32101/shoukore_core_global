@@ -88,6 +88,8 @@
   積算（再起動で消え日次リセットもされないバグがあった）から移行した。
 - `weak`モジュールに誤答問題の間隔反復(spaced repetition)復習タイミングを計算する
   `SpacedReviewScheduler`を追加した（Leitner方式、箱レベル0〜4）。
+- growthモジュールに`GrowthSnapshot`から達成済みバッジを判定する
+  `AchievementEvaluator`を追加した（ストリーク3/7/30日、累計正答数100/500問）。
 - 1台の端末を複数の子どもで共有する家庭向けに、`ProfileStore`抽象
   （`InMemoryProfileStore`/`DriftProfileStore`）を追加した。プロファイルの
   一覧・選択状態の管理のみを提供し、`Progress`/`Growth`/`ScreenTime`等の
