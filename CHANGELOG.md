@@ -70,3 +70,6 @@
 - growthモジュールに`GrowthStore`抽象（`InMemoryGrowthStore`/`DriftGrowthStore`）
   を追加し、`ProgressStore`/`ConsentStore`と同様に永続化先を差し替え可能にした。
   `example/`の`GrowthRepository`を`GrowthStore`への保存・復元に書き換えた。
+- `exportUserData`の結果をJSON文字列化する`exportUserDataAsJson`を追加した。
+  `example/`の`DataPrivacyScreen`に書き出し内容をクリップボードへコピーする
+  ボタンを追加し、UI結合確認を行った。

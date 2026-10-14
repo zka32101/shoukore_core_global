@@ -88,5 +88,7 @@
   "dataPrivacyEraseConfirmBody": "同意記録と学習記録がすべて削除されます。この操作は取り消せません。",
   "dataPrivacyEraseConfirmButton": "削除する",
   "dataPrivacyEraseCancelButton": "キャンセル",
-  "dataPrivacyErasedMessage": "学習データを削除しました"
+  "dataPrivacyErasedMessage": "学習データを削除しました",
+  "dataPrivacyCopyJsonButton": "書き出し内容をJSONでコピーする",
+  "dataPrivacyExportCopiedMessage": "書き出し内容をクリップボードにコピーしました"
 }

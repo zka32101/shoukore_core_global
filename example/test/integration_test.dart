@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shoukore_core_global_example/main.dart';
 
 void main() {
+  // flutter_testの既定バインディングにはClipboardチャンネルのモックが無く、
+  // Clipboard.setDataを呼ぶと応答が返らずハングする。テスト環境専用のモックを登録する。
+  TestWidgetsFlutterBinding.ensureInitialized();
+  TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      .setMockMethodCallHandler(SystemChannels.platform, (call) async {
+    if (call.method == 'Clipboard.setData') return null;
+    return null;
+  });
+
   // 1つのtestWidgets内でシナリオを連結し、pumpWidgetを1回だけ呼ぶ。
   // （Flutter test環境では複数のtestWidgetsでpumpWidgetを繰り返すとアセット読み込みの
   //  非同期処理がテスト間で干渉し、2回目以降でpumpAndSettleがハングする既知の問題がある）
@@ -115,6 +125,18 @@ void main() {
 
       expect(find.text('Consentimento dos responsáveis: concedido'), findsOneWidget);
       expect(find.text('Registros de aprendizagem: 1'), findsOneWidget);
+
+      await tester.tap(find.byKey(const Key('copyExportedJsonButton')));
+      await tester.pumpAndSettle();
+      expect(
+        find.text('Conteúdo exportado copiado para a área de transferência'),
+        findsOneWidget,
+      );
+      // SnackBarは実時間のタイマーで自動消去されるため、pumpAndSettleだけでは消えない。
+      // 消去を待たないと、画面下部に残った不可視のSnackBarオーバーレイが後続のタップを
+      // 吸収してしまう。
+      await tester.pump(const Duration(seconds: 5));
+      await tester.pumpAndSettle();
 
       await tester.tap(find.byKey(const Key('revokeConsentButton')));
       await tester.pumpAndSettle();
