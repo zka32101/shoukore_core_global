@@ -76,6 +76,9 @@
 - 米国(en, COPPA)向けの`regional/en.yaml`を新規ロケール追加の雛形として追加。
   ADRに「新規ロケール追加の手順」を整理し、本コアに追加すべきもの（RegionalProfile・
   l10n）と算数アプリ側に残すべきもの（カリキュラムJSON）を区別した。
+- `Question.explanationId`を実際に有効化した。四則演算の各テンプレに
+  `explanationId`を設定し、`example/`で回答後に教科書的な解説を表示する
+  UI結合確認を追加した。
 - growthモジュールに学習ストリーク（何日連続で学習したか）を計算する
   `LearningStreak`を追加。`GrowthSnapshot`/`GrowthStore`に状態を持たせ、
   `example/`の出題画面で正誤を問わず全回答時に更新・表示するようにした。

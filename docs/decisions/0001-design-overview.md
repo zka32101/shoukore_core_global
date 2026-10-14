@@ -342,6 +342,21 @@ Storeモジュール同様、結合テストで検証しやすい`InMemoryGrowth
 実際にexampleで選択可能にするには、算数カリキュラムJSON
 （`curriculum/en.json`）を別途用意する必要がある。
 
+## 問題の解説(explanation)機能の有効化
+
+`Question.explanationId`（教科書的な解説を指すキー）は初期設計から存在していたが、
+カリキュラムJSONのテンプレに値が設定されず、exampleでも表示されない、未使用の
+フィールドだった。`ArithmeticTemplate`（加減乗除）の各テンプレに演算の種類ごとの
+`explanationId`（`explanation_add`/`explanation_subtract`/`explanation_multiply`/
+`explanation_divide`）を設定し、example側に`resolveExplanation()`
+（`explanationId`をarb文言へ解決するヘルパー）と、回答後に解説を表示するUIを
+追加した。`explanationId`から実際の文言への解決はアプリ側（l10n）の責務とし、
+本コアはIDのみを保持する設計を踏襲している。これにより「問題を解く機能」に加えて
+「教科書のような解説を示す機能」が実際に動作するようになった。
+他のQuestionSource（geometry/measurement/sequence/statistics）の各テンプレは
+`explanationId`フィールド自体は既に持っているが、今回は未設定のままとした
+（算数アプリ側で順次拡充する想定）。
+
 ## 学習ストリーク(LearningStreak)の追加
 
 growthモジュールに「何日連続で学習したか」を計算する純関数`LearningStreak`を
