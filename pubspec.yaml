@@ -1,0 +1,32 @@
+name: shoukore_core_global
+description: "小学コレ！海外版向け多言語共通コア（言語・地域はデータ、コードは中立）。"
+version: 0.1.0
+publish_to: 'none'
+
+environment:
+  sdk: ^3.9.0
+  flutter: ">=3.35.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
+  drift: ^2.23.0
+  sqlite3_flutter_libs: ^0.5.27
+  path_provider: ^2.1.5
+  path: ^1.9.0
+  intl: ^0.19.0
+  yaml: ^3.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  lints: ^6.0.0
+  drift_dev: ^2.23.0
+  build_runner: ^2.4.13
+
+flutter:
+  assets:
+    - curriculum/
+    - regional/
+    - l10n/

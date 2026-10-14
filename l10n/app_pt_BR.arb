@@ -1,0 +1,21 @@
+{
+  "@@locale": "pt_BR",
+  "guardianGateTitle": "Para os responsáveis",
+  "@guardianGateTitle": {
+    "description": "保護者ゲートのタイトル"
+  },
+  "guardianGateInstruction": "Digite o resultado de: {a} × {b}",
+  "@guardianGateInstruction": {
+    "description": "保護者ゲートの計算問題文",
+    "placeholders": {
+      "a": {"type": "int"},
+      "b": {"type": "int"}
+    }
+  },
+  "guardianGateWrongAnswer": "Resposta incorreta. Tente novamente.",
+  "guardianGateConfirmButton": "Confirmar",
+  "consentTitle": "É necessário o consentimento dos responsáveis",
+  "consentBody": "Os dados de aprendizagem do seu filho(a) são armazenados apenas no dispositivo. Se concordar, selecione \"Concordo\".",
+  "consentAcceptButton": "Concordo",
+  "consentDeclineButton": "Não concordo"
+}

@@ -1,0 +1,25 @@
+{
+  "locale": "pt_BR",
+  "note": "BNCC anos iniciais (1º-5º ano) の算数(Matemática)雛形。5 eixos: Números/Álgebra/Geometria/Grandezas e medidas/Probabilidade e estatística。本格展開は現地確認者(教員)によるレビュー前提。理科(Ciências)はBNCC単元未検証のため後回し。",
+  "subjects": [
+    {"id": "matematica", "eixos": ["numeros", "algebra", "geometria", "grandezas_medidas", "probabilidade_estatistica"]}
+  ],
+  "templates": [
+    {"id": "tpl_add_1_10", "operator": "add", "minOperand": 1, "maxOperand": 10},
+    {"id": "tpl_add_1_100", "operator": "add", "minOperand": 1, "maxOperand": 100},
+    {"id": "tpl_sub_1_20", "operator": "subtract", "minOperand": 1, "maxOperand": 20},
+    {"id": "tpl_mul_1_10", "operator": "multiply", "minOperand": 1, "maxOperand": 10},
+    {"id": "tpl_div_1_10", "operator": "divide", "minOperand": 1, "maxOperand": 10}
+  ],
+  "units": [
+    {"id": "mat_numeros_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_numeros_1", "order": 1, "templateIds": ["tpl_add_1_10"]},
+    {"id": "mat_numeros_2", "subjectId": "matematica", "grade": 2, "titleKey": "unit_numeros_2", "order": 1, "templateIds": ["tpl_add_1_100", "tpl_sub_1_20"]},
+    {"id": "mat_numeros_3", "subjectId": "matematica", "grade": 3, "titleKey": "unit_numeros_3", "order": 1, "templateIds": ["tpl_mul_1_10"]},
+    {"id": "mat_numeros_4", "subjectId": "matematica", "grade": 4, "titleKey": "unit_numeros_4", "order": 1, "templateIds": ["tpl_mul_1_10", "tpl_div_1_10"]},
+    {"id": "mat_numeros_5", "subjectId": "matematica", "grade": 5, "titleKey": "unit_numeros_5", "order": 1, "templateIds": ["tpl_div_1_10"]},
+    {"id": "mat_algebra_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_algebra_1", "order": 2, "templateIds": []},
+    {"id": "mat_geometria_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_geometria_1", "order": 3, "templateIds": []},
+    {"id": "mat_grandezas_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_grandezas_1", "order": 4, "templateIds": []},
+    {"id": "mat_probabilidade_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_probabilidade_1", "order": 5, "templateIds": []}
+  ]
+}
