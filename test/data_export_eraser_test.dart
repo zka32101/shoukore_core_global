@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shoukore_core_global/shoukore_core_global.dart';
 
@@ -29,6 +31,33 @@ void main() {
       'policyVersion': 2,
     });
     expect(data['progress'], [
+      {
+        'unitId': 'mat_numeros_1',
+        'score': 0.5,
+        'lastPracticedAt': consentedAt.toIso8601String(),
+      },
+    ]);
+  });
+
+  test('exportUserDataAsJsonはexportUserDataと同じ内容をJSON文字列化する', () async {
+    final consentedAt = DateTime.utc(2026, 10, 14);
+    await consentStore.setConsent(ConsentRecord(
+      parentalConsentGiven: true,
+      consentedAt: consentedAt,
+      policyVersion: 2,
+    ));
+    progressStore.masteries = [
+      Mastery(unitId: 'mat_numeros_1', score: 0.5, lastPracticedAt: consentedAt),
+    ];
+
+    final json = await exportUserDataAsJson(
+      consentStore: consentStore,
+      progressStore: progressStore,
+    );
+    final decoded = jsonDecode(json) as Map<String, dynamic>;
+
+    expect(decoded['consent']['parentalConsentGiven'], isTrue);
+    expect(decoded['progress'], [
       {
         'unitId': 'mat_numeros_1',
         'score': 0.5,

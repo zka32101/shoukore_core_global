@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:shoukore_core_global/shoukore_core_global.dart';
 
 import 'l10n/app_localizations.dart';
@@ -38,6 +39,22 @@ class _DataPrivacyScreenState extends State<DataPrivacyScreen> {
     );
     if (!mounted) return;
     setState(() => _exported = exported);
+  }
+
+  Future<void> _copyExportedJson() async {
+    final json = await exportUserDataAsJson(
+      consentStore: widget.consentStore,
+      progressStore: widget.progressStore,
+    );
+    await Clipboard.setData(ClipboardData(text: json));
+    if (!mounted) return;
+    final l10n = AppLocalizations.of(context)!;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        key: const Key('dataExportedSnackBar'),
+        content: Text(l10n.dataPrivacyExportCopiedMessage),
+      ),
+    );
   }
 
   Future<void> _revokeConsent() async {
@@ -112,6 +129,12 @@ class _DataPrivacyScreenState extends State<DataPrivacyScreen> {
                 Text(
                   l10n.dataPrivacyProgressCount(progressCount),
                   key: const Key('dataPrivacyProgressCountText'),
+                ),
+                const SizedBox(height: 8),
+                OutlinedButton(
+                  key: const Key('copyExportedJsonButton'),
+                  onPressed: _copyExportedJson,
+                  child: Text(l10n.dataPrivacyCopyJsonButton),
                 ),
                 const SizedBox(height: 24),
                 ElevatedButton(

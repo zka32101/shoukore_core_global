@@ -46,5 +46,7 @@
   "dataPrivacyEraseConfirmBody": "O consentimento e os registros de aprendizagem serão excluídos. Esta ação não pode ser desfeita.",
   "dataPrivacyEraseConfirmButton": "Excluir",
   "dataPrivacyEraseCancelButton": "Cancelar",
-  "dataPrivacyErasedMessage": "Dados de aprendizagem excluídos"
+  "dataPrivacyErasedMessage": "Dados de aprendizagem excluídos",
+  "dataPrivacyCopyJsonButton": "Copiar conteúdo exportado como JSON",
+  "dataPrivacyExportCopiedMessage": "Conteúdo exportado copiado para a área de transferência"
 }

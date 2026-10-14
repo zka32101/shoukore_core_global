@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import '../progress/progress_store.dart';
 import 'consent_store.dart';
 
@@ -28,4 +30,19 @@ Future<Map<String, dynamic>> exportUserData({
         },
     ],
   };
+}
+
+/// [exportUserData]の結果をJSON文字列化する。ファイル保存・共有シートへの
+/// 受け渡しなど、アプリ側でそのまま書き出せる形にするための便宜関数。
+/// JSON化自体は教科・地域に依存しない共通処理のため、本コアに置く
+/// （実際のファイルI/O・共有UIはアプリ側の責務）。
+Future<String> exportUserDataAsJson({
+  required ConsentStore consentStore,
+  required ProgressStore progressStore,
+}) async {
+  final data = await exportUserData(
+    consentStore: consentStore,
+    progressStore: progressStore,
+  );
+  return const JsonEncoder.withIndent('  ').convert(data);
 }
