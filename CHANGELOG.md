@@ -57,3 +57,6 @@
 - `example/`にAgeGate/ConsentStoreのUI結合確認を追加。生まれ年入力→
   保護者同意要否判定→（必要なら）同意ダイアログ→`ConsentStore`記録、という
   一連のフローと同意状態表示タイルを追加した。
+- `example/`にAdaptiveDifficultyのUI結合確認を追加。従来Mastery.scoreを
+  そのまま目標難易度に使っていた箇所を、直近の正誤結果と最終練習日から
+  AdaptiveDifficulty.nextDifficulty()で計算するように変更した。

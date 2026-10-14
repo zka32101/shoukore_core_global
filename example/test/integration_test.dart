@@ -39,12 +39,21 @@ void main() {
       expect(find.byKey(const Key('masteryText')), findsOneWidget);
       expect(find.text('mastery: 0%'), findsOneWidget);
 
+      // 初回の目標難易度は既定値(50%)から始まる。
+      expect(find.byKey(const Key('difficultyText')), findsOneWidget);
+      expect(find.text('difficulty: 50%'), findsOneWidget);
+
       final choiceButtons = find.byType(ElevatedButton);
       expect(choiceButtons, findsWidgets);
       await tester.tap(choiceButtons.first);
       await tester.pumpAndSettle();
 
       expect(find.byKey(const Key('feedbackText')), findsOneWidget);
+
+      // 回答結果に応じてAdaptiveDifficultyが目標難易度を更新する
+      // （1問目の正誤により40%または60%になる。初期値50%からは必ず変化する）。
+      expect(find.byKey(const Key('difficultyText')), findsOneWidget);
+      expect(find.text('difficulty: 50%'), findsNothing);
 
       // 出題画面にgrowth状態（stage/coins/mission進捗）が表示される。
       // 閾値(10問)に満たないため、正誤に関わらずstageはeggのまま。
