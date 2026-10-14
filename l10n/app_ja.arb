@@ -90,5 +90,10 @@
   "dataPrivacyEraseCancelButton": "キャンセル",
   "dataPrivacyErasedMessage": "学習データを削除しました",
   "dataPrivacyCopyJsonButton": "書き出し内容をJSONでコピーする",
-  "dataPrivacyExportCopiedMessage": "書き出し内容をクリップボードにコピーしました"
+  "dataPrivacyExportCopiedMessage": "書き出し内容をクリップボードにコピーしました",
+  "explanationSectionTitle": "解説",
+  "explanationAdd": "足し算は、2つ以上の数をあわせて全体の数を求める計算です。例えば3+5は「3に5を足す」という意味で、答えは8になります。",
+  "explanationSubtract": "引き算は、ある数から別の数を取り除いたときに残る数を求める計算です。例えば8-3は「8から3を引く」という意味で、答えは5になります。",
+  "explanationMultiply": "掛け算は、同じ数を何回も足すことをまとめて計算する方法です。例えば3×4は「3を4回足す」という意味で、答えは12になります。",
+  "explanationDivide": "割り算は、ある数を同じ大きさに分けたときの1つ分の数を求める計算です。例えば12÷4は「12を4つに等しく分ける」という意味で、答えは3になります。"
 }

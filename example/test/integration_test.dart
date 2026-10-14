@@ -56,6 +56,9 @@ void main() {
 
       expect(find.byKey(const Key('feedbackText')), findsOneWidget);
 
+      // 回答後、問題テンプレの解説（教科書的な説明）が表示される。
+      expect(find.byKey(const Key('explanationText')), findsOneWidget);
+
       // 出題画面にgrowth状態（stage/coins/mission進捗）が表示される。
       // 閾値(10問)に満たないため、正誤に関わらずstageはeggのまま。
       expect(find.byKey(const Key('growthStatusText')), findsOneWidget);
