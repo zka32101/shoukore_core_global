@@ -285,6 +285,20 @@ QuestionSource実装のみを移動する。
 `QuestionSource`実装を追加することはしない。新しい教科のアプリは、本コアの
 抽象インターフェースを実装する形で独自レポジトリ側に実装する。
 
+## GrowthStoreの追加とexample結合確認
+
+growthモジュール（`DailyMissionRules`/`CoinWallet`/`GrowthStageCalculator`）は
+純関数のみを提供し、`ProgressStore`/`ConsentStore`と異なり永続化先を規定する
+抽象が存在しなかった。これにより、example側の`GrowthRepository`は端末内メモリ
+保持（再起動で消える）に留まっていた。`ProgressStore`/`ConsentStore`と同様の
+パターンで`GrowthStore`抽象（`GrowthSnapshot`の読み書き・`clearAll`）を追加し、
+`InMemoryGrowthStore`と`DriftGrowthStore`（`progress.sqlite`内に`growth_states`
+テーブルを追加、単一行保持）の2実装を用意した。両実装は
+`test/growth_store_contract_test.dart`の契約テストで検証している。
+example側の`GrowthRepository`は`GrowthStore`への保存・復元に書き換え、
+`GrowthRepository.load()`で起動時に状態を読み込むようにした。他の
+Storeモジュール同様、結合テストで検証しやすい`InMemoryGrowthStore`を使う。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
