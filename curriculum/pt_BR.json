@@ -5,11 +5,19 @@
     {"id": "matematica", "eixos": ["numeros", "algebra", "geometria", "grandezas_medidas", "probabilidade_estatistica"]}
   ],
   "templates": [
-    {"id": "tpl_add_1_10", "operator": "add", "minOperand": 1, "maxOperand": 10},
-    {"id": "tpl_add_1_100", "operator": "add", "minOperand": 1, "maxOperand": 100},
-    {"id": "tpl_sub_1_20", "operator": "subtract", "minOperand": 1, "maxOperand": 20},
-    {"id": "tpl_mul_1_10", "operator": "multiply", "minOperand": 1, "maxOperand": 10},
-    {"id": "tpl_div_1_10", "operator": "divide", "minOperand": 1, "maxOperand": 10}
+    {"kind": "arithmetic", "id": "tpl_add_1_10", "operator": "add", "minOperand": 1, "maxOperand": 10},
+    {"kind": "arithmetic", "id": "tpl_add_1_100", "operator": "add", "minOperand": 1, "maxOperand": 100},
+    {"kind": "arithmetic", "id": "tpl_sub_1_20", "operator": "subtract", "minOperand": 1, "maxOperand": 20},
+    {"kind": "arithmetic", "id": "tpl_mul_1_10", "operator": "multiply", "minOperand": 1, "maxOperand": 10},
+    {"kind": "arithmetic", "id": "tpl_div_1_10", "operator": "divide", "minOperand": 1, "maxOperand": 10},
+    {"kind": "sequence", "id": "tpl_sequence_1_10", "startMin": 1, "startMax": 10, "stepMin": 1, "stepMax": 3, "length": 4},
+    {"kind": "shape", "id": "tpl_shape_triangle", "shapeNameKey": "shape_triangle", "sides": 3},
+    {"kind": "shape", "id": "tpl_shape_square", "shapeNameKey": "shape_square", "sides": 4},
+    {"kind": "shape", "id": "tpl_shape_pentagon", "shapeNameKey": "shape_pentagon", "sides": 5},
+    {"kind": "unitConversion", "id": "tpl_cm_to_m", "fromUnitKey": "unit_cm", "toUnitKey": "unit_m", "factor": 100, "minValue": 1, "maxValue": 9},
+    {"kind": "dataset", "id": "tpl_dataset_max", "operation": "max", "valueCount": 5, "minValue": 1, "maxValue": 20},
+    {"kind": "dataset", "id": "tpl_dataset_min", "operation": "min", "valueCount": 5, "minValue": 1, "maxValue": 20},
+    {"kind": "dataset", "id": "tpl_dataset_mode", "operation": "mode", "valueCount": 5, "minValue": 1, "maxValue": 5}
   ],
   "units": [
     {"id": "mat_numeros_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_numeros_1", "order": 1, "templateIds": ["tpl_add_1_10"]},
@@ -17,9 +25,9 @@
     {"id": "mat_numeros_3", "subjectId": "matematica", "grade": 3, "titleKey": "unit_numeros_3", "order": 1, "templateIds": ["tpl_mul_1_10"]},
     {"id": "mat_numeros_4", "subjectId": "matematica", "grade": 4, "titleKey": "unit_numeros_4", "order": 1, "templateIds": ["tpl_mul_1_10", "tpl_div_1_10"]},
     {"id": "mat_numeros_5", "subjectId": "matematica", "grade": 5, "titleKey": "unit_numeros_5", "order": 1, "templateIds": ["tpl_div_1_10"]},
-    {"id": "mat_algebra_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_algebra_1", "order": 2, "templateIds": []},
-    {"id": "mat_geometria_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_geometria_1", "order": 3, "templateIds": []},
-    {"id": "mat_grandezas_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_grandezas_1", "order": 4, "templateIds": []},
-    {"id": "mat_probabilidade_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_probabilidade_1", "order": 5, "templateIds": []}
+    {"id": "mat_algebra_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_algebra_1", "order": 2, "templateIds": ["tpl_sequence_1_10"]},
+    {"id": "mat_geometria_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_geometria_1", "order": 3, "templateIds": ["tpl_shape_triangle", "tpl_shape_square", "tpl_shape_pentagon"]},
+    {"id": "mat_grandezas_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_grandezas_1", "order": 4, "templateIds": ["tpl_cm_to_m"]},
+    {"id": "mat_probabilidade_1", "subjectId": "matematica", "grade": 1, "titleKey": "unit_probabilidade_1", "order": 5, "templateIds": ["tpl_dataset_max", "tpl_dataset_min", "tpl_dataset_mode"]}
   ]
 }

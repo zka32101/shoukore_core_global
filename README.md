@@ -29,6 +29,12 @@
 - 教科/単元はカリキュラムJSON（`curriculum/{locale}.json`）のID。
 - アプリからは `ref: vX.Y.Z` で参照。SemVer。破壊的変更は `docs/decisions/` にADRを追加する。
 
+## エントリポイント
+
+- `shoukore_core_global.dart`: コア本体（Flutterプラグイン依存なし）
+- `shoukore_core_global_drift.dart`: drift(SQLite)実装（`DriftProgressStore`/`DriftConsentStore`）
+- `shoukore_core_global_notify.dart`: `flutter_local_notifications`実装（`LocalNotificationScheduler`）
+
 ## 開発
 
 ```
@@ -36,6 +42,7 @@ flutter pub get
 dart run build_runner build --delete-conflicting-outputs
 flutter analyze
 dart run tool/check_l10n.dart
+dart run tool/check_curriculum.dart
 flutter test
 ```
 

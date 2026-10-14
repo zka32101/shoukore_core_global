@@ -12,9 +12,13 @@ void main() {
       await tester.pumpWidget(const ShoukoreExampleApp());
       await tester.pumpAndSettle();
 
-      // 既定ロケール(pt_BR)でpt_BRのカリキュラム単元一覧・arb文言が表示される。
+      // 既定ロケール(pt_BR)でpt_BRのカリキュラム単元一覧が表示される。
       expect(find.byKey(const Key('unit_mat_numeros_1')), findsOneWidget);
+
+      // 単元数が増え一覧が画面に収まらないため、保護者ゲートのタイルはスクロールして確認する。
+      await tester.scrollUntilVisible(find.byKey(const Key('guardianGateTile')), 300.0);
       expect(find.text('Para os responsáveis'), findsOneWidget);
+      await tester.scrollUntilVisible(find.byKey(const Key('unit_mat_numeros_1')), -300.0);
 
       // 単元をタップすると出題され、回答するとprogressのmasteryが更新される。
       await tester.tap(find.byKey(const Key('unit_mat_numeros_1')));

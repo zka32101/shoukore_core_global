@@ -51,6 +51,7 @@ class Question {
     required this.explanationId,
     this.misconceptionTags = const {},
     this.version = 1,
+    this.params = const {},
   }) : assert(difficulty >= 0 && difficulty <= 1);
 
   final String id;
@@ -62,6 +63,10 @@ class Question {
   final List<String> choices;
   final String answer;
   final String explanationId;
+
+  /// 問題文プレースホルダ用の値（例: `{'a': '3', 'b': '5'}`）。
+  /// 文言・数字表記はアプリ側がarb/intlで組み立てる。
+  final Map<String, String> params;
 
   /// 誤答選択肢ID → 誤解の型（例: sign_error）。
   final Map<String, String> misconceptionTags;

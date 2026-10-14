@@ -95,6 +95,7 @@ class ArithmeticQuestionSource implements QuestionSource {
       choices: choices.map((c) => c.toString()).toList(),
       answer: answer.toString(),
       explanationId: template.explanationId,
+      params: {'a': a.toString(), 'b': b.toString()},
     );
   }
 
