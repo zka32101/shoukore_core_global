@@ -16,3 +16,12 @@
 - `l10n/app_pt.arb`（ベースロケール、gen-l10nの要件）を追加。
 - `DriftConsentStore`（`ConsentStore`の端末内drift実装、`ProgressDatabase`に`Consents`テーブルを追加）を追加。
 - `exportUserData` / `eraseAllUserData`（LGPD上のデータ書き出し/削除の権利行使対応）を追加。
+- `WeakNotesAnalyzer`（誤答のmisconceptionTagsから弱点傾向を集計、克服判定）を追加。
+- `WeeklyReportBuilder`（保護者向け週次レポート）を追加。
+- `tool/check_curriculum.dart`（カリキュラムJSONの整合性検証、CI組み込み）を追加。
+- `GeometryQuestionSource`/`MeasurementQuestionSource`/`SequenceQuestionSource`/`StatisticsQuestionSource`
+  （BNCC Geometria/Grandezas e medidas/Álgebra/Probabilidade e estatística向け）を追加。
+  `Question`に`params`（問題文プレースホルダ用の値）を追加し、`CurriculumLoader`が
+  複数テンプレ種別(`kind`)を判定できるよう拡張。
+- `LocalNotificationScheduler`（`flutter_local_notifications`を使った`NotificationScheduler`の
+  端末内実装、`shoukore_core_global_notify.dart`に分離）を追加。

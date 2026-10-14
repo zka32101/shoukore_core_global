@@ -53,6 +53,15 @@ materializeしないため、単元数が増えて一覧が画面高さを超え
 `ProgressStore`のdrift実装自体はコア側の単体テストで検証済みのため、
 `example/`では`InMemoryProgressStore`（軽量実装）を使い、widget結合確認に専念している。
 
+## LocalNotificationSchedulerのテスト範囲
+
+`flutter_local_notifications`は実際の通知呼び出し（`zonedSchedule`/`cancel`等）が
+プラットフォーム側のプラグイン登録（`FlutterLocalNotificationsPlatform.instance`、
+Android/iOSのネイティブプラグイン登録メカニズム）に依存するため、CIのdart VM環境
+（`flutter test`）では`LateInitializationError`になり検証できない。コア側の
+単体テストはコンストラクタ・デフォルト値など純粋なロジック部分にとどめ、実際の
+スケジューリング動作の結合確認は実機・エミュレータでのテストに委ねる。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
