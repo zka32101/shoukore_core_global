@@ -71,10 +71,34 @@ BNCC公式PDF（basenacionalcomum.mec.gov.br）・州教育局サイト・Nova E
 要約で断片的に確認できた範囲のみを `Unit.verified: true` とし、それ以外は
 `Unit.verified: false`（知識ベースの推測）としている。
 
-- `verified: true`（Web検索で確認できたもの）: Números 1º-3º、Álgebra 1º、
+- `verified: true`（Web検索で確認できたもの）: Números 1º-5º、Álgebra 1º-2º、
   Grandezas e medidas 1º・5º（体積の導入）、Probabilidade e estatística 1º-3º。
 - `verified: false`（要検証・現地教員レビュー前提）: 上記以外すべて。特に
-  Geometria・Álgebra 2º-5ºは全学年ともWeb検索で裏付けが取れていない。
+  Geometria（全学年）・Álgebra 3º-5ºはWeb検索で裏付けが取れていない。
+
+### 第2回検証パス（2026-10-14、本セッション後半）
+
+BNCC公式PDF・州教育局サイトへは引き続きアクセス不可（名前解決の失敗、または
+プロキシのCONNECT拒否403）だったが、Web検索（WebSearchツール）経由で
+Nova Escola・Tudo Sala de Aula・Profez等、複数の独立した教育系サイトが
+一致する文言でhabilidadeを説明している単元について、以下を`verified: true`に
+格上げした。いずれも官報PDFそのものの直接確認ではなく、複数の二次資料の
+突き合わせによる確認であることに注意。
+
+- `mat_numeros_4`（EF04MA01/06/07/08、4º ano乗除）: Nova EscolaとTudo Sala de
+  Aulaが一致する文言を提示。
+- `mat_numeros_5`（EF05MA01/07/08、5º ano数・加減乗除）: Tudo Sala de Aulaで
+  3コードとも確認。ただしEF05MA07は厳密には加減算の habilidade であり、
+  本単元が意図する除算は EF05MA08 が担う（コード自体の単元内訳は変更していない）。
+- `mat_algebra_2`（EF02MA09/10/11、2º ano数列）: Tudo Sala de Aula・Nova
+  Escola・Profezの3サイトで一致。
+
+試みたが確認に至らなかったもの:
+- `mat_geometria_2`（EF02MA14/15）: EF02MA15は「平面図形の認識・命名」、
+  EF02MA14は「立体図形（円柱・立方体等）の認識」が本来の内容で、現行の
+  `GeometryQuestionSource`（多角形の辺の数当て）とは一致度が低い。
+  Geometria単元は本番投入前にテンプレート自体の作り直しが必要な可能性が高い。
+- `mat_geometria_1`（EF01MA14）: Web検索でも文言を確認できず。
 - `Unit.habilidadeCodes`（例: `EF01MA09`）はBNCCのhabilidadeコードとの対応を
   記録するためのフィールドで、出題ロジックからは参照しない。
 - `tool/check_curriculum.dart` は各ファイルの `unverified` 単元数を出力する
