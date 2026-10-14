@@ -70,3 +70,6 @@
 - growthモジュールに`GrowthStore`抽象（`InMemoryGrowthStore`/`DriftGrowthStore`）
   を追加し、`ProgressStore`/`ConsentStore`と同様に永続化先を差し替え可能にした。
   `example/`の`GrowthRepository`を`GrowthStore`への保存・復元に書き換えた。
+- 米国(en, COPPA)向けの`regional/en.yaml`を新規ロケール追加の雛形として追加。
+  ADRに「新規ロケール追加の手順」を整理し、本コアに追加すべきもの（RegionalProfile・
+  l10n）と算数アプリ側に残すべきもの（カリキュラムJSON）を区別した。

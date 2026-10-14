@@ -1,0 +1,19 @@
+# 米国(en, COPPA)向けの地域コンプライアンス設定の雛形。
+# COPPA (Children's Online Privacy Protection Act) は13歳未満を「子ども」として
+# 保護者の同意（verifiable parental consent）を要求する。
+# 法令の最終解釈は現地弁護士の確認が前提
+# （docs/decisions/0001-design-overview.md「新規ロケール追加の手順」参照）。
+locale: en
+
+# COPPA: 13歳未満は保護者の同意が必要。
+ageOfConsent: 13
+guardianConsentRequired: true
+
+dailyResetHour: 0
+timeZone: America/New_York
+
+# 保護者が端末側で設定する想定。既定は無制限。
+screenTimeLimitMinutes: 0
+
+# COPPA: 子どもを対象とした行動ターゲティング広告は原則禁止。
+profilingAdsAllowed: false

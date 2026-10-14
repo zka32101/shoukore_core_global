@@ -83,4 +83,14 @@ void main() {
     expect(profile.locale, 'ja');
     expect(profile.dailyResetHour, 5);
   });
+
+  test('en regional profile を読み込める（COPPA既定）', () {
+    final content = File('regional/en.yaml').readAsStringSync();
+    final profile = parseRegionalProfile(content);
+
+    expect(profile.locale, 'en');
+    expect(profile.ageOfConsent, 13);
+    expect(profile.guardianConsentRequired, isTrue);
+    expect(profile.profilingAdsAllowed, isFalse);
+  });
 }
