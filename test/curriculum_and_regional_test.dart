@@ -17,6 +17,19 @@ void main() {
     expect(data.templates['tpl_add_1_10']!.operator, ArithmeticOperator.add);
   });
 
+  test('pt_BR カリキュラムJSONは他eixoのテンプレも読み込める', () {
+    final content = File('curriculum/pt_BR.json').readAsStringSync();
+    final data = parseCurriculum(content);
+
+    expect(data.shapeTemplates['tpl_shape_triangle']!.sides, 3);
+    expect(data.unitConversionTemplates['tpl_cm_to_m']!.factor, 100);
+    expect(data.sequenceTemplates['tpl_sequence_1_10']!.length, 4);
+    expect(data.dataSetTemplates['tpl_dataset_mode']!.operation, DataSetOperation.mode);
+
+    final geometria1 = data.units.firstWhere((u) => u.id == 'mat_geometria_1');
+    expect(geometria1.templateIds, contains('tpl_shape_triangle'));
+  });
+
   test('ja カリキュラムJSONを読み込める', () {
     final content = File('curriculum/ja.json').readAsStringSync();
     final data = parseCurriculum(content);

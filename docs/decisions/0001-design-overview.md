@@ -44,6 +44,12 @@
 ハングする現象を確認した。シナリオを1つの`testWidgets`に連結し、`pumpWidget`を
 1回だけ呼ぶ構成で回避している。将来テストを増やす際もこの制約に注意する。
 
+また、`ListView(children: [...])` は画面に収まらない項目をSliverの遅延構築で
+materializeしないため、単元数が増えて一覧が画面高さを超えると、スクロールするまで
+下部のWidget（保護者ゲートのタイル等）はElementツリーに存在しない。`find.text`等で
+見つからない場合は例外が出ていなくても、まずスクロール不足を疑う
+（`tester.scrollUntilVisible`で解決する）。
+
 `ProgressStore`のdrift実装自体はコア側の単体テストで検証済みのため、
 `example/`では`InMemoryProgressStore`（軽量実装）を使い、widget結合確認に専念している。
 
