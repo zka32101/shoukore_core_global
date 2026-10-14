@@ -47,5 +47,6 @@
     }
   },
   "weeklyReportNoData": "この1週間の学習記録はまだありません。",
-  "entitlementLockedMessage": "この教科はロックされています。購入すると解放されます。"
+  "entitlementLockedMessage": "この教科はロックされています。購入すると解放されます。",
+  "screenTimeLimitReached": "今日の利用時間の上限に達しました。保護者の方にご相談ください。"
 }

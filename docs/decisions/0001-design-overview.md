@@ -183,6 +183,19 @@ ANPD関連の解説記事）で裏付けを確認した。公式法令原文（P
 （`lib/src/progress/in_memory_progress_store.dart`）にも追加した。
 `example/`側の実装はそのまま残している（example独自の初期化経路を保ちたいため）。
 
+## ScreenTimeGuardのexample結合確認
+
+`ScreenTimeGuard`は利用時間の計測自体をアプリ側に委ねる設計のため、
+サンプルアプリでは出題画面を開いていた時間（`Clock`経由）を簡易に積算する
+形で結合確認した。pt_BRの既定`screenTimeLimitMinutes`は0（無制限）のため、
+結合確認用に「1分制限を模擬するトグル」（`screenTimeLimitToggleButton`）を
+追加し、`RegionalProfile`を差し替えた`ScreenTimeGuard`で制限ありの挙動
+（残り時間表示、超過時のロックメッセージ）を確認できるようにした。
+実際に1分経過するのを待つテストは現実的でないため、結合テストでは
+「トグルで残り時間表示が切り替わること」までを確認し、超過時の
+ブロック挙動自体はコア側の単体テスト（`guardian_privacy_test.dart`）で
+検証済みのロジックに委ねている。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

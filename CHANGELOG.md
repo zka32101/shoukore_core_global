@@ -49,3 +49,5 @@
 - `InMemoryProgressStore`をコアに追加し、`DriftProgressStore`と共通の
   契約テストスイート（`test/progress_store_contract_test.dart`）で
   両実装の整合性を検証できるようにした。
+- `example/`にScreenTimeGuardのUI結合確認を追加。出題画面の滞在時間を積算し、
+  制限模擬トグルで残り時間表示・超過時のロックメッセージを確認できるようにした。

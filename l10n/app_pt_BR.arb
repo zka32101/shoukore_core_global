@@ -24,5 +24,6 @@
   "weeklyReportUnitLine": "{unitId}: {percent}% ({correct}/{total} questões)",
   "weeklyReportTopMisconception": "Erro mais comum: {tag}",
   "weeklyReportNoData": "Ainda não há registros de aprendizagem nesta semana.",
-  "entitlementLockedMessage": "Esta matéria está bloqueada. Compre para desbloquear."
+  "entitlementLockedMessage": "Esta matéria está bloqueada. Compre para desbloquear.",
+  "screenTimeLimitReached": "Você atingiu o limite de uso de hoje. Converse com seus responsáveis."
 }
