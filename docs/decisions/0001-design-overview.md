@@ -250,6 +250,21 @@ misconceptionTagsを設定していない（本格導入は別途の課題）。
 返す`Map`をJSON化してOSの共有シートに渡す等）はアプリ側の責務であり、ここでは
 書き出し対象データの件数表示までを確認する。
 
+## exportUserDataAsJsonの追加とexample結合確認
+
+`exportUserData`が返す`Map`のJSON文字列化自体は教科・地域に依存しない共通処理
+であるため、`exportUserDataAsJson`として本コアに追加した（実際のファイル保存・
+共有UIは引き続きアプリ側の責務）。`example/`の`DataPrivacyScreen`に、書き出し
+内容をJSON文字列としてクリップボードへコピーするボタンを追加し、結合確認した。
+結合テストでは、`flutter_test`の既定バインディングに`Clipboard.setData`の
+モックが無く呼び出しが応答なしにハングする問題があったため、
+`integration_test.dart`の`main()`で`SystemChannels.platform`に対する
+モックハンドラを登録している。また、SnackBarは実時間のタイマーで自動消去される
+ため、`pumpAndSettle()`だけでは消えず、画面下部に残った不可視のオーバーレイが
+後続のタップを吸収する問題があった。これを避けるため、SnackBar表示を確認した
+直後に`tester.pump(const Duration(seconds: 5))`で消去を待ってから後続の操作を
+行うようにした。
+
 ## 教科別アプリ/レポジトリ分割と本コアの境界
 
 想定アーキテクチャは「教科ごとにアプリとレポジトリを分け、本コア
