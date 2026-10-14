@@ -159,6 +159,16 @@ ANPD関連の解説記事）で裏付けを確認した。公式法令原文（P
 （Lei 15.211/2025）の最終解釈確認。確認が取れ次第、`regional/pt_BR.yaml`の
 コメントと必要なら`ageOfConsent`等の既定値を見直す。
 
+## growthのexample結合確認とGrowthRepository
+
+`DailyMissionRules`/`CoinWallet`/`GrowthStageCalculator`はいずれも永続化先を
+規定しない純関数のみを提供するため、`weekly report`のQuestionCache同様、
+サンプルアプリ側に`GrowthRepository`（端末内の簡易な状態保持、再起動で消える）
+を追加して結合確認に対応した。本番アプリでは`ProgressStore`実装と同様に
+永続化層を用意する必要がある。growth状態はロケール切替の影響を受けないため、
+`RegionalProfile`（`DailyBoundary`の日付境界に使用）は初回ロード時のものを
+保持し続け、ロケール切替のたびに作り直すことはしない。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

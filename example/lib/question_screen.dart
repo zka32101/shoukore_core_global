@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoukore_core_global/shoukore_core_global.dart';
 
+import 'growth_repository.dart';
 import 'question_cache.dart';
 
 class QuestionScreen extends StatefulWidget {
@@ -11,6 +12,7 @@ class QuestionScreen extends StatefulWidget {
     required this.progressStore,
     required this.clock,
     required this.questionCache,
+    required this.growthRepository,
   });
 
   final Unit unit;
@@ -18,6 +20,7 @@ class QuestionScreen extends StatefulWidget {
   final ProgressStore progressStore;
   final Clock clock;
   final QuestionCache questionCache;
+  final GrowthRepository growthRepository;
 
   @override
   State<QuestionScreen> createState() => _QuestionScreenState();
@@ -58,6 +61,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
       chosenId: chosenId,
       answeredAt: widget.clock.now(),
     ));
+    if (correct) {
+      widget.growthRepository.recordCorrectAnswer();
+    }
     final mastery = await widget.progressStore.getMastery(widget.unit.id);
     setState(() {
       _feedback = correct ? 'correct' : 'incorrect';
@@ -82,6 +88,12 @@ class _QuestionScreenState extends State<QuestionScreen> {
                       'mastery: ${(_mastery!.score * 100).toStringAsFixed(0)}%',
                       key: const Key('masteryText'),
                     ),
+                  Text(
+                    'stage: ${widget.growthRepository.stage.name}, '
+                    'coins: ${widget.growthRepository.wallet.balance}, '
+                    'mission: ${widget.growthRepository.missionState.completedCount}',
+                    key: const Key('growthStatusText'),
+                  ),
                   const SizedBox(height: 16),
                   for (final choice in question.choices)
                     ElevatedButton(
