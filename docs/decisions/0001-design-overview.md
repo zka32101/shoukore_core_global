@@ -386,6 +386,17 @@ growthモジュールに「何日連続で学習したか」を計算する純�
 利用時間をリセットするように修正した。両実装は
 `test/screen_time_store_contract_test.dart`の契約テストで検証している。
 
+## SpacedReviewSchedulerの追加
+
+誤答した問題を間隔反復（spaced repetition）で再提示するタイミングを計算する
+純関数`SpacedReviewScheduler`を`weak`モジュールに追加した。`WeakNotesAnalyzer`
+同様、永続化先は規定せず、Leitner方式（箱レベルが上がるほど復習間隔が広がり、
+誤答すると箱レベル0に戻る）のロジックのみを提供する。`intervalsByBoxLevel`
+（1/2/4/7/15日）はコンストラクタで差し替え不可の固定値とし、必要になれば
+`AdaptiveDifficulty`のように閾値差し替え可能な設計へ拡張する。問題IDごとの
+`ReviewState`の永続化・UIへの反映（復習リストの表示等）はアプリ側の責務であり、
+本コアは「次にいつ復習すべきか」の計算のみを提供する。
+
 ## ProfileStoreの追加（複数子どもプロファイル対応の土台）
 
 1台の端末を複数の子どもで共有する家庭向けに、`ProfileStore`抽象
@@ -400,6 +411,8 @@ drift実装は`profiles`/`active_profile_state`テーブルを追加、schemaVer
 既存ストアすべてに影響する大きな変更であり、アプリ側が複数プロファイル
 対応を必要とするタイミングで、本コアの各Store抽象に`profileId`引数を
 追加する形で段階的に対応する想定とする（本PRでは未着手）。
+
+## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
 screen_time連携、cross_app、Firebase直接利用、analytics SDK（既定なし）、freezed、
