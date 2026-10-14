@@ -58,12 +58,35 @@ class ScreenTimeStates extends Table {
   Set<Column> get primaryKey => {id};
 }
 
-@DriftDatabase(tables: [Attempts, Consents, GrowthStates, ScreenTimeStates])
+/// 複数の子どもプロファイル（1台の端末を複数の子どもで共有する想定）。
+@DataClassName('ProfileRow')
+class Profiles extends Table {
+  TextColumn get id => text()();
+  TextColumn get displayName => text()();
+  IntColumn get birthYear => integer().nullable()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+/// 現在選択中のプロファイルID。単一行(id固定)で保持する。
+@DataClassName('ActiveProfileRow')
+class ActiveProfileState extends Table {
+  IntColumn get id => integer().withDefault(const Constant(0))();
+  TextColumn get activeProfileId => text().nullable()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+@DriftDatabase(
+  tables: [Attempts, Consents, GrowthStates, ScreenTimeStates, Profiles, ActiveProfileState],
+)
 class ProgressDatabase extends _$ProgressDatabase {
   ProgressDatabase(super.e);
 
   @override
-  int get schemaVersion => 5;
+  int get schemaVersion => 6;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -81,6 +104,10 @@ class ProgressDatabase extends _$ProgressDatabase {
           }
           if (from < 5) {
             await m.createTable(screenTimeStates);
+          }
+          if (from < 6) {
+            await m.createTable(profiles);
+            await m.createTable(activeProfileState);
           }
         },
       );

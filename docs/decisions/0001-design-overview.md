@@ -386,7 +386,20 @@ growthモジュールに「何日連続で学習したか」を計算する純�
 利用時間をリセットするように修正した。両実装は
 `test/screen_time_store_contract_test.dart`の契約テストで検証している。
 
-## 引き継がない・作らないもの
+## ProfileStoreの追加（複数子どもプロファイル対応の土台）
+
+1台の端末を複数の子どもで共有する家庭向けに、`ProfileStore`抽象
+（`Profile`の一覧・選択状態の管理、`InMemoryProfileStore`/`DriftProfileStore`、
+drift実装は`profiles`/`active_profile_state`テーブルを追加、schemaVersion 6へ
+移行）を追加した。両実装は`test/profile_store_contract_test.dart`の契約テストで
+検証している。
+
+スコープを意図的に「プロファイルの一覧・選択状態の管理」のみに限定した。
+`ProgressStore`/`GrowthStore`/`ScreenTimeStore`を実際にプロファイルIDで
+分離する（単一行保持からプロファイルごとの複数行保持へ変更する等）のは
+既存ストアすべてに影響する大きな変更であり、アプリ側が複数プロファイル
+対応を必要とするタイミングで、本コアの各Store抽象に`profileId`引数を
+追加する形で段階的に対応する想定とする（本PRでは未着手）。
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
 screen_time連携、cross_app、Firebase直接利用、analytics SDK（既定なし）、freezed、

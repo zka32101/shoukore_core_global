@@ -86,3 +86,7 @@
   追加し、`ProgressStore`/`GrowthStore`と同様に利用時間の永続化先を差し替え
   可能にした。`example/`に`ScreenTimeRepository`を追加し、端末内メモリの
   積算（再起動で消え日次リセットもされないバグがあった）から移行した。
+- 1台の端末を複数の子どもで共有する家庭向けに、`ProfileStore`抽象
+  （`InMemoryProfileStore`/`DriftProfileStore`）を追加した。プロファイルの
+  一覧・選択状態の管理のみを提供し、`Progress`/`Growth`/`ScreenTime`等の
+  既存ストアをプロファイルごとに分離する実装はアプリ側の責務とする。
