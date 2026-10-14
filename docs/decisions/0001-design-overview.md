@@ -314,6 +314,34 @@ example側の`GrowthRepository`は`GrowthStore`への保存・復元に書き換
 `GrowthRepository.load()`で起動時に状態を読み込むようにした。他の
 Storeモジュール同様、結合テストで検証しやすい`InMemoryGrowthStore`を使う。
 
+## 新規ロケール追加の手順
+
+本コアは地域ごとのコンプライアンス設定（`RegionalProfile`）を`regional/<locale>.yaml`
+として、教科非依存の設定として保持する。一方、`curriculum/<locale>.json`は
+算数固有のカリキュラムデータであり、「教科別アプリ/レポジトリ分割と本コアの境界」
+の方針により、将来的には算数アプリ側のレポジトリへ移設する対象である。
+新しいロケールを追加する際は、この2つを区別して進める。
+
+本コアに追加するもの（教科非依存）:
+1. `regional/<locale>.yaml`に、その地域の年齢同意・保護者同意要否・
+   日次リセット時刻・タイムゾーン・利用時間制限・プロファイリング広告可否を
+   定義する。対象国/地域の子ども向けプライバシー法令（LGPD/ECA Digital、
+   COPPA等）を確認し、不確実な論点はADRに「法令確認状況」として残す
+   （弁護士確認前提である旨を明記する）。
+2. `test/curriculum_and_regional_test.dart`に、`parseRegionalProfile`で
+   読み込めることを確認するテストを追加する。
+3. `l10n/app_<locale>.arb`にUI文言を追加する（既存キー一式を翻訳する）。
+
+本コアに追加しないもの（教科固有、アプリ側の責務）:
+- `curriculum/<locale>.json`（算数カリキュラムデータ）
+- 当該ロケール向けの`QuestionSource`実装の単元データ
+
+今回、米国(en, COPPA)向けの`regional/en.yaml`を雛形として追加した。
+`example/`側のロケール切替UIには追加していない（カリキュラムJSONが
+無いロケールをexampleで選択可能にすると、該当教科のUIが破綻するため）。
+実際にexampleで選択可能にするには、算数カリキュラムJSON
+（`curriculum/en.json`）を別途用意する必要がある。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
