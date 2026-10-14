@@ -1,6 +1,8 @@
 # ブラジル(pt-BR)の地域コンプライアンス設定。
 # ECA Digital（Lei 15.211/2025）・LGPD第14条を前提に厳しめ既定。
-# 法令の最終解釈は現地弁護士の確認が前提（docs/decisions/0001-design-overview.md参照）。
+# 法令の最終解釈は現地弁護士の確認が前提
+# （docs/decisions/0001-design-overview.md「LGPD第14条・ECA Digitalの法令確認状況」参照。
+#  特にECA Digitalのアプリダウンロード同意要件の対象年齢は未確定）。
 locale: pt_BR
 
 # LGPD第14条: 12歳未満は「子ども」として保護者の同意が原則必要。

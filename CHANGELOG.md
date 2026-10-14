@@ -28,3 +28,7 @@
 - `curriculum/pt_BR.json`をBNCC 1º-5º ano × 5 eixo全25単元に本格拡充。
   `Unit`に`habilidadeCodes`/`verified`を追加し、一次資料で確認できた単元と
   要検証（現地教員レビュー前提）の単元を区別できるようにした（ADR参照）。
+- LGPD第14条・ECA Digital（Lei 15.211/2025）の法令確認状況をADRに整理。
+  `regional/pt_BR.yaml`の既定値はLGPD第14条とは整合する一方、ECA Digitalの
+  アプリダウンロード同意要件の対象年齢が未確定であることを明記（コード変更なし、
+  弁護士確認待ちの事項として記録）。
