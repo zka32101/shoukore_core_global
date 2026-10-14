@@ -43,4 +43,5 @@ export 'src/guardian/weekly_report.dart';
 export 'src/privacy/age_gate.dart';
 export 'src/privacy/in_memory_consent_store.dart';
 export 'src/regional/regional_profile_loader.dart';
+export 'src/weak/spaced_review.dart';
 export 'src/weak/weak_notes.dart';

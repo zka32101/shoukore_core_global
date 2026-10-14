@@ -386,6 +386,17 @@ growthモジュールに「何日連続で学習したか」を計算する純�
 利用時間をリセットするように修正した。両実装は
 `test/screen_time_store_contract_test.dart`の契約テストで検証している。
 
+## SpacedReviewSchedulerの追加
+
+誤答した問題を間隔反復（spaced repetition）で再提示するタイミングを計算する
+純関数`SpacedReviewScheduler`を`weak`モジュールに追加した。`WeakNotesAnalyzer`
+同様、永続化先は規定せず、Leitner方式（箱レベルが上がるほど復習間隔が広がり、
+誤答すると箱レベル0に戻る）のロジックのみを提供する。`intervalsByBoxLevel`
+（1/2/4/7/15日）はコンストラクタで差し替え不可の固定値とし、必要になれば
+`AdaptiveDifficulty`のように閾値差し替え可能な設計へ拡張する。問題IDごとの
+`ReviewState`の永続化・UIへの反映（復習リストの表示等）はアプリ側の責務であり、
+本コアは「次にいつ復習すべきか」の計算のみを提供する。
+
 ## AchievementEvaluatorの追加
 
 既存の`GrowthSnapshot`（ストリーク・累計正答数）から達成済みバッジを判定する

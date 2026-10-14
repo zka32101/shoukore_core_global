@@ -86,5 +86,7 @@
   追加し、`ProgressStore`/`GrowthStore`と同様に利用時間の永続化先を差し替え
   可能にした。`example/`に`ScreenTimeRepository`を追加し、端末内メモリの
   積算（再起動で消え日次リセットもされないバグがあった）から移行した。
+- `weak`モジュールに誤答問題の間隔反復(spaced repetition)復習タイミングを計算する
+  `SpacedReviewScheduler`を追加した（Leitner方式、箱レベル0〜4）。
 - growthモジュールに`GrowthSnapshot`から達成済みバッジを判定する
   `AchievementEvaluator`を追加した（ストリーク3/7/30日、累計正答数100/500問）。
