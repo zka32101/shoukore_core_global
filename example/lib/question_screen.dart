@@ -66,7 +66,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
       answeredAt: widget.clock.now(),
     ));
     if (correct) {
-      widget.growthRepository.recordCorrectAnswer();
+      await widget.growthRepository.recordCorrectAnswer();
     }
     final mastery = await widget.progressStore.getMastery(widget.unit.id);
 

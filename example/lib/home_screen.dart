@@ -44,6 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
   // （学習記録はロケール切替の影響を受けない）。drift実装自体はコア側のテストで
   // 検証済みのため、サンプルアプリではUI結合確認に専念するInMemory実装を使う。
   final ProgressStore _progressStore = InMemoryProgressStore();
+  final GrowthStore _growthStore = InMemoryGrowthStore();
   final QuestionCache _questionCache = QuestionCache();
   final ConsentStore _consentStore = InMemoryConsentStore();
   ConsentRecord? _consent;
@@ -83,7 +84,11 @@ class _HomeScreenState extends State<HomeScreen> {
     RegionalProfile? regionalProfile = _regionalProfile;
     if (growthRepository == null || regionalProfile == null) {
       regionalProfile ??= await _repository.loadRegionalProfile(locale);
-      growthRepository ??= GrowthRepository(clock: _clock, profile: regionalProfile);
+      growthRepository ??= await GrowthRepository.load(
+        clock: _clock,
+        profile: regionalProfile,
+        store: _growthStore,
+      );
     }
     if (!mounted) return;
     setState(() {
