@@ -39,3 +39,6 @@
   `regional/pt_BR.yaml`の既定値はLGPD第14条とは整合する一方、ECA Digitalの
   アプリダウンロード同意要件の対象年齢が未確定であることを明記（コード変更なし、
   弁護士確認待ちの事項として記録）。
+- `InMemoryProgressStore`をコアに追加し、`DriftProgressStore`と共通の
+  契約テストスイート（`test/progress_store_contract_test.dart`）で
+  両実装の整合性を検証できるようにした。
