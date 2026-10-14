@@ -13,6 +13,8 @@ export 'src/notify/daily_reminder_planner.dart';
 export 'src/notify/in_memory_notification_scheduler.dart';
 export 'src/notify/notification_scheduler.dart';
 export 'src/privacy/consent_store.dart';
+export 'src/privacy/data_eraser.dart';
+export 'src/privacy/data_export.dart';
 export 'src/entitlement/entitlement_reader.dart';
 export 'src/growth/coin_wallet.dart';
 export 'src/growth/daily_boundary.dart';

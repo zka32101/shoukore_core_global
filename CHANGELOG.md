@@ -14,3 +14,5 @@
 - `example/` にja/pt_BRサンプルアプリを追加し、単元一覧→出題→採点→progress記録→
   保護者ゲート→ロケール切替の結合をwidgetテストで確認（実装順⑧）。
 - `l10n/app_pt.arb`（ベースロケール、gen-l10nの要件）を追加。
+- `DriftConsentStore`（`ConsentStore`の端末内drift実装、`ProgressDatabase`に`Consents`テーブルを追加）を追加。
+- `exportUserData` / `eraseAllUserData`（LGPD上のデータ書き出し/削除の権利行使対応）を追加。
