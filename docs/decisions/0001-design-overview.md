@@ -62,6 +62,32 @@ Android/iOSのネイティブプラグイン登録メカニズム）に依存す
 単体テストはコンストラクタ・デフォルト値など純粋なロジック部分にとどめ、実際の
 スケジューリング動作の結合確認は実機・エミュレータでのテストに委ねる。
 
+## BNCCカリキュラム本格拡充（curriculum/pt_BR.json）と一次資料アクセスの制約
+
+1º〜5º ano（anos iniciais）× 5 eixos（Números/Álgebra/Geometria/Grandezas e
+medidas/Probabilidade e estatística）の計25単元に拡充した。このセッションからは
+BNCC公式PDF（basenacionalcomum.mec.gov.br）・州教育局サイト・Nova Escola等の
+一次資料に直接アクセスできず（名前解決の失敗またはプロキシの403）、Web検索の
+要約で断片的に確認できた範囲のみを `Unit.verified: true` とし、それ以外は
+`Unit.verified: false`（知識ベースの推測）としている。
+
+- `verified: true`（Web検索で確認できたもの）: Números 1º-3º、Álgebra 1º、
+  Grandezas e medidas 1º・5º（体積の導入）、Probabilidade e estatística 1º-3º。
+- `verified: false`（要検証・現地教員レビュー前提）: 上記以外すべて。特に
+  Geometria・Álgebra 2º-5ºは全学年ともWeb検索で裏付けが取れていない。
+- `Unit.habilidadeCodes`（例: `EF01MA09`）はBNCCのhabilidadeコードとの対応を
+  記録するためのフィールドで、出題ロジックからは参照しない。
+- `tool/check_curriculum.dart` は各ファイルの `unverified` 単元数を出力する
+  （CIは落とさない。現地教員レビューの優先度把握のため）。
+- 出題テンプレートとhabilidadeの対応は粗い近似（例: Probabilidade
+  e estatística 1º anoの本来の内容は「分類・確率の初歩」だが、既存の
+  `StatisticsQuestionSource`（最大/最小/最頻値）で代用している）。本番投入前に
+  現地教員によるカリキュラム・問題内容の作り直しが必須。
+
+**推奨（次のアクション）**: ネットワーク制限のない環境でBNCC公式PDF
+（`BNCC_EI_EF_110518_versaofinal_site.pdf`, Matemática anos iniciais,
+p.276〜297付近）を取得し、`habilidadeCodes`と単元内容を機械的に照合すること。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

@@ -77,10 +77,14 @@ void main() {
   for (final file in files) {
     final doc = jsonDecode(file.readAsStringSync()) as Map<String, dynamic>;
     final locale = doc['locale'] as String? ?? '(unknown)';
-    final unitCount = (doc['units'] as List<dynamic>? ?? const []).length;
+    final units = (doc['units'] as List<dynamic>? ?? const []).cast<Map<String, dynamic>>();
+    final unverifiedCount = units.where((u) => (u['verified'] as bool?) != true).length;
 
     errors.addAll(validateCurriculumDoc(file.path, doc));
-    stdout.writeln('checked ${file.path} (locale=$locale, units=$unitCount)');
+    stdout.writeln(
+      'checked ${file.path} (locale=$locale, units=${units.length}, '
+      'unverified=$unverifiedCount — 現地教員レビュー前提)',
+    );
   }
 
   if (errors.isNotEmpty) {
