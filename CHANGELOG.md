@@ -28,6 +28,10 @@
 - `curriculum/pt_BR.json`をBNCC 1º-5º ano × 5 eixo全25単元に本格拡充。
   `Unit`に`habilidadeCodes`/`verified`を追加し、一次資料で確認できた単元と
   要検証（現地教員レビュー前提）の単元を区別できるようにした（ADR参照）。
+- `example/`に週次レポート画面を追加し、弱点ノート（`WeakNotesAnalyzer`）・
+  週次レポート（`WeeklyReportBuilder`）のUI結合確認を行えるようにした。
+  `QuestionSource`は生成した問題を保持しないため、サンプルアプリ側で
+  `QuestionCache`（questionId→Questionの簡易ルックアップ）を追加している。
 - BNCCカリキュラムの第2回検証パスとして、複数の独立した教育系サイトで
   内容が一致した`mat_numeros_4`/`mat_numeros_5`/`mat_algebra_2`を
   `verified: true`に更新（unverified 16→13単元、詳細はADR参照）。

@@ -17,5 +17,11 @@
   "consentTitle": "É necessário o consentimento dos responsáveis",
   "consentBody": "Os dados de aprendizagem do seu filho(a) são armazenados apenas no dispositivo. Se concordar, selecione \"Concordo\".",
   "consentAcceptButton": "Concordo",
-  "consentDeclineButton": "Não concordo"
+  "consentDeclineButton": "Não concordo",
+  "weeklyReportTile": "Relatório semanal (para responsáveis)",
+  "weeklyReportTitle": "Relatório semanal",
+  "weeklyReportAccuracy": "Acerto: {percent}% ({correct}/{total} questões)",
+  "weeklyReportUnitLine": "{unitId}: {percent}% ({correct}/{total} questões)",
+  "weeklyReportTopMisconception": "Erro mais comum: {tag}",
+  "weeklyReportNoData": "Ainda não há registros de aprendizagem nesta semana."
 }
