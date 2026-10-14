@@ -39,6 +39,8 @@ class GrowthStates extends Table {
   DateTimeColumn get missionDay => dateTime().nullable()();
   IntColumn get missionCompletedCount => integer().withDefault(const Constant(0))();
   BoolColumn get missionRewardClaimed => boolean().withDefault(const Constant(false))();
+  IntColumn get currentStreakDays => integer().withDefault(const Constant(0))();
+  DateTimeColumn get lastStudiedDay => dateTime().nullable()();
 
   @override
   Set<Column> get primaryKey => {id};
@@ -61,7 +63,7 @@ class ProgressDatabase extends _$ProgressDatabase {
   ProgressDatabase(super.e);
 
   @override
-  int get schemaVersion => 4;
+  int get schemaVersion => 5;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -74,6 +76,10 @@ class ProgressDatabase extends _$ProgressDatabase {
             await m.createTable(growthStates);
           }
           if (from < 4) {
+            await m.addColumn(growthStates, growthStates.currentStreakDays);
+            await m.addColumn(growthStates, growthStates.lastStudiedDay);
+          }
+          if (from < 5) {
             await m.createTable(screenTimeStates);
           }
         },

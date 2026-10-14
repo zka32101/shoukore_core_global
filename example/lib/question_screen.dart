@@ -66,6 +66,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
       chosenId: chosenId,
       answeredAt: widget.clock.now(),
     ));
+    await widget.growthRepository.recordStudyActivity();
     if (correct) {
       await widget.growthRepository.recordCorrectAnswer();
     }
@@ -114,7 +115,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   Text(
                     'stage: ${widget.growthRepository.stage.name}, '
                     'coins: ${widget.growthRepository.wallet.balance}, '
-                    'mission: ${widget.growthRepository.missionState.completedCount}',
+                    'mission: ${widget.growthRepository.missionState.completedCount}, '
+                    'streak: ${widget.growthRepository.streak.currentStreakDays}',
                     key: const Key('growthStatusText'),
                   ),
                   const SizedBox(height: 16),

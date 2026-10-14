@@ -79,6 +79,9 @@
 - `Question.explanationId`を実際に有効化した。四則演算の各テンプレに
   `explanationId`を設定し、`example/`で回答後に教科書的な解説を表示する
   UI結合確認を追加した。
+- growthモジュールに学習ストリーク（何日連続で学習したか）を計算する
+  `LearningStreak`を追加。`GrowthSnapshot`/`GrowthStore`に状態を持たせ、
+  `example/`の出題画面で正誤を問わず全回答時に更新・表示するようにした。
 - `ScreenTimeStore`抽象（`InMemoryScreenTimeStore`/`DriftScreenTimeStore`）を
   追加し、`ProgressStore`/`GrowthStore`と同様に利用時間の永続化先を差し替え
   可能にした。`example/`に`ScreenTimeRepository`を追加し、端末内メモリの

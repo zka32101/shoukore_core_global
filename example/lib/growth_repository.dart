@@ -55,6 +55,25 @@ class GrowthRepository {
         );
   CoinWallet get wallet => CoinWallet(balance: _snapshot.coinBalance);
   GrowthStage get stage => stageCalculator.stageFor(_snapshot.totalCorrectAnswers);
+  LearningStreak get streak => LearningStreak(
+        currentStreakDays: _snapshot.currentStreakDays,
+        lastStudiedDay: _snapshot.lastStudiedDay,
+      );
+
+  /// 問題に回答するたびに呼ぶ（正誤を問わない）。学習ストリークを更新する。
+  Future<void> recordStudyActivity() async {
+    final nextStreak = streak.recordStudy(now: clock.now(), boundary: boundary);
+    _snapshot = GrowthSnapshot(
+      totalCorrectAnswers: _snapshot.totalCorrectAnswers,
+      coinBalance: _snapshot.coinBalance,
+      missionDay: _snapshot.missionDay,
+      missionCompletedCount: _snapshot.missionCompletedCount,
+      missionRewardClaimed: _snapshot.missionRewardClaimed,
+      currentStreakDays: nextStreak.currentStreakDays,
+      lastStudiedDay: nextStreak.lastStudiedDay,
+    );
+    await _store.save(_snapshot);
+  }
 
   /// 1問正解するたびに呼ぶ。ミッション進捗を進め、目標達成していれば報酬を自動付与する。
   Future<void> recordCorrectAnswer() async {
@@ -76,6 +95,8 @@ class GrowthRepository {
       missionDay: nextState.missionDay,
       missionCompletedCount: nextState.completedCount,
       missionRewardClaimed: nextState.rewardClaimed,
+      currentStreakDays: _snapshot.currentStreakDays,
+      lastStudiedDay: _snapshot.lastStudiedDay,
     );
     await _store.save(_snapshot);
   }
