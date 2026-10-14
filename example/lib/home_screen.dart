@@ -5,7 +5,9 @@ import 'curriculum_repository.dart';
 import 'guardian_dialog.dart';
 import 'in_memory_progress_store.dart';
 import 'l10n/app_localizations.dart';
+import 'question_cache.dart';
 import 'question_screen.dart';
+import 'weekly_report_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, required this.onLocaleChanged});
@@ -28,6 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
   // （学習記録はロケール切替の影響を受けない）。drift実装自体はコア側のテストで
   // 検証済みのため、サンプルアプリではUI結合確認に専念するInMemory実装を使う。
   final ProgressStore _progressStore = InMemoryProgressStore();
+  final QuestionCache _questionCache = QuestionCache();
 
   @override
   void didChangeDependencies() {
@@ -89,10 +92,25 @@ class _HomeScreenState extends State<HomeScreen> {
                           source: _source!,
                           progressStore: _progressStore,
                           clock: _clock,
+                          questionCache: _questionCache,
                         ),
                       ),
                     ),
                   ),
+                ListTile(
+                  key: const Key('weeklyReportTile'),
+                  title: Text(l10n.weeklyReportTile),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => WeeklyReportScreen(
+                        unitIds: curriculum.units.map((u) => u.id).toList(),
+                        progressStore: _progressStore,
+                        clock: _clock,
+                        questionCache: _questionCache,
+                      ),
+                    ),
+                  ),
+                ),
                 ListTile(
                   key: const Key('guardianGateTile'),
                   title: Text(l10n.guardianGateTitle),
