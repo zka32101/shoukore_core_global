@@ -1,0 +1,1 @@
+# shoukore_core_global
