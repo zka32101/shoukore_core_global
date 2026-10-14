@@ -422,6 +422,21 @@ drift実装は`profiles`/`active_profile_state`テーブルを追加、schemaVer
 対応を必要とするタイミングで、本コアの各Store抽象に`profileId`引数を
 追加する形で段階的に対応する想定とする（本PRでは未着手）。
 
+## LocaleFormatterの追加（数字・日付表記のロケール対応）
+
+「保護者ゲートの文言・数字表記が固定」（本ADR冒頭の表の8番）という既存の
+課題に対応し、`package:intl`（`NumberFormat`/`DateFormat`）を薄くラップした
+`LocaleFormatter`を`regional`モジュールに追加した。`RegionalProfile.locale`を
+受け取り、桁区切り・日付・時刻のロケール対応表記を返す。文言そのもの（arb）は
+引き続きアプリ側の責務であり、本コアが提供するのは数字・日付の表記ルールのみ。
+
+`DateFormat`はロケールデータの初期化（`initializeDateFormatting(locale)`）に
+依存するため、未初期化のロケールで呼ぶと`LocaleDataException`になる。
+`flutter_localizations`経由でMaterialAppを構築している場合は通常自動的に
+初期化されるが、コア側の単体テストでは明示的に
+`package:intl/date_symbol_data_local.dart`の`initializeDateFormatting`を
+呼ぶ必要がある（`test/locale_formatter_test.dart`参照）。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
