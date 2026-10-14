@@ -29,11 +29,16 @@ class QuestionScreen extends StatefulWidget {
 
 class _QuestionScreenState extends State<QuestionScreen> {
   static const _weakNotesAnalyzer = WeakNotesAnalyzer();
+  static const _adaptiveDifficulty = AdaptiveDifficulty();
 
   Question? _question;
   Mastery? _mastery;
   String? _feedback;
   String? _overcomeMisconception;
+
+  // 目標難易度はAdaptiveDifficultyが直近の正誤結果・最終練習日から計算する
+  // （masteryスコアをそのまま難易度として使うと、忘却分の調整が反映されない）。
+  double _targetDifficulty = 0.5;
 
   @override
   void initState() {
@@ -45,7 +50,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
     final mastery = await widget.progressStore.getMastery(widget.unit.id);
     final question = await widget.source.generate(
       unitId: widget.unit.id,
-      targetDifficulty: mastery.score == 0 ? 0.5 : mastery.score,
+      targetDifficulty: _targetDifficulty,
     );
     widget.questionCache.register(question);
     setState(() {
@@ -70,6 +75,15 @@ class _QuestionScreenState extends State<QuestionScreen> {
     }
     final mastery = await widget.progressStore.getMastery(widget.unit.id);
 
+    // 直近5問の正誤結果と最終練習日から、次回の目標難易度を計算する。
+    final recentAttempts = await widget.progressStore.getAttempts(widget.unit.id, limit: 5);
+    final nextDifficulty = _adaptiveDifficulty.nextDifficulty(
+      currentDifficulty: _targetDifficulty,
+      recentResults: recentAttempts.map((a) => a.correct).toList(),
+      lastPracticedAt: mastery.lastPracticedAt,
+      clock: widget.clock,
+    );
+
     // 直近の誤解傾向から最頻出タイプを求め、それを克服済み（直近N問連続正解かつ
     // それ以前に同タグの誤答があった）と判定できればバッジ表示する。
     final attempts = await widget.progressStore.getAttempts(widget.unit.id);
@@ -90,6 +104,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
       _feedback = correct ? 'correct' : 'incorrect';
       _mastery = mastery;
       _overcomeMisconception = overcome ? topMisconception : null;
+      _targetDifficulty = nextDifficulty;
     });
   }
 
@@ -110,6 +125,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
                       'mastery: ${(_mastery!.score * 100).toStringAsFixed(0)}%',
                       key: const Key('masteryText'),
                     ),
+                  Text(
+                    'difficulty: ${(_targetDifficulty * 100).round()}%',
+                    key: const Key('difficultyText'),
+                  ),
                   Text(
                     'stage: ${widget.growthRepository.stage.name}, '
                     'coins: ${widget.growthRepository.wallet.balance}, '

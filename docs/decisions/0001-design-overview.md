@@ -227,6 +227,16 @@ misconceptionTagsを設定していない（本格導入は別途の課題）。
 同意不要と判定された場合も`parentalConsentGiven: false`で記録し、
 「未確認/不要」という表示上の区別は同意状態ではなく表示ロジック側で行う。
 
+## AdaptiveDifficultyのexample結合確認
+
+これまでexampleの出題画面は`Mastery.score`（直近masteryWindow件の正答率）を
+そのまま`targetDifficulty`として渡しており、`AdaptiveDifficulty`
+（忘却分の調整、上昇/下降レートの非対称性）が一度も使われていなかった。
+`QuestionScreen`に目標難易度の状態を持たせ、回答のたびに
+`AdaptiveDifficulty.nextDifficulty()`（直近5問の正誤結果＋`Mastery.lastPracticedAt`）
+で更新するように変更した。`mastery`表示（過去の実績）と`difficulty`表示
+（次に出す問題の目標難易度）を区別して画面に表示する。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
