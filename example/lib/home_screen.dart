@@ -12,6 +12,7 @@ import 'in_memory_progress_store.dart';
 import 'l10n/app_localizations.dart';
 import 'question_cache.dart';
 import 'question_screen.dart';
+import 'screen_time_repository.dart';
 import 'weekly_report_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -32,10 +33,8 @@ class _HomeScreenState extends State<HomeScreen> {
   ArithmeticQuestionSource? _source;
   GrowthRepository? _growthRepository;
   RegionalProfile? _regionalProfile;
-
-  // ScreenTimeGuardの利用時間計測はアプリ側の責務（ADR参照）。ここでは出題画面を
-  // 開いていた時間の合計を簡易に積算する（端末単位、再起動で消える）。
-  Duration _usedToday = Duration.zero;
+  ScreenTimeRepository? _screenTimeRepository;
+  final ScreenTimeStore _screenTimeStore = InMemoryScreenTimeStore();
 
   // pt_BRの既定ではscreenTimeLimitMinutesが0（無制限）のため、結合確認用に
   // 保護者が制限を設定した状態を模擬するトグルを用意する。
@@ -83,12 +82,18 @@ class _HomeScreenState extends State<HomeScreen> {
     // ロケール切替の影響を受けない。既に生成済みなら使い回す。
     GrowthRepository? growthRepository = _growthRepository;
     RegionalProfile? regionalProfile = _regionalProfile;
-    if (growthRepository == null || regionalProfile == null) {
+    ScreenTimeRepository? screenTimeRepository = _screenTimeRepository;
+    if (growthRepository == null || regionalProfile == null || screenTimeRepository == null) {
       regionalProfile ??= await _repository.loadRegionalProfile(locale);
       growthRepository ??= await GrowthRepository.load(
         clock: _clock,
         profile: regionalProfile,
         store: _growthStore,
+      );
+      screenTimeRepository ??= await ScreenTimeRepository.load(
+        clock: _clock,
+        boundary: DailyBoundary(regionalProfile),
+        store: _screenTimeStore,
       );
     }
     if (!mounted) return;
@@ -97,6 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _source = source;
       _growthRepository = growthRepository;
       _regionalProfile = regionalProfile;
+      _screenTimeRepository = screenTimeRepository;
     });
   }
 
@@ -203,8 +209,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ListTile(
                   key: const Key('screenTimeStatusTile'),
                   title: Text(
-                    'screen time used: ${_usedToday.inMinutes}min, '
-                    'remaining: ${_screenTimeGuard.remaining(_usedToday).inMinutes}min',
+                    'screen time used: ${_screenTimeRepository!.usedToday.inMinutes}min, '
+                    'remaining: ${_screenTimeGuard.remaining(_screenTimeRepository!.usedToday).inMinutes}min',
                   ),
                 ),
                 for (final unit in curriculum.units.where((u) => u.templateIds.isNotEmpty))
@@ -225,7 +231,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         );
                         return;
                       }
-                      if (_screenTimeGuard.isOverLimit(_usedToday)) {
+                      if (_screenTimeGuard.isOverLimit(_screenTimeRepository!.usedToday)) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             key: const Key('screenTimeLimitSnackBar'),
@@ -247,7 +253,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       );
-                      _usedToday += _clock.now().difference(openedAt);
+                      await _screenTimeRepository!.addUsage(_clock.now().difference(openedAt));
                       // 出題画面でgrowth状態（stage/coins）が更新されている可能性があるため、
                       // ホームに戻った際に再描画する。
                       if (mounted) setState(() {});

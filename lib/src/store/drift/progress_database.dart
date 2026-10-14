@@ -44,12 +44,24 @@ class GrowthStates extends Table {
   Set<Column> get primaryKey => {id};
 }
 
-@DriftDatabase(tables: [Attempts, Consents, GrowthStates])
+/// 利用時間計測（ECA Digitalの保護者監督ツール対応）。単一行(id固定)で
+/// 「今日」の利用時間のみを保持する（日次リセットは`DailyBoundary`に委ねる）。
+@DataClassName('ScreenTimeStateRow')
+class ScreenTimeStates extends Table {
+  IntColumn get id => integer().withDefault(const Constant(0))();
+  IntColumn get usedTodayMinutes => integer().withDefault(const Constant(0))();
+  DateTimeColumn get day => dateTime().nullable()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+@DriftDatabase(tables: [Attempts, Consents, GrowthStates, ScreenTimeStates])
 class ProgressDatabase extends _$ProgressDatabase {
   ProgressDatabase(super.e);
 
   @override
-  int get schemaVersion => 3;
+  int get schemaVersion => 4;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -60,6 +72,9 @@ class ProgressDatabase extends _$ProgressDatabase {
           }
           if (from < 3) {
             await m.createTable(growthStates);
+          }
+          if (from < 4) {
+            await m.createTable(screenTimeStates);
           }
         },
       );

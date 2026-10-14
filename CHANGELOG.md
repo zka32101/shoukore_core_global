@@ -76,3 +76,7 @@
 - 米国(en, COPPA)向けの`regional/en.yaml`を新規ロケール追加の雛形として追加。
   ADRに「新規ロケール追加の手順」を整理し、本コアに追加すべきもの（RegionalProfile・
   l10n）と算数アプリ側に残すべきもの（カリキュラムJSON）を区別した。
+- `ScreenTimeStore`抽象（`InMemoryScreenTimeStore`/`DriftScreenTimeStore`）を
+  追加し、`ProgressStore`/`GrowthStore`と同様に利用時間の永続化先を差し替え
+  可能にした。`example/`に`ScreenTimeRepository`を追加し、端末内メモリの
+  積算（再起動で消え日次リセットもされないバグがあった）から移行した。
