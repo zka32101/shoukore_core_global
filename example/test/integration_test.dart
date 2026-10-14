@@ -15,6 +15,18 @@ void main() {
       // 既定ロケール(pt_BR)でpt_BRのカリキュラム単元一覧が表示される。
       expect(find.byKey(const Key('unit_mat_numeros_1')), findsOneWidget);
 
+      // 既定ではpremiumが無効なので単元はロックされており、タップしても出題画面に遷移しない。
+      expect(find.byKey(const Key('lockIcon')), findsWidgets);
+      await tester.tap(find.byKey(const Key('unit_mat_numeros_1')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('entitlementLockedSnackBar')), findsOneWidget);
+      expect(find.byKey(const Key('masteryText')), findsNothing);
+
+      // premiumトグルをONにすると単元ロックが解除される。
+      await tester.tap(find.byKey(const Key('premiumToggleButton')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('lockIcon')), findsNothing);
+
       // 単元数が増え一覧が画面に収まらないため、保護者ゲートのタイルはスクロールして確認する。
       await tester.scrollUntilVisible(find.byKey(const Key('guardianGateTile')), 300.0);
       expect(find.text('Para os responsáveis'), findsOneWidget);

@@ -46,5 +46,6 @@
       "tag": {"type": "String"}
     }
   },
-  "weeklyReportNoData": "この1週間の学習記録はまだありません。"
+  "weeklyReportNoData": "この1週間の学習記録はまだありません。",
+  "entitlementLockedMessage": "この教科はロックされています。購入すると解放されます。"
 }

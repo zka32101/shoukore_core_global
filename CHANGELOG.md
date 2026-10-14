@@ -43,6 +43,9 @@
   UI結合確認を追加。`GrowthRepository`（端末内の簡易な状態保持）を介して、
   正解のたびにミッション進捗・コイン・成長段階が更新される様子を
   出題画面・ホーム画面の両方に表示する。
+- `example/`にEntitlement（課金状態）連動の単元ロックUIを追加。premiumトグルで
+  購入フローを模擬し、`Entitlement.isUnlocked`に応じて単元タップ時の
+  ロックメッセージ表示/出題画面遷移を切り替える結合確認を追加した。
 - `InMemoryProgressStore`をコアに追加し、`DriftProgressStore`と共通の
   契約テストスイート（`test/progress_store_contract_test.dart`）で
   両実装の整合性を検証できるようにした。
