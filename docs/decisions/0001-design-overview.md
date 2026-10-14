@@ -183,6 +183,26 @@ ANPD関連の解説記事）で裏付けを確認した。公式法令原文（P
 （`lib/src/progress/in_memory_progress_store.dart`）にも追加した。
 `example/`側の実装はそのまま残している（example独自の初期化経路を保ちたいため）。
 
+## 弱点ノート「克服」バッジのexample結合確認とmisconceptionTagsの実データ化
+
+`WeakNotesAnalyzer.isOvercome()`はコア側の単体テスト（手組みのAttempt/Question
+フィクスチャ）では検証済みだったが、本番のQuestionSource実装が実際に
+`Question.misconceptionTags`を設定していなかったため、example側で意味のある
+結合確認ができない状態だった。`ArithmeticQuestionSource`の減算に、典型的な
+誤解（引き算を足し算と取り違える、`a + b`を誤答選択肢に含める）として
+`subtraction_as_addition`タグを追加し、`example/`のQuestionScreenで
+誤解傾向の分析→克服判定→バッジ表示（`misconceptionOvercomeBadge`）まで
+一気通貫で動作することを確認できるようにした。
+
+既存のGeometry/Measurement/Sequence/Statistics系QuestionSourceは引き続き
+misconceptionTagsを設定していない（本格導入は別途の課題）。
+
+既存の`example/test/integration_test.dart`の既定シナリオは加算単元
+（`mat_numeros_1`）を使っており、減算の誤解克服フローは乱数に依存する
+単元・テンプレ選択（`mat_numeros_2`はtpl_add/tpl_subをランダムに選択）のため、
+決定的な結合テストシナリオの追加は見送った。コア側の単体テスト
+（`subtraction_as_addition`タグの付与自体の検証）で確認している。
+
 ## AgeGate/ConsentStoreのexample結合確認
 
 `AgeGate`（生まれ年から保護者同意の要否を判定）と`ConsentStore`

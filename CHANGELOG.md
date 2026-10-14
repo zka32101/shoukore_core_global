@@ -49,6 +49,9 @@
 - `InMemoryProgressStore`をコアに追加し、`DriftProgressStore`と共通の
   契約テストスイート（`test/progress_store_contract_test.dart`）で
   両実装の整合性を検証できるようにした。
+- `ArithmeticQuestionSource`の減算に典型的な誤解タグ（`subtraction_as_addition`）
+  を追加し、`WeakNotesAnalyzer.isOvercome()`の判定結果を`example/`の出題画面に
+  「誤解を克服しました」バッジとして表示する結合確認を追加した。
 - `example/`にAgeGate/ConsentStoreのUI結合確認を追加。生まれ年入力→
   保護者同意要否判定→（必要なら）同意ダイアログ→`ConsentStore`記録、という
   一連のフローと同意状態表示タイルを追加した。

@@ -25,6 +25,7 @@
   "weeklyReportTopMisconception": "Erro mais comum: {tag}",
   "weeklyReportNoData": "Ainda não há registros de aprendizagem nesta semana.",
   "entitlementLockedMessage": "Esta matéria está bloqueada. Compre para desbloquear.",
+  "misconceptionOvercome": "Você superou o erro de \"{tag}\"!",
   "ageGateTitle": "Qual é o seu ano de nascimento?",
   "ageGateBirthYearHint": "Ex: 2016",
   "ageGateConfirmButton": "Avançar",
