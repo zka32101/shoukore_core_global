@@ -227,6 +227,19 @@ misconceptionTagsを設定していない（本格導入は別途の課題）。
 同意不要と判定された場合も`parentalConsentGiven: false`で記録し、
 「未確認/不要」という表示上の区別は同意状態ではなく表示ロジック側で行う。
 
+## NotificationScheduler/DailyReminderPlannerのexample結合確認
+
+通知モジュール（`NotificationScheduler`/`DailyReminderPlanner`）はコア側に実装・
+単体テスト済みだったが、UI結合確認が未着手だった。実機通知アダプタ
+（`LocalNotificationScheduler`）はプラットフォームプラグイン登録に依存し
+テスト環境では検証できないため（本章冒頭の方針通り）、サンプルアプリでは
+`InMemoryNotificationScheduler`でスケジュール状態のUI結合確認に専念する。
+ホーム画面に「デイリーミッションのリマインド通知」タイルを追加し、タップで
+`DailyReminderPlanner.reminderAt()`が返す時刻への通知予約/解除を切り替えられる
+ようにした。通知の実際のトリガー（OS側のスケジュール実行）自体はコア側の
+単体テストと`LocalNotificationScheduler`の責務であり、ここではスケジュール
+状態の表示のみを確認する。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

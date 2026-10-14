@@ -48,6 +48,14 @@ class _HomeScreenState extends State<HomeScreen> {
   final ConsentStore _consentStore = InMemoryConsentStore();
   ConsentRecord? _consent;
 
+  // 通知のスケジューリングはアプリ側の責務（プッシュ(FCM)は使わない設計）。
+  // 実機通知アダプタ(LocalNotificationScheduler)はプラットフォームプラグイン登録に
+  // 依存しテスト環境では検証できないため（ADR参照）、サンプルアプリでは
+  // InMemoryNotificationSchedulerでスケジュール状態のUI結合確認に専念する。
+  final NotificationScheduler _notificationScheduler = InMemoryNotificationScheduler();
+  static const _dailyReminderId = 'daily_reminder';
+  DateTime? _dailyReminderScheduledAt;
+
   // 課金状態はアプリ側の責務（ADR参照）。コアは`Entitlement`を読むだけなので、
   // サンプルアプリでは購入フローの代わりにpremiumトグルで模擬する。
   Entitlement _entitlement = const Entitlement(unlockedSubjectIds: {});
@@ -96,6 +104,23 @@ class _HomeScreenState extends State<HomeScreen> {
     final consent = await _consentStore.getConsent();
     if (!mounted) return;
     setState(() => _consent = consent);
+  }
+
+  Future<void> _toggleDailyReminder() async {
+    if (_dailyReminderScheduledAt != null) {
+      await _notificationScheduler.cancel(_dailyReminderId);
+      setState(() => _dailyReminderScheduledAt = null);
+      return;
+    }
+    final planner = DailyReminderPlanner(_regionalProfile!);
+    final reminderAt = planner.reminderAt(_clock.now());
+    await _notificationScheduler.schedule(
+      id: _dailyReminderId,
+      at: reminderAt,
+      titleKey: 'dailyReminderTitle',
+      bodyKey: 'dailyReminderBody',
+    );
+    setState(() => _dailyReminderScheduledAt = reminderAt);
   }
 
   ScreenTimeGuard get _screenTimeGuard {
@@ -246,6 +271,20 @@ class _HomeScreenState extends State<HomeScreen> {
                     key: const Key('consentStatusText'),
                   ),
                   onTap: _runAgeGateFlow,
+                ),
+                ListTile(
+                  key: const Key('dailyReminderTile'),
+                  title: Text(l10n.dailyReminderTile),
+                  subtitle: Text(
+                    _dailyReminderScheduledAt != null
+                        ? l10n.dailyReminderScheduled(
+                            _dailyReminderScheduledAt!.hour,
+                            _dailyReminderScheduledAt!.minute,
+                          )
+                        : l10n.dailyReminderNotScheduled,
+                    key: const Key('dailyReminderStatusText'),
+                  ),
+                  onTap: _toggleDailyReminder,
                 ),
                 ListTile(
                   key: const Key('guardianGateTile'),

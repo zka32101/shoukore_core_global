@@ -57,3 +57,6 @@
 - `example/`にAgeGate/ConsentStoreのUI結合確認を追加。生まれ年入力→
   保護者同意要否判定→（必要なら）同意ダイアログ→`ConsentStore`記録、という
   一連のフローと同意状態表示タイルを追加した。
+- `example/`にNotificationScheduler/DailyReminderPlannerのUI結合確認を追加。
+  ホーム画面にデイリーミッションのリマインド通知タイルを追加し、タップで
+  `InMemoryNotificationScheduler`への通知予約/解除を切り替えられるようにした。

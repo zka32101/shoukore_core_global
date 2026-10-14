@@ -32,5 +32,8 @@
   "ageGateConfirmButton": "Avançar",
   "ageVerificationTile": "Verificação de idade",
   "consentStatusGiven": "Consentimento dos responsáveis: concedido",
-  "consentStatusNotGiven": "Consentimento dos responsáveis: não confirmado/não necessário"
+  "consentStatusNotGiven": "Consentimento dos responsáveis: não confirmado/não necessário",
+  "dailyReminderTile": "Notificação de lembrete da missão diária",
+  "dailyReminderScheduled": "Notificação agendada ({hour}:{minute})",
+  "dailyReminderNotScheduled": "Nenhuma notificação agendada"
 }
