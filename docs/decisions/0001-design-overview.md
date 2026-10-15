@@ -618,6 +618,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 を`maxDelay`で上限、`maxAttempts`到達後は再送を諦めるべきと判定する。
 実際のHTTP送信・APIコールはアプリ側の責務とする。
 
+## StaleDataPolicyの追加
+
+オフライン運用が長期化した端末では、ローカルの`ProgressStore`/`GrowthStore`
+等がサーバーと長期間同期されないままになる可能性がある。これを検知するため、
+純関数`StaleDataPolicy`（`isStale`/`remainingUntilStale`）を`sync`モジュールに
+追加した。`lastSyncedAt`（最終同期時刻、未同期は`null`）と`now`を受け取り、
+`staleAfter`を超えていれば要同期と判定するだけで、最終同期時刻の記録・保存
+自体はアプリ側の責務とする。
+
 ## UnitRecommendationの追加
 
 出題画面から「次にやる単元」への導線を作る際、未学習・弱点が強い単元を
