@@ -609,6 +609,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 `consentedAt`/`policyVersion`と比較するだけで、`ConsentStore`への保存・
 読込自体には関与しない。
 
+## StaleDataPolicyの追加
+
+オフライン運用が長期化した端末では、ローカルの`ProgressStore`/`GrowthStore`
+等がサーバーと長期間同期されないままになる可能性がある。これを検知するため、
+純関数`StaleDataPolicy`（`isStale`/`remainingUntilStale`）を`sync`モジュールに
+追加した。`lastSyncedAt`（最終同期時刻、未同期は`null`）と`now`を受け取り、
+`staleAfter`を超えていれば要同期と判定するだけで、最終同期時刻の記録・保存
+自体はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
