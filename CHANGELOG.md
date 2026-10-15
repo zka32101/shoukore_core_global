@@ -173,3 +173,5 @@
 - `QuietHoursGuard`の結果を踏まえ、静かな時間帯に予定されていた通知を
   時間帯明け直後に再スケジュールすべき時刻を計算する純関数
   `NotificationQuietMerge`をnotifyモジュールに追加した。
+- 連続正解数に応じたボーナスコインを計算する純関数`AnswerStreakBonus`を
+  growthモジュールに追加した。`CoinWallet.earn`への反映はアプリ側が行う。
