@@ -157,6 +157,10 @@
 - 一定時間操作がない場合にロック状態へ戻すべきかを判定する純関数
   `SessionTimeoutPolicy`をguardianモジュールに追加した。共有端末での
   意図しない継続利用を防ぐ。`GuardianGate`とは独立した制限。
+- 一定期間学習していない単元の`Mastery.score`を時間経過で緩やかに減衰させる
+  純関数`MasteryDecay`をquestionモジュールに追加した。`ProgressStore`への
+  保存は行わず、`UnitRecommendation`等への入力として使う表示・判定用の値を
+  計算するだけ。
 - `exportUserData`の出力を再取り込みする前に想定キー構成・型を検証する
   純関数`ExportIntegrityChecker`（`validate`/`isValid`）をprivacyモジュール
   に追加した。端末移行時のインポート処理の安全性を上げる。
