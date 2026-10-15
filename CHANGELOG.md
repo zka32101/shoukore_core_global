@@ -110,3 +110,6 @@
   `PendingSyncQueue`抽象（`InMemoryPendingSyncQueue`/`DriftPendingSyncQueue`）を
   syncモジュールに追加した。実際の送信（HTTP等）・APIはアプリ側の責務とし、
   本コアはキューの永続化・再送管理のみを提供する。
+- `ProfileStore`のアクティブプロファイル切替時に他プロファイルの学習データを
+  誤って混在させないための軽量ガード`ActiveProfileGuard`を追加した。
+  （`isSameProfile`/`ensureSameProfile`）
