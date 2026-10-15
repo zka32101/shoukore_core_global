@@ -464,6 +464,21 @@ drift実装は`owned_items`テーブル（1行=1所持アイテム）を追加�
 `package:intl/date_symbol_data_local.dart`の`initializeDateFormatting`を
 呼ぶ必要がある（`test/locale_formatter_test.dart`参照）。
 
+## PendingSyncQueueの追加（将来のサーバー同期に備えた土台）
+
+本コアはFirebase等の外部サービスに依存しない方針（本ADR冒頭の表の3番）だが、
+将来アプリ側が独自のサーバー同期機能を追加する可能性に備え、送信失敗した
+アイテムを溜めて再送するキューの抽象`PendingSyncQueue`（`PendingSyncItem`の
+enqueue/listPending/markSynced/markFailed/clearAll、`InMemoryPendingSyncQueue`/
+`DriftPendingSyncQueue`、drift実装は`pending_sync_items`テーブルを追加、
+schemaVersion 8へ移行）を`sync`モジュールに追加した。
+
+`PendingSyncItem.payload`は`Map<String, dynamic>`（JSON互換の値のみ）とし、
+drift実装では`jsonEncode`/`jsonDecode`で文字列化して保存する。実際の送信先
+（HTTPエンドポイント等）・送信ロジック・リトライ間隔の制御はアプリ側の責務
+であり、本コアは「送信待ちアイテムの永続化」「成功/失敗の記録」のみを提供する。
+本コア自体は依然としてどのサーバーとも通信しない。
+
 ## ActiveProfileGuardの追加
 
 「ProfileStoreの追加」で明記した通り、`ProgressStore`/`GrowthStore`/

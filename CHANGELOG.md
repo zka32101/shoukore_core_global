@@ -106,6 +106,10 @@
 - `RegionalProfile.locale`に基づく数値・日付・時刻のフォーマッタ`LocaleFormatter`
   （`package:intl`を利用）を追加した。保護者ゲート等でアプリ側が数字・日付表記を
   ベタ書きしないよう、本コアにユーティリティとして用意した。
+- 将来のサーバー同期機能に備え、送信失敗した学習記録等を溜めて再送する
+  `PendingSyncQueue`抽象（`InMemoryPendingSyncQueue`/`DriftPendingSyncQueue`）を
+  syncモジュールに追加した。実際の送信（HTTP等）・APIはアプリ側の責務とし、
+  本コアはキューの永続化・再送管理のみを提供する。
 - `ProfileStore`のアクティブプロファイル切替時に他プロファイルの学習データを
   誤って混在させないための軽量ガード`ActiveProfileGuard`を追加した。
   （`isSameProfile`/`ensureSameProfile`）
