@@ -63,6 +63,7 @@ export 'src/growth/inventory_manager.dart';
 export 'src/growth/inventory_snapshot.dart';
 export 'src/growth/inventory_store.dart';
 export 'src/growth/learning_streak.dart';
+export 'src/growth/streak_recovery_grace.dart';
 export 'src/growth/store_item.dart';
 export 'src/guardian/daily_digest.dart';
 export 'src/guardian/daily_digest_builder.dart';
