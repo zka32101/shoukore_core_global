@@ -143,3 +143,5 @@
 - 保護者同意に有効期限・ポリシーバージョンを設け、再同意が必要かどうかを
   判定する純関数`ConsentExpiryPolicy`（`isExpired`/`needsReconfirmation`）を
   privacyモジュールに追加した。`ConsentStore`への保存・読込自体には関与しない。
+- `example/`のUIをMaterial3テーマ・Card化・アイコン・配色で整理し、見やすさを
+  改善した（コア本体の挙動・widgetテストが依存する文言・Keyは変更していない）。
