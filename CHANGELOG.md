@@ -94,6 +94,11 @@
   （`InMemoryProfileStore`/`DriftProfileStore`）を追加した。プロファイルの
   一覧・選択状態の管理のみを提供し、`Progress`/`Growth`/`ScreenTime`等の
   既存ストアをプロファイルごとに分離する実装はアプリ側の責務とする。
+- コインで購入できるアイテムの所持状態を管理する`InventoryStore`抽象
+  （`InMemoryInventoryStore`/`DriftInventoryStore`）と、購入判定・状態遷移を
+  行う純関数`InventoryManager`をgrowthモジュールに追加した。アイテムの
+  絵柄・価格等の表示情報はアプリ側データとし、本コアは`StoreItem`
+  （id/priceCoinsのみ）と所持判定のロジックを提供する。
 - `WeeklyReportBuilder`の日次版として`DailyDigestBuilder`を追加した。
   `ProgressStore`から今日分の記録を集計し、`GrowthSnapshot.currentStreakDays`
   と合わせて保護者向け日次要約データ（`DailyDigest`）を組み立てる。通知文言・
