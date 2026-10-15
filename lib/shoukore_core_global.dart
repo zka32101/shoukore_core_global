@@ -52,6 +52,7 @@ export 'src/growth/store_item.dart';
 export 'src/guardian/daily_digest.dart';
 export 'src/guardian/daily_digest_builder.dart';
 export 'src/guardian/guardian_gate.dart';
+export 'src/guardian/guardian_gate_lockout.dart';
 export 'src/guardian/in_memory_report_read_state.dart';
 export 'src/guardian/in_memory_screen_time_store.dart';
 export 'src/guardian/report_read_state.dart';

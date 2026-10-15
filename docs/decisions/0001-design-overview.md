@@ -558,6 +558,17 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 戻り値を変更するものではなく、必要なアプリが明示的に利用するユーティリティ
 として提供する。
 
+## GuardianGateLockoutの追加
+
+`GuardianGate`（2桁×2桁の乗算チャレンジ）自体は再試行回数を制限しない設計
+だったため、子どもが総当たりで正答を探すことを妨げない状態だった。これを
+防ぐため、純関数`GuardianGateLockout`（`isLocked`/`recordFailure`/
+`recordSuccess`）を`guardian`モジュールに追加した。`maxAttempts`回連続で
+誤答すると`lockoutDuration`だけロックし、正答で状態をリセットする。状態
+（`GuardianGateLockoutState`）の永続化先は規定せず、アプリ側が保持する
+（画面を閉じればリセットされる想定でも、永続化したい場合は`GrowthStore`等
+既存のパターンでアプリ側に追加する）。
+
 ## check_l10n_parity.dartの追加
 
 `tool/check_curriculum.dart`と同様の方針で、`l10n/app_*.arb`間のキー整合性を
