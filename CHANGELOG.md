@@ -117,6 +117,9 @@
   プロファイル）をまとめてバックアップ/復元する`exportSettingsBackup`/
   `importSettingsBackup`（JSON文字列版含む）を追加した。学習記録は
   `exportUserData`が別途担うため対象外とする。
+- フィードバック音声・効果音の再生要求を抽象化する`AudioCuePlayer`
+  （`InMemoryAudioCuePlayer`）を追加した。`NotificationScheduler`と同様、
+  実際の音声アセット・再生エンジンはアプリ側の責務とする。
 - アプリ側の一度きりの移行処理（旧シングルプロファイルから複数プロファイルへの
   移行等）が実行済みかどうかを記録する`MigrationLedger`抽象
   （`InMemoryMigrationLedger`/`DriftMigrationLedger`）を追加した。drift自体の
