@@ -437,6 +437,18 @@ drift実装は`owned_items`テーブル（1行=1所持アイテム）を追加�
 （サブスクリプションの値付け、本コアが扱わない対象）とは異なり、
 ゲーム内コインで買えるコスメティックアイテムの所持判定に限定した機能である。
 
+## DailyDigestBuilderの追加
+
+`WeeklyReportBuilder`と同じ入力（`ProgressStore`・単元IDリスト・`Clock`）を使い、
+集計範囲を「今日1日分」に絞った`DailyDigestBuilder`/`DailyDigest`を追加した。
+`WeeklyReportBuilder`が`answeredAt`を固定7日の`Duration`で絞るのに対し、
+`DailyDigestBuilder`は`DailyBoundary.isSameMissionDay`で地域の日次リセット
+時刻（`dailyResetHour`）を基準にした「今日」の判定を使う（`LearningStreak`/
+`DailyMissionRules`と同じ基準）。`currentStreakDays`は`GrowthSnapshot`から
+そのまま引き継ぐ。通知文言の組み立てと`NotificationScheduler`への実際の
+スケジューリング（毎日決まった時間に送る、等）はアプリ側の責務とし、本コアは
+要約データの集計のみを提供する。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

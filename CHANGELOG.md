@@ -99,3 +99,7 @@
   行う純関数`InventoryManager`をgrowthモジュールに追加した。アイテムの
   絵柄・価格等の表示情報はアプリ側データとし、本コアは`StoreItem`
   （id/priceCoinsのみ）と所持判定のロジックを提供する。
+- `WeeklyReportBuilder`の日次版として`DailyDigestBuilder`を追加した。
+  `ProgressStore`から今日分の記録を集計し、`GrowthSnapshot.currentStreakDays`
+  と合わせて保護者向け日次要約データ（`DailyDigest`）を組み立てる。通知文言・
+  `NotificationScheduler`への実際のスケジューリングはアプリ側の責務とする。
