@@ -154,3 +154,6 @@
 - `Mastery`一覧から未学習・弱点が強い単元を優先して次に学習すべき単元を
   提案する純関数`UnitRecommendation`（`recommend`/`topPick`）をquestion
   モジュールに追加した。
+- `exportUserData`の出力を再取り込みする前に想定キー構成・型を検証する
+  純関数`ExportIntegrityChecker`（`validate`/`isValid`）をprivacyモジュール
+  に追加した。端末移行時のインポート処理の安全性を上げる。
