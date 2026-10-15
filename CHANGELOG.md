@@ -199,5 +199,7 @@
   `UnitMasteryBadgeEligibility`をgrowthモジュールに追加した。
 - オフライン同期時の競合を解決する純関数`OfflineSyncConflictResolver`
   （`SyncableRecord`、last-write-wins）をsyncモジュールに追加した。
+- 1日あたりのコイン獲得量に上限を設ける純関数`CoinEarningCapPerDay`
+  （`CoinEarningState`）をgrowthモジュールに追加した。
 - ストリークの見逃し猶予を判定する純関数`StreakRecoveryGrace`を
   growthモジュールに追加した。
