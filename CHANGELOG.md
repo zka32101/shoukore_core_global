@@ -117,3 +117,6 @@
   プロファイル）をまとめてバックアップ/復元する`exportSettingsBackup`/
   `importSettingsBackup`（JSON文字列版含む）を追加した。学習記録は
   `exportUserData`が別途担うため対象外とする。
+- 保護者向けレポート（週次/日次）の既読状態を記録する`ReportReadState`抽象
+  （`InMemoryReportReadState`/`DriftReportReadState`）を追加した。
+  レポートの内容・文言には関与せず、`reportType`ごとの既読時刻のみを保持する。
