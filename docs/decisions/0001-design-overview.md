@@ -666,6 +666,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 を検証するだけで、実際のファイル読み込み・インポート処理自体はアプリ側の
 責務とする。
 
+## CoinSpendingLimitの追加
+
+`InventoryManager`は残高と所持状況のみで購入可否を判定し、「1日に使い
+すぎていないか」という保護者視点の制限には対応していなかった。これに
+対応するため、純関数`CoinSpendingLimit`（`wouldExceedLimit`/
+`recordSpending`）を`growth`モジュールに追加した。`CoinSpendingState`
+（当日消費済みコイン数）と`dailyLimit`を比較するだけで、日替わりの
+判定・リセット自体は既存の`DailyBoundary`と組み合わせてアプリ側が行う。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
