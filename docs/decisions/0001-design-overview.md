@@ -741,6 +741,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 タイトル・説明文言は`AchievementId`同様アプリ側のl10nで解決する想定。
 画像生成・SNS連携などの実際の共有処理はアプリ側の責務とする。
 
+## ProfileAvatarRotationSuggesterの追加
+
+キャラ進化（`GrowthStage`の変化）に合わせてアバター変更を促したい場面向けに、
+純関数`ProfileAvatarRotationSuggester`（`shouldSuggestRotation`）を`profile`
+モジュールに追加した。前回アバター変更を提案した時点の進化段階と現在の
+進化段階を比較するだけで、まだ一度も提案していない（`previousStage`が
+`null`）場合は提案しない。実際のアバター選択UI・保存・候補一覧の管理は
+アプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

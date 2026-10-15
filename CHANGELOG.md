@@ -185,3 +185,5 @@
 - 保護者向け共有カード表示用のメタデータを組み立てる純関数
   `AchievementShareCardBuilder`（`AchievementShareCardData`、`AchievementRank`）
   をgrowthモジュールに追加した。
+- 進化段階の変化を手がかりにアバター変更を提案すべきかを判定する純関数
+  `ProfileAvatarRotationSuggester`をprofileモジュールに追加した。
