@@ -666,6 +666,16 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 を検証するだけで、実際のファイル読み込み・インポート処理自体はアプリ側の
 責務とする。
 
+## ProfileSwitchCooldownの追加
+
+兄弟で1台の端末を共有する際、「本当にコインが貯まったか」を確認したい
+子ども同士が短時間にプロファイルを連打切替してしまい、画面がちらつく
+だけでなく誤操作の温床にもなる。これに対応するため、純関数
+`ProfileSwitchCooldown`（`canSwitch`/`recordSwitch`）を`profile`モジュールに
+追加した。最後に切り替えた時刻から`cooldown`を超えるまでは次の切替を
+許可しないと判定するだけで、`ActiveProfileGuard`（切替中のデータ混在防止）
+とは独立しており、実際の切替UI・ブロック表示はアプリ側の責務とする。
+
 ## NotificationQuietMergeの追加
 
 `QuietHoursGuard`は「今が静かな時間帯かどうか」を判定するだけで、

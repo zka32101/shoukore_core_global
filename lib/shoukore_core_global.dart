@@ -34,6 +34,7 @@ export 'src/profile/active_profile_guard.dart';
 export 'src/profile/in_memory_profile_store.dart';
 export 'src/profile/profile.dart';
 export 'src/profile/profile_store.dart';
+export 'src/profile/profile_switch_cooldown.dart';
 export 'src/privacy/data_eraser.dart';
 export 'src/privacy/data_export.dart';
 export 'src/privacy/export_chunker.dart';
