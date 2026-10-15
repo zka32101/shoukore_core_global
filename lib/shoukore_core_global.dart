@@ -42,6 +42,7 @@ export 'src/privacy/data_export.dart';
 export 'src/privacy/export_chunker.dart';
 export 'src/privacy/export_integrity_checker.dart';
 export 'src/privacy/settings_backup.dart';
+export 'src/entitlement/entitlement_grace_period.dart';
 export 'src/entitlement/entitlement_reader.dart';
 export 'src/growth/achievement.dart';
 export 'src/growth/achievement_share_card_data.dart';
