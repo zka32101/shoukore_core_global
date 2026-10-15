@@ -723,6 +723,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 タイムゾーン取得・記録の永続化・変更時の対応（再確認ダイアログ等）は
 アプリ側の責務とする。
 
+## AchievementShareCardDataの追加
+
+保護者が子の達成バッジを共有したくなる場面向けに、純関数
+`AchievementShareCardBuilder`（`build`）を`growth`モジュールに追加した。
+`AchievementId`からランク（`AchievementRank`: bronze/silver/gold）と
+獲得日時をまとめた`AchievementShareCardData`を組み立てるだけで、
+タイトル・説明文言は`AchievementId`同様アプリ側のl10nで解決する想定。
+画像生成・SNS連携などの実際の共有処理はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
