@@ -83,6 +83,7 @@ export 'src/regional/locale_formatter.dart';
 export 'src/regional/regional_profile_loader.dart';
 export 'src/regional/timezone_drift_detector.dart';
 export 'src/sync/in_memory_pending_sync_queue.dart';
+export 'src/sync/offline_sync_conflict_resolver.dart';
 export 'src/sync/pending_sync_item.dart';
 export 'src/sync/pending_sync_queue.dart';
 export 'src/sync/retry_backoff_policy.dart';

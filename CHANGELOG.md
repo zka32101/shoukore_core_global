@@ -193,3 +193,5 @@
   `GuardianDigestMuteWindow`をguardianモジュールに追加した。
 - サブスクリプション失効後の猶予期間を判定する純関数
   `EntitlementGracePeriod`をentitlementモジュールに追加した。
+- オフライン同期時の競合を解決する純関数`OfflineSyncConflictResolver`
+  （`SyncableRecord`、last-write-wins）をsyncモジュールに追加した。
