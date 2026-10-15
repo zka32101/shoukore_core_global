@@ -656,6 +656,16 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 `ProgressStore`への保存は行わず、`UnitRecommendation`等の入力として使う
 表示・判定用の値を計算するだけで、永続化された`Mastery`自体は書き換えない。
 
+## ExportIntegrityCheckerの追加
+
+端末移行時に`exportUserData`/`exportUserDataAsJson`で書き出したデータを
+別端末へ再取り込みする場面で、壊れたファイルや別バージョン・別形式の
+データを誤って取り込むリスクがある。これに対応するため、純関数
+`ExportIntegrityChecker`（`validate`/`isValid`）を`privacy`モジュールに
+追加した。`exportUserData`の出力構造（`consent`/`progress`の各キーと型）
+を検証するだけで、実際のファイル読み込み・インポート処理自体はアプリ側の
+責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
