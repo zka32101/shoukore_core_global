@@ -154,6 +154,9 @@
 - `Mastery`一覧から未学習・弱点が強い単元を優先して次に学習すべき単元を
   提案する純関数`UnitRecommendation`（`recommend`/`topPick`）をquestion
   モジュールに追加した。
+- 一定時間操作がない場合にロック状態へ戻すべきかを判定する純関数
+  `SessionTimeoutPolicy`をguardianモジュールに追加した。共有端末での
+  意図しない継続利用を防ぐ。`GuardianGate`とは独立した制限。
 - `exportUserData`の出力を再取り込みする前に想定キー構成・型を検証する
   純関数`ExportIntegrityChecker`（`validate`/`isValid`）をprivacyモジュール
   に追加した。端末移行時のインポート処理の安全性を上げる。

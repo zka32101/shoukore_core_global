@@ -636,6 +636,16 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 （未学習は`score: 0`扱い）単元ほど優先する順序を返すだけで、カリキュラムの
 単元順序や`Entitlement`（解禁状態）は関与しない。
 
+## SessionTimeoutPolicyの追加
+
+共有端末では、保護者がゲートを通過した後、子どもが放置した端末を
+別の家族がそのまま使い続けてしまう可能性がある。これに対応するため、
+純関数`SessionTimeoutPolicy`（`shouldLock`/`remainingUntilLock`）を
+`guardian`モジュールに追加した。最後の操作時刻（`lastInteractionAt`）から
+一定時間（`timeout`）を超えたらロック状態に戻すべきと判定するだけで、
+実際のロック画面表示・入力監視・`GuardianGate`との連携はアプリ側の責務
+とする。
+
 ## ExportIntegrityCheckerの追加
 
 端末移行時に`exportUserData`/`exportUserDataAsJson`で書き出したデータを
