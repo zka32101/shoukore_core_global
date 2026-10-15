@@ -129,3 +129,5 @@
   スキーマ移行（`MigrationStrategy`）とは別物である。
 - `exportUserData`等が返すリストを件数ごとに分割する`ExportChunker`を追加した。
   学習記録が多い端末でも一度に全件をメモリへ展開せずに書き出せるようにする。
+- `tool/check_l10n_parity.dart`（`l10n/app_*.arb`間のキー整合性検証ツール、
+  CI組み込み）を追加した。新規ロケール追加時のキー欠落・余剰を検出する。
