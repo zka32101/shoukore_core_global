@@ -800,6 +800,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 （remote）を優先する。実際のマージ処理・サーバーAPIの呼び出しは
 アプリ側の責務とする。
 
+## StreakRecoveryGraceの追加
+
+1日学習を忘れただけでストリークが完全にリセットされるとモチベーションを
+損ねるため、純関数`StreakRecoveryGrace`（`isRecoverable`）を`growth`
+モジュールに追加した。`LearningStreak.recordStudy`自体の厳密な連続判定
+ロジックは変更せず、間隔が[graceDays]日以内の見逃しであれば継続扱いに
+してよいと判定するだけで、実際にストリークを復元する処理（`LearningStreak`
+の再構築、復元の演出・通知等）はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
