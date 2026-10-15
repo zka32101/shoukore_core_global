@@ -546,6 +546,18 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 フラグの管理のみを提供する。実際の移行処理の実装（データ変換ロジック）は
 アプリ側の責務。
 
+## ExportChunkerの追加
+
+`exportUserData`は`List<Mastery>`等を一度に`Map`へ組み立てて返す設計で、
+学習記録が多い端末では出力全体を一度にメモリへ展開することになる。これに
+備え、任意の`List<Map<String, dynamic>>`（`exportUserData`が返す`progress`
+リスト等）を指定件数ごとに分割する純関数`ExportChunker`（`chunkByCount`/
+`chunkToJson`）を`privacy`モジュールに追加した。各チャンクは
+`{chunkIndex, chunkCount, items}`の形でJSON文字列化され、アプリ側で
+ファイル分割保存・結合する際の単位として使える。`exportUserData`自体の
+戻り値を変更するものではなく、必要なアプリが明示的に利用するユーティリティ
+として提供する。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
