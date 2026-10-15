@@ -54,5 +54,8 @@ export 'src/privacy/age_gate.dart';
 export 'src/privacy/in_memory_consent_store.dart';
 export 'src/regional/locale_formatter.dart';
 export 'src/regional/regional_profile_loader.dart';
+export 'src/sync/in_memory_pending_sync_queue.dart';
+export 'src/sync/pending_sync_item.dart';
+export 'src/sync/pending_sync_queue.dart';
 export 'src/weak/spaced_review.dart';
 export 'src/weak/weak_notes.dart';
