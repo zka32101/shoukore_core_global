@@ -2,6 +2,8 @@
 library;
 
 export 'src/adaptive/adaptive_difficulty.dart';
+export 'src/audio/audio_cue_player.dart';
+export 'src/audio/in_memory_audio_cue_player.dart';
 export 'src/clock/clock.dart';
 export 'src/models/models.dart';
 export 'src/question/arithmetic_question_source.dart';
