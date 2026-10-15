@@ -129,3 +129,6 @@
   スキーマ移行（`MigrationStrategy`）とは別物である。
 - `exportUserData`等が返すリストを件数ごとに分割する`ExportChunker`を追加した。
   学習記録が多い端末でも一度に全件をメモリへ展開せずに書き出せるようにする。
+- `GuardianGate`の計算チャレンジに繰り返し失敗した際、一定時間ロックする
+  純関数`GuardianGateLockout`を追加した。子どもが総当たりで保護者ゲートを
+  突破するのを防ぐ。
