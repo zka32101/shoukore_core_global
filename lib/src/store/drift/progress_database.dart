@@ -101,6 +101,16 @@ class PendingSyncItems extends Table {
   Set<Column> get primaryKey => {id};
 }
 
+/// `MigrationLedger`が管理する、アプリ側の一度きりの移行処理の実行済み記録。
+/// 1行=1`migrationId`。
+@DataClassName('AppliedMigrationRow')
+class AppliedMigrations extends Table {
+  TextColumn get migrationId => text()();
+
+  @override
+  Set<Column> get primaryKey => {migrationId};
+}
+
 @DriftDatabase(
   tables: [
     Attempts,
@@ -111,13 +121,14 @@ class PendingSyncItems extends Table {
     ActiveProfileState,
     OwnedItems,
     PendingSyncItems,
+    AppliedMigrations,
   ],
 )
 class ProgressDatabase extends _$ProgressDatabase {
   ProgressDatabase(super.e);
 
   @override
-  int get schemaVersion => 8;
+  int get schemaVersion => 9;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -145,6 +156,9 @@ class ProgressDatabase extends _$ProgressDatabase {
           }
           if (from < 8) {
             await m.createTable(pendingSyncItems);
+          }
+          if (from < 9) {
+            await m.createTable(appliedMigrations);
           }
         },
       );

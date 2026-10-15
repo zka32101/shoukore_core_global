@@ -509,6 +509,18 @@ drift実装では`jsonEncode`/`jsonDecode`で文字列化して保存する。�
 実際のファイル保存・新端末への転送方法（クラウド経由、QRコード、ファイル
 共有等）はアプリ側の責務であり、本コアはデータの組み立て・復元のみを提供する。
 
+## MigrationLedgerの追加
+
+drift自体のスキーマ移行（`MigrationStrategy.onUpgrade`、テーブルの追加・
+カラムの追加等）とは別に、アプリ側のコード（Dartロジック）で行う一度きりの
+移行処理（例: 旧シングルプロファイル時代のデータを`ProfileStore`の形式へ
+移行する、旧バージョンの端末内ストレージ形式から新形式へデータを移す等）が
+実行済みかどうかを記録する汎用台帳`MigrationLedger`（`InMemoryMigrationLedger`/
+`DriftMigrationLedger`、drift実装は`applied_migrations`テーブルを追加、
+schemaVersion 9へ移行）を`store`モジュールに追加した。`migrationId`は
+アプリ側が決める任意の文字列キーとし、本コアは実行済みフラグの管理のみを
+提供する。実際の移行処理の実装（データ変換ロジック）はアプリ側の責務。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
