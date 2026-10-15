@@ -774,6 +774,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 内であれば引き続き利用可能とみなすだけで、価格・プラン自体のロジックは
 `EntitlementReader`（アプリ側のRevenueCat等実装）の責務のまま変わらない。
 
+## GuardianApprovalRequestQueueの追加
+
+子がコイン使用やストア購入を試みた際、保護者が後から確認・承認/却下する
+非同期フロー向けに、純関数`GuardianApprovalRequestQueue`（`isExpired`、
+`pendingRequests`）と値オブジェクト`GuardianApprovalRequest`を`guardian`
+モジュールに追加した。`GuardianGate`（即時PINによる計算チャレンジ）とは
+異なり、承認待ちのまま一定期間が過ぎたら期限切れと判定するだけで、
+申請の永続化・実際の通知送信はアプリ側の責務とする。
+
 ## OfflineSyncConflictResolverの追加
 
 オフライン中に複数端末で記録された進捗データが同期時に競合する場合に
