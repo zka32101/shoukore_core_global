@@ -145,3 +145,6 @@
   privacyモジュールに追加した。`ConsentStore`への保存・読込自体には関与しない。
 - `example/`のUIをMaterial3テーマ・Card化・アイコン・配色で整理し、見やすさを
   改善した（コア本体の挙動・widgetテストが依存する文言・Keyは変更していない）。
+- `Mastery`一覧から未学習・弱点が強い単元を優先して次に学習すべき単元を
+  提案する純関数`UnitRecommendation`（`recommend`/`topPick`）をquestion
+  モジュールに追加した。

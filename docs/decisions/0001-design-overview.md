@@ -609,6 +609,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 `consentedAt`/`policyVersion`と比較するだけで、`ConsentStore`への保存・
 読込自体には関与しない。
 
+## UnitRecommendationの追加
+
+出題画面から「次にやる単元」への導線を作る際、未学習・弱点が強い単元を
+優先して提案するロジックが各アプリでバラバラに実装されることを避けるため、
+純関数`UnitRecommendation`（`recommend`/`topPick`）を`question`モジュールに
+追加した。候補の`unitId`一覧と`Mastery`マップを受け取り、`score`が低い
+（未学習は`score: 0`扱い）単元ほど優先する順序を返すだけで、カリキュラムの
+単元順序や`Entitlement`（解禁状態）は関与しない。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
