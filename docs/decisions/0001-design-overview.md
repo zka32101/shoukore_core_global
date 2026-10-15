@@ -703,6 +703,16 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 の学習日連続とは別物）を受け取り、`interval`回ごとに`bonusPerInterval`
 コインを返すだけで、`CoinWallet.earn`への実際の反映はアプリ側が行う。
 
+## ConsentAuditLogの追加
+
+`ConsentStore`は現在の同意状態のみを保持し、「いつ付与・撤回・ポリシー
+更新があったか」という履歴を遡れなかった。保護者がLGPD等の文脈で過去の
+同意履歴を確認したい場合に備え、純関数`ConsentAuditLog`（`append`）と
+値オブジェクト`ConsentAuditEntry`を`privacy`モジュールに追加した。
+`append`は履歴に新しいエントリを追加し、`maxAge`を超えた履歴を削除した
+上で`maxEntries`を超える分を古いものから削除するだけで、履歴自体の
+永続化はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
