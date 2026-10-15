@@ -106,3 +106,6 @@
 - `RegionalProfile.locale`に基づく数値・日付・時刻のフォーマッタ`LocaleFormatter`
   （`package:intl`を利用）を追加した。保護者ゲート等でアプリ側が数字・日付表記を
   ベタ書きしないよう、本コアにユーティリティとして用意した。
+- `ProfileStore`のアクティブプロファイル切替時に他プロファイルの学習データを
+  誤って混在させないための軽量ガード`ActiveProfileGuard`を追加した。
+  （`isSameProfile`/`ensureSameProfile`）

@@ -464,6 +464,20 @@ drift実装は`owned_items`テーブル（1行=1所持アイテム）を追加�
 `package:intl/date_symbol_data_local.dart`の`initializeDateFormatting`を
 呼ぶ必要がある（`test/locale_formatter_test.dart`参照）。
 
+## ActiveProfileGuardの追加
+
+「ProfileStoreの追加」で明記した通り、`ProgressStore`/`GrowthStore`/
+`ScreenTimeStore`等はまだプロファイルIDで分離されていない。この制約の下で
+プロファイル切替の事故（ある子どものデータ読み込み中に保護者が別の
+子どものプロファイルに切り替え、古いデータを新プロファイルへ保存してしまう
+等）を防ぐため、軽量な純関数`ActiveProfileGuard`（`isSameProfile`/
+`ensureSameProfile`）を`profile`モジュールに追加した。
+
+これは`Progress`/`Growth`/`ScreenTime`等のStoreに`profileId`を持たせる
+本格的な対応の代替ではなく、アプリ側のRepository層が「データを読み込んだ
+時点のプロファイルID」と「保存直前の現在のアクティブプロファイルID」を
+比較し、不一致なら保存を中断する、という最小限の防御策である。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
