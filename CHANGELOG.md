@@ -145,3 +145,6 @@
   privacyモジュールに追加した。`ConsentStore`への保存・読込自体には関与しない。
 - `example/`のUIをMaterial3テーマ・Card化・アイコン・配色で整理し、見やすさを
   改善した（コア本体の挙動・widgetテストが依存する文言・Keyは変更していない）。
+- `PendingSyncQueue`の再送失敗回数から次回再送までの待機時間を指数バックオフで
+  計算する純関数`RetryBackoffPolicy`をsyncモジュールに追加した。実際のHTTP送信・
+  APIコールはアプリ側の責務とする。
