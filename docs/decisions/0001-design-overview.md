@@ -695,6 +695,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 （`guard.end`、日をまたぐ範囲も考慮）を返すだけで、実際の再スケジュール
 処理（`NotificationScheduler`への再登録）はアプリ側の責務とする。
 
+## AnswerStreakBonusの追加
+
+連続正解に対するボーナスコイン付与ロジックが各アプリでバラバラに
+実装されることを避けるため、純関数`AnswerStreakBonus`（`bonusFor`）を
+`growth`モジュールに追加した。回答1回ごとの連続正解数（`LearningStreak`
+の学習日連続とは別物）を受け取り、`interval`回ごとに`bonusPerInterval`
+コインを返すだけで、`CoinWallet.earn`への実際の反映はアプリ側が行う。
+
 ## ConsentAuditLogの追加
 
 `ConsentStore`は現在の同意状態のみを保持し、「いつ付与・撤回・ポリシー
