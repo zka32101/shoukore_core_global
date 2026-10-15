@@ -178,3 +178,6 @@
 - 同意の付与・撤回・ポリシー更新などのイベント履歴を追記・整理する純関数
   `ConsentAuditLog`（`ConsentAuditEntry`）をprivacyモジュールに追加した。
   `ConsentStore`（現在の同意状態のみ）とは別の履歴専用の仕組み。
+- 端末のタイムゾーンが前回記録時と変わっていないかを検出する純関数
+  `TimeZoneDriftDetector`をregionalモジュールに追加した。`DailyBoundary`
+  の日付境界判定が乱れる手がかりに使う。
