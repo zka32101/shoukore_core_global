@@ -580,6 +580,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 比較対象から除外し、実際の文言キーのみを比較する。最初に見つかった
 ファイル（ソート順で先頭）を基準とし、他の全ファイルと比較する。
 
+## QuietHoursGuardの追加
+
+`ScreenTimeGuard`は累積利用時間を制限するが、「夜21時〜朝7時のような特定の
+時刻帯には使わせたくない」という保護者ニーズには対応できなかった。これを
+補うため、純関数`QuietHoursGuard`（`isQuietAt`）を`guardian`モジュールに
+追加した。`start`/`end`（`TimeOfDay`、日をまたぐ範囲も許容）を保護者が設定し、
+`now`がその範囲内かを判定するだけで、新規ミッション開始の抑制や通知の
+延期判断はアプリ側が行う。
+
 ## DeviceLocaleSuggesterの追加
 
 初回起動時、OS側の端末ロケール（例: `pt_PT`）が本コアの対応ロケール
