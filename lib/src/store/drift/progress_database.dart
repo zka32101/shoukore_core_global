@@ -88,6 +88,19 @@ class OwnedItems extends Table {
   Set<Column> get primaryKey => {itemId};
 }
 
+/// サーバー同期の送信待ちアイテム。`payload`はアプリ側が決める任意のJSONを
+/// 文字列化して保持する（本コアはキューの管理のみを担い、内容を解釈しない）。
+@DataClassName('PendingSyncItemRow')
+class PendingSyncItems extends Table {
+  TextColumn get id => text()();
+  TextColumn get payloadJson => text()();
+  DateTimeColumn get createdAt => dateTime()();
+  IntColumn get retryCount => integer().withDefault(const Constant(0))();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
 @DriftDatabase(
   tables: [
     Attempts,
@@ -97,13 +110,14 @@ class OwnedItems extends Table {
     Profiles,
     ActiveProfileState,
     OwnedItems,
+    PendingSyncItems,
   ],
 )
 class ProgressDatabase extends _$ProgressDatabase {
   ProgressDatabase(super.e);
 
   @override
-  int get schemaVersion => 7;
+  int get schemaVersion => 8;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -128,6 +142,9 @@ class ProgressDatabase extends _$ProgressDatabase {
           }
           if (from < 7) {
             await m.createTable(ownedItems);
+          }
+          if (from < 8) {
+            await m.createTable(pendingSyncItems);
           }
         },
       );
