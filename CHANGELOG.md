@@ -134,3 +134,6 @@
   突破するのを防ぐ。
 - `tool/check_l10n_parity.dart`（`l10n/app_*.arb`間のキー整合性検証ツール、
   CI組み込み）を追加した。新規ロケール追加時のキー欠落・余剰を検出する。
+- 保護者同意に有効期限・ポリシーバージョンを設け、再同意が必要かどうかを
+  判定する純関数`ConsentExpiryPolicy`（`isExpired`/`needsReconfirmation`）を
+  privacyモジュールに追加した。`ConsentStore`への保存・読込自体には関与しない。

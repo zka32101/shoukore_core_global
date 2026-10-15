@@ -580,6 +580,17 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 比較対象から除外し、実際の文言キーのみを比較する。最初に見つかった
 ファイル（ソート順で先頭）を基準とし、他の全ファイルと比較する。
 
+## ConsentExpiryPolicyの追加
+
+`ConsentRecord`は同意済みかどうかの状態のみを持ち、「一定期間が過ぎたら
+再同意が必要」「プライバシーポリシー改定後は再同意が必要」といった運用を
+本コアでは支援していなかった。これに対応するため、純関数
+`ConsentExpiryPolicy`（`isExpired`/`needsReconfirmation`）を`privacy`
+モジュールに追加した。`validity`（有効期間）と`currentPolicyVersion`
+（現行ポリシーバージョン）を設定値として受け取り、`ConsentRecord`の
+`consentedAt`/`policyVersion`と比較するだけで、`ConsentStore`への保存・
+読込自体には関与しない。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
