@@ -774,6 +774,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 内であれば引き続き利用可能とみなすだけで、価格・プラン自体のロジックは
 `EntitlementReader`（アプリ側のRevenueCat等実装）の責務のまま変わらない。
 
+## UnitMasteryBadgeEligibilityの追加
+
+単元単位で「マスター」バッジを付与したい場面向けに、純関数
+`UnitMasteryBadgeEligibility`（`isMastered`）を`growth`モジュールに追加した。
+`Achievement`（ストリーク・累計正答数という教科非依存の全体指標）とは別に、
+単元ごとの直近N件の正答率が閾値以上かを判定するだけで、バッジの永続化・
+通知表示はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
