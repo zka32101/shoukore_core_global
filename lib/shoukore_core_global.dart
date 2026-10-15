@@ -62,6 +62,7 @@ export 'src/guardian/report_read_state.dart';
 export 'src/guardian/screen_time_guard.dart';
 export 'src/guardian/screen_time_snapshot.dart';
 export 'src/guardian/screen_time_store.dart';
+export 'src/guardian/session_timeout_policy.dart';
 export 'src/guardian/weekly_report.dart';
 export 'src/privacy/age_gate.dart';
 export 'src/privacy/in_memory_consent_store.dart';
