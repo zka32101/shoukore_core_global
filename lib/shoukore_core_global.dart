@@ -46,6 +46,7 @@ export 'src/entitlement/entitlement_grace_period.dart';
 export 'src/entitlement/entitlement_reader.dart';
 export 'src/growth/achievement.dart';
 export 'src/growth/achievement_share_card_data.dart';
+export 'src/growth/unit_mastery_badge_eligibility.dart';
 export 'src/growth/answer_streak_bonus.dart';
 export 'src/growth/coin_spending_limit.dart';
 export 'src/growth/coin_wallet.dart';
