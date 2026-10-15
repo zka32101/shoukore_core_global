@@ -187,5 +187,7 @@
   をgrowthモジュールに追加した。
 - 進化段階の変化を手がかりにアバター変更を提案すべきかを判定する純関数
   `ProfileAvatarRotationSuggester`をprofileモジュールに追加した。
+- 弱点単元の誤解頻出度に応じた復習タイミングを計算する純関数
+  `WeakNotesReviewScheduler`をweakモジュールに追加した。
 - 保護者向けダイジェスト通知の一時ミュート期間を判定する純関数
   `GuardianDigestMuteWindow`をguardianモジュールに追加した。
