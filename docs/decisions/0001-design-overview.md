@@ -636,6 +636,16 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 （未学習は`score: 0`扱い）単元ほど優先する順序を返すだけで、カリキュラムの
 単元順序や`Entitlement`（解禁状態）は関与しない。
 
+## MasteryDecayの追加
+
+`Mastery.score`はそれまでの正答率を反映するが、長期間学習していない単元も
+過去のスコアをそのまま維持してしまい、「しばらくやらないと忘れる」という
+実態を反映できなかった。これに対応するため、純関数`MasteryDecay`
+（`decayedScore`）を`question`モジュールに追加した。`lastPracticedAt`から
+`gracePeriod`を超えた分だけ`halfLife`（半減期）で指数的にスコアを減衰させる。
+`ProgressStore`への保存は行わず、`UnitRecommendation`等の入力として使う
+表示・判定用の値を計算するだけで、永続化された`Mastery`自体は書き換えない。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

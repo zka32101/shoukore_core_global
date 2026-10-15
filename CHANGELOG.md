@@ -154,3 +154,7 @@
 - `Mastery`一覧から未学習・弱点が強い単元を優先して次に学習すべき単元を
   提案する純関数`UnitRecommendation`（`recommend`/`topPick`）をquestion
   モジュールに追加した。
+- 一定期間学習していない単元の`Mastery.score`を時間経過で緩やかに減衰させる
+  純関数`MasteryDecay`をquestionモジュールに追加した。`ProgressStore`への
+  保存は行わず、`UnitRecommendation`等への入力として使う表示・判定用の値を
+  計算するだけ。
