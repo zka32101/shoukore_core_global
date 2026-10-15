@@ -164,6 +164,9 @@
 - `exportUserData`の出力を再取り込みする前に想定キー構成・型を検証する
   純関数`ExportIntegrityChecker`（`validate`/`isValid`）をprivacyモジュール
   に追加した。端末移行時のインポート処理の安全性を上げる。
+- 短時間に何度もプロファイル切替が行われた場合に一定時間制限すべきかを
+  判定する純関数`ProfileSwitchCooldown`をprofileモジュールに追加した。
+  `ActiveProfileGuard`とは独立した、切替操作自体の頻度制限。
 - 1日あたりのコイン消費量に上限を設け、`InventoryManager`での購入が超過
   しないかを判定する純関数`CoinSpendingLimit`をgrowthモジュールに追加した。
   日替わり判定・リセット自体はアプリ側（`DailyBoundary`併用）の責務とする。
