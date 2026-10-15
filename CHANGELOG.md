@@ -154,3 +154,6 @@
 - `Mastery`一覧から未学習・弱点が強い単元を優先して次に学習すべき単元を
   提案する純関数`UnitRecommendation`（`recommend`/`topPick`）をquestion
   モジュールに追加した。
+- 一定時間操作がない場合にロック状態へ戻すべきかを判定する純関数
+  `SessionTimeoutPolicy`をguardianモジュールに追加した。共有端末での
+  意図しない継続利用を防ぐ。`GuardianGate`とは独立した制限。
