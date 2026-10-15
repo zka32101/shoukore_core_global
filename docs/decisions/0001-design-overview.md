@@ -758,6 +758,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 単位で誤解の総回数が多いほど復習間隔を短くするだけの優先度付けであり、
 実際の復習問題の選定・提示はアプリ側の責務とする。
 
+## GuardianDigestMuteWindowの追加
+
+保護者が一定期間（旅行中など）ダイジェスト通知を止めたい場面向けに、
+純関数`GuardianDigestMuteWindow`（`isMutedAt`）を`guardian`モジュールに
+追加した。`QuietHoursGuard`（子供側の毎日の静かな時間帯）とは異なり、
+保護者が指定した`mutedUntil`までの任意の期間をミュート中と判定するだけで、
+実際の通知停止処理・設定UIはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
