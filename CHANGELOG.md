@@ -199,3 +199,5 @@
   `UnitMasteryBadgeEligibility`をgrowthモジュールに追加した。
 - オフライン同期時の競合を解決する純関数`OfflineSyncConflictResolver`
   （`SyncableRecord`、last-write-wins）をsyncモジュールに追加した。
+- プロフィール写真利用の追加同意を判定する純関数`ProfilePhotoConsentGate`
+  （`ProfilePhotoConsent`）をprivacyモジュールに追加した。
