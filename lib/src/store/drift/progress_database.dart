@@ -101,6 +101,16 @@ class PendingSyncItems extends Table {
   Set<Column> get primaryKey => {id};
 }
 
+/// 保護者向けレポート（週次/日次）の既読状態。1行=1レポート種別(`reportType`)。
+@DataClassName('ReportReadStateRow')
+class ReportReadStates extends Table {
+  TextColumn get reportType => text()();
+  DateTimeColumn get lastReadAt => dateTime()();
+
+  @override
+  Set<Column> get primaryKey => {reportType};
+}
+
 @DriftDatabase(
   tables: [
     Attempts,
@@ -111,13 +121,14 @@ class PendingSyncItems extends Table {
     ActiveProfileState,
     OwnedItems,
     PendingSyncItems,
+    ReportReadStates,
   ],
 )
 class ProgressDatabase extends _$ProgressDatabase {
   ProgressDatabase(super.e);
 
   @override
-  int get schemaVersion => 8;
+  int get schemaVersion => 9;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -145,6 +156,9 @@ class ProgressDatabase extends _$ProgressDatabase {
           }
           if (from < 8) {
             await m.createTable(pendingSyncItems);
+          }
+          if (from < 9) {
+            await m.createTable(reportReadStates);
           }
         },
       );

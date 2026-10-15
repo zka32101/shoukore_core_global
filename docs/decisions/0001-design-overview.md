@@ -520,6 +520,18 @@ drift実装では`jsonEncode`/`jsonDecode`で文字列化して保存する。�
 等の別入口に追加する想定で、本PRでは未着手（テスト用の`InMemoryAudioCuePlayer`
 のみ提供）。
 
+## ReportReadStateの追加
+
+`WeeklyReportBuilder`/`DailyDigestBuilder`が生成するレポートは都度計算する
+純関数であり、「保護者が確認したかどうか」の状態を持たない。保護者向けUIで
+未読バッジ（例: ホーム画面に「新しい週次レポートがあります」を表示する）を
+実装できるようにするため、軽量な`ReportReadState`抽象
+（`InMemoryReportReadState`/`DriftReportReadState`、drift実装は
+`report_read_states`テーブルを追加、schemaVersion 9へ移行）を`guardian`
+モジュールに追加した。`reportType`（`'weekly'`/`'daily'`等、アプリ側が決める
+任意の文字列キー）ごとに最終既読時刻のみを保持し、レポートの内容・文言には
+関与しない。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

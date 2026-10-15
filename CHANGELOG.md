@@ -120,3 +120,6 @@
 - フィードバック音声・効果音の再生要求を抽象化する`AudioCuePlayer`
   （`InMemoryAudioCuePlayer`）を追加した。`NotificationScheduler`と同様、
   実際の音声アセット・再生エンジンはアプリ側の責務とする。
+- 保護者向けレポート（週次/日次）の既読状態を記録する`ReportReadState`抽象
+  （`InMemoryReportReadState`/`DriftReportReadState`）を追加した。
+  レポートの内容・文言には関与せず、`reportType`ごとの既読時刻のみを保持する。
