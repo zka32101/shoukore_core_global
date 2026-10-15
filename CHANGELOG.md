@@ -103,3 +103,6 @@
   `ProgressStore`から今日分の記録を集計し、`GrowthSnapshot.currentStreakDays`
   と合わせて保護者向け日次要約データ（`DailyDigest`）を組み立てる。通知文言・
   `NotificationScheduler`への実際のスケジューリングはアプリ側の責務とする。
+- `RegionalProfile.locale`に基づく数値・日付・時刻のフォーマッタ`LocaleFormatter`
+  （`package:intl`を利用）を追加した。保護者ゲート等でアプリ側が数字・日付表記を
+  ベタ書きしないよう、本コアにユーティリティとして用意した。
