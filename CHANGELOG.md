@@ -140,3 +140,6 @@
 - OS側の端末ロケールから、本コアが対応済みのロケールへの近似マッチを提案する
   純関数`DeviceLocaleSuggester`を`regional`モジュールに追加した。初回起動時の
   既定ロケール選定に使う。
+- 保護者同意に有効期限・ポリシーバージョンを設け、再同意が必要かどうかを
+  判定する純関数`ConsentExpiryPolicy`（`isExpired`/`needsReconfirmation`）を
+  privacyモジュールに追加した。`ConsentStore`への保存・読込自体には関与しない。
