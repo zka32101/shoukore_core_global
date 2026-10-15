@@ -79,14 +79,31 @@ class ActiveProfileState extends Table {
   Set<Column> get primaryKey => {id};
 }
 
+/// 所持アイテム（コインで購入したアバター装飾等）。1行=1所持アイテム。
+@DataClassName('OwnedItemRow')
+class OwnedItems extends Table {
+  TextColumn get itemId => text()();
+
+  @override
+  Set<Column> get primaryKey => {itemId};
+}
+
 @DriftDatabase(
-  tables: [Attempts, Consents, GrowthStates, ScreenTimeStates, Profiles, ActiveProfileState],
+  tables: [
+    Attempts,
+    Consents,
+    GrowthStates,
+    ScreenTimeStates,
+    Profiles,
+    ActiveProfileState,
+    OwnedItems,
+  ],
 )
 class ProgressDatabase extends _$ProgressDatabase {
   ProgressDatabase(super.e);
 
   @override
-  int get schemaVersion => 6;
+  int get schemaVersion => 7;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -108,6 +125,9 @@ class ProgressDatabase extends _$ProgressDatabase {
           if (from < 6) {
             await m.createTable(profiles);
             await m.createTable(activeProfileState);
+          }
+          if (from < 7) {
+            await m.createTable(ownedItems);
           }
         },
       );

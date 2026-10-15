@@ -422,6 +422,33 @@ drift実装は`profiles`/`active_profile_state`テーブルを追加、schemaVer
 対応を必要とするタイミングで、本コアの各Store抽象に`profileId`引数を
 追加する形で段階的に対応する想定とする（本PRでは未着手）。
 
+## InventoryStore/InventoryManagerの追加
+
+コインで購入できるアイテム（アバター装飾等）の所持状態を管理する
+`InventoryStore`抽象（`InMemoryInventoryStore`/`DriftInventoryStore`、
+drift実装は`owned_items`テーブル（1行=1所持アイテム）を追加、schemaVersion 7へ
+移行）を追加した。購入可否判定・購入時の`CoinWallet`/`InventorySnapshot`の
+状態遷移は純関数`InventoryManager`（`canPurchase`/`purchase`）が担い、
+`CoinWallet.spend`が持つ残高不足時の例外をそのまま利用する設計とした。
+
+アイテムの絵柄・説明文・価格設定（どのアイテムをいくつで売るか）は
+教科と同様にアプリ側のドメイン知識とみなし、本コアの`StoreItem`は
+`id`と`priceCoins`のみを持つ。これは「キット内の価格/無料期間ロジック」
+（サブスクリプションの値付け、本コアが扱わない対象）とは異なり、
+ゲーム内コインで買えるコスメティックアイテムの所持判定に限定した機能である。
+
+## DailyDigestBuilderの追加
+
+`WeeklyReportBuilder`と同じ入力（`ProgressStore`・単元IDリスト・`Clock`）を使い、
+集計範囲を「今日1日分」に絞った`DailyDigestBuilder`/`DailyDigest`を追加した。
+`WeeklyReportBuilder`が`answeredAt`を固定7日の`Duration`で絞るのに対し、
+`DailyDigestBuilder`は`DailyBoundary.isSameMissionDay`で地域の日次リセット
+時刻（`dailyResetHour`）を基準にした「今日」の判定を使う（`LearningStreak`/
+`DailyMissionRules`と同じ基準）。`currentStreakDays`は`GrowthSnapshot`から
+そのまま引き継ぐ。通知文言の組み立てと`NotificationScheduler`への実際の
+スケジューリング（毎日決まった時間に送る、等）はアプリ側の責務とし、本コアは
+要約データの集計のみを提供する。
+
 ## LocaleFormatterの追加（数字・日付表記のロケール対応）
 
 「保護者ゲートの文言・数字表記が固定」（本ADR冒頭の表の8番）という既存の
