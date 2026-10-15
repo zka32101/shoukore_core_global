@@ -800,6 +800,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 （remote）を優先する。実際のマージ処理・サーバーAPIの呼び出しは
 アプリ側の責務とする。
 
+## CoinEarningCapPerDayの追加
+
+過剰な繰り返し操作によるコインのインフレを防ぐため、純関数
+`CoinEarningCapPerDay`（`wouldExceedCap`、`recordEarning`）と値オブジェクト
+`CoinEarningState`を`growth`モジュールに追加した。`CoinSpendingLimit`
+（使用側の1日あたり上限）と対になる獲得側の上限で、設計も同様に
+「1日」の境界判定自体はアプリ側が`DailyBoundary`を使って行い、本クラスは
+単純な加算・上限比較のみを担う。
+
 ## ProfilePhotoConsentGateの追加
 
 アバター用のカメラ撮影・画像選択は端末のカメラロール等へのアクセスを
