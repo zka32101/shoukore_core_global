@@ -195,3 +195,5 @@
   `EntitlementGracePeriod`をentitlementモジュールに追加した。
 - 保護者の非同期承認フローを扱う純関数`GuardianApprovalRequestQueue`
   （`GuardianApprovalRequest`）をguardianモジュールに追加した。
+- 単元ごとのマスターバッジ付与条件を判定する純関数
+  `UnitMasteryBadgeEligibility`をgrowthモジュールに追加した。
