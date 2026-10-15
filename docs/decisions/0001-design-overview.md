@@ -766,6 +766,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 保護者が指定した`mutedUntil`までの任意の期間をミュート中と判定するだけで、
 実際の通知停止処理・設定UIはアプリ側の責務とする。
 
+## EntitlementGracePeriodの追加
+
+オフライン環境で課金ストアへの再確認ができないまま失効扱いになる体験
+悪化を避けるため、純関数`EntitlementGracePeriod`（`isWithinGrace`、
+`graceEndsAt`）を`entitlement`モジュールに追加した。失効時刻から一定期間
+内であれば引き続き利用可能とみなすだけで、価格・プラン自体のロジックは
+`EntitlementReader`（アプリ側のRevenueCat等実装）の責務のまま変わらない。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
