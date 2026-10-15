@@ -106,3 +106,7 @@
 - `RegionalProfile.locale`に基づく数値・日付・時刻のフォーマッタ`LocaleFormatter`
   （`package:intl`を利用）を追加した。保護者ゲート等でアプリ側が数字・日付表記を
   ベタ書きしないよう、本コアにユーティリティとして用意した。
+- 端末移行時に保護者が引き継ぎたい設定（同意状態・プロファイル一覧・選択中
+  プロファイル）をまとめてバックアップ/復元する`exportSettingsBackup`/
+  `importSettingsBackup`（JSON文字列版含む）を追加した。学習記録は
+  `exportUserData`が別途担うため対象外とする。

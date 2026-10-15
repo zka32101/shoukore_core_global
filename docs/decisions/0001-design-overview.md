@@ -464,6 +464,22 @@ drift実装は`owned_items`テーブル（1行=1所持アイテム）を追加�
 `package:intl/date_symbol_data_local.dart`の`initializeDateFormatting`を
 呼ぶ必要がある（`test/locale_formatter_test.dart`参照）。
 
+## SettingsBackupの追加（exportSettingsBackup/importSettingsBackup）
+
+`exportUserData`/`exportUserDataAsJson`が学習記録（`Attempt`/`Mastery`）の
+書き出しを担うのに対し、端末移行時に保護者が引き継ぎたい「設定」（同意状態・
+プロファイル一覧・選択中プロファイルID）をまとめてバックアップ/復元する
+`exportSettingsBackup`/`importSettingsBackup`（JSON文字列版の
+`exportSettingsBackupAsJson`/`importSettingsBackupFromJson`含む）を
+`privacy`モジュールに追加した。既存の`exportUserData`と役割を分け、
+学習記録は対象外とした（将来、両者を1つにまとめて書き出す関数が必要になれば
+アプリ側で合成する）。
+
+`importSettingsBackup`は`ConsentStore.setConsent`/`ProfileStore.saveProfile`
+の上書き挙動をそのまま使うため、既存の同意・プロファイル状態を上書きする。
+実際のファイル保存・新端末への転送方法（クラウド経由、QRコード、ファイル
+共有等）はアプリ側の責務であり、本コアはデータの組み立て・復元のみを提供する。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
