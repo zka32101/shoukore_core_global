@@ -809,6 +809,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 「1日」の境界判定自体はアプリ側が`DailyBoundary`を使って行い、本クラスは
 単純な加算・上限比較のみを担う。
 
+## ProfilePhotoConsentGateの追加
+
+アバター用のカメラ撮影・画像選択は端末のカメラロール等へのアクセスを
+伴うため、純関数`ProfilePhotoConsentGate`（`requiresConsent`）と値オブジェクト
+`ProfilePhotoConsent`を`privacy`モジュールに追加した。`ConsentRecord`
+（保護者同意・年齢確認の全体記録）とは別の、写真利用という目的特化の
+最小限の同意判定のみを行い、実際の同意取得UI・画像の保存/削除処理は
+アプリ側の責務とする。
+
 ## StreakRecoveryGraceの追加
 
 1日学習を忘れただけでストリークが完全にリセットされるとモチベーションを
