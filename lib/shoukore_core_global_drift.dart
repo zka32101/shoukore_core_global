@@ -6,6 +6,7 @@ export 'src/store/drift/connection.dart';
 export 'src/store/drift/drift_consent_store.dart';
 export 'src/store/drift/drift_growth_store.dart';
 export 'src/store/drift/drift_inventory_store.dart';
+export 'src/store/drift/drift_migration_ledger.dart';
 export 'src/store/drift/drift_pending_sync_queue.dart';
 export 'src/store/drift/drift_profile_store.dart';
 export 'src/store/drift/drift_report_read_state.dart';

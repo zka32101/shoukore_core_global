@@ -123,3 +123,7 @@
 - 保護者向けレポート（週次/日次）の既読状態を記録する`ReportReadState`抽象
   （`InMemoryReportReadState`/`DriftReportReadState`）を追加した。
   レポートの内容・文言には関与せず、`reportType`ごとの既読時刻のみを保持する。
+- アプリ側の一度きりの移行処理（旧シングルプロファイルから複数プロファイルへの
+  移行等）が実行済みかどうかを記録する`MigrationLedger`抽象
+  （`InMemoryMigrationLedger`/`DriftMigrationLedger`）を追加した。drift自体の
+  スキーマ移行（`MigrationStrategy`）とは別物である。
