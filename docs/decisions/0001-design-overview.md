@@ -509,6 +509,17 @@ drift実装では`jsonEncode`/`jsonDecode`で文字列化して保存する。�
 実際のファイル保存・新端末への転送方法（クラウド経由、QRコード、ファイル
 共有等）はアプリ側の責務であり、本コアはデータの組み立て・復元のみを提供する。
 
+## AudioCuePlayerの追加
+
+フィードバック音声・効果音（「よくできました」等）の再生要求を抽象化する
+`AudioCuePlayer`（`InMemoryAudioCuePlayer`）を`audio`モジュールに追加した。
+`NotificationScheduler`（実機通知の土台）と同じ方針で、本コアは`cueId`の
+再生要求のみを定義し、実際の音声アセット（どのcueIdにどの音源を割り当てるか）
+と再生エンジン（`audioplayers`等）はアプリ側の責務とする。`LocalNotificationScheduler`
+のような実機アダプタは、必要になった時点で`shoukore_core_global_audio.dart`
+等の別入口に追加する想定で、本PRでは未着手（テスト用の`InMemoryAudioCuePlayer`
+のみ提供）。
+
 ## ReportReadStateの追加
 
 `WeeklyReportBuilder`/`DailyDigestBuilder`が生成するレポートは都度計算する
