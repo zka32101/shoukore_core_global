@@ -137,6 +137,9 @@
 - 保護者が設定した時間帯（就寝時間など）に新規ミッション開始や通知を控える
   べきかを判定する純関数`QuietHoursGuard`を`guardian`モジュールに追加した。
   `ScreenTimeGuard`（累積利用時間の制限）とは独立した、時刻帯ベースの制限。
+- OS側の端末ロケールから、本コアが対応済みのロケールへの近似マッチを提案する
+  純関数`DeviceLocaleSuggester`を`regional`モジュールに追加した。初回起動時の
+  既定ロケール選定に使う。
 - 保護者同意に有効期限・ポリシーバージョンを設け、再同意が必要かどうかを
   判定する純関数`ConsentExpiryPolicy`（`isExpired`/`needsReconfirmation`）を
   privacyモジュールに追加した。`ConsentStore`への保存・読込自体には関与しない。

@@ -589,6 +589,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 `now`がその範囲内かを判定するだけで、新規ミッション開始の抑制や通知の
 延期判断はアプリ側が行う。
 
+## DeviceLocaleSuggesterの追加
+
+初回起動時、OS側の端末ロケール（例: `pt_PT`）が本コアの対応ロケール
+（`ja`/`pt_BR`/`en`）と完全一致しないことがある。これに対応するため、
+純関数`DeviceLocaleSuggester`（`suggest`）を`regional`モジュールに追加した。
+完全一致→言語コード一致→対応ロケール先頭（既定ロケール）の優先順位で
+最も近いロケールを提案する。実際のOSロケール取得（`Platform.localeName`等）
+はアプリ側の責務とする。
+
 ## ConsentExpiryPolicyの追加
 
 `ConsentRecord`は同意済みかどうかの状態のみを持ち、「一定期間が過ぎたら
