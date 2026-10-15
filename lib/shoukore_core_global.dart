@@ -32,6 +32,7 @@ export 'src/profile/profile.dart';
 export 'src/profile/profile_store.dart';
 export 'src/privacy/data_eraser.dart';
 export 'src/privacy/data_export.dart';
+export 'src/privacy/export_chunker.dart';
 export 'src/privacy/settings_backup.dart';
 export 'src/entitlement/entitlement_reader.dart';
 export 'src/growth/achievement.dart';

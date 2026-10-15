@@ -127,3 +127,5 @@
   移行等）が実行済みかどうかを記録する`MigrationLedger`抽象
   （`InMemoryMigrationLedger`/`DriftMigrationLedger`）を追加した。drift自体の
   スキーマ移行（`MigrationStrategy`）とは別物である。
+- `exportUserData`等が返すリストを件数ごとに分割する`ExportChunker`を追加した。
+  学習記録が多い端末でも一度に全件をメモリへ展開せずに書き出せるようにする。
