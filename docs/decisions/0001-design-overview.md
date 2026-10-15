@@ -723,6 +723,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 タイムゾーン取得・記録の永続化・変更時の対応（再確認ダイアログ等）は
 アプリ側の責務とする。
 
+## ProfileAvatarRotationSuggesterの追加
+
+キャラ進化（`GrowthStage`の変化）に合わせてアバター変更を促したい場面向けに、
+純関数`ProfileAvatarRotationSuggester`（`shouldSuggestRotation`）を`profile`
+モジュールに追加した。前回アバター変更を提案した時点の進化段階と現在の
+進化段階を比較するだけで、まだ一度も提案していない（`previousStage`が
+`null`）場合は提案しない。実際のアバター選択UI・保存・候補一覧の管理は
+アプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
