@@ -164,3 +164,6 @@
 - `exportUserData`の出力を再取り込みする前に想定キー構成・型を検証する
   純関数`ExportIntegrityChecker`（`validate`/`isValid`）をprivacyモジュール
   に追加した。端末移行時のインポート処理の安全性を上げる。
+- `QuietHoursGuard`の結果を踏まえ、静かな時間帯に予定されていた通知を
+  時間帯明け直後に再スケジュールすべき時刻を計算する純関数
+  `NotificationQuietMerge`をnotifyモジュールに追加した。

@@ -666,6 +666,16 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 を検証するだけで、実際のファイル読み込み・インポート処理自体はアプリ側の
 責務とする。
 
+## NotificationQuietMergeの追加
+
+`QuietHoursGuard`は「今が静かな時間帯かどうか」を判定するだけで、
+「静かな時間帯に予定されていた通知をいつに動かすべきか」までは計算
+していなかった。これに対応するため、純関数`NotificationQuietMerge`
+（`resolve`）を`notify`モジュールに追加した。`QuietHoursGuard`を受け取り、
+`scheduledAt`が静かな時間帯に含まれる場合はその時間帯が明ける時刻
+（`guard.end`、日をまたぐ範囲も考慮）を返すだけで、実際の再スケジュール
+処理（`NotificationScheduler`への再登録）はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
