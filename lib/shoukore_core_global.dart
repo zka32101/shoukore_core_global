@@ -67,6 +67,7 @@ export 'src/guardian/in_memory_report_read_state.dart';
 export 'src/guardian/in_memory_screen_time_store.dart';
 export 'src/guardian/quiet_hours_guard.dart';
 export 'src/guardian/report_read_state.dart';
+export 'src/guardian/review_session_pacer.dart';
 export 'src/guardian/screen_time_guard.dart';
 export 'src/guardian/screen_time_snapshot.dart';
 export 'src/guardian/screen_time_store.dart';
