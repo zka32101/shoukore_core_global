@@ -110,6 +110,9 @@
   `PendingSyncQueue`抽象（`InMemoryPendingSyncQueue`/`DriftPendingSyncQueue`）を
   syncモジュールに追加した。実際の送信（HTTP等）・APIはアプリ側の責務とし、
   本コアはキューの永続化・再送管理のみを提供する。
+- `ProfileStore`のアクティブプロファイル切替時に他プロファイルの学習データを
+  誤って混在させないための軽量ガード`ActiveProfileGuard`を追加した。
+  （`isSameProfile`/`ensureSameProfile`）
 - 端末移行時に保護者が引き継ぎたい設定（同意状態・プロファイル一覧・選択中
   プロファイル）をまとめてバックアップ/復元する`exportSettingsBackup`/
   `importSettingsBackup`（JSON文字列版含む）を追加した。学習記録は
