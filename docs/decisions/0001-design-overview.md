@@ -520,6 +520,18 @@ drift実装では`jsonEncode`/`jsonDecode`で文字列化して保存する。�
 等の別入口に追加する想定で、本PRでは未着手（テスト用の`InMemoryAudioCuePlayer`
 のみ提供）。
 
+## ReportReadStateの追加
+
+`WeeklyReportBuilder`/`DailyDigestBuilder`が生成するレポートは都度計算する
+純関数であり、「保護者が確認したかどうか」の状態を持たない。保護者向けUIで
+未読バッジ（例: ホーム画面に「新しい週次レポートがあります」を表示する）を
+実装できるようにするため、軽量な`ReportReadState`抽象
+（`InMemoryReportReadState`/`DriftReportReadState`、drift実装は
+`report_read_states`テーブルを追加、schemaVersion 9へ移行）を`guardian`
+モジュールに追加した。`reportType`（`'weekly'`/`'daily'`等、アプリ側が決める
+任意の文字列キー）ごとに最終既読時刻のみを保持し、レポートの内容・文言には
+関与しない。
+
 ## MigrationLedgerの追加
 
 drift自体のスキーマ移行（`MigrationStrategy.onUpgrade`、テーブルの追加・
@@ -528,9 +540,11 @@ drift自体のスキーマ移行（`MigrationStrategy.onUpgrade`、テーブル�
 移行する、旧バージョンの端末内ストレージ形式から新形式へデータを移す等）が
 実行済みかどうかを記録する汎用台帳`MigrationLedger`（`InMemoryMigrationLedger`/
 `DriftMigrationLedger`、drift実装は`applied_migrations`テーブルを追加、
-schemaVersion 9へ移行）を`store`モジュールに追加した。`migrationId`は
-アプリ側が決める任意の文字列キーとし、本コアは実行済みフラグの管理のみを
-提供する。実際の移行処理の実装（データ変換ロジック）はアプリ側の責務。
+schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合した
+ため、本マージでバージョン番号を調整した）を`store`モジュールに追加した。
+`migrationId`はアプリ側が決める任意の文字列キーとし、本コアは実行済み
+フラグの管理のみを提供する。実際の移行処理の実装（データ変換ロジック）は
+アプリ側の責務。
 
 ## 引き継がない・作らないもの
 
