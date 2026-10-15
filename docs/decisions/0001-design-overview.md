@@ -732,6 +732,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 （無操作時のロック）とは独立した概念である。実際の休憩提案UI・
 タイマー管理はアプリ側の責務とする。
 
+## AchievementShareCardDataの追加
+
+保護者が子の達成バッジを共有したくなる場面向けに、純関数
+`AchievementShareCardBuilder`（`build`）を`growth`モジュールに追加した。
+`AchievementId`からランク（`AchievementRank`: bronze/silver/gold）と
+獲得日時をまとめた`AchievementShareCardData`を組み立てるだけで、
+タイトル・説明文言は`AchievementId`同様アプリ側のl10nで解決する想定。
+画像生成・SNS連携などの実際の共有処理はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

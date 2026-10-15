@@ -43,6 +43,7 @@ export 'src/privacy/export_integrity_checker.dart';
 export 'src/privacy/settings_backup.dart';
 export 'src/entitlement/entitlement_reader.dart';
 export 'src/growth/achievement.dart';
+export 'src/growth/achievement_share_card_data.dart';
 export 'src/growth/answer_streak_bonus.dart';
 export 'src/growth/coin_spending_limit.dart';
 export 'src/growth/coin_wallet.dart';
