@@ -182,5 +182,8 @@
 - 端末のタイムゾーンが前回記録時と変わっていないかを検出する純関数
   `TimeZoneDriftDetector`をregionalモジュールに追加した。`DailyBoundary`
   の日付境界判定が乱れる手がかりに使う。
+- 保護者向け共有カード表示用のメタデータを組み立てる純関数
+  `AchievementShareCardBuilder`（`AchievementShareCardData`、`AchievementRank`）
+  をgrowthモジュールに追加した。
 - 進化段階の変化を手がかりにアバター変更を提案すべきかを判定する純関数
   `ProfileAvatarRotationSuggester`をprofileモジュールに追加した。
