@@ -750,6 +750,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 `null`）場合は提案しない。実際のアバター選択UI・保存・候補一覧の管理は
 アプリ側の責務とする。
 
+## WeakNotesReviewSchedulerの追加
+
+`WeakNotesAnalyzer`が特定した弱点単元を優先的に復習させたい場面向けに、
+純関数`WeakNotesReviewScheduler`（`schedule`、`dueUnitIds`）を`weak`モジュール
+に追加した。`SpacedReview`（問題単位のLeitner式間隔反復）とは別に、単元
+単位で誤解の総回数が多いほど復習間隔を短くするだけの優先度付けであり、
+実際の復習問題の選定・提示はアプリ側の責務とする。
+
 ## EntitlementGracePeriodの追加
 
 オフライン環境で課金ストアへの再確認ができないまま失効扱いになる体験
