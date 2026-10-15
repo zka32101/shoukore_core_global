@@ -197,3 +197,5 @@
   （`GuardianApprovalRequest`）をguardianモジュールに追加した。
 - 単元ごとのマスターバッジ付与条件を判定する純関数
   `UnitMasteryBadgeEligibility`をgrowthモジュールに追加した。
+- オフライン同期時の競合を解決する純関数`OfflineSyncConflictResolver`
+  （`SyncableRecord`、last-write-wins）をsyncモジュールに追加した。

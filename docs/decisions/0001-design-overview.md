@@ -791,6 +791,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 単元ごとの直近N件の正答率が閾値以上かを判定するだけで、バッジの永続化・
 通知表示はアプリ側の責務とする。
 
+## OfflineSyncConflictResolverの追加
+
+オフライン中に複数端末で記録された進捗データが同期時に競合する場合に
+備え、純関数`OfflineSyncConflictResolver`（`resolve`）と値オブジェクト
+`SyncableRecord`を`sync`モジュールに追加した。`updatedAt`が新しい方を
+採用する単純なlast-write-winsのみを行い、同時刻の場合はサーバー側
+（remote）を優先する。実際のマージ処理・サーバーAPIの呼び出しは
+アプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
