@@ -609,6 +609,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 `consentedAt`/`policyVersion`と比較するだけで、`ConsentStore`への保存・
 読込自体には関与しない。
 
+## RetryBackoffPolicyの追加
+
+`PendingSyncQueue`は失敗回数（`retryCount`）を保持するが、「次にいつ
+再送してよいか」の計算は本コアでは支援していなかった。これに対応するため、
+純関数`RetryBackoffPolicy`（`nextDelay`/`shouldRetryNow`/
+`hasExhaustedRetries`）を`sync`モジュールに追加した。`baseDelay * 2^retryCount`
+を`maxDelay`で上限、`maxAttempts`到達後は再送を諦めるべきと判定する。
+実際のHTTP送信・APIコールはアプリ側の責務とする。
+
 ## StaleDataPolicyの追加
 
 オフライン運用が長期化した端末では、ローカルの`ProgressStore`/`GrowthStore`
