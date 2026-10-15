@@ -103,9 +103,11 @@ class _DataPrivacyScreenState extends State<DataPrivacyScreen> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final theme = Theme.of(context);
     final exported = _exported;
     final consent = exported?['consent'] as Map<String, dynamic>?;
     final progressCount = (exported?['progress'] as List?)?.length ?? 0;
+    final consentGiven = consent?['parentalConsentGiven'] as bool? ?? false;
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.dataPrivacyTitle)),
@@ -114,39 +116,61 @@ class _DataPrivacyScreenState extends State<DataPrivacyScreen> {
           : ListView(
               padding: const EdgeInsets.all(16),
               children: [
-                Text(
-                  (consent?['parentalConsentGiven'] as bool? ?? false)
-                      ? l10n.consentStatusGiven
-                      : l10n.consentStatusNotGiven,
-                  key: const Key('dataPrivacyConsentStatusText'),
+                Card(
+                  color: consentGiven
+                      ? theme.colorScheme.primaryContainer
+                      : theme.colorScheme.surfaceContainerHighest,
+                  child: ListTile(
+                    leading: Icon(
+                      consentGiven ? Icons.verified_user : Icons.gpp_maybe_outlined,
+                    ),
+                    title: Text(
+                      consentGiven ? l10n.consentStatusGiven : l10n.consentStatusNotGiven,
+                      key: const Key('dataPrivacyConsentStatusText'),
+                    ),
+                  ),
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 20),
                 Text(
                   l10n.dataPrivacyExportSectionTitle,
-                  style: Theme.of(context).textTheme.titleMedium,
+                  style: theme.textTheme.titleMedium,
                 ),
                 const SizedBox(height: 8),
-                Text(
-                  l10n.dataPrivacyProgressCount(progressCount),
-                  key: const Key('dataPrivacyProgressCountText'),
+                Card(
+                  child: ListTile(
+                    leading: const Icon(Icons.description_outlined),
+                    title: Text(
+                      l10n.dataPrivacyProgressCount(progressCount),
+                      key: const Key('dataPrivacyProgressCountText'),
+                    ),
+                  ),
                 ),
                 const SizedBox(height: 8),
-                OutlinedButton(
+                OutlinedButton.icon(
                   key: const Key('copyExportedJsonButton'),
                   onPressed: _copyExportedJson,
-                  child: Text(l10n.dataPrivacyCopyJsonButton),
+                  icon: const Icon(Icons.copy_all_outlined),
+                  label: Text(l10n.dataPrivacyCopyJsonButton),
                 ),
                 const SizedBox(height: 24),
-                ElevatedButton(
+                Divider(color: theme.colorScheme.outlineVariant),
+                const SizedBox(height: 8),
+                OutlinedButton.icon(
                   key: const Key('revokeConsentButton'),
                   onPressed: _revokeConsent,
-                  child: Text(l10n.dataPrivacyRevokeConsentButton),
+                  icon: const Icon(Icons.block),
+                  label: Text(l10n.dataPrivacyRevokeConsentButton),
                 ),
                 const SizedBox(height: 8),
-                ElevatedButton(
+                FilledButton.icon(
                   key: const Key('eraseAllButton'),
                   onPressed: _eraseAll,
-                  child: Text(l10n.dataPrivacyEraseAllButton),
+                  style: FilledButton.styleFrom(
+                    backgroundColor: theme.colorScheme.error,
+                    foregroundColor: theme.colorScheme.onError,
+                  ),
+                  icon: const Icon(Icons.delete_forever_outlined),
+                  label: Text(l10n.dataPrivacyEraseAllButton),
                 ),
               ],
             ),

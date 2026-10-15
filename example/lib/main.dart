@@ -22,6 +22,7 @@ class _ShoukoreExampleAppState extends State<ShoukoreExampleApp> {
 
   @override
   Widget build(BuildContext context) {
+    final seed = Colors.indigo;
     return MaterialApp(
       locale: _locale,
       localizationsDelegates: const [
@@ -31,6 +32,26 @@ class _ShoukoreExampleAppState extends State<ShoukoreExampleApp> {
         GlobalWidgetsLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
+      theme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: seed,
+        appBarTheme: const AppBarTheme(centerTitle: false),
+        cardTheme: const CardThemeData(
+          elevation: 0,
+          margin: EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(16)),
+          ),
+        ),
+        listTileTheme: const ListTileThemeData(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(16)),
+          ),
+        ),
+        inputDecorationTheme: const InputDecorationTheme(
+          border: OutlineInputBorder(),
+        ),
+      ),
       home: HomeScreen(onLocaleChanged: _setLocale),
     );
   }

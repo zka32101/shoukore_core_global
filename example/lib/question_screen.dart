@@ -98,70 +98,143 @@ class _QuestionScreenState extends State<QuestionScreen> {
   @override
   Widget build(BuildContext context) {
     final question = _question;
+    final theme = Theme.of(context);
+    final correct = _feedback == 'correct';
     return Scaffold(
       appBar: AppBar(title: Text(widget.unit.id)),
       body: question == null
           ? const Center(child: CircularProgressIndicator())
-          : Padding(
+          : ListView(
               padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  if (_mastery != null)
-                    Text(
-                      'mastery: ${(_mastery!.score * 100).toStringAsFixed(0)}%',
-                      key: const Key('masteryText'),
-                    ),
-                  Text(
-                    'stage: ${widget.growthRepository.stage.name}, '
-                    'coins: ${widget.growthRepository.wallet.balance}, '
-                    'mission: ${widget.growthRepository.missionState.completedCount}, '
-                    'streak: ${widget.growthRepository.streak.currentStreakDays}',
-                    key: const Key('growthStatusText'),
-                  ),
-                  const SizedBox(height: 16),
-                  for (final choice in question.choices)
-                    ElevatedButton(
-                      key: Key('choice_$choice'),
-                      onPressed: () => _answer(choice),
-                      child: Text(choice),
-                    ),
-                  if (_feedback != null)
-                    Text(_feedback!, key: const Key('feedbackText')),
-                  if (_feedback != null && question.explanationId.isNotEmpty)
-                    Builder(builder: (context) {
-                      final explanation = resolveExplanation(
-                        AppLocalizations.of(context)!,
-                        question.explanationId,
-                      );
-                      if (explanation == null) return const SizedBox.shrink();
-                      return Padding(
-                        padding: const EdgeInsets.only(top: 8),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              AppLocalizations.of(context)!.explanationSectionTitle,
-                              style: Theme.of(context).textTheme.titleMedium,
-                            ),
-                            Text(explanation, key: const Key('explanationText')),
-                          ],
+              children: [
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        if (_mastery != null)
+                          Row(
+                            children: [
+                              Icon(Icons.insights, size: 18, color: theme.colorScheme.primary),
+                              const SizedBox(width: 6),
+                              Text(
+                                'mastery: ${(_mastery!.score * 100).toStringAsFixed(0)}%',
+                                key: const Key('masteryText'),
+                                style: theme.textTheme.titleSmall,
+                              ),
+                            ],
+                          ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'stage: ${widget.growthRepository.stage.name}, '
+                          'coins: ${widget.growthRepository.wallet.balance}, '
+                          'mission: ${widget.growthRepository.missionState.completedCount}, '
+                          'streak: ${widget.growthRepository.streak.currentStreakDays}',
+                          key: const Key('growthStatusText'),
+                          style: theme.textTheme.bodySmall,
                         ),
-                      );
-                    }),
-                  if (_overcomeMisconception != null)
-                    Text(
-                      AppLocalizations.of(context)!.misconceptionOvercome(_overcomeMisconception!),
-                      key: const Key('misconceptionOvercomeBadge'),
+                      ],
                     ),
-                  const SizedBox(height: 16),
-                  ElevatedButton(
-                    key: const Key('nextQuestionButton'),
-                    onPressed: _loadQuestion,
-                    child: const Text('next'),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Wrap(
+                  spacing: 12,
+                  runSpacing: 12,
+                  children: [
+                    for (final choice in question.choices)
+                      SizedBox(
+                        width: 140,
+                        height: 56,
+                        child: ElevatedButton(
+                          key: Key('choice_$choice'),
+                          onPressed: () => _answer(choice),
+                          style: ElevatedButton.styleFrom(
+                            textStyle: theme.textTheme.titleMedium,
+                          ),
+                          child: Text(choice),
+                        ),
+                      ),
+                  ],
+                ),
+                if (_feedback != null) ...[
+                  const SizedBox(height: 20),
+                  Card(
+                    color: correct
+                        ? theme.colorScheme.primaryContainer
+                        : theme.colorScheme.errorContainer,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Row(
+                        children: [
+                          Icon(
+                            correct ? Icons.check_circle : Icons.cancel,
+                            color: correct
+                                ? theme.colorScheme.onPrimaryContainer
+                                : theme.colorScheme.onErrorContainer,
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            _feedback!,
+                            key: const Key('feedbackText'),
+                            style: theme.textTheme.titleMedium?.copyWith(
+                              color: correct
+                                  ? theme.colorScheme.onPrimaryContainer
+                                  : theme.colorScheme.onErrorContainer,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ],
-              ),
+                if (_feedback != null && question.explanationId.isNotEmpty)
+                  Builder(builder: (context) {
+                    final explanation = resolveExplanation(
+                      AppLocalizations.of(context)!,
+                      question.explanationId,
+                    );
+                    if (explanation == null) return const SizedBox.shrink();
+                    return Padding(
+                      padding: const EdgeInsets.only(top: 12),
+                      child: Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                AppLocalizations.of(context)!.explanationSectionTitle,
+                                style: theme.textTheme.titleMedium,
+                              ),
+                              const SizedBox(height: 4),
+                              Text(explanation, key: const Key('explanationText')),
+                            ],
+                          ),
+                        ),
+                      ),
+                    );
+                  }),
+                if (_overcomeMisconception != null)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 12),
+                    child: Chip(
+                      avatar: const Icon(Icons.emoji_events, size: 18),
+                      label: Text(
+                        AppLocalizations.of(context)!.misconceptionOvercome(_overcomeMisconception!),
+                        key: const Key('misconceptionOvercomeBadge'),
+                      ),
+                    ),
+                  ),
+                const SizedBox(height: 24),
+                ElevatedButton.icon(
+                  key: const Key('nextQuestionButton'),
+                  onPressed: _loadQuestion,
+                  icon: const Icon(Icons.arrow_forward),
+                  label: const Text('next'),
+                ),
+              ],
             ),
     );
   }

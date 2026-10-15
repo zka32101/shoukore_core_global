@@ -156,7 +156,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final curriculum = _curriculum;
+    final theme = Theme.of(context);
     return Scaffold(
+      backgroundColor: theme.colorScheme.surfaceContainerLowest,
       appBar: AppBar(
         title: const Text('shoukore_core_global example'),
         actions: [
@@ -198,30 +200,60 @@ class _HomeScreenState extends State<HomeScreen> {
       body: curriculum == null
           ? const Center(child: CircularProgressIndicator())
           : ListView(
+              padding: const EdgeInsets.symmetric(vertical: 12),
               children: [
-                ListTile(
-                  key: const Key('growthStatusTile'),
-                  title: Text(
-                    'stage: ${_growthRepository!.stage.name}, '
-                    'coins: ${_growthRepository!.wallet.balance}',
+                _SectionLabel(label: '今日のステータス'),
+                Card(
+                  child: ListTile(
+                    key: const Key('growthStatusTile'),
+                    leading: CircleAvatar(
+                      backgroundColor: theme.colorScheme.primaryContainer,
+                      foregroundColor: theme.colorScheme.onPrimaryContainer,
+                      child: const Icon(Icons.auto_awesome),
+                    ),
+                    title: Text(
+                      'stage: ${_growthRepository!.stage.name}  /  coins: ${_growthRepository!.wallet.balance}',
+                      style: theme.textTheme.titleMedium,
+                    ),
+                    subtitle: const Text('成長段階とコインの状態'),
                   ),
                 ),
-                ListTile(
-                  key: const Key('screenTimeStatusTile'),
-                  title: Text(
-                    'screen time used: ${_screenTimeRepository!.usedToday.inMinutes}min, '
-                    'remaining: ${_screenTimeGuard.remaining(_screenTimeRepository!.usedToday).inMinutes}min',
+                Card(
+                  child: ListTile(
+                    key: const Key('screenTimeStatusTile'),
+                    leading: CircleAvatar(
+                      backgroundColor: theme.colorScheme.secondaryContainer,
+                      foregroundColor: theme.colorScheme.onSecondaryContainer,
+                      child: const Icon(Icons.schedule),
+                    ),
+                    title: Text(
+                      'screen time used: ${_screenTimeRepository!.usedToday.inMinutes}min, '
+                      'remaining: ${_screenTimeGuard.remaining(_screenTimeRepository!.usedToday).inMinutes}min',
+                      style: theme.textTheme.titleMedium,
+                    ),
+                    subtitle: const Text('本日の学習時間の消化状況'),
                   ),
                 ),
+                _SectionLabel(label: '単元を選ぶ'),
                 for (final unit in curriculum.units.where((u) => u.templateIds.isNotEmpty))
-                  ListTile(
-                    key: Key('unit_${unit.id}'),
-                    title: Text(unit.id),
-                    subtitle: Text('grade ${unit.grade}'),
-                    trailing: _entitlement.isUnlocked(unit.subjectId)
-                        ? null
-                        : const Icon(Icons.lock, key: Key('lockIcon')),
-                    onTap: () async {
+                  Card(
+                    child: ListTile(
+                      key: Key('unit_${unit.id}'),
+                      leading: CircleAvatar(
+                        backgroundColor: theme.colorScheme.tertiaryContainer,
+                        foregroundColor: theme.colorScheme.onTertiaryContainer,
+                        child: const Icon(Icons.menu_book_outlined),
+                      ),
+                      title: Text(unit.id, style: theme.textTheme.titleMedium),
+                      subtitle: Text('grade ${unit.grade}'),
+                      trailing: _entitlement.isUnlocked(unit.subjectId)
+                          ? const Icon(Icons.chevron_right)
+                          : Icon(
+                              Icons.lock,
+                              key: const Key('lockIcon'),
+                              color: theme.colorScheme.outline,
+                            ),
+                      onTap: () async {
                       if (!_entitlement.isUnlocked(unit.subjectId)) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
@@ -257,78 +289,120 @@ class _HomeScreenState extends State<HomeScreen> {
                       // 出題画面でgrowth状態（stage/coins）が更新されている可能性があるため、
                       // ホームに戻った際に再描画する。
                       if (mounted) setState(() {});
+                      },
+                    ),
+                  ),
+                _SectionLabel(label: 'レポート・設定'),
+                Card(
+                  child: ListTile(
+                    key: const Key('weeklyReportTile'),
+                    leading: const Icon(Icons.bar_chart_outlined),
+                    title: Text(l10n.weeklyReportTile),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => WeeklyReportScreen(
+                          unitIds: curriculum.units.map((u) => u.id).toList(),
+                          progressStore: _progressStore,
+                          clock: _clock,
+                          questionCache: _questionCache,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Card(
+                  child: ListTile(
+                    key: const Key('ageVerificationTile'),
+                    leading: const Icon(Icons.verified_user_outlined),
+                    title: Text(l10n.ageVerificationTile),
+                    subtitle: Text(
+                      (_consent?.parentalConsentGiven ?? false)
+                          ? l10n.consentStatusGiven
+                          : l10n.consentStatusNotGiven,
+                      key: const Key('consentStatusText'),
+                    ),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: _runAgeGateFlow,
+                  ),
+                ),
+                Card(
+                  child: ListTile(
+                    key: const Key('dailyReminderTile'),
+                    leading: const Icon(Icons.notifications_outlined),
+                    title: Text(l10n.dailyReminderTile),
+                    subtitle: Text(
+                      _dailyReminderScheduledAt != null
+                          ? l10n.dailyReminderScheduled(
+                              _dailyReminderScheduledAt!.hour,
+                              _dailyReminderScheduledAt!.minute,
+                            )
+                          : l10n.dailyReminderNotScheduled,
+                      key: const Key('dailyReminderStatusText'),
+                    ),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: _toggleDailyReminder,
+                  ),
+                ),
+                Card(
+                  child: ListTile(
+                    key: const Key('dataPrivacyTile'),
+                    leading: const Icon(Icons.privacy_tip_outlined),
+                    title: Text(l10n.dataPrivacyTile),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => DataPrivacyScreen(
+                          consentStore: _consentStore,
+                          progressStore: _progressStore,
+                          onDataErased: () {
+                            if (mounted) setState(() => _consent = null);
+                          },
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Card(
+                  child: ListTile(
+                    key: const Key('guardianGateTile'),
+                    leading: const Icon(Icons.shield_outlined),
+                    title: Text(l10n.guardianGateTitle),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () async {
+                      final passed = await showGuardianGateDialog(context);
+                      if (!context.mounted) return;
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          key: const Key('guardianGateResultSnackBar'),
+                          content: Text(passed ? 'guardian_gate_passed' : 'guardian_gate_failed'),
+                        ),
+                      );
                     },
                   ),
-                ListTile(
-                  key: const Key('weeklyReportTile'),
-                  title: Text(l10n.weeklyReportTile),
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (_) => WeeklyReportScreen(
-                        unitIds: curriculum.units.map((u) => u.id).toList(),
-                        progressStore: _progressStore,
-                        clock: _clock,
-                        questionCache: _questionCache,
-                      ),
-                    ),
-                  ),
-                ),
-                ListTile(
-                  key: const Key('ageVerificationTile'),
-                  title: Text(l10n.ageVerificationTile),
-                  subtitle: Text(
-                    (_consent?.parentalConsentGiven ?? false)
-                        ? l10n.consentStatusGiven
-                        : l10n.consentStatusNotGiven,
-                    key: const Key('consentStatusText'),
-                  ),
-                  onTap: _runAgeGateFlow,
-                ),
-                ListTile(
-                  key: const Key('dailyReminderTile'),
-                  title: Text(l10n.dailyReminderTile),
-                  subtitle: Text(
-                    _dailyReminderScheduledAt != null
-                        ? l10n.dailyReminderScheduled(
-                            _dailyReminderScheduledAt!.hour,
-                            _dailyReminderScheduledAt!.minute,
-                          )
-                        : l10n.dailyReminderNotScheduled,
-                    key: const Key('dailyReminderStatusText'),
-                  ),
-                  onTap: _toggleDailyReminder,
-                ),
-                ListTile(
-                  key: const Key('dataPrivacyTile'),
-                  title: Text(l10n.dataPrivacyTile),
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (_) => DataPrivacyScreen(
-                        consentStore: _consentStore,
-                        progressStore: _progressStore,
-                        onDataErased: () {
-                          if (mounted) setState(() => _consent = null);
-                        },
-                      ),
-                    ),
-                  ),
-                ),
-                ListTile(
-                  key: const Key('guardianGateTile'),
-                  title: Text(l10n.guardianGateTitle),
-                  onTap: () async {
-                    final passed = await showGuardianGateDialog(context);
-                    if (!context.mounted) return;
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        key: const Key('guardianGateResultSnackBar'),
-                        content: Text(passed ? 'guardian_gate_passed' : 'guardian_gate_failed'),
-                      ),
-                    );
-                  },
                 ),
               ],
             ),
+    );
+  }
+}
+
+class _SectionLabel extends StatelessWidget {
+  const _SectionLabel({required this.label});
+
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 16, 20, 4),
+      child: Text(
+        label,
+        style: Theme.of(context).textTheme.labelLarge?.copyWith(
+          color: Theme.of(context).colorScheme.primary,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
     );
   }
 }

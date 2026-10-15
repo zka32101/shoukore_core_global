@@ -47,6 +47,7 @@ class _WeeklyReportScreenState extends State<WeeklyReportScreen> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final theme = Theme.of(context);
     final report = _report;
     return Scaffold(
       appBar: AppBar(title: Text(l10n.weeklyReportTitle)),
@@ -61,35 +62,44 @@ class _WeeklyReportScreenState extends State<WeeklyReportScreen> {
                   key: const Key('weeklyReportList'),
                   padding: const EdgeInsets.all(16),
                   children: [
-                    Text(
-                      l10n.weeklyReportAccuracy(
-                        (report.overallAccuracy * 100).round(),
-                        report.totalCorrect,
-                        report.totalAttempts,
+                    Card(
+                      color: theme.colorScheme.primaryContainer,
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.query_stats,
+                          color: theme.colorScheme.onPrimaryContainer,
+                        ),
+                        title: Text(
+                          l10n.weeklyReportAccuracy(
+                            (report.overallAccuracy * 100).round(),
+                            report.totalCorrect,
+                            report.totalAttempts,
+                          ),
+                          key: const Key('weeklyReportAccuracyText'),
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            color: theme.colorScheme.onPrimaryContainer,
+                          ),
+                        ),
                       ),
-                      key: const Key('weeklyReportAccuracyText'),
-                      style: Theme.of(context).textTheme.titleMedium,
                     ),
                     const SizedBox(height: 16),
                     for (final unit in report.units)
-                      Padding(
+                      Card(
                         key: Key('weeklyReportUnit_${unit.unitId}'),
-                        padding: const EdgeInsets.only(bottom: 8),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(l10n.weeklyReportUnitLine(
-                              unit.unitId,
-                              (unit.accuracy * 100).round(),
-                              unit.correctCount,
-                              unit.attemptCount,
-                            )),
-                            if (unit.topMisconception != null)
-                              Text(
-                                l10n.weeklyReportTopMisconception(unit.topMisconception!),
-                                style: Theme.of(context).textTheme.bodySmall,
-                              ),
-                          ],
+                        child: ListTile(
+                          leading: const Icon(Icons.menu_book_outlined),
+                          title: Text(l10n.weeklyReportUnitLine(
+                            unit.unitId,
+                            (unit.accuracy * 100).round(),
+                            unit.correctCount,
+                            unit.attemptCount,
+                          )),
+                          subtitle: unit.topMisconception != null
+                              ? Text(
+                                  l10n.weeklyReportTopMisconception(unit.topMisconception!),
+                                  style: theme.textTheme.bodySmall,
+                                )
+                              : null,
                         ),
                       ),
                   ],
