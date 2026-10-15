@@ -87,3 +87,4 @@ export 'src/sync/retry_backoff_policy.dart';
 export 'src/sync/stale_data_policy.dart';
 export 'src/weak/spaced_review.dart';
 export 'src/weak/weak_notes.dart';
+export 'src/weak/weak_notes_review_scheduler.dart';
