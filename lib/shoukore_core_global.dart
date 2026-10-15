@@ -26,6 +26,7 @@ export 'src/store/in_memory_migration_ledger.dart';
 export 'src/store/migration_ledger.dart';
 export 'src/notify/daily_reminder_planner.dart';
 export 'src/notify/in_memory_notification_scheduler.dart';
+export 'src/notify/notification_quiet_merge.dart';
 export 'src/notify/notification_scheduler.dart';
 export 'src/privacy/consent_expiry_policy.dart';
 export 'src/privacy/consent_store.dart';

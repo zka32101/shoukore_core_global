@@ -170,3 +170,6 @@
 - 1日あたりのコイン消費量に上限を設け、`InventoryManager`での購入が超過
   しないかを判定する純関数`CoinSpendingLimit`をgrowthモジュールに追加した。
   日替わり判定・リセット自体はアプリ側（`DailyBoundary`併用）の責務とする。
+- `QuietHoursGuard`の結果を踏まえ、静かな時間帯に予定されていた通知を
+  時間帯明け直後に再スケジュールすべき時刻を計算する純関数
+  `NotificationQuietMerge`をnotifyモジュールに追加した。
