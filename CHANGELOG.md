@@ -217,3 +217,5 @@
   privacyモジュールに追加した。
 - 保護者ゲート認証情報のローテーション促進を判定する純関数
   `GuardianPinRotationReminder`をguardianモジュールに追加した。
+- 同期キューの滞留を検知する純関数`SyncQueueBacklogAlert`をsyncモジュール
+  に追加した。

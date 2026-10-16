@@ -98,6 +98,7 @@ export 'src/sync/offline_sync_conflict_resolver.dart';
 export 'src/sync/pending_sync_item.dart';
 export 'src/sync/pending_sync_queue.dart';
 export 'src/sync/retry_backoff_policy.dart';
+export 'src/sync/sync_queue_backlog_alert.dart';
 export 'src/sync/stale_data_policy.dart';
 export 'src/weak/spaced_review.dart';
 export 'src/weak/weak_notes.dart';
