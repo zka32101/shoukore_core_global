@@ -895,6 +895,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 重複チェック）と同じ考え方を別経路にも適用するだけで、実際のギフト
 付与処理・付与結果の通知はアプリ側の責務とする。
 
+## SyncQueueBacklogAlertの追加
+
+`PendingSyncQueue`に未送信アイテムが溜まり続けている場合に同期不調を
+検知したい場面向けに、純関数`SyncQueueBacklogAlert`（`shouldAlert`）を
+`sync`モジュールに追加した。`RetryBackoffPolicy`（個々のアイテムの再送
+タイミング）とは別に、キュー全体の件数が閾値以上かを見るだけで、実際の
+アラート表示・ユーザーへの通知はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

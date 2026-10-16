@@ -221,3 +221,5 @@
   （`SeenItemPrice`）をgrowthモジュールに追加した。
 - ギフト付与時の重複チェックを行う純関数`InventoryDuplicateGiftGuard`を
   growthモジュールに追加した。
+- 同期キューの滞留を検知する純関数`SyncQueueBacklogAlert`をsyncモジュール
+  に追加した。
