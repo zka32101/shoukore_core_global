@@ -268,5 +268,7 @@
   syncモジュールに追加した。
 - 保護者ゲートへの異常に速い連続試行を検知する
   `GuardianGateRapidAttemptDetector`をguardianモジュールに追加した。
+- セッション中の解答時間が徐々に遅くなる傾向（集中力低下の疑い）を検知する
+  `AnswerLatencyFatigueTrend`をadaptiveモジュールに追加した。
 - 期間限定の所持アイテムの消費期限が近いことを知らせる
   `InventoryItemExpiryNotice`をgrowthモジュールに追加した。
