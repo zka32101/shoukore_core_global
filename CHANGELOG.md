@@ -217,3 +217,5 @@
   privacyモジュールに追加した。
 - 保護者ゲート認証情報のローテーション促進を判定する純関数
   `GuardianPinRotationReminder`をguardianモジュールに追加した。
+- ギフト付与時の重複チェックを行う純関数`InventoryDuplicateGiftGuard`を
+  growthモジュールに追加した。
