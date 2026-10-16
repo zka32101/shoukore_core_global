@@ -80,6 +80,7 @@ export 'src/guardian/quiet_hours_guard.dart';
 export 'src/guardian/report_read_state.dart';
 export 'src/guardian/review_session_pacer.dart';
 export 'src/guardian/screen_time_guard.dart';
+export 'src/guardian/screen_time_warning_threshold.dart';
 export 'src/guardian/screen_time_snapshot.dart';
 export 'src/guardian/screen_time_store.dart';
 export 'src/guardian/session_timeout_policy.dart';
