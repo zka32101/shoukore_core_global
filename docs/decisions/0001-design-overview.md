@@ -953,6 +953,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 起動間隔のみを見る。実際の復帰時UI・再同期のトリガーはアプリ側の責務
 とする。
 
+## PhotoConsentExpiryCascadeの追加
+
+プロフィール写真利用の同意が失効した際、既に保存済みの写真そのものも
+削除対象にすべきかを判定したい場面向けに、純関数
+`PhotoConsentExpiryCascade`（`shouldDeleteStoredPhoto`）を`privacy`
+モジュールに追加した。`ProfilePhotoConsentGate`（新規利用前の同意確認）
+とは異なり、同意取り消し後に写真が残り続けることを防ぐための事後判定を
+扱う。実際の写真削除処理はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

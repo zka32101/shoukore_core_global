@@ -34,6 +34,7 @@ export 'src/privacy/consent_audit_log.dart';
 export 'src/privacy/consent_expiry_policy.dart';
 export 'src/privacy/consent_renewal_reminder.dart';
 export 'src/privacy/consent_store.dart';
+export 'src/privacy/photo_consent_expiry_cascade.dart';
 export 'src/privacy/profile_photo_consent_gate.dart';
 export 'src/profile/active_profile_guard.dart';
 export 'src/profile/in_memory_profile_store.dart';
