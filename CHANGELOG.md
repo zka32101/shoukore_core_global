@@ -250,3 +250,5 @@
   `AudioCueVolumeDuckingSuggestion`をaudioモジュールに追加した。
 - プロフィール切り替えが発生したことを保護者向けに記録すべきか判定する
   `ProfileSwitchAuditLog`をprofileモジュールに追加した。
+- コインウォレットの残高不足を例外なしで事前確認できる
+  `CoinWalletOverdraftGuard`をgrowthモジュールに追加した。
