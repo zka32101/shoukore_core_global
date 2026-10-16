@@ -1095,6 +1095,33 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 試行回数ではなく試行間隔の異常さを見る。実際の警戒時の対応（追加ロック
 ・保護者への通知等）はアプリ側の責務とする。
 
+## AnswerLatencyFatigueTrendの追加
+
+セッション中の解答時間が、単発の異常値ではなく徐々に遅くなっていく
+傾向（集中力低下の疑い）を検知したい場面向けに、`AnswerLatencyFatigueTrend`
+を`adaptive`モジュールに追加した。`AnswerLatencyOutlierFlag`（個々の解答
+の所要時間が極端に短い/長い場合のフラグ）とは異なり、本クラスは直近の
+解答時間列の前半と後半の平均を比較し、遅くなる傾向自体を見る。実際の
+休憩提案・通知はアプリ側の責務とする。
+
+## InventoryItemExpiryNoticeの追加
+
+イベント配布等の期間限定アイテムの消費期限が近いことに気づけるよう
+にしたい場面向けに、`InventoryItemExpiryNotice`を`growth`モジュールに
+追加した。`InventorySnapshot`自体は所持アイテムIDの集合のみを保持し
+期限の概念を持たないため、本クラスはアプリ側が別途管理する
+「アイテムID→期限」の対応を受け取り、期限が近いものを抽出する。
+実際の通知表示・期限切れ後の失効処理はアプリ側の責務とする。
+
+## DuplicateSyncPayloadDetectorの追加
+
+複数端末から同じ内容のデータが重複して同期キューに積まれていないか
+を検知したい場面向けに、`DuplicateSyncPayloadDetector`を`sync`モジュール
+に追加した。`OfflineSyncConflictResolver`（更新時刻が異なる競合の解決）
+とは異なり、本クラスは内容（payload）が完全に一致するレコードが複数
+存在するかのみを見る。実際の重複除去・サーバー側への問い合わせは
+アプリ側の責務とする。
+
 ## MissionCompletionTimePreferenceの追加
 
 通知タイミングの最適化のため、ミッション達成（学習完了）の履歴から

@@ -268,5 +268,11 @@
   syncモジュールに追加した。
 - 保護者ゲートへの異常に速い連続試行を検知する
   `GuardianGateRapidAttemptDetector`をguardianモジュールに追加した。
+- セッション中の解答時間が徐々に遅くなる傾向（集中力低下の疑い）を検知する
+  `AnswerLatencyFatigueTrend`をadaptiveモジュールに追加した。
+- 期間限定の所持アイテムの消費期限が近いことを知らせる
+  `InventoryItemExpiryNotice`をgrowthモジュールに追加した。
+- 複数端末から同じ内容のデータが重複して同期キューに積まれていないかを
+  検知する`DuplicateSyncPayloadDetector`をsyncモジュールに追加した。
 - ミッション達成履歴から最も学習しやすい時間帯を推定する
   `MissionCompletionTimePreference`をgrowthモジュールに追加した。
