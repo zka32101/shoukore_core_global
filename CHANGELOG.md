@@ -278,5 +278,7 @@
   `MissionCompletionTimePreference`をgrowthモジュールに追加した。
 - 保護者承認待ちが複数件溜まった場合にまとめて知らせるべきかを判定する
   `GuardianApprovalRequestBatchNotice`をguardianモジュールに追加した。
+- 一度克服したはずの誤解が再び誤答として現れた（再発した）かを検知する
+  `WeakNoteMisconceptionRelapse`をweakモジュールに追加した。
 - 子どもと保護者の端末のタイムゾーンが大きくずれていないかを検知する
   `GuardianTimezoneMismatchDetector`をguardianモジュールに追加した。
