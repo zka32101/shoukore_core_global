@@ -223,3 +223,5 @@
   growthモジュールに追加した。
 - 同期キューの滞留を検知する純関数`SyncQueueBacklogAlert`をsyncモジュール
   に追加した。
+- ストリーク保護用フリーズ券の消費判定を行う純関数
+  `MissionStreakFreezeToken`をgrowthモジュールに追加した。
