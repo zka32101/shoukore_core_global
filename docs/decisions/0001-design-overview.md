@@ -903,6 +903,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 タイミング）とは別に、キュー全体の件数が閾値以上かを見るだけで、実際の
 アラート表示・ユーザーへの通知はアプリ側の責務とする。
 
+## AnswerLatencyOutlierFlagの追加
+
+解答にかかった時間が極端に短い、または長い場合に異常値として検知したい
+場面向けに、純関数`AnswerLatencyOutlierFlag`（`isOutlier`）を`adaptive`
+モジュールに追加した。`QuestionDifficultyDriftAlert`（難易度の変動検知）
+とは異なり、個々の解答の所要時間のみを見るだけで、実際の異常値への対応
+（アラート・保護者への報告等）はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
