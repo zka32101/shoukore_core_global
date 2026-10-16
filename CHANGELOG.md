@@ -239,3 +239,6 @@
   `PhotoConsentExpiryCascade`をprivacyモジュールに追加した。
 - 連続するミッション見逃しに上限を設ける純関数`MissionSkipStreakCap`を
   growthモジュールに追加した。
+- 保護者承認申請の期限切れ前リマインドを判定する純関数
+  `GuardianApprovalRequestReminderEscalation`をguardianモジュールに
+  追加した。

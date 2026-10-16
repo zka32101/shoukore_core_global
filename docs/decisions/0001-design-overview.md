@@ -970,6 +970,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 見逃しの連続日数が上限を超えたかを見るだけで、実際のストリーク更新
 処理自体はアプリ側の責務とする。
 
+## GuardianApprovalRequestReminderEscalationの追加
+
+保護者承認申請が期限切れになる前に、未処理のままであることをリマインド
+したい場面向けに、純関数`GuardianApprovalRequestReminderEscalation`
+（`shouldEscalate`）を`guardian`モジュールに追加した。
+`GuardianApprovalRequestQueue.isExpired`（既に期限切れかどうかの判定）
+とは異なり、期限切れ前の事前リードタイムのみを扱う。実際のリマインド
+表示・通知送信はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
