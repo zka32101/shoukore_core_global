@@ -1006,6 +1006,32 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 `AudioCuePlayer`自体は再生のみを担うため、音量ミキシングの単純な比率
 計算のみを行う。実際の音量制御・フェード処理はアプリ側の責務とする。
 
+## ProfileSwitchAuditLogの追加
+
+保護者が後から「いつ・どのプロフィールに切り替わったか」を確認できる
+ようにしたい場面向けに、プロフィール切り替えの発生を記録すべきかを
+判定する`ProfileSwitchAuditLog`を`profile`モジュールに追加した。
+`ActiveProfileGuard`（保存直前の不整合検知）とは異なり、正常な切り替え
+操作そのものを記録対象にするかどうかを判定するだけで、実際の記録の
+保存・一覧表示はアプリ側の責務とする。
+
+## CoinWalletOverdraftGuardの追加
+
+購入ボタンの有効/無効切り替え等、コイン残高不足を例外を伴わずに事前
+確認したい場面向けに、`CoinWalletOverdraftGuard`を`growth`モジュールに
+追加した。`CoinWallet.spend`は残高不足時に`StateError`を投げる設計の
+ため、例外を使わずに判定したい用途向けに分離した。実際の購入UI・
+エラー表示はアプリ側の責務とする。
+
+## TimeZoneDriftRecalibrationPromptの追加
+
+タイムゾーン変更の検知（`TimeZoneDriftDetector`）が単発の一時的な
+ブレではなく継続して観測された場合にのみ、ミッション日境界の再確認を
+促したい場面向けに、`TimeZoneDriftRecalibrationPrompt`を`regional`
+モジュールに追加した。起動ごとの揺れ（機内モード中の一時的な誤検知
+等）で毎回促してしまわないよう、連続観測回数で判断する。実際の再確認
+ダイアログ表示はアプリ側の責務とする。
+
 ## DailyDigestDuplicateSuppressionの追加
 
 `DailyDigestBuilder`で組み立てた日次要約を同じミッション日内に複数回
