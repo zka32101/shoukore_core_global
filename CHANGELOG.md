@@ -246,3 +246,5 @@
   `WeakNoteStalenessCleanup`をweakモジュールに追加した。
 - 購入復元プロンプト要否を判定する純関数`EntitlementRestorePrompt`を
   entitlementモジュールに追加した。
+- 効果音再生時のBGMダッキング判定を行う純関数
+  `AudioCueVolumeDuckingSuggestion`をaudioモジュールに追加した。

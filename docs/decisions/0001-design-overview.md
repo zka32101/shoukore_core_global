@@ -998,6 +998,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 権利情報のずれを検知する。実際のリストア処理・UI表示はアプリ側の責務
 とする。
 
+## AudioCueVolumeDuckingSuggestionの追加
+
+BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一時的に
+下げたい場面向けに、純関数`AudioCueVolumeDuckingSuggestion`
+（`shouldDuck`・`duckedVolumeFor`）を`audio`モジュールに追加した。
+`AudioCuePlayer`自体は再生のみを担うため、音量ミキシングの単純な比率
+計算のみを行う。実際の音量制御・フェード処理はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
