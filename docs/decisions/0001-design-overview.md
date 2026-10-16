@@ -1159,6 +1159,15 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 端末間のオフセット差を見る。実際の通知時刻の補正・表示はアプリ側の
 責務とする。
 
+## ExportSizeEstimatorの追加
+
+`exportUserData`等が返すデータをJSON化した際のおおよそのバイト数を
+見積もり、分割が必要かを判定したい場面向けに、`ExportSizeEstimator`を
+`privacy`モジュールに追加した。`ExportChunker`自体は件数ベースで分割
+するのみでバイト数は見ないため、本クラスは実際にJSON文字列化して
+バイト数を測り、サイズベースで判定を補う。実際の分割保存・結合処理は
+アプリ側（`ExportChunker`）の責務とする。
+
 ## EntitlementExpiryNoticeの追加
 
 課金プランの有効期限切れが近いことを失効前に事前に知らせたい場面

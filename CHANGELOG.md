@@ -282,5 +282,7 @@
   `WeakNoteMisconceptionRelapse`をweakモジュールに追加した。
 - 子どもと保護者の端末のタイムゾーンが大きくずれていないかを検知する
   `GuardianTimezoneMismatchDetector`をguardianモジュールに追加した。
+- データ書き出しのJSON化後のバイト数を見積もり、分割が必要かを判定する
+  `ExportSizeEstimator`をprivacyモジュールに追加した。
 - 課金プランの有効期限切れが近いことを事前に知らせるべきかを判定する
   `EntitlementExpiryNotice`をentitlementモジュールに追加した。
