@@ -911,6 +911,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 トークン消費による保護経路を扱う。実際のトークン所持数の管理・付与・
 消費演出はアプリ側の責務とする。
 
+## GuardianNotificationDigestThrottleの追加
+
+保護者向け通知が短時間に連続して送られすぎないようにしたい場面向けに、
+純関数`GuardianNotificationDigestThrottle`（`shouldThrottle`）を
+`guardian`モジュールに追加した。`GuardianDigestMuteWindow`（保護者が
+指定するミュート期間）とは異なり、直前の送信時刻からの経過時間のみで
+判定する。実際の通知のまとめ・送信処理はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
