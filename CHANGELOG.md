@@ -268,3 +268,5 @@
   syncモジュールに追加した。
 - 保護者ゲートへの異常に速い連続試行を検知する
   `GuardianGateRapidAttemptDetector`をguardianモジュールに追加した。
+- ミッション達成履歴から最も学習しやすい時間帯を推定する
+  `MissionCompletionTimePreference`をgrowthモジュールに追加した。
