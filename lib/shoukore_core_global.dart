@@ -44,6 +44,7 @@ export 'src/profile/active_profile_guard.dart';
 export 'src/profile/in_memory_profile_store.dart';
 export 'src/profile/profile_avatar_rotation_suggester.dart';
 export 'src/profile/profile.dart';
+export 'src/profile/profile_photo_staleness_notice.dart';
 export 'src/profile/profile_store.dart';
 export 'src/profile/profile_switch_audit_log.dart';
 export 'src/profile/profile_switch_cooldown.dart';

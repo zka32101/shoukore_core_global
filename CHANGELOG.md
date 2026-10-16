@@ -288,3 +288,6 @@
   `EntitlementExpiryNotice`をentitlementモジュールに追加した。
 - コイン残高が長期間使われず滞留していることに気づけるようにする
   `CoinWalletStagnationNotice`をgrowthモジュールに追加した。
+- プロフィール写真が登録・最終更新から長期間変わっていないことに気づ
+  けるようにする`ProfilePhotoStalenessNotice`をprofileモジュールに
+  追加した。
