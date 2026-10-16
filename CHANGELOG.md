@@ -288,3 +288,5 @@
   `EntitlementExpiryNotice`をentitlementモジュールに追加した。
 - コイン残高が長期間使われず滞留していることに気づけるようにする
   `CoinWalletStagnationNotice`をgrowthモジュールに追加した。
+- セッション内の解答が復習モードに偏りすぎていないかを検知する
+  `SessionReviewModeRatioAlert`をadaptiveモジュールに追加した。
