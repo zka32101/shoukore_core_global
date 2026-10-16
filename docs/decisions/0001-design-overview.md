@@ -962,6 +962,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 とは異なり、同意取り消し後に写真が残り続けることを防ぐための事後判定を
 扱う。実際の写真削除処理はアプリ側の責務とする。
 
+## MissionSkipStreakCapの追加
+
+`RegionalHolidayMissionSkip`等によるミッション未達成の見逃しが連続
+しすぎた場合に、ストリーク継続扱いの対象外にしたい場面向けに、純関数
+`MissionSkipStreakCap`（`exceedsCap`）を`growth`モジュールに追加した。
+見逃しの連続日数が上限を超えたかを見るだけで、実際のストリーク更新
+処理自体はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

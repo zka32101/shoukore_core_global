@@ -237,3 +237,5 @@
   syncモジュールに追加した。
 - プロフィール写真同意失効時の保存済み写真削除要否を判定する純関数
   `PhotoConsentExpiryCascade`をprivacyモジュールに追加した。
+- 連続するミッション見逃しに上限を設ける純関数`MissionSkipStreakCap`を
+  growthモジュールに追加した。
