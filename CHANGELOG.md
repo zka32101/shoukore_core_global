@@ -248,3 +248,5 @@
   entitlementモジュールに追加した。
 - 効果音再生時のBGMダッキング判定を行う純関数
   `AudioCueVolumeDuckingSuggestion`をaudioモジュールに追加した。
+- アプリのダウングレード等によるマイグレーション台帳の異常を検知する
+  `MigrationLedgerRollbackGuard`をstoreモジュールに追加した。
