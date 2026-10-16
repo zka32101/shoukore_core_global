@@ -1168,6 +1168,16 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 バイト数を測り、サイズベースで判定を補う。実際の分割保存・結合処理は
 アプリ側（`ExportChunker`）の責務とする。
 
+## EntitlementExpiryNoticeの追加
+
+課金プランの有効期限切れが近いことを失効前に事前に知らせたい場面
+向けに、`EntitlementExpiryNotice`を`entitlement`モジュールに追加した。
+`EntitlementGracePeriod`（失効後の猶予期間判定）とは異なり、本クラス
+は失効前の時点で期限が近づいていることに気づけるようにする。
+`Entitlement`自体やストアからの期限取得はアプリ側（`EntitlementReader`
+等のRevenueCat実装）の責務とし、本コアは期限までの残り時間の判定
+のみを担う。実際の通知表示・更新手続きの案内はアプリ側の責務とする。
+
 ## CoinWalletStagnationNoticeの追加
 
 コインが貯まり続けているにもかかわらず長期間使われていない（残高が
