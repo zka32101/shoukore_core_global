@@ -258,3 +258,5 @@
   `DailyDigestDuplicateSuppression`をguardianモジュールに追加した。
 - アプリのダウングレード等によるマイグレーション台帳の異常を検知する
   `MigrationLedgerRollbackGuard`をstoreモジュールに追加した。
+- 保護者ゲートへの異常に速い連続試行を検知する
+  `GuardianGateRapidAttemptDetector`をguardianモジュールに追加した。
