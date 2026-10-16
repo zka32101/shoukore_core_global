@@ -887,6 +887,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 `InventoryManager`の購入判定には関与しない。価格自体の決定・セール運用
 ロジックはアプリ側の責務とする。
 
+## InventoryDuplicateGiftGuardの追加
+
+キャンペーン等の購入を伴わないギフト付与経路でも重複付与を防ぎたい
+場面向けに、純関数`InventoryDuplicateGiftGuard`（`shouldBlockGift`）を
+`growth`モジュールに追加した。`InventoryManager`（コイン購入経路の
+重複チェック）と同じ考え方を別経路にも適用するだけで、実際のギフト
+付与処理・付与結果の通知はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

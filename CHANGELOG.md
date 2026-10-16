@@ -219,3 +219,5 @@
   `GuardianPinRotationReminder`をguardianモジュールに追加した。
 - ストアアイテムの価格下落通知を判定する純関数`ItemPriceDropNotice`
   （`SeenItemPrice`）をgrowthモジュールに追加した。
+- ギフト付与時の重複チェックを行う純関数`InventoryDuplicateGiftGuard`を
+  growthモジュールに追加した。
