@@ -282,5 +282,7 @@
   `WeakNoteMisconceptionRelapse`をweakモジュールに追加した。
 - 子どもと保護者の端末のタイムゾーンが大きくずれていないかを検知する
   `GuardianTimezoneMismatchDetector`をguardianモジュールに追加した。
+- データ書き出しのJSON化後のバイト数を見積もり、分割が必要かを判定する
+  `ExportSizeEstimator`をprivacyモジュールに追加した。
 - コイン残高が長期間使われず滞留していることに気づけるようにする
   `CoinWalletStagnationNotice`をgrowthモジュールに追加した。
