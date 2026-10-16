@@ -211,3 +211,5 @@
   `SiblingProfileSwitchSuggestion`をprofileモジュールに追加した。
 - 適応難易度の急激な変動を検知する純関数`QuestionDifficultyDriftAlert`を
   adaptiveモジュールに追加した。
+- データ書き出し要求の連続送信を防ぐ純関数`DataExportRequestThrottle`を
+  privacyモジュールに追加した。

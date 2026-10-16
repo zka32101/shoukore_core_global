@@ -854,6 +854,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 `AdaptiveDifficulty`自体の難易度調整ロジックは変更せず、実際のアラート
 対応（通知・保護者への報告等）はアプリ側の責務とする。
 
+## DataExportRequestThrottleの追加
+
+データ書き出し要求（`exportUserData`、LGPD第18条等の権利行使対応）が
+短期間に繰り返されるのを防ぐため、純関数`DataExportRequestThrottle`
+（`shouldThrottle`、`nextAllowedAt`）を`privacy`モジュールに追加した。
+直前の要求時刻からの間隔が最小間隔未満かを判定するだけで、実際の
+書き出し処理の呼び出し制御・UI表示はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
