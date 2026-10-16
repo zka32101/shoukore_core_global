@@ -205,3 +205,5 @@
   （`ProfilePhotoConsent`）をprivacyモジュールに追加した。
 - ストリークの見逃し猶予を判定する純関数`StreakRecoveryGrace`を
   growthモジュールに追加した。
+- 無操作時にプロフィール切替を提案すべきかを判定する純関数
+  `SiblingProfileSwitchSuggestion`をprofileモジュールに追加した。
