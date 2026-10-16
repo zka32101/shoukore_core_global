@@ -248,3 +248,5 @@
   entitlementモジュールに追加した。
 - 効果音再生時のBGMダッキング判定を行う純関数
   `AudioCueVolumeDuckingSuggestion`をaudioモジュールに追加した。
+- 日次ダイジェストの同日重複送信を抑制する
+  `DailyDigestDuplicateSuppression`をguardianモジュールに追加した。

@@ -1006,6 +1006,15 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 `AudioCuePlayer`自体は再生のみを担うため、音量ミキシングの単純な比率
 計算のみを行う。実際の音量制御・フェード処理はアプリ側の責務とする。
 
+## DailyDigestDuplicateSuppressionの追加
+
+`DailyDigestBuilder`で組み立てた日次要約を同じミッション日内に複数回
+送信してしまわないよう抑制したい場面向けに、
+`DailyDigestDuplicateSuppression`を`guardian`モジュールに追加した。
+`DailyDigestBuilder`自体は要約の組み立てのみを担い送信済み管理には
+関与しないため、本クラスが最後に送信したミッション日との比較を行う。
+実際の送信済み記録の保存・送信処理はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
