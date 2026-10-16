@@ -262,3 +262,5 @@
   adaptiveモジュールに追加した。
 - 保護者レポート未読が長期化した際の通知エスカレーションを判定する
   `ReportReadTimeoutEscalation`をguardianモジュールに追加した。
+- ストリークが途切れそうな日の残り時間が少ない場合にアラートする
+  `StreakRiskAlert`をgrowthモジュールに追加した。
