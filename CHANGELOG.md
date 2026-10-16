@@ -235,3 +235,5 @@
   モジュールに追加した。
 - 長時間オフラインギャップを検知する純関数`OfflineSessionGapDetector`を
   syncモジュールに追加した。
+- プロフィール写真同意失効時の保存済み写真削除要否を判定する純関数
+  `PhotoConsentExpiryCascade`をprivacyモジュールに追加した。
