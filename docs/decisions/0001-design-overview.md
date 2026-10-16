@@ -827,6 +827,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 してよいと判定するだけで、実際にストリークを復元する処理（`LearningStreak`
 の再構築、復元の演出・通知等）はアプリ側の責務とする。
 
+## RegionalHolidayMissionSkipの追加
+
+地域の祝日・休校日には`DailyMission`の未達成を強制したくない場面向けに、
+純関数`RegionalHolidayMissionSkip`（`isSkippable`）を`growth`モジュールに
+追加した。祝日データ自体の取得・保持は`RegionalProfile`に持たせず、
+アプリ側が渡す祝日一覧（ミッション日単位の日付集合）と照合するだけの
+軽量な手がかりとし、実際のミッション未達成時の扱い（通知抑制、UI表示等）
+はアプリ側の責務とする。
+
 ## SiblingProfileSwitchSuggestionの追加
 
 同じ端末を兄弟間で共有している場合、使い終わったら自然にプロフィール
