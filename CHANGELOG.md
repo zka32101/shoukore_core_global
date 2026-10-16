@@ -254,3 +254,5 @@
   `CoinWalletOverdraftGuard`をgrowthモジュールに追加した。
 - タイムゾーン変更が連続観測された場合のみ再確認を促す
   `TimeZoneDriftRecalibrationPrompt`をregionalモジュールに追加した。
+- 日次ダイジェストの同日重複送信を抑制する
+  `DailyDigestDuplicateSuppression`をguardianモジュールに追加した。
