@@ -244,3 +244,5 @@
   追加した。
 - 長期間放置された弱点ノートの整理要否を判定する純関数
   `WeakNoteStalenessCleanup`をweakモジュールに追加した。
+- 購入復元プロンプト要否を判定する純関数`EntitlementRestorePrompt`を
+  entitlementモジュールに追加した。
