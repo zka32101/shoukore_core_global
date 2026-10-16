@@ -235,3 +235,6 @@
   モジュールに追加した。
 - 長時間オフラインギャップを検知する純関数`OfflineSessionGapDetector`を
   syncモジュールに追加した。
+- 保護者承認申請の期限切れ前リマインドを判定する純関数
+  `GuardianApprovalRequestReminderEscalation`をguardianモジュールに
+  追加した。
