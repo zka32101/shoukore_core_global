@@ -280,5 +280,7 @@
   `GuardianApprovalRequestBatchNotice`をguardianモジュールに追加した。
 - 一度克服したはずの誤解が再び誤答として現れた（再発した）かを検知する
   `WeakNoteMisconceptionRelapse`をweakモジュールに追加した。
+- 子どもと保護者の端末のタイムゾーンが大きくずれていないかを検知する
+  `GuardianTimezoneMismatchDetector`をguardianモジュールに追加した。
 - 課金プランの有効期限切れが近いことを事前に知らせるべきかを判定する
   `EntitlementExpiryNotice`をentitlementモジュールに追加した。
