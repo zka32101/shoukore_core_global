@@ -213,5 +213,7 @@
   adaptiveモジュールに追加した。
 - `ScreenTimeGuard`の残り時間低下を事前に警告する純関数
   `ScreenTimeWarningThreshold`をguardianモジュールに追加した。
+- データ書き出し要求の連続送信を防ぐ純関数`DataExportRequestThrottle`を
+  privacyモジュールに追加した。
 - 保護者ゲート認証情報のローテーション促進を判定する純関数
   `GuardianPinRotationReminder`をguardianモジュールに追加した。
