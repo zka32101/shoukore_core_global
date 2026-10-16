@@ -229,3 +229,5 @@
   `GuardianNotificationDigestThrottle`をguardianモジュールに追加した。
 - 解答時間の異常値検知を行う純関数`AnswerLatencyOutlierFlag`をadaptive
   モジュールに追加した。
+- 成長段階の後退を検知する純関数`GrowthStageRegressionGuard`をgrowth
+  モジュールに追加した。

@@ -927,6 +927,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 とは異なり、個々の解答の所要時間のみを見るだけで、実際の異常値への対応
 （アラート・保護者への報告等）はアプリ側の責務とする。
 
+## GrowthStageRegressionGuardの追加
+
+`GrowthStageCalculator`が算出した新しい成長段階が保存済みより後退して
+いないかを検知したい場面向けに、純関数`GrowthStageRegressionGuard`
+（`isRegression`）を`growth`モジュールに追加した。進化段階は単調に進む
+べきもので、データ不整合等による後退をキャラ更新前に検知するだけで、
+実際の不整合発生時の対応（データ再計算・ログ送信等）はアプリ側の責務
+とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
