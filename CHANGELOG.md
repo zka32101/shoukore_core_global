@@ -264,3 +264,5 @@
   `ReportReadTimeoutEscalation`をguardianモジュールに追加した。
 - ストリークが途切れそうな日の残り時間が少ない場合にアラートする
   `StreakRiskAlert`をgrowthモジュールに追加した。
+- 同期コンフリクトの深刻度を分類する`SyncConflictSeverityClassifier`を
+  syncモジュールに追加した。
