@@ -836,6 +836,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 軽量な手がかりとし、実際のミッション未達成時の扱い（通知抑制、UI表示等）
 はアプリ側の責務とする。
 
+## SiblingProfileSwitchSuggestionの追加
+
+同じ端末を兄弟間で共有している場合、使い終わったら自然にプロフィール
+切替を促したい場面向けに、純関数`SiblingProfileSwitchSuggestion`
+（`shouldSuggestSwitch`）を`profile`モジュールに追加した。
+`ProfileSwitchCooldown`（切替直後の連続切替を制限する）とは逆方向の、
+一定時間の無操作を手がかりに切替を促すロジックであり、実際の提案UI・
+切替処理はアプリ側の責務とする。
+
 ## QuestionDifficultyDriftAlertの追加
 
 `AdaptiveDifficulty`が算出する難易度が短期間に大きく変動した場合、
