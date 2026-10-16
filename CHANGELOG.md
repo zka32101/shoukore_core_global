@@ -235,3 +235,5 @@
   モジュールに追加した。
 - 長時間オフラインギャップを検知する純関数`OfflineSessionGapDetector`を
   syncモジュールに追加した。
+- 連続するミッション見逃しに上限を設ける純関数`MissionSkipStreakCap`を
+  growthモジュールに追加した。

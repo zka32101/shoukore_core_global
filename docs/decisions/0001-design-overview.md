@@ -953,6 +953,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 起動間隔のみを見る。実際の復帰時UI・再同期のトリガーはアプリ側の責務
 とする。
 
+## MissionSkipStreakCapの追加
+
+`RegionalHolidayMissionSkip`等によるミッション未達成の見逃しが連続
+しすぎた場合に、ストリーク継続扱いの対象外にしたい場面向けに、純関数
+`MissionSkipStreakCap`（`exceedsCap`）を`growth`モジュールに追加した。
+見逃しの連続日数が上限を超えたかを見るだけで、実際のストリーク更新
+処理自体はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
