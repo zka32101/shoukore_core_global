@@ -276,3 +276,5 @@
   検知する`DuplicateSyncPayloadDetector`をsyncモジュールに追加した。
 - ミッション達成履歴から最も学習しやすい時間帯を推定する
   `MissionCompletionTimePreference`をgrowthモジュールに追加した。
+- 保護者承認待ちが複数件溜まった場合にまとめて知らせるべきかを判定する
+  `GuardianApprovalRequestBatchNotice`をguardianモジュールに追加した。
