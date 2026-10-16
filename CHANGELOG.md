@@ -278,3 +278,5 @@
   `MissionCompletionTimePreference`をgrowthモジュールに追加した。
 - 保護者承認待ちが複数件溜まった場合にまとめて知らせるべきかを判定する
   `GuardianApprovalRequestBatchNotice`をguardianモジュールに追加した。
+- コイン残高が長期間使われず滞留していることに気づけるようにする
+  `CoinWalletStagnationNotice`をgrowthモジュールに追加した。
