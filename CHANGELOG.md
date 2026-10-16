@@ -229,3 +229,5 @@
   `GuardianNotificationDigestThrottle`をguardianモジュールに追加した。
 - 解答時間の異常値検知を行う純関数`AnswerLatencyOutlierFlag`をadaptive
   モジュールに追加した。
+- 長時間オフラインギャップを検知する純関数`OfflineSessionGapDetector`を
+  syncモジュールに追加した。
