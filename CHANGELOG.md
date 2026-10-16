@@ -266,3 +266,5 @@
   `StreakRiskAlert`をgrowthモジュールに追加した。
 - 同期コンフリクトの深刻度を分類する`SyncConflictSeverityClassifier`を
   syncモジュールに追加した。
+- 保護者ゲートへの異常に速い連続試行を検知する
+  `GuardianGateRapidAttemptDetector`をguardianモジュールに追加した。
