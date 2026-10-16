@@ -879,6 +879,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 判定するだけで、実際のローテーション促進UI・変更フローはアプリ側の
 責務とする。
 
+## ItemPriceDropNoticeの追加
+
+ストアアイテムの価格が下がった際にお得感を伝えたい場面向けに、純関数
+`ItemPriceDropNotice`（`shouldNotify`）と値オブジェクト`SeenItemPrice`を
+`growth`モジュールに追加した。前回記録した価格との単純比較のみを行い、
+`InventoryManager`の購入判定には関与しない。価格自体の決定・セール運用
+ロジックはアプリ側の責務とする。
+
 ## InventoryDuplicateGiftGuardの追加
 
 キャンペーン等の購入を伴わないギフト付与経路でも重複付与を防ぎたい
