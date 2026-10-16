@@ -211,3 +211,5 @@
   `SiblingProfileSwitchSuggestion`をprofileモジュールに追加した。
 - 適応難易度の急激な変動を検知する純関数`QuestionDifficultyDriftAlert`を
   adaptiveモジュールに追加した。
+- 保護者ゲート認証情報のローテーション促進を判定する純関数
+  `GuardianPinRotationReminder`をguardianモジュールに追加した。

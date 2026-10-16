@@ -74,6 +74,7 @@ export 'src/guardian/guardian_digest_mute_window.dart';
 export 'src/guardian/guardian_approval_request_queue.dart';
 export 'src/guardian/guardian_gate.dart';
 export 'src/guardian/guardian_gate_lockout.dart';
+export 'src/guardian/guardian_pin_rotation_reminder.dart';
 export 'src/guardian/in_memory_report_read_state.dart';
 export 'src/guardian/in_memory_screen_time_store.dart';
 export 'src/guardian/quiet_hours_guard.dart';
