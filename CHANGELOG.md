@@ -268,3 +268,5 @@
   syncモジュールに追加した。
 - 保護者ゲートへの異常に速い連続試行を検知する
   `GuardianGateRapidAttemptDetector`をguardianモジュールに追加した。
+- セッション中の解答時間が徐々に遅くなる傾向（集中力低下の疑い）を検知する
+  `AnswerLatencyFatigueTrend`をadaptiveモジュールに追加した。

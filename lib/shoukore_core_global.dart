@@ -2,6 +2,7 @@
 library;
 
 export 'src/adaptive/adaptive_difficulty.dart';
+export 'src/adaptive/answer_latency_fatigue_trend.dart';
 export 'src/adaptive/answer_latency_outlier_flag.dart';
 export 'src/adaptive/question_difficulty_drift_alert.dart';
 export 'src/adaptive/question_variety_bias_detector.dart';
