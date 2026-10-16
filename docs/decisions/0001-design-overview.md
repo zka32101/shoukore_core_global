@@ -1051,6 +1051,16 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 マイグレーションID一覧との差分を見る。実際の警告表示・データ整合性の
 復旧処理はアプリ側の責務とする。
 
+## SyncConflictSeverityClassifierの追加
+
+`OfflineSyncConflictResolver`が解決したコンフリクトについて、採用され
+なかった側のデータが実質的に失われる重大なものか実害のない軽微な
+ものかを分類したい場面向けに、`SyncConflictSeverityClassifier`を
+`sync`モジュールに追加した。`OfflineSyncConflictResolver`自体はどちら
+を採用するか（last-write-wins）のみを判定するため、本クラスが採用され
+なかった側のpayloadを比較する。実際のログ記録・保護者への報告はアプリ
+側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
