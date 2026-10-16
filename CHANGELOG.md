@@ -248,3 +248,5 @@
   entitlementモジュールに追加した。
 - 効果音再生時のBGMダッキング判定を行う純関数
   `AudioCueVolumeDuckingSuggestion`をaudioモジュールに追加した。
+- プロフィール切り替えが発生したことを保護者向けに記録すべきか判定する
+  `ProfileSwitchAuditLog`をprofileモジュールに追加した。
