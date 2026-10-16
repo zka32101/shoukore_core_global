@@ -2,6 +2,7 @@
 library;
 
 export 'src/adaptive/adaptive_difficulty.dart';
+export 'src/adaptive/answer_latency_fatigue_trend.dart';
 export 'src/adaptive/answer_latency_outlier_flag.dart';
 export 'src/adaptive/question_difficulty_drift_alert.dart';
 export 'src/adaptive/question_variety_bias_detector.dart';
@@ -75,10 +76,12 @@ export 'src/growth/growth_store.dart';
 export 'src/growth/in_memory_growth_store.dart';
 export 'src/growth/in_memory_inventory_store.dart';
 export 'src/growth/inventory_duplicate_gift_guard.dart';
+export 'src/growth/inventory_item_expiry_notice.dart';
 export 'src/growth/inventory_manager.dart';
 export 'src/growth/inventory_snapshot.dart';
 export 'src/growth/inventory_store.dart';
 export 'src/growth/learning_streak.dart';
+export 'src/growth/mission_completion_time_preference.dart';
 export 'src/growth/mission_streak_freeze_token.dart';
 export 'src/growth/streak_recovery_grace.dart';
 export 'src/growth/streak_risk_alert.dart';
@@ -115,6 +118,7 @@ export 'src/regional/locale_formatter.dart';
 export 'src/regional/regional_profile_loader.dart';
 export 'src/regional/timezone_drift_detector.dart';
 export 'src/regional/timezone_drift_recalibration_prompt.dart';
+export 'src/sync/duplicate_sync_payload_detector.dart';
 export 'src/sync/in_memory_pending_sync_queue.dart';
 export 'src/sync/offline_session_gap_detector.dart';
 export 'src/sync/offline_sync_conflict_resolver.dart';
