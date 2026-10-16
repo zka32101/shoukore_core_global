@@ -278,3 +278,5 @@
   `MissionCompletionTimePreference`をgrowthモジュールに追加した。
 - 保護者承認待ちが複数件溜まった場合にまとめて知らせるべきかを判定する
   `GuardianApprovalRequestBatchNotice`をguardianモジュールに追加した。
+- 課金プランの有効期限切れが近いことを事前に知らせるべきかを判定する
+  `EntitlementExpiryNotice`をentitlementモジュールに追加した。

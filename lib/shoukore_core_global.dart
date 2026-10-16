@@ -54,6 +54,7 @@ export 'src/privacy/data_export_request_throttle.dart';
 export 'src/privacy/export_chunker.dart';
 export 'src/privacy/export_integrity_checker.dart';
 export 'src/privacy/settings_backup.dart';
+export 'src/entitlement/entitlement_expiry_notice.dart';
 export 'src/entitlement/entitlement_grace_period.dart';
 export 'src/entitlement/entitlement_reader.dart';
 export 'src/entitlement/entitlement_restore_prompt.dart';
