@@ -1139,6 +1139,15 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 本クラスは承認待ち件数の閾値のみを見る。実際の通知のまとめ・送信処理
 はアプリ側の責務とする。
 
+## WeakNoteMisconceptionRelapseの追加
+
+`WeakNotesAnalyzer.isOvercome()`で一度「克服した」と判定された誤解が、
+その後再び同じ誤解タイプで誤答された（再発した）かを検知したい場面
+向けに、`WeakNoteMisconceptionRelapse`を`weak`モジュールに追加した。
+`WeakNotesAnalyzer`自体は克服判定のみを行い克服後の再発は見ないため、
+本クラスが克服と判定された時刻以降の誤答のみを見る。実際の再学習の
+案表示・保護者への報告はアプリ側の責務とする。
+
 ## CoinWalletStagnationNoticeの追加
 
 コインが貯まり続けているにもかかわらず長期間使われていない（残高が
