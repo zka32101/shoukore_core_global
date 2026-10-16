@@ -231,3 +231,5 @@
   モジュールに追加した。
 - 保護者同意の期限切れ前リマインドを判定する純関数
   `ConsentRenewalReminder`をprivacyモジュールに追加した。
+- 成長段階の後退を検知する純関数`GrowthStageRegressionGuard`をgrowth
+  モジュールに追加した。
