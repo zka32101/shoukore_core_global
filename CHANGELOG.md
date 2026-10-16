@@ -258,5 +258,13 @@
   `DailyDigestDuplicateSuppression`をguardianモジュールに追加した。
 - アプリのダウングレード等によるマイグレーション台帳の異常を検知する
   `MigrationLedgerRollbackGuard`をstoreモジュールに追加した。
+- 出題が同一単元に偏っていないかを検知する`QuestionVarietyBiasDetector`を
+  adaptiveモジュールに追加した。
+- 保護者レポート未読が長期化した際の通知エスカレーションを判定する
+  `ReportReadTimeoutEscalation`をguardianモジュールに追加した。
+- ストリークが途切れそうな日の残り時間が少ない場合にアラートする
+  `StreakRiskAlert`をgrowthモジュールに追加した。
+- 同期コンフリクトの深刻度を分類する`SyncConflictSeverityClassifier`を
+  syncモジュールに追加した。
 - 保護者ゲートへの異常に速い連続試行を検知する
   `GuardianGateRapidAttemptDetector`をguardianモジュールに追加した。
