@@ -252,3 +252,5 @@
   `ProfileSwitchAuditLog`をprofileモジュールに追加した。
 - コインウォレットの残高不足を例外なしで事前確認できる
   `CoinWalletOverdraftGuard`をgrowthモジュールに追加した。
+- タイムゾーン変更が連続観測された場合のみ再確認を促す
+  `TimeZoneDriftRecalibrationPrompt`をregionalモジュールに追加した。
