@@ -229,5 +229,7 @@
   `GuardianNotificationDigestThrottle`をguardianモジュールに追加した。
 - 解答時間の異常値検知を行う純関数`AnswerLatencyOutlierFlag`をadaptive
   モジュールに追加した。
+- 保護者同意の期限切れ前リマインドを判定する純関数
+  `ConsentRenewalReminder`をprivacyモジュールに追加した。
 - 成長段階の後退を検知する純関数`GrowthStageRegressionGuard`をgrowth
   モジュールに追加した。
