@@ -854,6 +854,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 `AdaptiveDifficulty`自体の難易度調整ロジックは変更せず、実際のアラート
 対応（通知・保護者への報告等）はアプリ側の責務とする。
 
+## ScreenTimeWarningThresholdの追加
+
+利用時間制限に達する直前に子どもへ警告を出したい場面向けに、純関数
+`ScreenTimeWarningThreshold`（`shouldWarn`）を`guardian`モジュールに
+追加した。`ScreenTimeGuard`（制限超過自体の判定）に委ね、残り時間の
+割合が閾値以下になったかを見るだけで、既に制限超過の場合は対象外とする。
+実際の警告UI・通知の表示はアプリ側の責務とする。
+
 ## DataExportRequestThrottleの追加
 
 データ書き出し要求（`exportUserData`、LGPD第18条等の権利行使対応）が
