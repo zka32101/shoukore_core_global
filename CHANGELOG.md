@@ -248,3 +248,5 @@
   entitlementモジュールに追加した。
 - 効果音再生時のBGMダッキング判定を行う純関数
   `AudioCueVolumeDuckingSuggestion`をaudioモジュールに追加した。
+- タイムゾーン変更が連続観測された場合のみ再確認を促す
+  `TimeZoneDriftRecalibrationPrompt`をregionalモジュールに追加した。

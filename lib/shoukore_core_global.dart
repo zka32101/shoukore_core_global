@@ -105,6 +105,7 @@ export 'src/regional/device_locale_suggester.dart';
 export 'src/regional/locale_formatter.dart';
 export 'src/regional/regional_profile_loader.dart';
 export 'src/regional/timezone_drift_detector.dart';
+export 'src/regional/timezone_drift_recalibration_prompt.dart';
 export 'src/sync/in_memory_pending_sync_queue.dart';
 export 'src/sync/offline_session_gap_detector.dart';
 export 'src/sync/offline_sync_conflict_resolver.dart';
