@@ -979,6 +979,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 とは異なり、期限切れ前の事前リードタイムのみを扱う。実際のリマインド
 表示・通知送信はアプリ側の責務とする。
 
+## WeakNoteStalenessCleanupの追加
+
+`WeakNote`が長期間更新されず放置され続けた場合、整理（アーカイブ・
+非表示化）対象にしたい場面向けに、純関数`WeakNoteStalenessCleanup`
+（`shouldCleanUp`）を`weak`モジュールに追加した。
+`WeakNotesReviewScheduler`（復習タイミングの計算）とは異なり、復習
+されずに古くなったノートの掃除を扱う。実際のアーカイブ・削除処理は
+アプリ側の責務とする。
+
 ## EntitlementRestorePromptの追加
 
 再インストール等で以前購入していた教科アンロックが`EntitlementReader`
