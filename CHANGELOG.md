@@ -258,3 +258,5 @@
   `DailyDigestDuplicateSuppression`をguardianモジュールに追加した。
 - アプリのダウングレード等によるマイグレーション台帳の異常を検知する
   `MigrationLedgerRollbackGuard`をstoreモジュールに追加した。
+- ストリークが途切れそうな日の残り時間が少ない場合にアラートする
+  `StreakRiskAlert`をgrowthモジュールに追加した。
