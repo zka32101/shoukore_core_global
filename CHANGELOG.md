@@ -248,5 +248,13 @@
   entitlementモジュールに追加した。
 - 効果音再生時のBGMダッキング判定を行う純関数
   `AudioCueVolumeDuckingSuggestion`をaudioモジュールに追加した。
+- プロフィール切り替えが発生したことを保護者向けに記録すべきか判定する
+  `ProfileSwitchAuditLog`をprofileモジュールに追加した。
+- コインウォレットの残高不足を例外なしで事前確認できる
+  `CoinWalletOverdraftGuard`をgrowthモジュールに追加した。
+- タイムゾーン変更が連続観測された場合のみ再確認を促す
+  `TimeZoneDriftRecalibrationPrompt`をregionalモジュールに追加した。
+- 日次ダイジェストの同日重複送信を抑制する
+  `DailyDigestDuplicateSuppression`をguardianモジュールに追加した。
 - アプリのダウングレード等によるマイグレーション台帳の異常を検知する
   `MigrationLedgerRollbackGuard`をstoreモジュールに追加した。
