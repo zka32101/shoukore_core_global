@@ -209,3 +209,5 @@
   純関数`RegionalHolidayMissionSkip`をgrowthモジュールに追加した。
 - 無操作時にプロフィール切替を提案すべきかを判定する純関数
   `SiblingProfileSwitchSuggestion`をprofileモジュールに追加した。
+- 適応難易度の急激な変動を検知する純関数`QuestionDifficultyDriftAlert`を
+  adaptiveモジュールに追加した。

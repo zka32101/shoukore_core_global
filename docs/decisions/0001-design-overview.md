@@ -845,6 +845,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 一定時間の無操作を手がかりに切替を促すロジックであり、実際の提案UI・
 切替処理はアプリ側の責務とする。
 
+## QuestionDifficultyDriftAlertの追加
+
+`AdaptiveDifficulty`が算出する難易度が短期間に大きく変動した場合、
+不正操作や極端な得点パターンの手がかりとなるよう、純関数
+`QuestionDifficultyDriftAlert`（`isDrifting`）を`adaptive`モジュールに
+追加した。前後の難易度の変化量が閾値以上かを判定するだけで、
+`AdaptiveDifficulty`自体の難易度調整ロジックは変更せず、実際のアラート
+対応（通知・保護者への報告等）はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
