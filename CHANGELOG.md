@@ -248,3 +248,5 @@
   entitlementモジュールに追加した。
 - 効果音再生時のBGMダッキング判定を行う純関数
   `AudioCueVolumeDuckingSuggestion`をaudioモジュールに追加した。
+- コインウォレットの残高不足を例外なしで事前確認できる
+  `CoinWalletOverdraftGuard`をgrowthモジュールに追加した。
