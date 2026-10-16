@@ -870,6 +870,15 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 直前の要求時刻からの間隔が最小間隔未満かを判定するだけで、実際の
 書き出し処理の呼び出し制御・UI表示はアプリ側の責務とする。
 
+## GuardianPinRotationReminderの追加
+
+保護者ゲートの認証情報を長期間変更していない場合にローテーションを
+促したい場面向けに、純関数`GuardianPinRotationReminder`
+（`shouldRemind`）を`guardian`モジュールに追加した。`GuardianGate`自体の
+認証ロジックは変更せず、最終変更時刻からの経過日数が閾値以上かを
+判定するだけで、実際のローテーション促進UI・変更フローはアプリ側の
+責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
