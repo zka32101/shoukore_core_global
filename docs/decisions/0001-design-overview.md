@@ -862,6 +862,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 割合が閾値以下になったかを見るだけで、既に制限超過の場合は対象外とする。
 実際の警告UI・通知の表示はアプリ側の責務とする。
 
+## DataExportRequestThrottleの追加
+
+データ書き出し要求（`exportUserData`、LGPD第18条等の権利行使対応）が
+短期間に繰り返されるのを防ぐため、純関数`DataExportRequestThrottle`
+（`shouldThrottle`、`nextAllowedAt`）を`privacy`モジュールに追加した。
+直前の要求時刻からの間隔が最小間隔未満かを判定するだけで、実際の
+書き出し処理の呼び出し制御・UI表示はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
