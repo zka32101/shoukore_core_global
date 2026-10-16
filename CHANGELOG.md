@@ -280,5 +280,7 @@
   `GuardianApprovalRequestBatchNotice`をguardianモジュールに追加した。
 - 一度克服したはずの誤解が再び誤答として現れた（再発した）かを検知する
   `WeakNoteMisconceptionRelapse`をweakモジュールに追加した。
+- 子どもと保護者の端末のタイムゾーンが大きくずれていないかを検知する
+  `GuardianTimezoneMismatchDetector`をguardianモジュールに追加した。
 - コイン残高が長期間使われず滞留していることに気づけるようにする
   `CoinWalletStagnationNotice`をgrowthモジュールに追加した。

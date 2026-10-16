@@ -97,6 +97,7 @@ export 'src/guardian/guardian_approval_request_queue.dart';
 export 'src/guardian/guardian_approval_request_reminder_escalation.dart';
 export 'src/guardian/guardian_gate.dart';
 export 'src/guardian/guardian_gate_lockout.dart';
+export 'src/guardian/guardian_timezone_mismatch_detector.dart';
 export 'src/guardian/guardian_gate_rapid_attempt_detector.dart';
 export 'src/guardian/guardian_notification_digest_throttle.dart';
 export 'src/guardian/guardian_pin_rotation_reminder.dart';
