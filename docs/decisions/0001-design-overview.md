@@ -903,6 +903,22 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 タイミング）とは別に、キュー全体の件数が閾値以上かを見るだけで、実際の
 アラート表示・ユーザーへの通知はアプリ側の責務とする。
 
+## MissionStreakFreezeTokenの追加
+
+ストリークが途切れそうな日にアイテム等で保護したい場面向けに、純関数
+`MissionStreakFreezeToken`（`shouldConsumeToken`）を`growth`モジュールに
+追加した。`StreakRecoveryGrace`（学習自体による見逃し猶予）とは異なる、
+トークン消費による保護経路を扱う。実際のトークン所持数の管理・付与・
+消費演出はアプリ側の責務とする。
+
+## GuardianNotificationDigestThrottleの追加
+
+保護者向け通知が短時間に連続して送られすぎないようにしたい場面向けに、
+純関数`GuardianNotificationDigestThrottle`（`shouldThrottle`）を
+`guardian`モジュールに追加した。`GuardianDigestMuteWindow`（保護者が
+指定するミュート期間）とは異なり、直前の送信時刻からの経過時間のみで
+判定する。実際の通知のまとめ・送信処理はアプリ側の責務とする。
+
 ## AnswerLatencyOutlierFlagの追加
 
 解答にかかった時間が極端に短い、または長い場合に異常値として検知したい
