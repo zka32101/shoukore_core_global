@@ -68,6 +68,7 @@ export 'src/growth/inventory_manager.dart';
 export 'src/growth/inventory_snapshot.dart';
 export 'src/growth/inventory_store.dart';
 export 'src/growth/learning_streak.dart';
+export 'src/growth/mission_streak_freeze_token.dart';
 export 'src/growth/streak_recovery_grace.dart';
 export 'src/growth/item_price_drop_notice.dart';
 export 'src/growth/store_item.dart';
