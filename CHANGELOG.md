@@ -256,3 +256,5 @@
   `TimeZoneDriftRecalibrationPrompt`をregionalモジュールに追加した。
 - 日次ダイジェストの同日重複送信を抑制する
   `DailyDigestDuplicateSuppression`をguardianモジュールに追加した。
+- アプリのダウングレード等によるマイグレーション台帳の異常を検知する
+  `MigrationLedgerRollbackGuard`をstoreモジュールに追加した。
