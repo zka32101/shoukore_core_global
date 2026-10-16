@@ -903,6 +903,14 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 タイミング）とは別に、キュー全体の件数が閾値以上かを見るだけで、実際の
 アラート表示・ユーザーへの通知はアプリ側の責務とする。
 
+## GuardianNotificationDigestThrottleの追加
+
+保護者向け通知が短時間に連続して送られすぎないようにしたい場面向けに、
+純関数`GuardianNotificationDigestThrottle`（`shouldThrottle`）を
+`guardian`モジュールに追加した。`GuardianDigestMuteWindow`（保護者が
+指定するミュート期間）とは異なり、直前の送信時刻からの経過時間のみで
+判定する。実際の通知のまとめ・送信処理はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

@@ -223,3 +223,5 @@
   growthモジュールに追加した。
 - 同期キューの滞留を検知する純関数`SyncQueueBacklogAlert`をsyncモジュール
   に追加した。
+- 保護者向け通知の連続送信を抑制する純関数
+  `GuardianNotificationDigestThrottle`をguardianモジュールに追加した。
