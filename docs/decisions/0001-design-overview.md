@@ -979,6 +979,16 @@ schemaVersion 10へ移行。`ReportReadStates`追加のschemaVersion 9と競合�
 とは異なり、期限切れ前の事前リードタイムのみを扱う。実際のリマインド
 表示・通知送信はアプリ側の責務とする。
 
+## EntitlementRestorePromptの追加
+
+再インストール等で以前購入していた教科アンロックが`EntitlementReader`
+の結果に反映されていない場合に、購入の復元（リストア）を促したい場面
+向けに、純関数`EntitlementRestorePrompt`（`shouldPromptRestore`）を
+`entitlement`モジュールに追加した。`EntitlementGracePeriod`（失効直後の
+継続利用猶予）とは異なり、ローカルに記録済みの以前の権利情報と現在の
+権利情報のずれを検知する。実際のリストア処理・UI表示はアプリ側の責務
+とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

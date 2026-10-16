@@ -242,3 +242,5 @@
 - 保護者承認申請の期限切れ前リマインドを判定する純関数
   `GuardianApprovalRequestReminderEscalation`をguardianモジュールに
   追加した。
+- 購入復元プロンプト要否を判定する純関数`EntitlementRestorePrompt`を
+  entitlementモジュールに追加した。
