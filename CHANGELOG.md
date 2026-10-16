@@ -268,3 +268,5 @@
   syncモジュールに追加した。
 - 保護者ゲートへの異常に速い連続試行を検知する
   `GuardianGateRapidAttemptDetector`をguardianモジュールに追加した。
+- 複数端末から同じ内容のデータが重複して同期キューに積まれていないかを
+  検知する`DuplicateSyncPayloadDetector`をsyncモジュールに追加した。
