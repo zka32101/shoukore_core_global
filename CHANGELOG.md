@@ -286,3 +286,5 @@
   `ExportSizeEstimator`をprivacyモジュールに追加した。
 - 課金プランの有効期限切れが近いことを事前に知らせるべきかを判定する
   `EntitlementExpiryNotice`をentitlementモジュールに追加した。
+- コイン残高が長期間使われず滞留していることに気づけるようにする
+  `CoinWalletStagnationNotice`をgrowthモジュールに追加した。

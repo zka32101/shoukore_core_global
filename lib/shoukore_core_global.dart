@@ -67,6 +67,7 @@ export 'src/growth/coin_earning_cap_per_day.dart';
 export 'src/growth/coin_spending_limit.dart';
 export 'src/growth/coin_wallet.dart';
 export 'src/growth/coin_wallet_overdraft_guard.dart';
+export 'src/growth/coin_wallet_stagnation_notice.dart';
 export 'src/growth/daily_boundary.dart';
 export 'src/growth/daily_mission.dart';
 export 'src/growth/mission_skip_streak_cap.dart';
