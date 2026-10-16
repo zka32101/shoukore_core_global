@@ -268,3 +268,5 @@
   syncモジュールに追加した。
 - 保護者ゲートへの異常に速い連続試行を検知する
   `GuardianGateRapidAttemptDetector`をguardianモジュールに追加した。
+- 期間限定の所持アイテムの消費期限が近いことを知らせる
+  `InventoryItemExpiryNotice`をgrowthモジュールに追加した。

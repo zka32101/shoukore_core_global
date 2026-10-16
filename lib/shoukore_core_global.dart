@@ -75,6 +75,7 @@ export 'src/growth/growth_store.dart';
 export 'src/growth/in_memory_growth_store.dart';
 export 'src/growth/in_memory_inventory_store.dart';
 export 'src/growth/inventory_duplicate_gift_guard.dart';
+export 'src/growth/inventory_item_expiry_notice.dart';
 export 'src/growth/inventory_manager.dart';
 export 'src/growth/inventory_snapshot.dart';
 export 'src/growth/inventory_store.dart';
