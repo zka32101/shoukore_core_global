@@ -278,3 +278,5 @@
   `MissionCompletionTimePreference`をgrowthモジュールに追加した。
 - 保護者承認待ちが複数件溜まった場合にまとめて知らせるべきかを判定する
   `GuardianApprovalRequestBatchNotice`をguardianモジュールに追加した。
+- データ書き出しのJSON化後のバイト数を見積もり、分割が必要かを判定する
+  `ExportSizeEstimator`をprivacyモジュールに追加した。
