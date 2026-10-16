@@ -1051,6 +1051,22 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 マイグレーションID一覧との差分を見る。実際の警告表示・データ整合性の
 復旧処理はアプリ側の責務とする。
 
+## QuestionVarietyBiasDetectorの追加
+
+直近の出題履歴が同じ単元・タグに偏りすぎていないかを検知したい場面
+向けに、`QuestionVarietyBiasDetector`を`adaptive`モジュールに追加した。
+連続する同一タグの件数が閾値を超えた場合に偏りと判定するだけで、
+実際の出題選定ロジック自体はアプリ側の責務とする。
+
+## ReportReadTimeoutEscalationの追加
+
+`ReportReadState`に記録された最終既読時刻から一定期間が過ぎても保護者
+がレポートを確認していない場合に通知方法をエスカレーションしたい
+場面向けに、`ReportReadTimeoutEscalation`を`guardian`モジュールに
+追加した。`ReportReadState`自体は既読時刻の記録・問い合わせのみを
+担うため、本クラスがその時刻と現在時刻の差分を見る。実際のエスカレ
+ーション先選定・送信処理はアプリ側の責務とする。
+
 ## StreakRiskAlertの追加
 
 `LearningStreak`が当日中に学習しないと途切れてしまう状態で、ミッション
