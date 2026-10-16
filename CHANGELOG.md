@@ -205,5 +205,7 @@
   （`ProfilePhotoConsent`）をprivacyモジュールに追加した。
 - ストリークの見逃し猶予を判定する純関数`StreakRecoveryGrace`を
   growthモジュールに追加した。
+- 地域の祝日・休校日にデイリーミッションをスキップしてよいかを判定する
+  純関数`RegionalHolidayMissionSkip`をgrowthモジュールに追加した。
 - 適応難易度の急激な変動を検知する純関数`QuestionDifficultyDriftAlert`を
   adaptiveモジュールに追加した。
