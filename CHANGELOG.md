@@ -207,3 +207,5 @@
   growthモジュールに追加した。
 - 地域の祝日・休校日にデイリーミッションをスキップしてよいかを判定する
   純関数`RegionalHolidayMissionSkip`をgrowthモジュールに追加した。
+- 無操作時にプロフィール切替を提案すべきかを判定する純関数
+  `SiblingProfileSwitchSuggestion`をprofileモジュールに追加した。
