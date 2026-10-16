@@ -227,3 +227,5 @@
   `MissionStreakFreezeToken`をgrowthモジュールに追加した。
 - 保護者向け通知の連続送信を抑制する純関数
   `GuardianNotificationDigestThrottle`をguardianモジュールに追加した。
+- 解答時間の異常値検知を行う純関数`AnswerLatencyOutlierFlag`をadaptive
+  モジュールに追加した。
