@@ -300,3 +300,5 @@
 - 保護者ゲートのPINが連番や同一数字の繰り返しのような推測されやすい
   パターンでないかを検知する`GuardianPinWeaknessDetector`をguardian
   モジュールに追加した。
+- 設定バックアップが長期間作成されていないことに気づけるようにする
+  `SettingsBackupStalenessNotice`をprivacyモジュールに追加した。
