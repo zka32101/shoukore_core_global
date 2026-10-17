@@ -312,3 +312,6 @@
   追加した。
 - `eraseAllUserData`実行後に関連ストアが実際に空になったかを検証する
   `DataErasureVerifier`をprivacyモジュールに追加した。
+- 季節イベントの終了判定が端末時刻のタイムゾーンズレで誤判定されて
+  いないかを検証する`SeasonalEventValidityGuard`をgrowthモジュールに
+  追加した。
