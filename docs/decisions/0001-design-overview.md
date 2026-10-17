@@ -1277,6 +1277,15 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 確認は行わないため、本クラスがアプリ側から渡された削除後の件数
 一覧を見る。実際の再削除・エラー報告はアプリ側の責務とする。
 
+## MultiDeviceConcurrentEditDetectorの追加
+
+同一プロファイルのデータが短時間に複数デバイスから更新され、進捗データが
+競合している可能性に気づけるようにしたい場面向けに、
+`MultiDeviceConcurrentEditDetector`を`sync`モジュールに追加した。
+`OfflineSyncConflictResolver`（競合が起きた後にどちらの値を採用するかの
+決定）とは異なり、本クラスは「競合が起きている／起きつつある」こと自体の
+検知のみを行う。実際の競合解決・保護者への通知はアプリ側の責務とする。
+
 ## RapidAnswerStreakDetectorの追加
 
 解答にかかった時間が人間の反応速度として不自然に短い状態が連続して
