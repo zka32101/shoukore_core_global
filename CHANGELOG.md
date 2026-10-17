@@ -325,3 +325,5 @@
   追加した。
 - 購入復元が長期間実行されていないことに気づけるようにする
   `EntitlementRestoreStalenessNotice`をentitlementモジュールに追加した。
+- 単元の提示順と難易度の想定順序（易→難）が逆転していないかを検証する
+  `UnitDifficultyOrderValidator`をquestionモジュールに追加した。
