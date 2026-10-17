@@ -310,3 +310,5 @@
 - 同期の再送を諦めたアイテムが溜まった場合にオフライン専用モードへの
   切り替えを提案する`OfflineOnlyModeSuggestion`をsyncモジュールに
   追加した。
+- `eraseAllUserData`実行後に関連ストアが実際に空になったかを検証する
+  `DataErasureVerifier`をprivacyモジュールに追加した。

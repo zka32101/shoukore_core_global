@@ -54,6 +54,7 @@ export 'src/profile/profile_switch_cooldown.dart';
 export 'src/profile/sibling_profile_switch_suggestion.dart';
 export 'src/profile/sibling_profile_usage_balance.dart';
 export 'src/privacy/data_eraser.dart';
+export 'src/privacy/data_erasure_verifier.dart';
 export 'src/privacy/data_export.dart';
 export 'src/privacy/data_export_request_throttle.dart';
 export 'src/privacy/export_chunker.dart';
