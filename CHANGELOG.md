@@ -315,5 +315,8 @@
 - 同一プロファイルのデータが短時間に複数デバイスから更新されている
   可能性を検知する`MultiDeviceConcurrentEditDetector`をsyncモジュール
   に追加した。
+- 保護者向け通知の配信が連続して失敗している場合に代替通知手段を
+  提案する`GuardianDeliveryFailureAlternativeNotice`をguardianモジュール
+  に追加した。
 - 速すぎる解答が連続していないか（不正操作の可能性）を検知する
   `RapidAnswerStreakDetector`をadaptiveモジュールに追加した。
