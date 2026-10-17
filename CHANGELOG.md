@@ -305,3 +305,5 @@
   追加した。
 - `MasteryDecay`の減衰量が大きい単元を優先的に知らせるべきかを判定する
   `MasteryRapidDecayDetector`をquestionモジュールに追加した。
+- 設定バックアップが長期間作成されていないことに気づけるようにする
+  `SettingsBackupStalenessNotice`をprivacyモジュールに追加した。
