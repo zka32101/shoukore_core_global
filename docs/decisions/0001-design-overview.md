@@ -1187,6 +1187,42 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 本クラスがアプリ側が別途記録する最終使用時刻と現在の残高を見て判定
 する。実際のストア案内・通知表示はアプリ側の責務とする。
 
+## SiblingProfileUsageBalanceの追加
+
+同じ端末を共有する兄弟プロフィール間で、学習時間の配分が極端に
+偏っていないかを検知したい場面向けに、`SiblingProfileUsageBalance`を
+`profile`モジュールに追加した。`SiblingProfileSwitchSuggestion`（操作
+が一定時間ないときに切替を促す）とは異なり、本クラスは累積の利用
+時間比率のみを見る。実際の保護者への報告・利用時間の調整提案は
+アプリ側の責務とする。
+
+## SessionReviewModeRatioAlertの追加
+
+セッション内の解答が復習モード（`Attempt.mode == 'review'`）に偏り
+すぎていないかを検知したい場面向けに、`SessionReviewModeRatioAlert`
+を`adaptive`モジュールに追加した。`QuestionVarietyBiasDetector`（出題
+タグの偏り）とは異なり、本クラスは出題の内容ではなくモード（新規
+学習か復習か）の比率のみを見る。実際の出題モードの切り替え判断は
+アプリ側の責務とする。
+
+## ProfilePhotoStalenessNoticeの追加
+
+プロフィール写真が登録・最終更新から長期間変わっていないことに
+気づけるようにしたい場面向けに、`ProfilePhotoStalenessNotice`を
+`profile`モジュールに追加した。`ProfileAvatarRotationSuggester`
+（成長段階の進化イベントをきっかけに変更を促す）とは異なり、本クラス
+は単純に経過時間のみを見る。実際の更新案内UIの表示はアプリ側の責務
+とする。
+
+## WeeklyReportEngagementDeclineNoticeの追加
+
+直近複数回分の週次レポートの既読率が継続して低い場合に、通知方法
+自体の見直しを提案したい場面向けに、`WeeklyReportEngagementDeclineNotice`
+を`guardian`モジュールに追加した。`ReportReadTimeoutEscalation`（直近
+1件のレポートの未読が長期化した場合のエスカレーション）とは異なり、
+本クラスは複数回のレポートにわたる既読傾向のみを見る。実際の通知
+方法の変更案提示はアプリ側の責務とする。
+
 ## GuardianPinWeaknessDetectorの追加
 
 保護者ゲートのPINが連番（"1234"等）や同一数字の繰り返し（"1111"等）

@@ -288,6 +288,15 @@
   `EntitlementExpiryNotice`をentitlementモジュールに追加した。
 - コイン残高が長期間使われず滞留していることに気づけるようにする
   `CoinWalletStagnationNotice`をgrowthモジュールに追加した。
+- 兄弟プロフィール間で学習時間の配分が極端に偏っていないかを検知する
+  `SiblingProfileUsageBalance`をprofileモジュールに追加した。
+- セッション内の解答が復習モードに偏りすぎていないかを検知する
+  `SessionReviewModeRatioAlert`をadaptiveモジュールに追加した。
+- プロフィール写真が登録・最終更新から長期間変わっていないことに気づ
+  けるようにする`ProfilePhotoStalenessNotice`をprofileモジュールに
+  追加した。
+- 週次レポートの既読率が継続して低い場合に通知方法の見直しを提案する
+  `WeeklyReportEngagementDeclineNotice`をguardianモジュールに追加した。
 - 保護者ゲートのPINが連番や同一数字の繰り返しのような推測されやすい
   パターンでないかを検知する`GuardianPinWeaknessDetector`をguardian
   モジュールに追加した。
