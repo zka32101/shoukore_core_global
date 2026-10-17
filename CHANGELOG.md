@@ -331,5 +331,8 @@
   `AchievementProximityHint`をgrowthモジュールに追加した。
 - 単元の提示順と難易度の想定順序（易→難）が逆転していないかを検証する
   `UnitDifficultyOrderValidator`をquestionモジュールに追加した。
+- 同一内容の保護者承認リクエストが短時間に重複して作成されていないかを
+  検知する`GuardianApprovalRequestDuplicateDetector`をguardianモジュール
+  に追加した。
 - 同期キュー1件分のペイロードサイズが異常に大きい場合に気づける
   `SyncPayloadSizeAlert`をsyncモジュールに追加した。
