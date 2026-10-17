@@ -325,3 +325,5 @@
   追加した。
 - 購入復元が長期間実行されていないことに気づけるようにする
   `EntitlementRestoreStalenessNotice`をentitlementモジュールに追加した。
+- 同期キュー1件分のペイロードサイズが異常に大きい場合に気づける
+  `SyncPayloadSizeAlert`をsyncモジュールに追加した。
