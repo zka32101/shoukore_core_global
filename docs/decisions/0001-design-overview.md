@@ -1326,6 +1326,15 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 別デバイスでの購入状態の不整合リスクに、食い違いが表面化する前に気づく
 手がかりとする。実際の復元操作の案内はアプリ側の責務とする。
 
+## AudioMuteStalenessNoticeの追加
+
+効果音/BGMのミュート設定が長期間解除されずに続いている場合、再度音を
+有効にしてよいか確認を提案したい場面向けに、`AudioMuteStalenessNotice`を
+`audio`モジュールに追加した。`AudioCueVolumeDuckingSuggestion`（再生中の
+一時的な音量調整）とは異なり、本クラスはミュート状態自体がいつから続いて
+いるかのみを見る。実際のミュート解除確認ダイアログの表示はアプリ側の
+責務とする。
+
 ## UnitDifficultyOrderValidatorの追加
 
 同一学年・同一カテゴリ内で、単元の提示順（`Unit.order`）と難易度の想定
