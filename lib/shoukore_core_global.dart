@@ -67,6 +67,7 @@ export 'src/entitlement/entitlement_expiry_notice.dart';
 export 'src/entitlement/entitlement_grace_period.dart';
 export 'src/entitlement/entitlement_reader.dart';
 export 'src/entitlement/entitlement_restore_prompt.dart';
+export 'src/entitlement/entitlement_restore_staleness_notice.dart';
 export 'src/growth/achievement.dart';
 export 'src/growth/achievement_share_card_data.dart';
 export 'src/growth/unit_mastery_badge_eligibility.dart';

@@ -323,3 +323,5 @@
 - 季節イベントの終了判定が端末時刻のタイムゾーンズレで誤判定されて
   いないかを検証する`SeasonalEventValidityGuard`をgrowthモジュールに
   追加した。
+- 購入復元が長期間実行されていないことに気づけるようにする
+  `EntitlementRestoreStalenessNotice`をentitlementモジュールに追加した。
