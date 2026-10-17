@@ -303,3 +303,5 @@
 - 単元推薦が何度も提示されても学習されずに無視され続けていないかを
   検知する`UnitRecommendationIgnoredDetector`をquestionモジュールに
   追加した。
+- `MasteryDecay`の減衰量が大きい単元を優先的に知らせるべきかを判定する
+  `MasteryRapidDecayDetector`をquestionモジュールに追加した。
