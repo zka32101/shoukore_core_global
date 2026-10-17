@@ -295,3 +295,5 @@
 - プロフィール写真が登録・最終更新から長期間変わっていないことに気づ
   けるようにする`ProfilePhotoStalenessNotice`をprofileモジュールに
   追加した。
+- 週次レポートの既読率が継続して低い場合に通知方法の見直しを提案する
+  `WeeklyReportEngagementDeclineNotice`をguardianモジュールに追加した。
