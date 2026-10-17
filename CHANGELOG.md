@@ -300,3 +300,6 @@
 - 保護者ゲートのPINが連番や同一数字の繰り返しのような推測されやすい
   パターンでないかを検知する`GuardianPinWeaknessDetector`をguardian
   モジュールに追加した。
+- 同期の再送を諦めたアイテムが溜まった場合にオフライン専用モードへの
+  切り替えを提案する`OfflineOnlyModeSuggestion`をsyncモジュールに
+  追加した。
