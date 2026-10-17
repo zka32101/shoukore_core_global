@@ -327,6 +327,8 @@
   `EntitlementRestoreStalenessNotice`をentitlementモジュールに追加した。
 - 音声のミュートが長期間解除されずに続いている場合に解除確認を提案する
   `AudioMuteStalenessNotice`をaudioモジュールに追加した。
+- 未解除の達成バッジについて条件達成までの残り回数を算出する
+  `AchievementProximityHint`をgrowthモジュールに追加した。
 - 同一内容の保護者承認リクエストが短時間に重複して作成されていないかを
   検知する`GuardianApprovalRequestDuplicateDetector`をguardianモジュール
   に追加した。
