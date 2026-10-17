@@ -133,6 +133,7 @@ export 'src/regional/timezone_drift_detector.dart';
 export 'src/regional/timezone_drift_recalibration_prompt.dart';
 export 'src/sync/duplicate_sync_payload_detector.dart';
 export 'src/sync/in_memory_pending_sync_queue.dart';
+export 'src/sync/offline_only_mode_suggestion.dart';
 export 'src/sync/offline_session_gap_detector.dart';
 export 'src/sync/offline_sync_conflict_resolver.dart';
 export 'src/sync/sync_conflict_severity_classifier.dart';
