@@ -297,3 +297,6 @@
   追加した。
 - 週次レポートの既読率が継続して低い場合に通知方法の見直しを提案する
   `WeeklyReportEngagementDeclineNotice`をguardianモジュールに追加した。
+- 保護者ゲートのPINが連番や同一数字の繰り返しのような推測されやすい
+  パターンでないかを検知する`GuardianPinWeaknessDetector`をguardian
+  モジュールに追加した。
