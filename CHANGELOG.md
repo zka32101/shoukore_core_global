@@ -325,5 +325,7 @@
   追加した。
 - 購入復元が長期間実行されていないことに気づけるようにする
   `EntitlementRestoreStalenessNotice`をentitlementモジュールに追加した。
+- 音声のミュートが長期間解除されずに続いている場合に解除確認を提案する
+  `AudioMuteStalenessNotice`をaudioモジュールに追加した。
 - 同期キュー1件分のペイロードサイズが異常に大きい場合に気づける
   `SyncPayloadSizeAlert`をsyncモジュールに追加した。
