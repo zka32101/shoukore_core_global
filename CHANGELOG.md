@@ -327,5 +327,7 @@
   `EntitlementRestoreStalenessNotice`をentitlementモジュールに追加した。
 - 音声のミュートが長期間解除されずに続いている場合に解除確認を提案する
   `AudioMuteStalenessNotice`をaudioモジュールに追加した。
+- 未解除の達成バッジについて条件達成までの残り回数を算出する
+  `AchievementProximityHint`をgrowthモジュールに追加した。
 - 同期キュー1件分のペイロードサイズが異常に大きい場合に気づける
   `SyncPayloadSizeAlert`をsyncモジュールに追加した。
