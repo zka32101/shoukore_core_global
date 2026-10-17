@@ -288,3 +288,6 @@
   `EntitlementExpiryNotice`をentitlementモジュールに追加した。
 - コイン残高が長期間使われず滞留していることに気づけるようにする
   `CoinWalletStagnationNotice`をgrowthモジュールに追加した。
+- 保護者ゲートのPINが連番や同一数字の繰り返しのような推測されやすい
+  パターンでないかを検知する`GuardianPinWeaknessDetector`をguardian
+  モジュールに追加した。

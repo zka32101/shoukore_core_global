@@ -103,6 +103,7 @@ export 'src/guardian/guardian_timezone_mismatch_detector.dart';
 export 'src/guardian/guardian_gate_rapid_attempt_detector.dart';
 export 'src/guardian/guardian_notification_digest_throttle.dart';
 export 'src/guardian/guardian_pin_rotation_reminder.dart';
+export 'src/guardian/guardian_pin_weakness_detector.dart';
 export 'src/guardian/in_memory_report_read_state.dart';
 export 'src/guardian/in_memory_screen_time_store.dart';
 export 'src/guardian/quiet_hours_guard.dart';
