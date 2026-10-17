@@ -1353,6 +1353,16 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 異なり、本クラスは順序と難易度の整合性のみを見る。実際のカリキュラム
 JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側の責務とする。
 
+## GuardianApprovalRequestDuplicateDetectorの追加
+
+同一の承認対象（単元アンロック等、`payload`が同一内容）に対して、
+短時間に複数の承認待ち申請が重複して作成されていないかを検知したい
+場面向けに、`GuardianApprovalRequestDuplicateDetector`を`guardian`
+モジュールに追加した。`GuardianApprovalRequestBatchNotice`（承認待ち
+件数が溜まった場合にまとめ通知すべきかの判定）とは異なり、本クラスは
+件数の多さではなく「同じ内容の申請が重複している」こと自体を見る。
+実際の重複申請の統合・再送抑制はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
