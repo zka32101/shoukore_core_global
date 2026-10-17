@@ -292,3 +292,6 @@
   `SiblingProfileUsageBalance`をprofileモジュールに追加した。
 - セッション内の解答が復習モードに偏りすぎていないかを検知する
   `SessionReviewModeRatioAlert`をadaptiveモジュールに追加した。
+- プロフィール写真が登録・最終更新から長期間変わっていないことに気づ
+  けるようにする`ProfilePhotoStalenessNotice`をprofileモジュールに
+  追加した。
