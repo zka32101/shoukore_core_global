@@ -1344,6 +1344,15 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 見ないため、本クラスが残り必要な回数を算出する。実際の「もうすぐ解除！」
 のようなUI表示はアプリ側の責務とする。
 
+## UnitDifficultyOrderValidatorの追加
+
+同一学年・同一カテゴリ内で、単元の提示順（`Unit.order`）と難易度の想定
+順序（易→難）が逆転していないかを検証したい場面向けに、
+`UnitDifficultyOrderValidator`を`question`モジュールに追加した。
+`tool/check_curriculum.dart`（CIでのID重複・参照整合性チェック）とは
+異なり、本クラスは順序と難易度の整合性のみを見る。実際のカリキュラム
+JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側の責務とする。
+
 ## SyncPayloadSizeAlertの追加
 
 同期キュー1件分の`PendingSyncItem.payload`のサイズが異常に大きい場合に
