@@ -312,5 +312,8 @@
   追加した。
 - `eraseAllUserData`実行後に関連ストアが実際に空になったかを検証する
   `DataErasureVerifier`をprivacyモジュールに追加した。
+- 同一プロファイルのデータが短時間に複数デバイスから更新されている
+  可能性を検知する`MultiDeviceConcurrentEditDetector`をsyncモジュール
+  に追加した。
 - 購入復元が長期間実行されていないことに気づけるようにする
   `EntitlementRestoreStalenessNotice`をentitlementモジュールに追加した。
