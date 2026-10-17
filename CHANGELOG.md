@@ -300,3 +300,5 @@
 - 保護者ゲートのPINが連番や同一数字の繰り返しのような推測されやすい
   パターンでないかを検知する`GuardianPinWeaknessDetector`をguardian
   モジュールに追加した。
+- `eraseAllUserData`実行後に関連ストアが実際に空になったかを検証する
+  `DataErasureVerifier`をprivacyモジュールに追加した。
