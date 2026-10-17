@@ -300,3 +300,5 @@
 - 保護者ゲートのPINが連番や同一数字の繰り返しのような推測されやすい
   パターンでないかを検知する`GuardianPinWeaknessDetector`をguardian
   モジュールに追加した。
+- `MasteryDecay`の減衰量が大きい単元を優先的に知らせるべきかを判定する
+  `MasteryRapidDecayDetector`をquestionモジュールに追加した。

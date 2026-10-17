@@ -24,6 +24,7 @@ export 'src/question/sequence_question_source.dart';
 export 'src/question/sequence_template.dart';
 export 'src/question/statistics_question_source.dart';
 export 'src/question/mastery_decay.dart';
+export 'src/question/mastery_rapid_decay_detector.dart';
 export 'src/question/statistics_template.dart';
 export 'src/question/unit_recommendation.dart';
 export 'src/progress/in_memory_progress_store.dart';
