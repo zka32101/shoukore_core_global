@@ -1335,6 +1335,15 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 いるかのみを見る。実際のミュート解除確認ダイアログの表示はアプリ側の
 責務とする。
 
+## AchievementProximityHintの追加
+
+`AchievementEvaluator`が判定する各バッジについて、現在の進捗が解除条件に
+どれだけ近いかを算出したい場面向けに、`AchievementProximityHint`を
+`growth`モジュールに追加した。`AchievementEvaluator`自体は「解除済みか
+どうか」の二値判定のみを行い、未解除のバッジが条件まであとどれだけかは
+見ないため、本クラスが残り必要な回数を算出する。実際の「もうすぐ解除！」
+のようなUI表示はアプリ側の責務とする。
+
 ## UnitDifficultyOrderValidatorの追加
 
 同一学年・同一カテゴリ内で、単元の提示順（`Unit.order`）と難易度の想定
