@@ -312,3 +312,5 @@
   追加した。
 - `eraseAllUserData`実行後に関連ストアが実際に空になったかを検証する
   `DataErasureVerifier`をprivacyモジュールに追加した。
+- 速すぎる解答が連続していないか（不正操作の可能性）を検知する
+  `RapidAnswerStreakDetector`をadaptiveモジュールに追加した。

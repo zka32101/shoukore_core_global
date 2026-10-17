@@ -6,6 +6,7 @@ export 'src/adaptive/answer_latency_fatigue_trend.dart';
 export 'src/adaptive/answer_latency_outlier_flag.dart';
 export 'src/adaptive/question_difficulty_drift_alert.dart';
 export 'src/adaptive/question_variety_bias_detector.dart';
+export 'src/adaptive/rapid_answer_streak_detector.dart';
 export 'src/adaptive/session_review_mode_ratio_alert.dart';
 export 'src/audio/audio_cue_player.dart';
 export 'src/audio/audio_cue_volume_ducking_suggestion.dart';
