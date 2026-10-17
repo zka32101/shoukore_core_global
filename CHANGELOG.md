@@ -290,3 +290,5 @@
   `CoinWalletStagnationNotice`をgrowthモジュールに追加した。
 - 兄弟プロフィール間で学習時間の配分が極端に偏っていないかを検知する
   `SiblingProfileUsageBalance`をprofileモジュールに追加した。
+- セッション内の解答が復習モードに偏りすぎていないかを検知する
+  `SessionReviewModeRatioAlert`をadaptiveモジュールに追加した。

@@ -1196,6 +1196,15 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 時間比率のみを見る。実際の保護者への報告・利用時間の調整提案は
 アプリ側の責務とする。
 
+## SessionReviewModeRatioAlertの追加
+
+セッション内の解答が復習モード（`Attempt.mode == 'review'`）に偏り
+すぎていないかを検知したい場面向けに、`SessionReviewModeRatioAlert`
+を`adaptive`モジュールに追加した。`QuestionVarietyBiasDetector`（出題
+タグの偏り）とは異なり、本クラスは出題の内容ではなくモード（新規
+学習か復習か）の比率のみを見る。実際の出題モードの切り替え判断は
+アプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
