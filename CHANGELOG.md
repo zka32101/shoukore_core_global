@@ -320,3 +320,6 @@
   に追加した。
 - 速すぎる解答が連続していないか（不正操作の可能性）を検知する
   `RapidAnswerStreakDetector`をadaptiveモジュールに追加した。
+- 季節イベントの終了判定が端末時刻のタイムゾーンズレで誤判定されて
+  いないかを検証する`SeasonalEventValidityGuard`をgrowthモジュールに
+  追加した。
