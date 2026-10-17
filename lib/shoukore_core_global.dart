@@ -27,6 +27,7 @@ export 'src/question/mastery_decay.dart';
 export 'src/question/mastery_rapid_decay_detector.dart';
 export 'src/question/statistics_template.dart';
 export 'src/question/unit_recommendation.dart';
+export 'src/question/unit_recommendation_ignored_detector.dart';
 export 'src/progress/in_memory_progress_store.dart';
 export 'src/progress/progress_store.dart';
 export 'src/store/in_memory_migration_ledger.dart';

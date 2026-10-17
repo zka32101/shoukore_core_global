@@ -1232,6 +1232,16 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 本クラスはPINの値そのものの強度のみを見る。実際の設定時の警告表示・
 再入力の強制はアプリ側の責務とする。
 
+## UnitRecommendationIgnoredDetectorの追加
+
+`UnitRecommendation`が提案した単元が、何度も提示されても学習されずに
+無視され続けていないかを検知したい場面向けに、
+`UnitRecommendationIgnoredDetector`を`question`モジュールに追加した。
+`UnitRecommendation`自体は単元の優先順位付けのみを行い、提案が実際に
+見送られ続けているかは見ないため、本クラスがアプリ側が記録する提示
+回数を見る。実際の提案内容の変更・別単元への切り替えはアプリ側の
+責務とする。
+
 ## MasteryRapidDecayDetectorの追加
 
 `MasteryDecay`による減衰量が大きい単元を優先的に知らせたい場面向けに、
