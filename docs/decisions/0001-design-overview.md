@@ -1232,6 +1232,33 @@ BGM再生中に効果音（`AudioCuePlayer`）を鳴らす際、BGM音量を一�
 本クラスはPINの値そのものの強度のみを見る。実際の設定時の警告表示・
 再入力の強制はアプリ側の責務とする。
 
+## UnitRecommendationIgnoredDetectorの追加
+
+`UnitRecommendation`が提案した単元が、何度も提示されても学習されずに
+無視され続けていないかを検知したい場面向けに、
+`UnitRecommendationIgnoredDetector`を`question`モジュールに追加した。
+`UnitRecommendation`自体は単元の優先順位付けのみを行い、提案が実際に
+見送られ続けているかは見ないため、本クラスがアプリ側が記録する提示
+回数を見る。実際の提案内容の変更・別単元への切り替えはアプリ側の
+責務とする。
+
+## MasteryRapidDecayDetectorの追加
+
+`MasteryDecay`による減衰量が大きい単元を優先的に知らせたい場面向けに、
+`MasteryRapidDecayDetector`を`question`モジュールに追加した。
+`MasteryDecay`自体は減衰後のスコアを計算するのみで単元間の比較は
+行わないため、本クラスが元のスコアとの差分を見る。実際の優先表示・
+通知はアプリ側の責務とする。
+
+## SettingsBackupStalenessNoticeの追加
+
+`exportSettingsBackup`によるバックアップが長期間作成されていないこと
+に気づけるようにしたい場面向けに、`SettingsBackupStalenessNotice`を
+`privacy`モジュールに追加した。`exportSettingsBackup`自体はバックアップ
+の生成・復元のみを行い最終作成時刻の追跡は見ないため、本クラスが
+アプリ側が別途記録する最終バックアップ時刻を見る。実際のバックアップ
+実行の案内はアプリ側の責務とする。
+
 ## OfflineOnlyModeSuggestionの追加
 
 `RetryBackoffPolicy.hasExhaustedRetries`で再送を諦めるべきと判定された
