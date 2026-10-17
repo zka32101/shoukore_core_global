@@ -312,3 +312,6 @@
   追加した。
 - `eraseAllUserData`実行後に関連ストアが実際に空になったかを検証する
   `DataErasureVerifier`をprivacyモジュールに追加した。
+- 保護者向け通知の配信が連続して失敗している場合に代替通知手段を
+  提案する`GuardianDeliveryFailureAlternativeNotice`をguardianモジュール
+  に追加した。
