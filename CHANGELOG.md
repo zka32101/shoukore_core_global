@@ -358,3 +358,5 @@
 - エンタイトルメント猶予期間の終了間近を事前に知らせるべきかを判定する
   `EntitlementGracePeriodEndingSoonReminder`をentitlementモジュールに
   追加した。
+- 適応難易度の算出結果が一定期間変化していない停滞状態を検知する
+  `AdaptiveDifficultyPlateauDetector`をadaptiveモジュールに追加した。
