@@ -381,3 +381,5 @@
 - 同期待ちアイテムのうちバックオフ上限に達した件数の割合からシステム的
   な同期障害の可能性を検知する`RetryBackoffExhaustionRateAlert`をsync
   モジュールに追加した。
+- プロフィール切替直後にすぐ元へ戻す誤操作パターンを検知する
+  `ProfileSwitchRevertDetector`をprofileモジュールに追加した。
