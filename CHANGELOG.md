@@ -392,3 +392,5 @@
   状態を検知する`FlakyConnectivityDetector`をsyncモジュールに追加した。
 - 直近の出題に同じ問題が繰り返し出されすぎている疲労状態を検知する
   `QuestionRepetitionFatigueDetector`をadaptiveモジュールに追加した。
+- 1つの単元の弱点ノートが同時に多種類の誤解タイプに広がっている状態を
+  検知する`WeakNoteMisconceptionDiversityAlert`をweakモジュールに追加した。
