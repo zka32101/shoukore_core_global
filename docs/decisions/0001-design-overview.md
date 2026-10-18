@@ -1713,6 +1713,15 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 アプリが認識していないID）を見るため、認識しているが未適用のままのID
 は見ない。実際の再実行・警告表示はアプリ側の責務とする。
 
+## ScreenTimeGuardOverrideFrequencyAlertの追加
+
+保護者が利用時間制限を頻繁に一時解除している状態に気づけるようにしたい
+場面向けに、`ScreenTimeGuardOverrideFrequencyAlert`を`guardian`モジュール
+に追加した。`ScreenTimeWarningThreshold`は残り時間が少ないことの事前
+警告のみを見るため、制限解除操作自体の頻度は見ない。`ScreenTimeGuard`
+自体は制限超過判定のみを行う。実際の「制限の見直しを検討しますか」案内の
+表示はアプリ側の責務とする。
+
 ## AchievementUnlockClusterDetectorの追加
 
 `AchievementEvaluator.newlyUnlocked`が一度に複数のバッジ解除を返した
