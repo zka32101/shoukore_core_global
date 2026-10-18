@@ -336,3 +336,5 @@
   に追加した。
 - 同期キュー1件分のペイロードサイズが異常に大きい場合に気づける
   `SyncPayloadSizeAlert`をsyncモジュールに追加した。
+- データ書き出しが長期間再生成されていないことに気づける
+  `DataExportRenewalNotice`をprivacyモジュールに追加した。
