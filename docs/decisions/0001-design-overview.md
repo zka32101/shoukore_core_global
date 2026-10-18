@@ -1429,6 +1429,16 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 独立してその判定を行う。実際のエスカレーション表示・優先的な出題はアプリ
 側の責務とする。
 
+## LocaleCurriculumStalenessNoticeの追加
+
+`DeviceLocaleSuggester`が提案したロケールに実際に切り替わった後、
+そのロケール向けのカリキュラムが一度も読み込まれていないことに
+気づけるようにしたい場面向けに、`LocaleCurriculumStalenessNotice`を
+`regional`モジュールに追加した。`DeviceLocaleSuggester`自体はロケール
+文字列の提案のみを行い、実際にカリキュラムが読み込まれたかは見ないため、
+本クラスがその整合性を確認する。実際のカリキュラム読み込みの再試行・
+エラー表示はアプリ側の責務とする。
+
 ## EntitlementGracePeriodEndingSoonReminderの追加
 
 エンタイトルメント猶予期間の終了が近いことを事前に知らせたい場面向けに、
