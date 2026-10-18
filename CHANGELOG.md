@@ -336,5 +336,7 @@
   に追加した。
 - 同期キュー1件分のペイロードサイズが異常に大きい場合に気づける
   `SyncPayloadSizeAlert`をsyncモジュールに追加した。
+- 同一内容の通知が短時間に重複して予約されていないかを検知する
+  `DuplicateNotificationScheduleDetector`をnotifyモジュールに追加した。
 - 短時間に大きなコイン消費が連続していないか（想定外の連続購入）を
   検知する`RapidCoinSpendingStreakDetector`をgrowthモジュールに追加した。
