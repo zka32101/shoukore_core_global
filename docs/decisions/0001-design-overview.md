@@ -1597,6 +1597,16 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 単位の偏りのみを見るため、問題インスタンス自体が繰り返されているかは
 見ない。実際の出題プールからの除外・差し替えはアプリ側の責務とする。
 
+## NotificationScheduleClusteringDetectorの追加
+
+内容の異同に関わらず複数の通知予定が短時間に密集している状態に
+気づけるようにしたい場面向けに、`NotificationScheduleClusteringDetector`
+を`notify`モジュールに追加した。`DuplicateNotificationScheduleDetector`
+は同一内容の通知の重複のみを見るため、異なる内容の通知が密集している
+かは見ない。`NotificationQuietMerge`は静かな時間帯の再スケジュール先の
+算出のみを行う。実際の通知の間引き・時間分散の実行はアプリ側の責務
+とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

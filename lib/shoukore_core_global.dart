@@ -43,6 +43,7 @@ export 'src/notify/daily_reminder_planner.dart';
 export 'src/notify/duplicate_notification_schedule_detector.dart';
 export 'src/notify/in_memory_notification_scheduler.dart';
 export 'src/notify/notification_quiet_merge.dart';
+export 'src/notify/notification_schedule_clustering_detector.dart';
 export 'src/notify/notification_scheduler.dart';
 export 'src/privacy/consent_audit_log.dart';
 export 'src/privacy/consent_expiry_policy.dart';
