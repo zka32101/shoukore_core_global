@@ -358,6 +358,9 @@
 - エンタイトルメント猶予期間の終了間近を事前に知らせるべきかを判定する
   `EntitlementGracePeriodEndingSoonReminder`をentitlementモジュールに
   追加した。
+- デイリーミッションが同じ種類ばかり連続して出題されているマンネリ化
+  状態を検知する`DailyMissionMonotonyDetector`をgrowthモジュールに
+  追加した。
 - 保護者週次レポートが開封されたが閲覧時間が短く流し見状態である
   ことを検知する`WeeklyReportSkimDetector`をguardianモジュールに
   追加した。
