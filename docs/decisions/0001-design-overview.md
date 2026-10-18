@@ -1465,6 +1465,15 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 が独立してその判定を行う。実際の「もうすぐ猶予期間が終了します」表示は
 アプリ側の責務とする。
 
+## DailyMissionMonotonyDetectorの追加
+
+デイリーミッションが同じ種類ばかり連続して出題されているマンネリ化状態に
+気づけるようにしたい場面向けに、`DailyMissionMonotonyDetector`を
+`growth`モジュールに追加した。`MissionSkipStreakCap`は未達成の見逃しの
+連続回数のみを見るため、達成しているかどうかに関わらず種類が偏っている
+かどうかは見ない。実際のミッション種類の選定ロジック自体はアプリ側の
+責務とする。
+
 ## AdaptiveDifficultyPlateauDetectorの追加
 
 `AdaptiveDifficulty`が算出する難易度が一定期間変化していない停滞状態に
