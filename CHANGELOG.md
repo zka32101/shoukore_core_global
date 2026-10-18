@@ -361,3 +361,5 @@
 - デイリーミッションが同じ種類ばかり連続して出題されているマンネリ化
   状態を検知する`DailyMissionMonotonyDetector`をgrowthモジュールに
   追加した。
+- 購入復元の試行が連続して失敗している状態を検知する
+  `EntitlementRestoreFailureStreak`をentitlementモジュールに追加した。
