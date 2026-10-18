@@ -1372,6 +1372,15 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 個々のアイテムのサイズのみを見る。実際のペイロード圧縮・送信抑制は
 アプリ側の責務とする。
 
+## DuplicateNotificationScheduleDetectorの追加
+
+同一内容（`titleKey`/`bodyKey`が一致）の通知が短時間内に複数予約されて
+いないかを検知したい場面向けに、`DuplicateNotificationScheduleDetector`を
+`notify`モジュールに追加した。`NotificationQuietMerge`（静かな時間帯に
+予定されていた通知の再スケジュール先の算出）とは異なり、本クラスは
+同一内容の通知が重複して積まれていること自体を見る。実際の重複通知の
+キャンセル・統合処理はアプリ側の責務とする。
+
 ## DataExportRenewalNoticeの追加
 
 以前に書き出した`exportUserData`の結果が長期間再生成されていない場合、

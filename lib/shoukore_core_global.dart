@@ -37,6 +37,7 @@ export 'src/store/in_memory_migration_ledger.dart';
 export 'src/store/migration_ledger.dart';
 export 'src/store/migration_ledger_rollback_guard.dart';
 export 'src/notify/daily_reminder_planner.dart';
+export 'src/notify/duplicate_notification_schedule_detector.dart';
 export 'src/notify/in_memory_notification_scheduler.dart';
 export 'src/notify/notification_quiet_merge.dart';
 export 'src/notify/notification_scheduler.dart';
