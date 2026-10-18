@@ -342,6 +342,8 @@
   `DataExportRenewalNotice`をprivacyモジュールに追加した。
 - 短時間に大きなコイン消費が連続していないか（想定外の連続購入）を
   検知する`RapidCoinSpendingStreakDetector`をgrowthモジュールに追加した。
+- プロフィール写真利用の同意取得から長期間経過していることに気づける
+  `ProfilePhotoConsentRenewalNotice`をprivacyモジュールに追加した。
 - デイリーリマインド送信後もミッションが連続して未達成のまま終わって
   いないかを検知する`DailyReminderNonresponseStreakDetector`をnotify
   モジュールに追加した。
