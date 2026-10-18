@@ -395,5 +395,8 @@
 - 同期待ちキュー内で特定のアイテムだけが著しく長く待たされている
   スタベーション状態を検知する`PendingSyncItemStarvationDetector`を
   syncモジュールに追加した。
+- 未使用のまま保持しているインベントリアイテムの種類数が一定数を超えて
+  いる状態を検知する`InventoryItemUnusedVarietyAlert`をgrowthモジュール
+  に追加した。
 - 1つの単元の弱点ノートが同時に多種類の誤解タイプに広がっている状態を
   検知する`WeakNoteMisconceptionDiversityAlert`をweakモジュールに追加した。

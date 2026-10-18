@@ -1606,6 +1606,16 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 個々のアイテムの待機時間の偏りは見ない。実際の優先送信・個別リトライの
 実行はアプリ側の責務とする。
 
+## InventoryItemUnusedVarietyAlertの追加
+
+未使用のまま保持しているインベントリアイテムの種類数が一定数を超えて
+いる状態に気づけるようにしたい場面向けに、`InventoryItemUnusedVarietyAlert`
+を`growth`モジュールに追加した。`InventoryItemStaleUsageNotice`は個々の
+アイテムの最終使用からの経過時間のみを見るため、未使用アイテムの種類の
+積み上がりは見ない。`InventoryDuplicateGiftGuard`はギフト付与時の重複
+防止のみを行い目的が異なる。実際の「まとめて使ってみよう」案内の表示は
+アプリ側の責務とする。
+
 ## WeakNoteMisconceptionDiversityAlertの追加
 
 1つの単元の弱点ノートが同時に多種類の誤解タイプに広がっている状態
