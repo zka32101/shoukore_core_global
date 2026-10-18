@@ -1381,6 +1381,15 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 同一内容の通知が重複して積まれていること自体を見る。実際の重複通知の
 キャンセル・統合処理はアプリ側の責務とする。
 
+## DataExportRenewalNoticeの追加
+
+以前に書き出した`exportUserData`の結果が長期間再生成されていない場合、
+保護者に最新の書き出しを促すべきかを判定したい場面向けに、
+`DataExportRenewalNotice`を`privacy`モジュールに追加した。
+`DataExportRequestThrottle`（連続要求の抑制、短すぎる間隔を防ぐ）とは
+異なり、本クラスは最後に書き出した時刻からの経過時間が長すぎる場合の
+みを見る。実際の書き出し再実行の案内はアプリ側の責務とする。
+
 ## ProfilePhotoConsentRenewalNoticeの追加
 
 `ProfilePhotoConsent`の同意取得から長期間経過している場合、現在も有効な

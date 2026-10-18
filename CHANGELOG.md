@@ -338,5 +338,7 @@
   `SyncPayloadSizeAlert`をsyncモジュールに追加した。
 - 同一内容の通知が短時間に重複して予約されていないかを検知する
   `DuplicateNotificationScheduleDetector`をnotifyモジュールに追加した。
+- データ書き出しが長期間再生成されていないことに気づける
+  `DataExportRenewalNotice`をprivacyモジュールに追加した。
 - プロフィール写真利用の同意取得から長期間経過していることに気づける
   `ProfilePhotoConsentRenewalNotice`をprivacyモジュールに追加した。
