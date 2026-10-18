@@ -141,6 +141,7 @@ export 'src/guardian/weekly_report_engagement_decline_notice.dart';
 export 'src/privacy/age_gate.dart';
 export 'src/privacy/in_memory_consent_store.dart';
 export 'src/regional/device_locale_suggester.dart';
+export 'src/regional/locale_curriculum_staleness_notice.dart';
 export 'src/regional/locale_formatter.dart';
 export 'src/regional/regional_profile_loader.dart';
 export 'src/regional/timezone_drift_detector.dart';
