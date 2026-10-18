@@ -349,3 +349,5 @@
   モジュールに追加した。
 - 弱点ノートの復習期限を大幅に超えて放置されている単元を検知する
   `WeakNoteReviewOverdueEscalation`をweakモジュールに追加した。
+- 現在のロケール向けのカリキュラムが未読み込みであることに気づける
+  `LocaleCurriculumStalenessNotice`をregionalモジュールに追加した。
