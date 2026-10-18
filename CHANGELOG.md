@@ -347,3 +347,6 @@
 - デイリーリマインド送信後もミッションが連続して未達成のまま終わって
   いないかを検知する`DailyReminderNonresponseStreakDetector`をnotify
   モジュールに追加した。
+- エンタイトルメント猶予期間の終了間近を事前に知らせるべきかを判定する
+  `EntitlementGracePeriodEndingSoonReminder`をentitlementモジュールに
+  追加した。
