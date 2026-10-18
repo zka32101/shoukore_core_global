@@ -1439,6 +1439,14 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 本クラスがその整合性を確認する。実際のカリキュラム読み込みの再試行・
 エラー表示はアプリ側の責務とする。
 
+## GuardianGateLockoutEndingSoonNoticeの追加
+
+保護者ゲートのロックが解除間近であることを事前に知らせたい場面向けに、
+`GuardianGateLockoutEndingSoonNotice`を`guardian`モジュールに追加した。
+`GuardianGateLockout`自体はロック中かどうかの二値判定のみを行い、
+解除までの残り時間が近いことの事前通知は見ないため、本クラスが独立して
+その判定を行う。実際の「もうすぐ解除されます」表示はアプリ側の責務とする。
+
 ## UnitMasteryBadgeMotivationDropNoticeの追加
 
 単元マスタリーバッジ解除直後に学習意欲が低下していないかを検知したい

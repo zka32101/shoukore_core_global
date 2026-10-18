@@ -351,5 +351,7 @@
   `WeakNoteReviewOverdueEscalation`をweakモジュールに追加した。
 - 現在のロケール向けのカリキュラムが未読み込みであることに気づける
   `LocaleCurriculumStalenessNotice`をregionalモジュールに追加した。
+- 保護者ゲートのロックが解除間近であることを事前に知らせるべきかを判定する
+  `GuardianGateLockoutEndingSoonNotice`をguardianモジュールに追加した。
 - 単元マスタリーバッジ解除直後の学習意欲低下を検知する
   `UnitMasteryBadgeMotivationDropNotice`をgrowthモジュールに追加した。
