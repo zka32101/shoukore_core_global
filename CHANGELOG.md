@@ -370,3 +370,5 @@
   `SyncConflictRecurrenceDetector`をsyncモジュールに追加した。
 - 適応難易度の算出結果が一定期間変化していない停滞状態を検知する
   `AdaptiveDifficultyPlateauDetector`をadaptiveモジュールに追加した。
+- データエクスポートの試行が連続して失敗している状態を検知する
+  `DataExportFailureStreak`をprivacyモジュールに追加した。
