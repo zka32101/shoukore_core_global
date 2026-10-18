@@ -355,3 +355,6 @@
   `GuardianGateLockoutEndingSoonNotice`をguardianモジュールに追加した。
 - 単元マスタリーバッジ解除直後の学習意欲低下を検知する
   `UnitMasteryBadgeMotivationDropNotice`をgrowthモジュールに追加した。
+- エンタイトルメント猶予期間の終了間近を事前に知らせるべきかを判定する
+  `EntitlementGracePeriodEndingSoonReminder`をentitlementモジュールに
+  追加した。
