@@ -1510,6 +1510,14 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 ままかどうかは見ない。実際の単元切り替え提案・休憩提案はアプリ側の
 責務とする。
 
+## CoinEarningCapHabitualHitDetectorの追加
+
+日次コイン獲得上限に何日も連続で到達し続けている常態化状態に気づける
+ようにしたい場面向けに、`CoinEarningCapHabitualHitDetector`を`growth`
+モジュールに追加した。`CoinEarningCapPerDay`は単日の上限判定のみを行う
+ため、連日にわたって上限に到達し続けているかどうかは見ない。実際の
+上限緩和提案・追加の獲得手段の案内はアプリ側の責務とする。
+
 ## DataExportFailureStreakの追加
 
 データエクスポートの試行が連続して失敗している状態に気づけるように

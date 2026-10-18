@@ -370,5 +370,7 @@
   `SyncConflictRecurrenceDetector`をsyncモジュールに追加した。
 - 適応難易度の算出結果が一定期間変化していない停滞状態を検知する
   `AdaptiveDifficultyPlateauDetector`をadaptiveモジュールに追加した。
+- 日次コイン獲得上限に連日到達し続けている常態化状態を検知する
+  `CoinEarningCapHabitualHitDetector`をgrowthモジュールに追加した。
 - データエクスポートの試行が連続して失敗している状態を検知する
   `DataExportFailureStreak`をprivacyモジュールに追加した。
