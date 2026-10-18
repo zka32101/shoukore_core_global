@@ -420,5 +420,7 @@
 - 課金サイクルごとに猶予期間が繰り返し使われているパターンを検知する
   `EntitlementGracePeriodRepeatedUsageDetector`をentitlementモジュール
   に追加した。
+- アプリが認識しているが未適用のまま残っているマイグレーションを検知
+  する`MigrationLedgerPendingMigrationAlert`をstoreモジュールに追加した。
 - 複数のバッジが同時に解除された際に祝賀表示を分散させるべきかを判定
   する`AchievementUnlockClusterDetector`をgrowthモジュールに追加した。

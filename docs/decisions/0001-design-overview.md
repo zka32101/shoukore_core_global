@@ -1704,6 +1704,15 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 かは見ない。`EntitlementRestoreFailureStreak`は復元試行の連続失敗のみを
 見る。実際の更新方法の見直し案内はアプリ側の責務とする。
 
+## MigrationLedgerPendingMigrationAlertの追加
+
+アプリが認識しているマイグレーションのうち、未適用のまま長期間残って
+いる（実行漏れの疑いがある）状態に気づけるようにしたい場面向けに、
+`MigrationLedgerPendingMigrationAlert`を`store`モジュールに追加した。
+`MigrationLedgerRollbackGuard`は逆方向（台帳に記録されているが現在の
+アプリが認識していないID）を見るため、認識しているが未適用のままのID
+は見ない。実際の再実行・警告表示はアプリ側の責務とする。
+
 ## AchievementUnlockClusterDetectorの追加
 
 `AchievementEvaluator.newlyUnlocked`が一度に複数のバッジ解除を返した
