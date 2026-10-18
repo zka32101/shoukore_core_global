@@ -420,3 +420,5 @@
 - 課金サイクルごとに猶予期間が繰り返し使われているパターンを検知する
   `EntitlementGracePeriodRepeatedUsageDetector`をentitlementモジュール
   に追加した。
+- アプリが認識しているが未適用のまま残っているマイグレーションを検知
+  する`MigrationLedgerPendingMigrationAlert`をstoreモジュールに追加した。
