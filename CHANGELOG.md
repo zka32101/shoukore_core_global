@@ -344,3 +344,6 @@
   検知する`RapidCoinSpendingStreakDetector`をgrowthモジュールに追加した。
 - プロフィール写真利用の同意取得から長期間経過していることに気づける
   `ProfilePhotoConsentRenewalNotice`をprivacyモジュールに追加した。
+- デイリーリマインド送信後もミッションが連続して未達成のまま終わって
+  いないかを検知する`DailyReminderNonresponseStreakDetector`をnotify
+  モジュールに追加した。
