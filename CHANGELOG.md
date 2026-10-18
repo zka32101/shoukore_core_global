@@ -347,3 +347,5 @@
 - デイリーリマインド送信後もミッションが連続して未達成のまま終わって
   いないかを検知する`DailyReminderNonresponseStreakDetector`をnotify
   モジュールに追加した。
+- 保護者ゲートのロックが解除間近であることを事前に知らせるべきかを判定する
+  `GuardianGateLockoutEndingSoonNotice`をguardianモジュールに追加した。
