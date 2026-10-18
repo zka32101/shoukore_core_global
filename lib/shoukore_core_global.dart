@@ -63,6 +63,7 @@ export 'src/profile/sibling_profile_usage_balance.dart';
 export 'src/privacy/data_eraser.dart';
 export 'src/privacy/data_erasure_verifier.dart';
 export 'src/privacy/data_export.dart';
+export 'src/privacy/data_export_failure_streak.dart';
 export 'src/privacy/data_export_renewal_notice.dart';
 export 'src/privacy/data_export_request_throttle.dart';
 export 'src/privacy/export_chunker.dart';

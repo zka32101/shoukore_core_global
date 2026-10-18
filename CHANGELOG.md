@@ -374,3 +374,5 @@
   `CoinEarningCapHabitualHitDetector`をgrowthモジュールに追加した。
 - 入手済みのインベントリアイテムが長期間使用されていない状態を検知する
   `InventoryItemStaleUsageNotice`をgrowthモジュールに追加した。
+- データエクスポートの試行が連続して失敗している状態を検知する
+  `DataExportFailureStreak`をprivacyモジュールに追加した。
