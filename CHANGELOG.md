@@ -340,3 +340,5 @@
   `DuplicateNotificationScheduleDetector`をnotifyモジュールに追加した。
 - データ書き出しが長期間再生成されていないことに気づける
   `DataExportRenewalNotice`をprivacyモジュールに追加した。
+- 短時間に大きなコイン消費が連続していないか（想定外の連続購入）を
+  検知する`RapidCoinSpendingStreakDetector`をgrowthモジュールに追加した。
