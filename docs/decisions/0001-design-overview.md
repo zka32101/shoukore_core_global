@@ -1474,6 +1474,15 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 かどうかは見ない。実際のミッション種類の選定ロジック自体はアプリ側の
 責務とする。
 
+## EntitlementRestoreFailureStreakの追加
+
+購入復元（リストア）の試行が連続して失敗している状態に気づけるように
+したい場面向けに、`EntitlementRestoreFailureStreak`を`entitlement`
+モジュールに追加した。`EntitlementRestoreStalenessNotice`は最後に復元を
+実行した時刻からの経過時間のみを見るため、実行自体はされていても失敗が
+連続しているかどうかは見ない。実際のエラー表示・サポート窓口への案内は
+アプリ側の責務とする。
+
 ## WeeklyReportSkimDetectorの追加
 
 保護者週次レポートが開封されたものの、閲覧時間が極端に短く実質的に
