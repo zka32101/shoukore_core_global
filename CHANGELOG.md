@@ -347,3 +347,5 @@
 - デイリーリマインド送信後もミッションが連続して未達成のまま終わって
   いないかを検知する`DailyReminderNonresponseStreakDetector`をnotify
   モジュールに追加した。
+- 現在のロケール向けのカリキュラムが未読み込みであることに気づける
+  `LocaleCurriculumStalenessNotice`をregionalモジュールに追加した。
