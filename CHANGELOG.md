@@ -406,5 +406,8 @@
 - 内容の異同に関わらず複数の通知予定が短時間に密集している状態を検知
   する`NotificationScheduleClusteringDetector`をnotifyモジュールに
   追加した。
+- 保護者が却下した承認申請が長期間再提出されずに放置されている状態を
+  検知する`GuardianApprovalRequestStaleRejectionReminder`をguardian
+  モジュールに追加した。
 - 直近の解答時間が継続的に短縮している習熟傾向を検知する
   `AnswerLatencyImprovementTrendDetector`をadaptiveモジュールに追加した。
