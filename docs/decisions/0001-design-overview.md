@@ -1668,6 +1668,14 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 同意年齢や利用時間制限等の変化は見ない。実際の再確認案内の表示はアプリ側
 の責務とする。
 
+## AnswerLatencyImprovementTrendDetectorの追加
+
+直近の解答時間が継続的に短縮している（習熟が進んでいる疑いがある）状態に
+気づけるようにしたい場面向けに、`AnswerLatencyImprovementTrendDetector`を
+`adaptive`モジュールに追加した。`AnswerLatencyFatigueTrend`は解答時間が
+遅くなる方向の悪化傾向のみを見るため、短縮方向の改善傾向は見ない。実際の
+難易度調整の提案・称賛表示はアプリ側の責務とする。
+
 ## GrowthStageStallDetectorの追加
 
 成長段階が最後の進化から長期間変化していない停滞状態に気づけるように
