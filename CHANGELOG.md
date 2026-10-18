@@ -415,3 +415,6 @@
   `AnswerLatencyImprovementTrendDetector`をadaptiveモジュールに追加した。
 - 成長段階が最後の進化から長期間変化していない停滞状態を検知する
   `GrowthStageStallDetector`をgrowthモジュールに追加した。
+- 課金サイクルごとに猶予期間が繰り返し使われているパターンを検知する
+  `EntitlementGracePeriodRepeatedUsageDetector`をentitlementモジュール
+  に追加した。
