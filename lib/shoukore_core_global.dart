@@ -78,6 +78,7 @@ export 'src/growth/achievement.dart';
 export 'src/growth/achievement_proximity_hint.dart';
 export 'src/growth/achievement_share_card_data.dart';
 export 'src/growth/unit_mastery_badge_eligibility.dart';
+export 'src/growth/unit_mastery_badge_motivation_drop_notice.dart';
 export 'src/growth/answer_streak_bonus.dart';
 export 'src/growth/coin_earning_cap_per_day.dart';
 export 'src/growth/coin_spending_limit.dart';
