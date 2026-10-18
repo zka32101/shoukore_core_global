@@ -363,5 +363,8 @@
   追加した。
 - 購入復元の試行が連続して失敗している状態を検知する
   `EntitlementRestoreFailureStreak`をentitlementモジュールに追加した。
+- 保護者週次レポートが開封されたが閲覧時間が短く流し見状態である
+  ことを検知する`WeeklyReportSkimDetector`をguardianモジュールに
+  追加した。
 - 適応難易度の算出結果が一定期間変化していない停滞状態を検知する
   `AdaptiveDifficultyPlateauDetector`をadaptiveモジュールに追加した。
