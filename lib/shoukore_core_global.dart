@@ -149,6 +149,7 @@ export 'src/sync/sync_conflict_severity_classifier.dart';
 export 'src/sync/pending_sync_item.dart';
 export 'src/sync/pending_sync_queue.dart';
 export 'src/sync/retry_backoff_policy.dart';
+export 'src/sync/sync_payload_size_alert.dart';
 export 'src/sync/sync_queue_backlog_alert.dart';
 export 'src/sync/stale_data_policy.dart';
 export 'src/weak/spaced_review.dart';

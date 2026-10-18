@@ -334,3 +334,5 @@
 - 同一内容の保護者承認リクエストが短時間に重複して作成されていないかを
   検知する`GuardianApprovalRequestDuplicateDetector`をguardianモジュール
   に追加した。
+- 同期キュー1件分のペイロードサイズが異常に大きい場合に気づける
+  `SyncPayloadSizeAlert`をsyncモジュールに追加した。
