@@ -392,3 +392,6 @@
   状態を検知する`FlakyConnectivityDetector`をsyncモジュールに追加した。
 - 直近の出題に同じ問題が繰り返し出されすぎている疲労状態を検知する
   `QuestionRepetitionFatigueDetector`をadaptiveモジュールに追加した。
+- 未使用のまま保持しているインベントリアイテムの種類数が一定数を超えて
+  いる状態を検知する`InventoryItemUnusedVarietyAlert`をgrowthモジュール
+  に追加した。
