@@ -411,3 +411,5 @@
   モジュールに追加した。
 - キャッシュされた地域プロフィールと最新のプロフィールの内容差分を
   検知する`RegionalProfileChangeDetector`をregionalモジュールに追加した。
+- 直近の解答時間が継続的に短縮している習熟傾向を検知する
+  `AnswerLatencyImprovementTrendDetector`をadaptiveモジュールに追加した。
