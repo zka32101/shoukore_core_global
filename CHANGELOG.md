@@ -336,3 +336,5 @@
   に追加した。
 - 同期キュー1件分のペイロードサイズが異常に大きい場合に気づける
   `SyncPayloadSizeAlert`をsyncモジュールに追加した。
+- プロフィール写真利用の同意取得から長期間経過していることに気づける
+  `ProfilePhotoConsentRenewalNotice`をprivacyモジュールに追加した。
