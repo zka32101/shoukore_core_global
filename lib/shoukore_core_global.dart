@@ -88,6 +88,7 @@ export 'src/growth/coin_wallet_overdraft_guard.dart';
 export 'src/growth/coin_wallet_stagnation_notice.dart';
 export 'src/growth/daily_boundary.dart';
 export 'src/growth/daily_mission.dart';
+export 'src/growth/daily_mission_monotony_detector.dart';
 export 'src/growth/mission_skip_streak_cap.dart';
 export 'src/growth/regional_holiday_mission_skip.dart';
 export 'src/growth/growth_snapshot.dart';
