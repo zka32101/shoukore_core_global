@@ -392,3 +392,6 @@
   状態を検知する`FlakyConnectivityDetector`をsyncモジュールに追加した。
 - 直近の出題に同じ問題が繰り返し出されすぎている疲労状態を検知する
   `QuestionRepetitionFatigueDetector`をadaptiveモジュールに追加した。
+- 短時間にアバター変更が繰り返されている場合に変更を制限すべきかを
+  判定する`ProfileAvatarChangeFrequencyThrottle`をprofileモジュールに
+  追加した。
