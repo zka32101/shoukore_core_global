@@ -370,3 +370,5 @@
   `SyncConflictRecurrenceDetector`をsyncモジュールに追加した。
 - 適応難易度の算出結果が一定期間変化していない停滞状態を検知する
   `AdaptiveDifficultyPlateauDetector`をadaptiveモジュールに追加した。
+- ストリークフリーズトークンが使われずに失効し続けている無駄遣い状態を
+  検知する`StreakFreezeTokenWasteDetector`をgrowthモジュールに追加した。
