@@ -1447,6 +1447,15 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 解除までの残り時間が近いことの事前通知は見ないため、本クラスが独立して
 その判定を行う。実際の「もうすぐ解除されます」表示はアプリ側の責務とする。
 
+## UnitMasteryBadgeMotivationDropNoticeの追加
+
+単元マスタリーバッジ解除直後に学習意欲が低下していないかを検知したい
+場面向けに、`UnitMasteryBadgeMotivationDropNotice`を`growth`モジュールに
+追加した。`UnitMasteryBadgeEligibility`自体はマスター済みかどうかの
+二値判定のみを行い、マスター達成後の取り組み状況の変化は見ないため、
+本クラスが独立してその判定を行う。実際の「もう一度挑戦してみよう」等の
+呼びかけ表示はアプリ側の責務とする。
+
 ## EntitlementGracePeriodEndingSoonReminderの追加
 
 エンタイトルメント猶予期間の終了が近いことを事前に知らせたい場面向けに、
