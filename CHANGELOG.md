@@ -372,6 +372,8 @@
   `AdaptiveDifficultyPlateauDetector`をadaptiveモジュールに追加した。
 - 日次コイン獲得上限に連日到達し続けている常態化状態を検知する
   `CoinEarningCapHabitualHitDetector`をgrowthモジュールに追加した。
+- 入手済みのインベントリアイテムが長期間使用されていない状態を検知する
+  `InventoryItemStaleUsageNotice`をgrowthモジュールに追加した。
 - 同期待ちアイテムのうちバックオフ上限に達した件数の割合からシステム的
   な同期障害の可能性を検知する`RetryBackoffExhaustionRateAlert`をsync
   モジュールに追加した。
