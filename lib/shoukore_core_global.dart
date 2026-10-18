@@ -122,6 +122,7 @@ export 'src/guardian/daily_digest.dart';
 export 'src/guardian/daily_digest_builder.dart';
 export 'src/guardian/daily_digest_duplicate_suppression.dart';
 export 'src/guardian/guardian_digest_mute_window.dart';
+export 'src/guardian/guardian_approval_request_backlog_size_alert.dart';
 export 'src/guardian/guardian_approval_request_batch_notice.dart';
 export 'src/guardian/guardian_approval_request_duplicate_detector.dart';
 export 'src/guardian/guardian_approval_request_queue.dart';
