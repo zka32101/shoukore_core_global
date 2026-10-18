@@ -1656,6 +1656,18 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 は承認待ちの件数の積み上がりのみを見るため、却下後の放置は見ない。実際の
 再提出案内の表示はアプリ側の責務とする。
 
+## RegionalProfileChangeDetectorの追加
+
+端末にキャッシュされている地域プロフィールと、最新の
+`regional/{locale}.yaml`から読み込んだプロフィールの内容（同意年齢・
+保護者同意要否・利用時間制限等）が変わっていないかに気づけるようにしたい
+場面向けに、`RegionalProfileChangeDetector`を`regional`モジュールに
+追加した。`LocaleCurriculumStalenessNotice`はロケール文字列の一致のみを
+見てカリキュラムの読み込み有無を判定するため、プロフィール自体の内容
+変化は見ない。`TimeZoneDriftDetector`は端末のタイムゾーンのみを見るため、
+同意年齢や利用時間制限等の変化は見ない。実際の再確認案内の表示はアプリ側
+の責務とする。
+
 ## AnswerLatencyImprovementTrendDetectorの追加
 
 直近の解答時間が継続的に短縮している（習熟が進んでいる疑いがある）状態に
