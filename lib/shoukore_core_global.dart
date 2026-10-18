@@ -102,6 +102,7 @@ export 'src/growth/regional_holiday_mission_skip.dart';
 export 'src/growth/growth_snapshot.dart';
 export 'src/growth/growth_stage.dart';
 export 'src/growth/growth_stage_regression_guard.dart';
+export 'src/growth/growth_stage_stall_detector.dart';
 export 'src/growth/growth_store.dart';
 export 'src/growth/in_memory_growth_store.dart';
 export 'src/growth/in_memory_inventory_store.dart';

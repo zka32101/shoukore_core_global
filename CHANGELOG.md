@@ -406,3 +406,5 @@
 - 内容の異同に関わらず複数の通知予定が短時間に密集している状態を検知
   する`NotificationScheduleClusteringDetector`をnotifyモジュールに
   追加した。
+- 成長段階が最後の進化から長期間変化していない停滞状態を検知する
+  `GrowthStageStallDetector`をgrowthモジュールに追加した。
