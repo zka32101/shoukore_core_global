@@ -401,6 +401,8 @@
 - 短時間にアバター変更が繰り返されている場合に変更を制限すべきかを
   判定する`ProfileAvatarChangeFrequencyThrottle`をprofileモジュールに
   追加した。
+- 1つの単元の弱点ノートが同時に多種類の誤解タイプに広がっている状態を
+  検知する`WeakNoteMisconceptionDiversityAlert`をweakモジュールに追加した。
 - 内容の異同に関わらず複数の通知予定が短時間に密集している状態を検知
   する`NotificationScheduleClusteringDetector`をnotifyモジュールに
   追加した。
