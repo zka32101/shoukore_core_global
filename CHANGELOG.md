@@ -347,5 +347,7 @@
 - デイリーリマインド送信後もミッションが連続して未達成のまま終わって
   いないかを検知する`DailyReminderNonresponseStreakDetector`をnotify
   モジュールに追加した。
+- 弱点ノートの復習期限を大幅に超えて放置されている単元を検知する
+  `WeakNoteReviewOverdueEscalation`をweakモジュールに追加した。
 - 単元マスタリーバッジ解除直後の学習意欲低下を検知する
   `UnitMasteryBadgeMotivationDropNotice`をgrowthモジュールに追加した。
