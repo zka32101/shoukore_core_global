@@ -417,5 +417,8 @@
   `GrowthStageStallDetector`をgrowthモジュールに追加した。
 - 同期競合解決の直後、一定時間内であれば取り消しを許可すべきかを判定
   する`SyncConflictResolutionUndoWindow`をsyncモジュールに追加した。
+- 課金サイクルごとに猶予期間が繰り返し使われているパターンを検知する
+  `EntitlementGracePeriodRepeatedUsageDetector`をentitlementモジュール
+  に追加した。
 - 複数のバッジが同時に解除された際に祝賀表示を分散させるべきかを判定
   する`AchievementUnlockClusterDetector`をgrowthモジュールに追加した。

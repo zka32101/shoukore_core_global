@@ -1694,6 +1694,16 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 解決直後の取消許容時間は見ない。実際の取り消しUI・再マージ処理の実行は
 アプリ側の責務とする。
 
+## EntitlementGracePeriodRepeatedUsageDetectorの追加
+
+課金サイクルごとに猶予期間が繰り返し使われている（毎回失効ギリギリまで
+更新されない）パターンに気づけるようにしたい場面向けに、
+`EntitlementGracePeriodRepeatedUsageDetector`を`entitlement`モジュールに
+追加した。`EntitlementGracePeriodEndingSoonReminder`は単発の猶予期間が
+終了間近であることのみを見るため、猶予期間の利用自体が繰り返されている
+かは見ない。`EntitlementRestoreFailureStreak`は復元試行の連続失敗のみを
+見る。実際の更新方法の見直し案内はアプリ側の責務とする。
+
 ## AchievementUnlockClusterDetectorの追加
 
 `AchievementEvaluator.newlyUnlocked`が一度に複数のバッジ解除を返した
