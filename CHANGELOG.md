@@ -358,3 +358,5 @@
 - エンタイトルメント猶予期間の終了間近を事前に知らせるべきかを判定する
   `EntitlementGracePeriodEndingSoonReminder`をentitlementモジュールに
   追加した。
+- 同一レコードで同期コンフリクトが繰り返し発生している再発状態を検知する
+  `SyncConflictRecurrenceDetector`をsyncモジュールに追加した。
