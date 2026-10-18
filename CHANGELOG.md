@@ -415,3 +415,5 @@
   `AnswerLatencyImprovementTrendDetector`をadaptiveモジュールに追加した。
 - 成長段階が最後の進化から長期間変化していない停滞状態を検知する
   `GrowthStageStallDetector`をgrowthモジュールに追加した。
+- アプリが認識しているが未適用のまま残っているマイグレーションを検知
+  する`MigrationLedgerPendingMigrationAlert`をstoreモジュールに追加した。
