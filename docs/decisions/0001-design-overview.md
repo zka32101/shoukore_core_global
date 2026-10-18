@@ -1646,6 +1646,16 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 算出のみを行う。実際の通知の間引き・時間分散の実行はアプリ側の責務
 とする。
 
+## GuardianApprovalRequestStaleRejectionReminderの追加
+
+保護者が却下した承認申請が、その後長期間再提出されずに放置されている
+状態に気づけるようにしたい場面向けに、`GuardianApprovalRequestStaleRejectionReminder`
+を`guardian`モジュールに追加した。`GuardianApprovalRequestReminderEscalation`
+は未処理（`pending`）の申請が期限切れに近づいていることのみを見るため、
+却下後に何も起きていない状態は見ない。`GuardianApprovalRequestBacklogSizeAlert`
+は承認待ちの件数の積み上がりのみを見るため、却下後の放置は見ない。実際の
+再提出案内の表示はアプリ側の責務とする。
+
 ## RegionalProfileChangeDetectorの追加
 
 端末にキャッシュされている地域プロフィールと、最新の

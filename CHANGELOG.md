@@ -406,5 +406,8 @@
 - 内容の異同に関わらず複数の通知予定が短時間に密集している状態を検知
   する`NotificationScheduleClusteringDetector`をnotifyモジュールに
   追加した。
+- 保護者が却下した承認申請が長期間再提出されずに放置されている状態を
+  検知する`GuardianApprovalRequestStaleRejectionReminder`をguardian
+  モジュールに追加した。
 - キャッシュされた地域プロフィールと最新のプロフィールの内容差分を
   検知する`RegionalProfileChangeDetector`をregionalモジュールに追加した。
