@@ -390,3 +390,5 @@
   検知する`WeakNoteBacklogSizeAlert`をweakモジュールに追加した。
 - 短時間オンライン→すぐオフラインのパターンが頻発している不安定な接続
   状態を検知する`FlakyConnectivityDetector`をsyncモジュールに追加した。
+- 直近の出題に同じ問題が繰り返し出されすぎている疲労状態を検知する
+  `QuestionRepetitionFatigueDetector`をadaptiveモジュールに追加した。
