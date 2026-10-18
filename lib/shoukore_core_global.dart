@@ -112,6 +112,7 @@ export 'src/growth/mission_completion_time_preference.dart';
 export 'src/growth/mission_streak_freeze_token.dart';
 export 'src/growth/rapid_coin_spending_streak_detector.dart';
 export 'src/growth/seasonal_event_validity_guard.dart';
+export 'src/growth/streak_freeze_token_waste_detector.dart';
 export 'src/growth/streak_recovery_grace.dart';
 export 'src/growth/streak_risk_alert.dart';
 export 'src/growth/item_price_drop_notice.dart';

@@ -376,6 +376,8 @@
   `InventoryItemStaleUsageNotice`をgrowthモジュールに追加した。
 - データエクスポートの試行が連続して失敗している状態を検知する
   `DataExportFailureStreak`をprivacyモジュールに追加した。
+- ストリークフリーズトークンが使われずに失効し続けている無駄遣い状態を
+  検知する`StreakFreezeTokenWasteDetector`をgrowthモジュールに追加した。
 - 同期待ちアイテムのうちバックオフ上限に達した件数の割合からシステム的
   な同期障害の可能性を検知する`RetryBackoffExhaustionRateAlert`をsync
   モジュールに追加した。
