@@ -1684,6 +1684,16 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 見るため、変化がないまま停滞している状態は見ない。実際の「学習を
 続けよう」案内の表示はアプリ側の責務とする。
 
+## SyncConflictResolutionUndoWindowの追加
+
+同期競合解決の直後、一定時間内であればユーザーが取り消しを行えるべきかに
+気づけるようにしたい場面向けに、`SyncConflictResolutionUndoWindow`を
+`sync`モジュールに追加した。`OfflineSyncConflictResolver`自体はどちらを
+採用するかの決定のみを行い、解決後に取り消しを許容する時間は見ない。
+`SyncConflictRecurrenceDetector`は同一対象での再発検知のみを見るため、
+解決直後の取消許容時間は見ない。実際の取り消しUI・再マージ処理の実行は
+アプリ側の責務とする。
+
 ## EntitlementGracePeriodRepeatedUsageDetectorの追加
 
 課金サイクルごとに猶予期間が繰り返し使われている（毎回失効ギリギリまで
