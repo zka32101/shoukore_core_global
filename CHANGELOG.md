@@ -381,3 +381,6 @@
 - 同期待ちアイテムのうちバックオフ上限に達した件数の割合からシステム的
   な同期障害の可能性を検知する`RetryBackoffExhaustionRateAlert`をsync
   モジュールに追加した。
+- 承認待ちの保護者承認申請が一定数を超えて積み上がっている滞留状態を
+  検知する`GuardianApprovalRequestBacklogSizeAlert`をguardianモジュール
+  に追加した。
