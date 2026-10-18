@@ -1722,6 +1722,16 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 自体は制限超過判定のみを行う。実際の「制限の見直しを検討しますか」案内の
 表示はアプリ側の責務とする。
 
+## AchievementUnlockClusterDetectorの追加
+
+`AchievementEvaluator.newlyUnlocked`が一度に複数のバッジ解除を返した
+場合、それらの祝賀表示を分散させるべきかに気づけるようにしたい場面向け
+に、`AchievementUnlockClusterDetector`を`growth`モジュールに追加した。
+`AchievementEvaluator`自体は解除済みバッジの集合計算のみを行い、同時に
+複数解除された際の表示順序・分散は見ない。`AchievementProximityHint`は
+未解除バッジの残り進捗のみを見る。実際の祝賀表示の分散・順序付けは
+アプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
