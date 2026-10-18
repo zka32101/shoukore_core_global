@@ -386,3 +386,5 @@
 - 承認待ちの保護者承認申請が一定数を超えて積み上がっている滞留状態を
   検知する`GuardianApprovalRequestBacklogSizeAlert`をguardianモジュール
   に追加した。
+- 未解消の弱点ノート件数が一定数を超えて増え続けている積み上がり状態を
+  検知する`WeakNoteBacklogSizeAlert`をweakモジュールに追加した。
