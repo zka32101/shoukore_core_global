@@ -409,5 +409,7 @@
 - 保護者が却下した承認申請が長期間再提出されずに放置されている状態を
   検知する`GuardianApprovalRequestStaleRejectionReminder`をguardian
   モジュールに追加した。
+- キャッシュされた地域プロフィールと最新のプロフィールの内容差分を
+  検知する`RegionalProfileChangeDetector`をregionalモジュールに追加した。
 - 成長段階が最後の進化から長期間変化していない停滞状態を検知する
   `GrowthStageStallDetector`をgrowthモジュールに追加した。
