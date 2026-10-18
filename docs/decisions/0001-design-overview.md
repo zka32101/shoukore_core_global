@@ -1419,6 +1419,16 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 反応がない連続回数のみを見る。実際の通知方法の見直し提案はアプリ側の
 責務とする。
 
+## WeakNoteReviewOverdueEscalationの追加
+
+`WeakNotesReviewScheduler`が算出した復習期限を大幅に超えて放置されて
+いる弱点単元に気づけるようにしたい場面向けに、
+`WeakNoteReviewOverdueEscalation`を`weak`モジュールに追加した。
+`WeakNotesReviewScheduler`自体は「次の復習日」の算出・期限超過の有無の
+判定のみを行い、期限超過がどれだけ長引いているかは見ないため、本クラスが
+独立してその判定を行う。実際のエスカレーション表示・優先的な出題はアプリ
+側の責務とする。
+
 ## EntitlementGracePeriodEndingSoonReminderの追加
 
 エンタイトルメント猶予期間の終了が近いことを事前に知らせたい場面向けに、

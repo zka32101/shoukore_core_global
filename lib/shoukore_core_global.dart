@@ -160,6 +160,7 @@ export 'src/sync/sync_queue_backlog_alert.dart';
 export 'src/sync/stale_data_policy.dart';
 export 'src/weak/spaced_review.dart';
 export 'src/weak/weak_note_misconception_relapse.dart';
+export 'src/weak/weak_note_review_overdue_escalation.dart';
 export 'src/weak/weak_note_staleness_cleanup.dart';
 export 'src/weak/weak_notes.dart';
 export 'src/weak/weak_notes_review_scheduler.dart';
