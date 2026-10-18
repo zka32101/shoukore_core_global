@@ -381,3 +381,5 @@
 - 同期待ちアイテムのうちバックオフ上限に達した件数の割合からシステム的
   な同期障害の可能性を検知する`RetryBackoffExhaustionRateAlert`をsync
   モジュールに追加した。
+- 短時間オンライン→すぐオフラインのパターンが頻発している不安定な接続
+  状態を検知する`FlakyConnectivityDetector`をsyncモジュールに追加した。
