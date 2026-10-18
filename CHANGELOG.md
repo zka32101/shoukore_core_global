@@ -338,6 +338,8 @@
   `SyncPayloadSizeAlert`をsyncモジュールに追加した。
 - 同一内容の通知が短時間に重複して予約されていないかを検知する
   `DuplicateNotificationScheduleDetector`をnotifyモジュールに追加した。
+- データ書き出しが長期間再生成されていないことに気づける
+  `DataExportRenewalNotice`をprivacyモジュールに追加した。
 - デイリーリマインド送信後もミッションが連続して未達成のまま終わって
   いないかを検知する`DailyReminderNonresponseStreakDetector`をnotify
   モジュールに追加した。
