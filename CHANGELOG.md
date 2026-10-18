@@ -398,5 +398,8 @@
 - 未使用のまま保持しているインベントリアイテムの種類数が一定数を超えて
   いる状態を検知する`InventoryItemUnusedVarietyAlert`をgrowthモジュール
   に追加した。
+- 短時間にアバター変更が繰り返されている場合に変更を制限すべきかを
+  判定する`ProfileAvatarChangeFrequencyThrottle`をprofileモジュールに
+  追加した。
 - 1つの単元の弱点ノートが同時に多種類の誤解タイプに広がっている状態を
   検知する`WeakNoteMisconceptionDiversityAlert`をweakモジュールに追加した。

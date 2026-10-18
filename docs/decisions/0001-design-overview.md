@@ -1616,6 +1616,15 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 防止のみを行い目的が異なる。実際の「まとめて使ってみよう」案内の表示は
 アプリ側の責務とする。
 
+## ProfileAvatarChangeFrequencyThrottleの追加
+
+短時間にアバター変更が繰り返されている状態を制限すべきかに気づけるよう
+にしたい場面向けに、`ProfileAvatarChangeFrequencyThrottle`を`profile`
+モジュールに追加した。`ProfileAvatarRotationSuggester`は成長段階が進んだ
+際に変更を提案するだけで、変更操作自体の頻度は見ない。`ProfileSwitchCooldown`
+はプロフィール切替自体の連続頻度を制限するものであり、アバター変更の
+頻度は見ない。実際の変更UI・ブロック表示はアプリ側の責務とする。
+
 ## WeakNoteMisconceptionDiversityAlertの追加
 
 1つの単元の弱点ノートが同時に多種類の誤解タイプに広がっている状態
