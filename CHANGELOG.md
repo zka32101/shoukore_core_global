@@ -351,6 +351,8 @@
   `WeakNoteReviewOverdueEscalation`をweakモジュールに追加した。
 - 現在のロケール向けのカリキュラムが未読み込みであることに気づける
   `LocaleCurriculumStalenessNotice`をregionalモジュールに追加した。
+- 保護者ゲートのロックが解除間近であることを事前に知らせるべきかを判定する
+  `GuardianGateLockoutEndingSoonNotice`をguardianモジュールに追加した。
 - エンタイトルメント猶予期間の終了間近を事前に知らせるべきかを判定する
   `EntitlementGracePeriodEndingSoonReminder`をentitlementモジュールに
   追加した。
