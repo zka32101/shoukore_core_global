@@ -381,3 +381,5 @@
 - 同期待ちアイテムのうちバックオフ上限に達した件数の割合からシステム的
   な同期障害の可能性を検知する`RetryBackoffExhaustionRateAlert`をsync
   モジュールに追加した。
+- 未解消の弱点ノート件数が一定数を超えて増え続けている積み上がり状態を
+  検知する`WeakNoteBacklogSizeAlert`をweakモジュールに追加した。
