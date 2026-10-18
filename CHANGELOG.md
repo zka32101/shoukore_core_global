@@ -366,3 +366,5 @@
 - 保護者週次レポートが開封されたが閲覧時間が短く流し見状態である
   ことを検知する`WeeklyReportSkimDetector`をguardianモジュールに
   追加した。
+- 同一レコードで同期コンフリクトが繰り返し発生している再発状態を検知する
+  `SyncConflictRecurrenceDetector`をsyncモジュールに追加した。
