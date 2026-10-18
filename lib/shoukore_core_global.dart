@@ -160,6 +160,7 @@ export 'src/regional/regional_profile_loader.dart';
 export 'src/regional/timezone_drift_detector.dart';
 export 'src/regional/timezone_drift_recalibration_prompt.dart';
 export 'src/sync/duplicate_sync_payload_detector.dart';
+export 'src/sync/flaky_connectivity_detector.dart';
 export 'src/sync/in_memory_pending_sync_queue.dart';
 export 'src/sync/multi_device_concurrent_edit_detector.dart';
 export 'src/sync/offline_only_mode_suggestion.dart';
