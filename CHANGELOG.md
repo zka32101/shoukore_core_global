@@ -415,3 +415,5 @@
   `AnswerLatencyImprovementTrendDetector`をadaptiveモジュールに追加した。
 - 成長段階が最後の進化から長期間変化していない停滞状態を検知する
   `GrowthStageStallDetector`をgrowthモジュールに追加した。
+- 保護者が利用時間制限を頻繁に一時解除している状態を検知する
+  `ScreenTimeGuardOverrideFrequencyAlert`をguardianモジュールに追加した。
