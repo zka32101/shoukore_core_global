@@ -370,3 +370,6 @@
   `SyncConflictRecurrenceDetector`をsyncモジュールに追加した。
 - 適応難易度の算出結果が一定期間変化していない停滞状態を検知する
   `AdaptiveDifficultyPlateauDetector`をadaptiveモジュールに追加した。
+- 同期待ちアイテムのうちバックオフ上限に達した件数の割合からシステム的
+  な同期障害の可能性を検知する`RetryBackoffExhaustionRateAlert`をsync
+  モジュールに追加した。

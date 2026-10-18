@@ -162,6 +162,7 @@ export 'src/sync/sync_conflict_recurrence_detector.dart';
 export 'src/sync/sync_conflict_severity_classifier.dart';
 export 'src/sync/pending_sync_item.dart';
 export 'src/sync/pending_sync_queue.dart';
+export 'src/sync/retry_backoff_exhaustion_rate_alert.dart';
 export 'src/sync/retry_backoff_policy.dart';
 export 'src/sync/sync_payload_size_alert.dart';
 export 'src/sync/sync_queue_backlog_alert.dart';
