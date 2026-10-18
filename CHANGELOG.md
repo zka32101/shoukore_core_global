@@ -392,6 +392,9 @@
   状態を検知する`FlakyConnectivityDetector`をsyncモジュールに追加した。
 - 直近の出題に同じ問題が繰り返し出されすぎている疲労状態を検知する
   `QuestionRepetitionFatigueDetector`をadaptiveモジュールに追加した。
+- 同期待ちキュー内で特定のアイテムだけが著しく長く待たされている
+  スタベーション状態を検知する`PendingSyncItemStarvationDetector`を
+  syncモジュールに追加した。
 - 内容の異同に関わらず複数の通知予定が短時間に密集している状態を検知
   する`NotificationScheduleClusteringDetector`をnotifyモジュールに
   追加した。
