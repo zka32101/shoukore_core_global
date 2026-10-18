@@ -1390,6 +1390,15 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 異なり、本クラスは最後に書き出した時刻からの経過時間が長すぎる場合の
 みを見る。実際の書き出し再実行の案内はアプリ側の責務とする。
 
+## RapidCoinSpendingStreakDetectorの追加
+
+短時間に複数回の大きなコイン消費が連続していないか（想定外の連続購入）
+を検知したい場面向けに、`RapidCoinSpendingStreakDetector`を`growth`
+モジュールに追加した。`CoinWalletOverdraftGuard`（残高不足の事前確認）・
+`CoinSpendingLimit`（1日あたりの消費上限）とは異なり、本クラスは個々の
+消費が短時間に連続していること自体を見る。実際の不審な連続消費への
+対応（確認ダイアログ・保護者への通知）はアプリ側の責務とする。
+
 ## DailyReminderNonresponseStreakDetectorの追加
 
 `DailyReminderPlanner`が計算するリマインド通知を送った後、ミッションが
