@@ -1985,6 +1985,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 ロケールを算出するのみで、提案後にユーザーがどう選んだかは見ない。
 実際の提案方法の見直し・表示頻度の調整はアプリ側の責務とする。
 
+## MasteryAcrossUnitsStagnationDetectorの追加
+
+複数単元の習熟度がどれも向上していない全体的な停滞状態に気づける
+ようにしたい場面向けに、`MasteryAcrossUnitsStagnationDetector`を
+`progress`モジュールに追加した。`AdaptiveDifficultyPlateauDetector`
+は単一の難易度算出値列の停滞のみを見るため、単元をまたいだ習熟度の
+変化は見ない。`MasteryRapidDecayDetector`は単一単元の減衰量のみを
+見るため、複数単元が揃って停滞しているかは見ない。実際の学習内容の
+見直し提案・通知はアプリ側の責務とする。
+
 ## WeakNoteBacklogGrowthRateAlertの追加
 
 未解消の弱点ノート件数が絶対数ではなく増加の速さとして加速している
