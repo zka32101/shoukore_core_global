@@ -1864,6 +1864,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 すべきかの判定のみを行い、期限管理は見ない。実際の「もうすぐ失効
 します」表示はアプリ側の責務とする。
 
+## ProfileNicknameChangeFrequencyThrottleの追加
+
+短時間に何度もニックネーム変更が繰り返されるのを制限したい場面向けに、
+`ProfileNicknameChangeFrequencyThrottle`を`profile`モジュールに追加した。
+`ProfileAvatarChangeFrequencyThrottle`はアバター変更の頻度のみを見る
+ものでニックネーム変更は見ない。`ProfileSwitchCooldown`はプロフィール
+切替自体の連続頻度を制限するものであり、ニックネーム変更は見ない。
+実際の変更UI・ブロック表示はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

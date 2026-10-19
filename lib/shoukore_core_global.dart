@@ -60,6 +60,7 @@ export 'src/privacy/profile_photo_consent_renewal_notice.dart';
 export 'src/profile/active_profile_guard.dart';
 export 'src/profile/in_memory_profile_store.dart';
 export 'src/profile/profile_avatar_change_frequency_throttle.dart';
+export 'src/profile/profile_nickname_change_frequency_throttle.dart';
 export 'src/profile/profile_avatar_rotation_suggester.dart';
 export 'src/profile/profile_avatar_rotation_suggestion_ignored_detector.dart';
 export 'src/profile/profile.dart';
