@@ -490,3 +490,5 @@
   `WeakNoteBacklogGrowthRateAlert`をweakモジュールに追加した。
 - プロフィール切替の誤操作が連続して繰り返されているかを検知する
   `ProfileSwitchRevertStreakDetector`をprofileモジュールに追加した。
+- 長時間オフラインギャップが習慣的に繰り返されているかを検知する
+  `OfflineSessionGapRecurrenceDetector`をsyncモジュールに追加した。
