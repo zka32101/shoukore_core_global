@@ -428,3 +428,6 @@
   する`AchievementUnlockClusterDetector`をgrowthモジュールに追加した。
 - 同意履歴に長期間イベントが記録されていない空白期間を検知する
   `ConsentAuditLogGapDetector`をprivacyモジュールに追加した。
+- 残高不足で購入できない状態が連続していることを検知する
+  `InventoryManagerInsufficientBalanceStreakDetector`をgrowthモジュール
+  に追加した。
