@@ -503,3 +503,6 @@
 - 保護者同意の再同意リマインドが連続して無視され続けている状態を
   検知する`ConsentRenewalReminderDismissalStreakDetector`をprivacy
   モジュールに追加した。
+- 単元マスターバッジ獲得後に正答率が再び悪化しているかを検知する
+  `UnitMasteryBadgeAccuracyRegressionDetector`をgrowthモジュールに
+  追加した。
