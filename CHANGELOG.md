@@ -471,3 +471,6 @@
 - ダッキング推奨音量がユーザーに頻繁に上書きされているかを検知する
   `AudioCueVolumeDuckingOverrideFrequencyDetector`をaudioモジュールに
   追加した。
+- 地域プロファイルの読み込みが連続して失敗しフォールバックが続いて
+  いる状態を知らせる`RegionalProfileLoadFailureFallbackNotice`を
+  regionalモジュールに追加した。
