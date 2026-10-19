@@ -2012,6 +2012,14 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 繰り返されているかは見ない。実際の「切替方法を見直しますか？」案内
 の表示はアプリ側の責務とする。
 
+## OfflineSessionGapRecurrenceDetectorの追加
+
+長時間オフラインギャップが単発ではなく習慣的に繰り返されていること
+に気づけるようにしたい場面向けに、`OfflineSessionGapRecurrenceDetector`
+を`sync`モジュールに追加した。`OfflineSessionGapDetector`自体は直前の
+起動間隔1件のみを見るため、繰り返しの発生自体は見ない。実際の
+「オフライン学習の案内」等の表示はアプリ側の責務とする。
+
 ## RetryBackoffExhaustionRecurrenceDetectorの追加
 
 同期バックオフ枯渇によるシステム的障害判定が単発ではなく連続して
