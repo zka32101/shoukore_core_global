@@ -1924,6 +1924,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 リクトが繰り返し発生しているかのみを見るため、解決の選択傾向は見ない。
 実際の解決ロジックの見直し提案はアプリ側の責務とする。
 
+## AudioCueVolumeDuckingOverrideFrequencyDetectorの追加
+
+ダッキング推奨音量がユーザーに頻繁に上書きされていないかに気づける
+ようにしたい場面向けに、`AudioCueVolumeDuckingOverrideFrequencyDetector`
+を`audio`モジュールに追加した。`AudioCueVolumeDuckingSuggestion`自体
+は推奨音量の算出のみを行い、ユーザーがそれをどう扱ったかは見ない。
+`AudioMuteStalenessNotice`はミュート状態が続いている期間のみを見る
+ため、ダッキング推奨への反応は見ない。実際の設定見直し提案の表示は
+アプリ側の責務とする。
+
 ## SettingsBackupRestoreFailureStreakの追加
 
 設定バックアップの復元が連続して失敗している状態に気づけるようにし
