@@ -1882,6 +1882,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 切替自体の連続頻度を制限するものであり、ニックネーム変更は見ない。
 実際の変更UI・ブロック表示はアプリ側の責務とする。
 
+## AchievementShareCardCooldownの追加
+
+達成共有カードが短時間に連続して共有されすぎないよう制限したい場面
+向けに、`AchievementShareCardCooldown`を`growth`モジュールに追加した。
+`AchievementShareCardBuilder`は共有カードの表示用データを組み立てる
+のみで共有の頻度は見ない。`AchievementProximityHint`は達成間近の状態
+を知らせるものであり、共有行動の頻度制御とは無関係。
+`AchievementUnlockClusterDetector`は複数の達成が短期間にまとまって
+解除されたかを見るものであり、共有行動自体は見ない。実際の共有UI・
+ブロック表示はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

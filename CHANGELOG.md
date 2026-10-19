@@ -460,3 +460,5 @@
   `QuestionHintOverrelianceDetector`をquestionモジュールに追加した。
 - 短時間に何度もニックネーム変更が繰り返されることを制限する
   `ProfileNicknameChangeFrequencyThrottle`をprofileモジュールに追加した。
+- 達成共有カードが短時間に連続して共有されすぎないようクールダウンを
+  判定する`AchievementShareCardCooldown`をgrowthモジュールに追加した。
