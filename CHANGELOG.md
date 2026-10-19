@@ -442,3 +442,6 @@
 - 購入復元プロンプトが連続して無視され続けている状態を検知する
   `EntitlementRestorePromptDismissalStreakDetector`をentitlement
   モジュールに追加した。
+- 保護者承認申請が連続して却下され続けている状態を検知する
+  `GuardianApprovalRequestRepeatedRejectionStreakDetector`をguardian
+  モジュールに追加した。
