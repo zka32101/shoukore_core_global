@@ -498,6 +498,8 @@
 - 同期バックオフ枯渇によるシステム的障害判定が連続して発生している
   かを検知する`RetryBackoffExhaustionRecurrenceDetector`をsync
   モジュールに追加した。
+- 間隔反復の復習期限到来件数が積み上がっているかを検知する
+  `SpacedReviewOverdueBacklogAlert`をweakモジュールに追加した。
 - 単元マスターバッジ獲得後に正答率が再び悪化しているかを検知する
   `UnitMasteryBadgeAccuracyRegressionDetector`をgrowthモジュールに
   追加した。
