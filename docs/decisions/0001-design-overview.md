@@ -2240,6 +2240,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 かどうかの単発判定のみを行い、出した後にユーザーがどう反応したかは
 見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## CoinWalletStagnationNoticeDismissalStreakDetectorの追加
+
+コイン残高滞留の通知が連続して無視され続けていることに気づけるように
+したい場面向けに、
+`CoinWalletStagnationNoticeDismissalStreakDetector`を`growth`
+モジュールに追加した。`CoinWalletStagnationNotice`自体は通知すべきか
+どうかの単発判定のみを行い、出した後にユーザーがどう反応したかは
+見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

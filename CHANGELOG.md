@@ -550,3 +550,6 @@
 - 設定バックアップの催促が連続して無視され続けている状態を検知する
   `SettingsBackupStalenessNoticeDismissalStreakDetector`をprivacy
   モジュールに追加した。
+- コイン残高滞留の通知が連続して無視され続けている状態を検知する
+  `CoinWalletStagnationNoticeDismissalStreakDetector`をgrowthモジュール
+  に追加した。
