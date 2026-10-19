@@ -86,6 +86,7 @@ export 'src/entitlement/entitlement_grace_period_repeated_usage_detector.dart';
 export 'src/entitlement/entitlement_reader.dart';
 export 'src/entitlement/entitlement_restore_failure_streak.dart';
 export 'src/entitlement/entitlement_restore_prompt.dart';
+export 'src/entitlement/entitlement_restore_prompt_dismissal_streak_detector.dart';
 export 'src/entitlement/entitlement_restore_staleness_notice.dart';
 export 'src/growth/achievement.dart';
 export 'src/growth/achievement_proximity_hint.dart';
