@@ -528,6 +528,8 @@
   モジュールに追加した。
 - 未解消の弱点ノートのうち最も古いものがどれだけ放置されているかを
   検知する`WeakNoteBacklogOldestItemAgeAlert`をweakモジュールに追加した。
+- 一度学習を始めた単元が長期間再学習されず未習熟のまま放置されている
+  状態を検知する`UnitAbandonmentDetector`をprogressモジュールに追加した。
 - 猶予期間終了間近の通知が連続して無視され続けている状態を検知する
   `EntitlementGracePeriodEndingSoonReminderDismissalStreakDetector`を
   entitlementモジュールに追加した。
