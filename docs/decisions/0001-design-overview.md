@@ -2142,6 +2142,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 リマインドへの無視を見るものであり、写真利用同意の再確認とは別物で
 ある。実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## GuardianNotificationBacklogSizeAlertの追加
+
+`GuardianNotificationDigestThrottle`によってまとめ送り抑制された保護者
+向け通知が積み上がっていることに気づけるようにしたい場面向けに、
+`GuardianNotificationBacklogSizeAlert`を`guardian`モジュールに追加した。
+`GuardianNotificationDigestThrottle`は1回の送信を抑制すべきかの単発
+判定のみを行い、抑制された通知が積み上がっているかは見ない。実際の
+まとめ送り処理の実行判断はアプリ側の責務とする。
+
 ## WeakNoteBacklogOldestItemAgeAlertの追加
 
 未解消の弱点ノートのうち最も古くから放置されているものに気づけるよう

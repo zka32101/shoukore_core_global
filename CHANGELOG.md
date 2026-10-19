@@ -523,5 +523,8 @@
 - プロフィール写真利用同意の再確認が連続して無視され続けている状態を
   検知する`ProfilePhotoConsentRenewalDismissalStreakDetector`をprivacy
   モジュールに追加した。
+- まとめ送り抑制された保護者向け通知が一定件数以上積み上がっている
+  状態を検知する`GuardianNotificationBacklogSizeAlert`をguardian
+  モジュールに追加した。
 - 未解消の弱点ノートのうち最も古いものがどれだけ放置されているかを
   検知する`WeakNoteBacklogOldestItemAgeAlert`をweakモジュールに追加した。
