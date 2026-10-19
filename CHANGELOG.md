@@ -530,3 +530,6 @@
   検知する`WeakNoteBacklogOldestItemAgeAlert`をweakモジュールに追加した。
 - 一度学習を始めた単元が長期間再学習されず未習熟のまま放置されている
   状態を検知する`UnitAbandonmentDetector`をprogressモジュールに追加した。
+- 間隔反復の箱レベルが連続して0に戻され続けている問題を検知する
+  `SpacedReviewBoxLevelRegressionStreakDetector`をweakモジュールに
+  追加した。
