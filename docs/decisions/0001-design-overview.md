@@ -2071,6 +2071,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 見るため、解答自体は続けているが正答率が落ちている状態は見ない。
 実際の再学習案の表示はアプリ側の責務とする。
 
+## DuplicateNotificationScheduleRecurrenceDetectorの追加
+
+同一内容の通知の重複予約が繰り返し発生していることに気づけるように
+したい場面向けに、`DuplicateNotificationScheduleRecurrenceDetector`を
+`notify`モジュールに追加した。`DuplicateNotificationScheduleDetector`は
+1回の予約時点で重複が存在するかどうかのみを判定し、それが繰り返し
+起きているかは見ない。実際のスケジューリングロジックの見直し案内は
+アプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

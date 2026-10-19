@@ -506,3 +506,6 @@
 - 単元マスターバッジ獲得後に正答率が再び悪化しているかを検知する
   `UnitMasteryBadgeAccuracyRegressionDetector`をgrowthモジュールに
   追加した。
+- 同一内容の通知の重複予約が繰り返し発生している状態を検知する
+  `DuplicateNotificationScheduleRecurrenceDetector`をnotifyモジュールに
+  追加した。
