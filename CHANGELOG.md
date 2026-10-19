@@ -506,3 +506,6 @@
 - 単元マスターバッジ獲得後に正答率が再び悪化しているかを検知する
   `UnitMasteryBadgeAccuracyRegressionDetector`をgrowthモジュールに
   追加した。
+- 課金期限切れ事前通知が連続して無視され続けている状態を検知する
+  `EntitlementExpiryNoticeDismissalStreakDetector`をentitlement
+  モジュールに追加した。
