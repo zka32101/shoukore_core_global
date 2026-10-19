@@ -1822,6 +1822,17 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 弱点ノートの復習セッションは対象外。実際のリマインド強化・出題への
 優先的な混在はアプリ側の責務とする。
 
+## ProfileAvatarRotationSuggestionIgnoredDetectorの追加
+
+`ProfileAvatarRotationSuggester`が提案したアバター変更が連続して無視
+され続けている状態に気づけるようにしたい場面向けに、
+`ProfileAvatarRotationSuggestionIgnoredDetector`を`profile`モジュール
+に追加した。`ProfileAvatarChangeFrequencyThrottle`は変更が多すぎる
+場合を抑制する逆方向の軸であり、提案が無視されているかどうかは見ない。
+`ProfileAvatarRotationSuggester`自体は提案すべきかどうかの判定のみを
+行い、提案後の反応は見ない。実際の提案方法の見直し・表示頻度の調整は
+アプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
