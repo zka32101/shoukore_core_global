@@ -145,6 +145,7 @@ export 'src/guardian/guardian_digest_mute_window.dart';
 export 'src/guardian/guardian_approval_request_backlog_size_alert.dart';
 export 'src/guardian/guardian_approval_request_batch_notice.dart';
 export 'src/guardian/guardian_approval_request_duplicate_detector.dart';
+export 'src/guardian/guardian_approval_request_latency_trend.dart';
 export 'src/guardian/guardian_approval_request_queue.dart';
 export 'src/guardian/guardian_approval_request_reminder_escalation.dart';
 export 'src/guardian/guardian_approval_request_repeated_rejection_streak_detector.dart';
