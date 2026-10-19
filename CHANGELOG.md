@@ -474,3 +474,5 @@
 - 地域プロファイルの読み込みが連続して失敗しフォールバックが続いて
   いる状態を知らせる`RegionalProfileLoadFailureFallbackNotice`を
   regionalモジュールに追加した。
+- 設定バックアップの復元が連続して失敗している状態を検知する
+  `SettingsBackupRestoreFailureStreak`をprivacyモジュールに追加した。
