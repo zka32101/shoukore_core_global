@@ -437,3 +437,6 @@
   `OfflineSessionResumeNotice`をsyncモジュールに追加した。
 - 1日あたりのコイン消費上限に連日到達し続けている常態化状態を検知する
   `CoinSpendingLimitHabitualMaxOutDetector`をgrowthモジュールに追加した。
+- アバター変更の提案が連続して無視され続けている状態を検知する
+  `ProfileAvatarRotationSuggestionIgnoredDetector`をprofileモジュール
+  に追加した。
