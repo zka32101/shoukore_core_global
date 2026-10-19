@@ -450,3 +450,5 @@
 - アバター変更の提案が連続して無視され続けている状態を検知する
   `ProfileAvatarRotationSuggestionIgnoredDetector`をprofileモジュール
   に追加した。
+- PINローテーション後に過去と同じPINが再利用されている状態を検知する
+  `GuardianPinReuseAfterRotationDetector`をguardianモジュールに追加した。

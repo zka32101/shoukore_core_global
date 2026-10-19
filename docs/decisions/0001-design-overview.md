@@ -1833,6 +1833,17 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 行い、提案後の反応は見ない。実際の提案方法の見直し・表示頻度の調整は
 アプリ側の責務とする。
 
+## GuardianPinReuseAfterRotationDetectorの追加
+
+PINローテーション後に設定された新しいPINが、過去に使用したPINの
+いずれかと同じである再利用状態に気づけるようにしたい場面向けに、
+`GuardianPinReuseAfterRotationDetector`を`guardian`モジュールに追加した。
+`GuardianPinRotationReminder`は変更タイミングの催促のみを行い、新PINの
+内容は見ない。`GuardianPinWeaknessDetector`はPIN自体の強度（連番・
+同一数字等）のみを見るため、履歴との再利用は見ない。PINそのものは本
+クラスに渡さず、アプリ側でハッシュ化した値同士を比較する想定。実際の
+「以前使ったPINは使えません」案内の表示はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
