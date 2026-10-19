@@ -2114,6 +2114,14 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 ため、正答率の変化は見ない。実際の難易度調整・復習案の表示はアプリ側
 の責務とする。
 
+## AudioMuteToggleFrequencyDetectorの追加
+
+効果音/BGMのミュート/解除の切り替えが短時間に頻発していることに気づけ
+るようにしたい場面向けに、`AudioMuteToggleFrequencyDetector`を`audio`
+モジュールに追加した。`AudioMuteStalenessNotice`はミュートし続けている
+期間の長さのみを見るため、頻繁な切り替え自体は見ない。実際の設定UIの
+見直し案内はアプリ側の責務とする。
+
 ## MasteryDecayAccelerationDetectorの追加
 
 `MasteryDecay`による減衰量が複数回の確認にわたって悪化（増大）し続け

@@ -516,5 +516,7 @@
   `WeeklyReportSkimStreakDetector`をguardianモジュールに追加した。
 - 直近の解答の正答率が前半と比べて後半に悪化している傾向を判定する
   `AnswerAccuracyDeclineTrendDetector`をadaptiveモジュールに追加した。
+- 効果音/BGMのミュート/解除の切り替えが短時間に頻発している状態を検知
+  する`AudioMuteToggleFrequencyDetector`をaudioモジュールに追加した。
 - 習熟度の減衰量が複数回の確認にわたって悪化し続けている状態を検知する
   `MasteryDecayAccelerationDetector`をquestionモジュールに追加した。
