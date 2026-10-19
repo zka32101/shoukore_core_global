@@ -476,3 +476,6 @@
   regionalモジュールに追加した。
 - 設定バックアップの復元が連続して失敗している状態を検知する
   `SettingsBackupRestoreFailureStreak`をprivacyモジュールに追加した。
+- 静かな時間帯明け直後への再スケジュールが複数件同一時刻に衝突して
+  いないかを検知する`NotificationQuietMergeCollisionDetector`を
+  notifyモジュールに追加した。

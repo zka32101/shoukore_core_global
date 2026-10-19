@@ -1955,6 +1955,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 見るため、設定バックアップの復元は見ない。実際のエラー表示・サポート
 窓口への案内はアプリ側の責務とする。
 
+## NotificationQuietMergeCollisionDetectorの追加
+
+静かな時間帯明け直後への再スケジュールが複数件同一時刻に集中して
+いないかに気づけるようにしたい場面向けに、
+`NotificationQuietMergeCollisionDetector`を`notify`モジュールに追加
+した。`NotificationQuietMerge`自体は1件ごとの再スケジュール先の算出
+のみを行い、他の通知との衝突は見ない。`NotificationScheduleClusteringDetector`
+はマージ前の生スケジュールの密集のみを見るため、マージ後に新たに
+生じる衝突は見ない。実際の再スケジュール時刻の分散処理はアプリ側の
+責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
