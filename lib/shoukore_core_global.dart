@@ -171,6 +171,7 @@ export 'src/guardian/guardian_gate_lockout_repeated_trigger_detector.dart';
 export 'src/guardian/guardian_gate_lockout_ending_soon_notice.dart';
 export 'src/guardian/guardian_timezone_mismatch_detector.dart';
 export 'src/guardian/guardian_gate_rapid_attempt_detector.dart';
+export 'src/guardian/guardian_notification_backlog_size_alert.dart';
 export 'src/guardian/guardian_notification_digest_throttle.dart';
 export 'src/guardian/guardian_pin_reuse_after_rotation_detector.dart';
 export 'src/guardian/guardian_pin_rotation_reminder.dart';
