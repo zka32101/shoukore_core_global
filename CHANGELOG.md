@@ -490,3 +490,6 @@
   `WeakNoteBacklogGrowthRateAlert`をweakモジュールに追加した。
 - プロフィール切替の誤操作が連続して繰り返されているかを検知する
   `ProfileSwitchRevertStreakDetector`をprofileモジュールに追加した。
+- 保護者ゲートのロックアウトが日をまたいで繰り返し発生しているかを
+  検知する`GuardianGateLockoutRepeatedTriggerDetector`をguardian
+  モジュールに追加した。

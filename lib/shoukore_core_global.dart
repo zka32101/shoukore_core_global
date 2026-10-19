@@ -159,6 +159,7 @@ export 'src/guardian/guardian_approval_request_stale_rejection_reminder.dart';
 export 'src/guardian/guardian_delivery_failure_alternative_notice.dart';
 export 'src/guardian/guardian_gate.dart';
 export 'src/guardian/guardian_gate_lockout.dart';
+export 'src/guardian/guardian_gate_lockout_repeated_trigger_detector.dart';
 export 'src/guardian/guardian_gate_lockout_ending_soon_notice.dart';
 export 'src/guardian/guardian_timezone_mismatch_detector.dart';
 export 'src/guardian/guardian_gate_rapid_attempt_detector.dart';
