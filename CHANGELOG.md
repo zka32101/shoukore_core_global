@@ -445,6 +445,8 @@
 - 保護者承認申請が連続して却下され続けている状態を検知する
   `GuardianApprovalRequestRepeatedRejectionStreakDetector`をguardian
   モジュールに追加した。
+- 弱点ノートの復習セッションが連続してスキップされている状態を検知する
+  `WeakNoteReviewSkipStreakDetector`をweakモジュールに追加した。
 - アバター変更の提案が連続して無視され続けている状態を検知する
   `ProfileAvatarRotationSuggestionIgnoredDetector`をprofileモジュール
   に追加した。

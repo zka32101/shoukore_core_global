@@ -1811,6 +1811,17 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 自体は申請単体の期限切れ判定のみを行う。実際の再申請制限・案内表示は
 アプリ側の責務とする。
 
+## WeakNoteReviewSkipStreakDetectorの追加
+
+`WeakNotesReviewScheduler`が提示した復習セッションが連続してスキップ
+されている状態に気づけるようにしたい場面向けに、
+`WeakNoteReviewSkipStreakDetector`を`weak`モジュールに追加した。
+`WeakNoteReviewOverdueEscalation`は復習期限からの放置期間のみを見るため、
+提示されたセッション自体が何回連続でスキップされたかは見ない。
+`MissionSkipStreakCap`は日次ミッション領域の連続スキップを扱うため、
+弱点ノートの復習セッションは対象外。実際のリマインド強化・出題への
+優先的な混在はアプリ側の責務とする。
+
 ## ProfileAvatarRotationSuggestionIgnoredDetectorの追加
 
 `ProfileAvatarRotationSuggester`が提案したアバター変更が連続して無視
