@@ -2040,6 +2040,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 実際のサーバー状態の確認・メンテナンス通知の表示はアプリ側の責務
 とする。
 
+## UnitMasteryBadgeAccuracyRegressionDetectorの追加
+
+単元マスターバッジを獲得した後、正答率が再び悪化していないかに
+気づけるようにしたい場面向けに、
+`UnitMasteryBadgeAccuracyRegressionDetector`を`growth`モジュールに
+追加した。`UnitMasteryBadgeEligibility`自体はマスター済みかどうかの
+二値判定のみを行い、マスター後のスコアの変化は見ない。
+`UnitMasteryBadgeMotivationDropNotice`はマスター後の無活動期間のみを
+見るため、解答自体は続けているが正答率が落ちている状態は見ない。
+実際の再学習案の表示はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
