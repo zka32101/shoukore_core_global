@@ -2050,6 +2050,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 間隔反復の復習待ち件数とは別軸である。実際の「まとめて復習しよう」
 案内の表示はアプリ側の責務とする。
 
+## ConsentRenewalReminderDismissalStreakDetectorの追加
+
+保護者同意の再同意リマインドが連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`ConsentRenewalReminderDismissalStreakDetector`を`privacy`モジュール
+に追加した。`ConsentRenewalReminder`自体はリマインドを出すべきか
+どうかの判定のみを行い、出した後にユーザーがどう反応したかは見ない。
+実際の表示方法の見直し・保護者への別経路での案内はアプリ側の責務
+とする。
+
 ## UnitMasteryBadgeAccuracyRegressionDetectorの追加
 
 単元マスターバッジを獲得した後、正答率が再び悪化していないかに
