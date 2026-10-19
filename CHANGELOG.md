@@ -439,5 +439,8 @@
   `CoinSpendingLimitHabitualMaxOutDetector`をgrowthモジュールに追加した。
 - 同じ音声キューが直近の再生で繰り返しすぎている疲労状態を検知する
   `AudioCueRepetitionFatigueDetector`をaudioモジュールに追加した。
+- 購入復元プロンプトが連続して無視され続けている状態を検知する
+  `EntitlementRestorePromptDismissalStreakDetector`をentitlement
+  モジュールに追加した。
 - 弱点ノートの復習セッションが連続してスキップされている状態を検知する
   `WeakNoteReviewSkipStreakDetector`をweakモジュールに追加した。
