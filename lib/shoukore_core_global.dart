@@ -15,6 +15,7 @@ export 'src/adaptive/session_review_mode_ratio_alert.dart';
 export 'src/audio/audio_cue_player.dart';
 export 'src/audio/audio_cue_repetition_fatigue_detector.dart';
 export 'src/audio/audio_cue_volume_ducking_suggestion.dart';
+export 'src/audio/audio_cue_volume_ducking_override_frequency_detector.dart';
 export 'src/audio/audio_mute_staleness_notice.dart';
 export 'src/audio/in_memory_audio_cue_player.dart';
 export 'src/clock/clock.dart';
