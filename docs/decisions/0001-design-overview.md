@@ -2131,6 +2131,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 のみを行うため、減衰量自体が悪化トレンドにあるかは見ない。実際の学習
 ペースの見直し案内はアプリ側の責務とする。
 
+## ProfilePhotoConsentRenewalDismissalStreakDetectorの追加
+
+プロフィール写真利用同意の再確認が連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`ProfilePhotoConsentRenewalDismissalStreakDetector`を`privacy`モジュール
+に追加した。`ProfilePhotoConsentRenewalNotice`自体は再確認すべきかの
+単発判定のみを行い、出した後の反応は見ない。
+`ConsentRenewalReminderDismissalStreakDetector`は一般的な同意再同意
+リマインドへの無視を見るものであり、写真利用同意の再確認とは別物で
+ある。実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## WeakNoteBacklogOldestItemAgeAlertの追加
 
 未解消の弱点ノートのうち最も古くから放置されているものに気づけるよう
