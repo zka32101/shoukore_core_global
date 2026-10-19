@@ -1742,6 +1742,16 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 通知のみを見るため、履歴自体の空白は見ない。実際の同意状態の再確認
 案内はアプリ側の責務とする。
 
+## InventoryManagerInsufficientBalanceStreakDetectorの追加
+
+`InventoryManager.canPurchase`が残高不足で購入不可と判定され続けている
+状態に気づけるようにしたい場面向けに、
+`InventoryManagerInsufficientBalanceStreakDetector`を`growth`モジュール
+に追加した。`InventoryManager`自体は1回の購入可否判定のみを行い、
+不可判定が連続しているかは見ない。`CoinSpendingLimit`は1日あたりの
+消費上限の判定のみを見るため、残高不足そのものの連続は見ない。実際の
+「コインを増やす方法」案内の表示はアプリ側の責務とする。
+
 ## CoinSpendingLimitHabitualMaxOutDetectorの追加
 
 1日あたりのコイン消費上限（`CoinSpendingLimit`）に何日も連続で達し
