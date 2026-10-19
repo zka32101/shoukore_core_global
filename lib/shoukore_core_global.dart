@@ -163,6 +163,7 @@ export 'src/guardian/session_timeout_policy.dart';
 export 'src/guardian/weekly_report.dart';
 export 'src/guardian/weekly_report_engagement_decline_notice.dart';
 export 'src/guardian/weekly_report_skim_detector.dart';
+export 'src/guardian/weekly_report_unopened_streak_detector.dart';
 export 'src/privacy/age_gate.dart';
 export 'src/privacy/in_memory_consent_store.dart';
 export 'src/regional/device_locale_suggester.dart';
