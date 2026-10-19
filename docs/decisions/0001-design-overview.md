@@ -2192,6 +2192,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 ごとに繰り返し使われているパターンのみを見るため、終了間近通知への
 反応は見ない。実際の通知方法の見直し案内はアプリ側の責務とする。
 
+## StreakRecoveryGraceRepeatedUsageDetectorの追加
+
+`StreakRecoveryGrace`による見逃し猶予が連続して使われ続けている（毎回
+ギリギリで猶予に頼っている）ことに気づけるようにしたい場面向けに、
+`StreakRecoveryGraceRepeatedUsageDetector`を`growth`モジュールに追加
+した。`StreakRecoveryGrace`自体は1回の見逃しが許容範囲かどうかの単発
+判定のみを行い、繰り返し使われているかは見ない。`MissionSkipStreakCap`
+はミッション見逃しの連続上限のみを見るものであり、見逃し猶予の利用
+頻度とは別軸の判定である。実際の学習習慣の見直し案内はアプリ側の責務
+とする。
+
 ## GuardianPinRotationReminderDismissalStreakDetectorの追加
 
 保護者ゲートのPINローテーション催促が連続して無視され続けていることに
