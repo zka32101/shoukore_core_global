@@ -2231,6 +2231,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 再発行すべきかどうかの単発判定のみを行い、出した後にユーザーがどう
 反応したかは見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## SettingsBackupStalenessNoticeDismissalStreakDetectorの追加
+
+設定バックアップの催促が連続して無視され続けていることに気づけるよう
+にしたい場面向けに、
+`SettingsBackupStalenessNoticeDismissalStreakDetector`を`privacy`
+モジュールに追加した。`SettingsBackupStalenessNotice`自体は催促すべき
+かどうかの単発判定のみを行い、出した後にユーザーがどう反応したかは
+見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## CoinWalletStagnationNoticeDismissalStreakDetectorの追加
 
 コイン残高滞留の通知が連続して無視され続けていることに気づけるように
