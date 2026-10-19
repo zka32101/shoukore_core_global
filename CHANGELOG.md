@@ -486,3 +486,5 @@
   に追加した。
 - 複数単元の習熟度が揃って停滞しているかを検知する
   `MasteryAcrossUnitsStagnationDetector`をprogressモジュールに追加した。
+- 未解消の弱点ノート件数の増加速度が加速しているかを検知する
+  `WeakNoteBacklogGrowthRateAlert`をweakモジュールに追加した。
