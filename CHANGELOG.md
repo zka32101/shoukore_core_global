@@ -533,3 +533,6 @@
 - 間隔反復の箱レベルが連続して0に戻され続けている問題を検知する
   `SpacedReviewBoxLevelRegressionStreakDetector`をweakモジュールに
   追加した。
+- 猶予期間終了間近の通知が連続して無視され続けている状態を検知する
+  `EntitlementGracePeriodEndingSoonReminderDismissalStreakDetector`を
+  entitlementモジュールに追加した。

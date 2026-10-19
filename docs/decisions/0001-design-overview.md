@@ -2180,6 +2180,18 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 のみを見るため、特定の問題が繰り返し失敗しているかは見ない。実際の
 「別の教え方で復習しよう」案内の表示はアプリ側の責務とする。
 
+## EntitlementGracePeriodEndingSoonReminderDismissalStreakDetectorの追加
+
+猶予期間終了間近の通知が連続して無視され続けていることに気づけるよう
+にしたい場面向けに、
+`EntitlementGracePeriodEndingSoonReminderDismissalStreakDetector`を
+`entitlement`モジュールに追加した。
+`EntitlementGracePeriodEndingSoonReminder`自体は通知すべきかどうかの
+判定のみを行い、出した後にユーザーがどう反応したかは見ない。
+`EntitlementGracePeriodRepeatedUsageDetector`は猶予期間が課金サイクル
+ごとに繰り返し使われているパターンのみを見るため、終了間近通知への
+反応は見ない。実際の通知方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
