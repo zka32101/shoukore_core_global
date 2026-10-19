@@ -1934,6 +1934,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 ため、ダッキング推奨への反応は見ない。実際の設定見直し提案の表示は
 アプリ側の責務とする。
 
+## RegionalProfileLoadFailureFallbackNoticeの追加
+
+地域プロファイルの読み込みが連続して失敗し既定値へのフォールバックが
+続いていることに気づけるようにしたい場面向けに、
+`RegionalProfileLoadFailureFallbackNotice`を`regional`モジュールに
+追加した。`RegionalProfileChangeDetector`は正常に読み込めたプロファイル
+同士の内容変化のみを見るため、読み込み失敗自体は見ない。
+`LocaleCurriculumStalenessNotice`はカリキュラムデータの古さのみを見る
+ため、プロファイルの読み込み失敗は見ない。実際のフォールバック通知の
+表示・再試行はアプリ側の責務とする。
+
 ## SettingsBackupRestoreFailureStreakの追加
 
 設定バックアップの復元が連続して失敗している状態に気づけるようにし
