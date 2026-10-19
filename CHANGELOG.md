@@ -536,3 +536,6 @@
 - 猶予期間終了間近の通知が連続して無視され続けている状態を検知する
   `EntitlementGracePeriodEndingSoonReminderDismissalStreakDetector`を
   entitlementモジュールに追加した。
+- 保護者ゲートのPINローテーション催促が連続して無視され続けている状態
+  を検知する`GuardianPinRotationReminderDismissalStreakDetector`を
+  guardianモジュールに追加した。

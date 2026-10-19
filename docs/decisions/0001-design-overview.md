@@ -2192,6 +2192,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 ごとに繰り返し使われているパターンのみを見るため、終了間近通知への
 反応は見ない。実際の通知方法の見直し案内はアプリ側の責務とする。
 
+## GuardianPinRotationReminderDismissalStreakDetectorの追加
+
+保護者ゲートのPINローテーション催促が連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`GuardianPinRotationReminderDismissalStreakDetector`を`guardian`
+モジュールに追加した。`GuardianPinRotationReminder`自体は催促すべき
+かどうかの単発判定のみを行い、出した後の反応は見ない。
+`GuardianPinWeaknessDetector`・`GuardianPinReuseAfterRotationDetector`
+はPINの値自体の強度・再利用を見るものであり、催促への反応は見ない。
+実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
