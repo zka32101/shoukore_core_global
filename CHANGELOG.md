@@ -478,6 +478,9 @@
   `SettingsBackupRestoreFailureStreak`をprivacyモジュールに追加した。
 - 解答時間のバラつきが急増しているかを検知する
   `AnswerLatencyVarianceSpikeDetector`をadaptiveモジュールに追加した。
+- 静かな時間帯明け直後への再スケジュールが複数件同一時刻に衝突して
+  いないかを検知する`NotificationQuietMergeCollisionDetector`を
+  notifyモジュールに追加した。
 - 端末ロケール提案と異なるロケールが連続して選ばれ続けている状態を
   検知する`DeviceLocaleSuggestionIgnoredDetector`をregionalモジュール
   に追加した。

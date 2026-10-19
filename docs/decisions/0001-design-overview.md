@@ -1965,6 +1965,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 平均を比較した一方向の低下傾向のみを見るため、方向性のないバラつき
 自体は見ない。実際の集中力低下への対応・通知はアプリ側の責務とする。
 
+## NotificationQuietMergeCollisionDetectorの追加
+
+静かな時間帯明け直後への再スケジュールが複数件同一時刻に集中して
+いないかに気づけるようにしたい場面向けに、
+`NotificationQuietMergeCollisionDetector`を`notify`モジュールに追加
+した。`NotificationQuietMerge`自体は1件ごとの再スケジュール先の算出
+のみを行い、他の通知との衝突は見ない。`NotificationScheduleClusteringDetector`
+はマージ前の生スケジュールの密集のみを見るため、マージ後に新たに
+生じる衝突は見ない。実際の再スケジュール時刻の分散処理はアプリ側の
+責務とする。
+
 ## DeviceLocaleSuggestionIgnoredDetectorの追加
 
 `DeviceLocaleSuggester`の提案と異なるロケールが連続して選ばれ続けて
