@@ -2,6 +2,7 @@
 library;
 
 export 'src/adaptive/adaptive_difficulty.dart';
+export 'src/adaptive/adaptive_difficulty_oscillation_detector.dart';
 export 'src/adaptive/adaptive_difficulty_plateau_detector.dart';
 export 'src/adaptive/answer_latency_fatigue_trend.dart';
 export 'src/adaptive/answer_latency_improvement_trend_detector.dart';

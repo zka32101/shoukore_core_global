@@ -1833,6 +1833,15 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 行い、提案後の反応は見ない。実際の提案方法の見直し・表示頻度の調整は
 アプリ側の責務とする。
 
+## AdaptiveDifficultyOscillationDetectorの追加
+
+適応難易度が上下に何度も反転し、安定しない振動状態に気づけるように
+したい場面向けに、`AdaptiveDifficultyOscillationDetector`を`adaptive`
+モジュールに追加した。`AdaptiveDifficultyPlateauDetector`は値が変化
+しない停滞のみを見るため逆方向の軸であり、`QuestionDifficultyDriftAlert`
+は一方向への緩やかな偏りのみを見るため、反転の繰り返しは見ない。実際の
+難易度調整ロジックの見直し・単元切り替え提案はアプリ側の責務とする。
+
 ## GuardianPinReuseAfterRotationDetectorの追加
 
 PINローテーション後に設定された新しいPINが、過去に使用したPINの
