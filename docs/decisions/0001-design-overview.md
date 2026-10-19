@@ -1893,6 +1893,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 解除されたかを見るものであり、共有行動自体は見ない。実際の共有UI・
 ブロック表示はアプリ側の責務とする。
 
+## GuardianApprovalRequestLatencyTrendの追加
+
+保護者承認申請への応答が遅くなってきている傾向に気づけるようにしたい
+場面向けに、`GuardianApprovalRequestLatencyTrend`を`guardian`モジュール
+に追加した。`GuardianApprovalRequestBacklogSizeAlert`は承認待ちの件数
+の積み上がりのみを見るため応答速度の変化は見ない。
+`GuardianApprovalRequestStaleRejectionReminder`は却下後に再提出がなく
+放置されているかのみを見るため、応答そのものの速さは見ない。実際の
+傾向表示・保護者への通知はアプリ側の責務とする。
+
 ## WeakNoteReviewScoreRegressionDetectorの追加
 
 一度完了とマークした弱点ノートの復習セッションについて、再テスト
