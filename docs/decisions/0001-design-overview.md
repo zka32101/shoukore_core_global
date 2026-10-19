@@ -1770,6 +1770,16 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 `OfflineSessionGapDetector`自体はギャップの長さのみを見て、同期完了後の
 案内は見ない。実際の「同期が完了しました」表示はアプリ側の責務とする。
 
+## CoinSpendingLimitHabitualMaxOutDetectorの追加
+
+1日あたりのコイン消費上限（`CoinSpendingLimit`）に何日も連続で達し
+続けている常態化状態に気づけるようにしたい場面向けに、
+`CoinSpendingLimitHabitualMaxOutDetector`を`growth`モジュールに追加した。
+`CoinSpendingLimit`は単日の上限判定のみを行うため、連日にわたって上限に
+到達し続けているかは見ない。`CoinEarningCapHabitualHitDetector`は獲得側
+の上限の常態化を見るため対称だが、消費側は見ない別軸。実際の上限緩和
+提案・使い道の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
