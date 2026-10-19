@@ -2071,6 +2071,18 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 見るため、解答自体は続けているが正答率が落ちている状態は見ない。
 実際の再学習案の表示はアプリ側の責務とする。
 
+## EntitlementExpiryNoticeDismissalStreakDetectorの追加
+
+課金期限切れ事前通知が連続して無視され続けていることに気づけるよう
+にしたい場面向けに、`EntitlementExpiryNoticeDismissalStreakDetector`
+を`entitlement`モジュールに追加した。`EntitlementExpiryNotice`自体は
+通知すべきかどうかの判定のみを行い、出した後にユーザーがどう反応
+したかは見ない。`EntitlementGracePeriodRepeatedUsageDetector`は失効後
+の猶予期間の利用パターンのみを見るため、失効前の事前通知への反応は
+見ない。`EntitlementRestorePromptDismissalStreakDetector`は復元を促す
+別の通知への無視を見るものであり、期限切れ事前通知とは別物である。
+実際の通知方法の見直し案内はアプリ側の責務とする。
+
 ## WeeklyReportSkimStreakDetectorの追加
 
 週次レポートが開封されているものの、複数週にわたって連続で流し見で
