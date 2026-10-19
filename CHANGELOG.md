@@ -520,3 +520,6 @@
   する`AudioMuteToggleFrequencyDetector`をaudioモジュールに追加した。
 - 習熟度の減衰量が複数回の確認にわたって悪化し続けている状態を検知する
   `MasteryDecayAccelerationDetector`をquestionモジュールに追加した。
+- プロフィール写真利用同意の再確認が連続して無視され続けている状態を
+  検知する`ProfilePhotoConsentRenewalDismissalStreakDetector`をprivacy
+  モジュールに追加した。
