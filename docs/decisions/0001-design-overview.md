@@ -2104,6 +2104,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 いる状態とは別物である。実際の通知方法の見直し案内はアプリ側の責務と
 する。
 
+## AnswerAccuracyDeclineTrendDetectorの追加
+
+マスター済みに限らず、直近の解答の正答率が悪化傾向にあることに
+気づけるようにしたい場面向けに、`AnswerAccuracyDeclineTrendDetector`
+を`adaptive`モジュールに追加した。`UnitMasteryBadgeAccuracyRegressionDetector`
+はマスターバッジ獲得後限定の悪化判定のみを行う。
+`AdaptiveDifficultyPlateauDetector`は難易度算出値自体の停滞のみを見る
+ため、正答率の変化は見ない。実際の難易度調整・復習案の表示はアプリ側
+の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

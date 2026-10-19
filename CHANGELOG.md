@@ -514,3 +514,5 @@
   追加した。
 - 週次レポートが複数週にわたって連続で流し見されている状態を検知する
   `WeeklyReportSkimStreakDetector`をguardianモジュールに追加した。
+- 直近の解答の正答率が前半と比べて後半に悪化している傾向を判定する
+  `AnswerAccuracyDeclineTrendDetector`をadaptiveモジュールに追加した。
