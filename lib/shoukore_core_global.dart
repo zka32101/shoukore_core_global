@@ -99,6 +99,7 @@ export 'src/entitlement/entitlement_expiry_notice.dart';
 export 'src/entitlement/entitlement_expiry_notice_dismissal_streak_detector.dart';
 export 'src/entitlement/entitlement_grace_period.dart';
 export 'src/entitlement/entitlement_grace_period_ending_soon_reminder.dart';
+export 'src/entitlement/entitlement_grace_period_ending_soon_reminder_dismissal_streak_detector.dart';
 export 'src/entitlement/entitlement_grace_period_repeated_usage_detector.dart';
 export 'src/entitlement/entitlement_reader.dart';
 export 'src/entitlement/entitlement_restore_failure_streak.dart';
