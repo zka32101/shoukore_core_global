@@ -544,6 +544,9 @@
 - ダッキング推奨音量が連続して上書きされ続けている状態を検知する
   `AudioCueVolumeDuckingOverrideStreakDetector`をaudioモジュールに
   追加した。
+- 学習記録書き出しの再発行提案が連続して無視され続けている状態を検知する
+  `DataExportRenewalNoticeDismissalStreakDetector`をprivacyモジュールに
+  追加した。
 - コイン残高滞留の通知が連続して無視され続けている状態を検知する
   `CoinWalletStagnationNoticeDismissalStreakDetector`をgrowthモジュール
   に追加した。
