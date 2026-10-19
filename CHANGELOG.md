@@ -426,3 +426,5 @@
   `ScreenTimeGuardOverrideFrequencyAlert`をguardianモジュールに追加した。
 - 複数のバッジが同時に解除された際に祝賀表示を分散させるべきかを判定
   する`AchievementUnlockClusterDetector`をgrowthモジュールに追加した。
+- 1日あたりのコイン消費上限に連日到達し続けている常態化状態を検知する
+  `CoinSpendingLimitHabitualMaxOutDetector`をgrowthモジュールに追加した。
