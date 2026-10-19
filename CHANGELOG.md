@@ -452,3 +452,5 @@
   に追加した。
 - 適応難易度が上下に反転し続けて安定しない振動状態を検知する
   `AdaptiveDifficultyOscillationDetector`をadaptiveモジュールに追加した。
+- PINローテーション後に過去と同じPINが再利用されている状態を検知する
+  `GuardianPinReuseAfterRotationDetector`をguardianモジュールに追加した。
