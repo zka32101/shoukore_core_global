@@ -2131,6 +2131,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 のみを行うため、減衰量自体が悪化トレンドにあるかは見ない。実際の学習
 ペースの見直し案内はアプリ側の責務とする。
 
+## GuardianNotificationBacklogSizeAlertの追加
+
+`GuardianNotificationDigestThrottle`によってまとめ送り抑制された保護者
+向け通知が積み上がっていることに気づけるようにしたい場面向けに、
+`GuardianNotificationBacklogSizeAlert`を`guardian`モジュールに追加した。
+`GuardianNotificationDigestThrottle`は1回の送信を抑制すべきかの単発
+判定のみを行い、抑制された通知が積み上がっているかは見ない。実際の
+まとめ送り処理の実行判断はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
