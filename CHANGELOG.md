@@ -426,3 +426,5 @@
   `ScreenTimeGuardOverrideFrequencyAlert`をguardianモジュールに追加した。
 - 複数のバッジが同時に解除された際に祝賀表示を分散させるべきかを判定
   する`AchievementUnlockClusterDetector`をgrowthモジュールに追加した。
+- 週次レポートが複数週連続で未読のまま放置されている状態を検知する
+  `WeeklyReportUnopenedStreakDetector`をguardianモジュールに追加した。
