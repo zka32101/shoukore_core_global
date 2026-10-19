@@ -2020,6 +2020,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 起動間隔1件のみを見るため、繰り返しの発生自体は見ない。実際の
 「オフライン学習の案内」等の表示はアプリ側の責務とする。
 
+## GuardianGateLockoutRepeatedTriggerDetectorの追加
+
+保護者ゲートのロックアウトが日をまたいで繰り返し発生していることに
+気づけるようにしたい場面向けに、`GuardianGateLockoutRepeatedTriggerDetector`
+を`guardian`モジュールに追加した。`GuardianGateLockout`自体は単発の
+失敗回数とロック状態の管理のみを行い、ロックアウト発生自体が繰り
+返されているかは見ない。`GuardianGateRapidAttemptDetector`は試行
+間隔の異常さのみを見るため、ロックアウトの発生回数は見ない。実際の
+警戒時の対応（保護者への通知等）はアプリ側の責務とする。
+
 ## RetryBackoffExhaustionRecurrenceDetectorの追加
 
 同期バックオフ枯渇によるシステム的障害判定が単発ではなく連続して

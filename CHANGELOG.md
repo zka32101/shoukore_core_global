@@ -492,6 +492,9 @@
   `ProfileSwitchRevertStreakDetector`をprofileモジュールに追加した。
 - 長時間オフラインギャップが習慣的に繰り返されているかを検知する
   `OfflineSessionGapRecurrenceDetector`をsyncモジュールに追加した。
+- 保護者ゲートのロックアウトが日をまたいで繰り返し発生しているかを
+  検知する`GuardianGateLockoutRepeatedTriggerDetector`をguardian
+  モジュールに追加した。
 - 同期バックオフ枯渇によるシステム的障害判定が連続して発生している
   かを検知する`RetryBackoffExhaustionRecurrenceDetector`をsync
   モジュールに追加した。
