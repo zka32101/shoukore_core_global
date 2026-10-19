@@ -450,5 +450,7 @@
 - アバター変更の提案が連続して無視され続けている状態を検知する
   `ProfileAvatarRotationSuggestionIgnoredDetector`をprofileモジュール
   に追加した。
+- 適応難易度が上下に反転し続けて安定しない振動状態を検知する
+  `AdaptiveDifficultyOscillationDetector`をadaptiveモジュールに追加した。
 - ストリークフリーズトークンが失効する前に案内すべきかを判定する
   `MissionStreakFreezeTokenExpiryWarning`をgrowthモジュールに追加した。
