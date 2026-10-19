@@ -484,3 +484,5 @@
 - 端末ロケール提案と異なるロケールが連続して選ばれ続けている状態を
   検知する`DeviceLocaleSuggestionIgnoredDetector`をregionalモジュール
   に追加した。
+- 複数単元の習熟度が揃って停滞しているかを検知する
+  `MasteryAcrossUnitsStagnationDetector`をprogressモジュールに追加した。
