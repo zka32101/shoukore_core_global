@@ -2040,6 +2040,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 実際のサーバー状態の確認・メンテナンス通知の表示はアプリ側の責務
 とする。
 
+## SpacedReviewOverdueBacklogAlertの追加
+
+間隔反復の復習期限到来件数が積み上がっていることに気づけるように
+したい場面向けに、`SpacedReviewOverdueBacklogAlert`を`weak`モジュール
+に追加した。`SpacedReviewScheduler`自体は期限到来IDの抽出のみを行い、
+その件数が積み上がっているかは見ない。`WeakNoteBacklogSizeAlert`は
+弱点ノート（誤解タイプの集計）単位の積み上がりを見るものであり、
+間隔反復の復習待ち件数とは別軸である。実際の「まとめて復習しよう」
+案内の表示はアプリ側の責務とする。
+
 ## ConsentRenewalReminderDismissalStreakDetectorの追加
 
 保護者同意の再同意リマインドが連続して無視され続けていることに
