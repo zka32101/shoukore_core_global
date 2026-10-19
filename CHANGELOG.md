@@ -476,3 +476,6 @@
   regionalモジュールに追加した。
 - 設定バックアップの復元が連続して失敗している状態を検知する
   `SettingsBackupRestoreFailureStreak`をprivacyモジュールに追加した。
+- 端末ロケール提案と異なるロケールが連続して選ばれ続けている状態を
+  検知する`DeviceLocaleSuggestionIgnoredDetector`をregionalモジュール
+  に追加した。
