@@ -520,3 +520,5 @@
   する`AudioMuteToggleFrequencyDetector`をaudioモジュールに追加した。
 - 習熟度の減衰量が複数回の確認にわたって悪化し続けている状態を検知する
   `MasteryDecayAccelerationDetector`をquestionモジュールに追加した。
+- 未解消の弱点ノートのうち最も古いものがどれだけ放置されているかを
+  検知する`WeakNoteBacklogOldestItemAgeAlert`をweakモジュールに追加した。
