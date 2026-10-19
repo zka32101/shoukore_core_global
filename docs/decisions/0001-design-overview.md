@@ -2223,6 +2223,14 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 回数（頻度）のみを見るため、連続性（streak）は見ない。実際の設定
 見直し提案の表示はアプリ側の責務とする。
 
+## DataExportRenewalNoticeDismissalStreakDetectorの追加
+
+学習記録書き出しの再発行提案が連続して無視され続けていることに気づけ
+るようにしたい場面向けに、`DataExportRenewalNoticeDismissalStreakDetector`
+を`privacy`モジュールに追加した。`DataExportRenewalNotice`自体は
+再発行すべきかどうかの単発判定のみを行い、出した後にユーザーがどう
+反応したかは見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## SettingsBackupStalenessNoticeDismissalStreakDetectorの追加
 
 設定バックアップの催促が連続して無視され続けていることに気づけるよう
