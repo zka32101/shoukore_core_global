@@ -541,3 +541,6 @@
 - 保護者ゲートのPINローテーション催促が連続して無視され続けている状態
   を検知する`GuardianPinRotationReminderDismissalStreakDetector`を
   guardianモジュールに追加した。
+- ダッキング推奨音量が連続して上書きされ続けている状態を検知する
+  `AudioCueVolumeDuckingOverrideStreakDetector`をaudioモジュールに
+  追加した。
