@@ -2161,6 +2161,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 期間は見ない。実際の「最優先で確認しよう」案内の表示はアプリ側の責務
 とする。
 
+## SpacedReviewBoxLevelRegressionStreakDetectorの追加
+
+間隔反復（Leitner方式）の箱レベルが連続して0に戻され続けている（連続
+して誤答し続けている）問題に気づけるようにしたい場面向けに、
+`SpacedReviewBoxLevelRegressionStreakDetector`を`weak`モジュールに追加
+した。`SpacedReviewOverdueBacklogAlert`は復習期限到来件数の積み上がり
+のみを見るため、特定の問題が繰り返し失敗しているかは見ない。実際の
+「別の教え方で復習しよう」案内の表示はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

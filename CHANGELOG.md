@@ -528,3 +528,6 @@
   モジュールに追加した。
 - 未解消の弱点ノートのうち最も古いものがどれだけ放置されているかを
   検知する`WeakNoteBacklogOldestItemAgeAlert`をweakモジュールに追加した。
+- 間隔反復の箱レベルが連続して0に戻され続けている問題を検知する
+  `SpacedReviewBoxLevelRegressionStreakDetector`をweakモジュールに
+  追加した。
