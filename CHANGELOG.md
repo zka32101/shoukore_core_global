@@ -450,3 +450,5 @@
 - アバター変更の提案が連続して無視され続けている状態を検知する
   `ProfileAvatarRotationSuggestionIgnoredDetector`をprofileモジュール
   に追加した。
+- ストリークフリーズトークンが失効する前に案内すべきかを判定する
+  `MissionStreakFreezeTokenExpiryWarning`をgrowthモジュールに追加した。
