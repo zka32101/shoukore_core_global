@@ -468,3 +468,6 @@
   `WeakNoteReviewScoreRegressionDetector`をweakモジュールに追加した。
 - 同期コンフリクトの解決が常に同じ側に偏っているかを検知する
   `SyncConflictResolutionChoiceBiasDetector`をsyncモジュールに追加した。
+- 地域プロファイルの読み込みが連続して失敗しフォールバックが続いて
+  いる状態を知らせる`RegionalProfileLoadFailureFallbackNotice`を
+  regionalモジュールに追加した。
