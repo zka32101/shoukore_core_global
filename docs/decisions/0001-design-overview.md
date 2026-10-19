@@ -2203,6 +2203,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 頻度とは別軸の判定である。実際の学習習慣の見直し案内はアプリ側の責務
 とする。
 
+## GuardianPinRotationReminderDismissalStreakDetectorの追加
+
+保護者ゲートのPINローテーション催促が連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`GuardianPinRotationReminderDismissalStreakDetector`を`guardian`
+モジュールに追加した。`GuardianPinRotationReminder`自体は催促すべき
+かどうかの単発判定のみを行い、出した後の反応は見ない。
+`GuardianPinWeaknessDetector`・`GuardianPinReuseAfterRotationDetector`
+はPINの値自体の強度・再利用を見るものであり、催促への反応は見ない。
+実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## AudioCueVolumeDuckingOverrideStreakDetectorの追加
 
 ダッキング推奨音量が連続して上書きされ続けていることに気づけるように
