@@ -2083,6 +2083,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 別の通知への無視を見るものであり、期限切れ事前通知とは別物である。
 実際の通知方法の見直し案内はアプリ側の責務とする。
 
+## DuplicateNotificationScheduleRecurrenceDetectorの追加
+
+同一内容の通知の重複予約が繰り返し発生していることに気づけるように
+したい場面向けに、`DuplicateNotificationScheduleRecurrenceDetector`を
+`notify`モジュールに追加した。`DuplicateNotificationScheduleDetector`は
+1回の予約時点で重複が存在するかどうかのみを判定し、それが繰り返し
+起きているかは見ない。実際のスケジューリングロジックの見直し案内は
+アプリ側の責務とする。
+
 ## WeeklyReportSkimStreakDetectorの追加
 
 週次レポートが開封されているものの、複数週にわたって連続で流し見で

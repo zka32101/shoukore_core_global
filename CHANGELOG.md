@@ -509,5 +509,8 @@
 - 課金期限切れ事前通知が連続して無視され続けている状態を検知する
   `EntitlementExpiryNoticeDismissalStreakDetector`をentitlement
   モジュールに追加した。
+- 同一内容の通知の重複予約が繰り返し発生している状態を検知する
+  `DuplicateNotificationScheduleRecurrenceDetector`をnotifyモジュールに
+  追加した。
 - 週次レポートが複数週にわたって連続で流し見されている状態を検知する
   `WeeklyReportSkimStreakDetector`をguardianモジュールに追加した。
