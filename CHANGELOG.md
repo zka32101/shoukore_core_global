@@ -468,3 +468,5 @@
   `WeakNoteReviewScoreRegressionDetector`をweakモジュールに追加した。
 - 同期コンフリクトの解決が常に同じ側に偏っているかを検知する
   `SyncConflictResolutionChoiceBiasDetector`をsyncモジュールに追加した。
+- 設定バックアップの復元が連続して失敗している状態を検知する
+  `SettingsBackupRestoreFailureStreak`をprivacyモジュールに追加した。
