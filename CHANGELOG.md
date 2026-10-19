@@ -466,3 +466,5 @@
   `GuardianApprovalRequestLatencyTrend`をguardianモジュールに追加した。
 - 弱点ノート復習完了後の再テストスコアが悪化しているかを検知する
   `WeakNoteReviewScoreRegressionDetector`をweakモジュールに追加した。
+- 同期コンフリクトの解決が常に同じ側に偏っているかを検知する
+  `SyncConflictResolutionChoiceBiasDetector`をsyncモジュールに追加した。
