@@ -1780,6 +1780,17 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 の上限の常態化を見るため対称だが、消費側は見ない別軸。実際の上限緩和
 提案・使い道の見直し案内はアプリ側の責務とする。
 
+## EntitlementRestorePromptDismissalStreakDetectorの追加
+
+`EntitlementRestorePrompt`が復元を促しているにもかかわらず、連続して
+無視され続けている状態に気づけるようにしたい場面向けに、
+`EntitlementRestorePromptDismissalStreakDetector`を`entitlement`
+モジュールに追加した。`EntitlementRestoreFailureStreak`は復元処理
+そのものが技術的に失敗した回数のみを見るため、ユーザーがプロンプトを
+無視する行動は見ない。`EntitlementRestoreStalenessNotice`は最後に復元
+を実行した時刻からの経過時間のみを見るため、無視が連続しているかは
+見ない。実際の表示頻度の調整・案内文の変更はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
