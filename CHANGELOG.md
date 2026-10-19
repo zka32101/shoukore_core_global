@@ -514,3 +514,5 @@
   追加した。
 - 週次レポートが複数週にわたって連続で流し見されている状態を検知する
   `WeeklyReportSkimStreakDetector`をguardianモジュールに追加した。
+- 習熟度の減衰量が複数回の確認にわたって悪化し続けている状態を検知する
+  `MasteryDecayAccelerationDetector`をquestionモジュールに追加した。
