@@ -1780,6 +1780,16 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 の上限の常態化を見るため対称だが、消費側は見ない別軸。実際の上限緩和
 提案・使い道の見直し案内はアプリ側の責務とする。
 
+## GuardianApprovalRequestRepeatedRejectionStreakDetectorの追加
+
+保護者承認申請が連続して却下され続けている状態に気づけるようにしたい
+場面向けに、`GuardianApprovalRequestRepeatedRejectionStreakDetector`を
+`guardian`モジュールに追加した。`GuardianApprovalRequestStaleRejectionReminder`
+は1件の却下後に再申請がないまま放置されている期間のみを見るため、複数
+申請にわたって却下が連続しているかは見ない。`GuardianApprovalRequestQueue`
+自体は申請単体の期限切れ判定のみを行う。実際の再申請制限・案内表示は
+アプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
