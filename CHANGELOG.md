@@ -456,5 +456,7 @@
   `GuardianPinReuseAfterRotationDetector`をguardianモジュールに追加した。
 - ストリークフリーズトークンが失効する前に案内すべきかを判定する
   `MissionStreakFreezeTokenExpiryWarning`をgrowthモジュールに追加した。
+- 直近の出題でのヒント利用回数から過度な依存が続いているかを検知する
+  `QuestionHintOverrelianceDetector`をquestionモジュールに追加した。
 - 短時間に何度もニックネーム変更が繰り返されることを制限する
   `ProfileNicknameChangeFrequencyThrottle`をprofileモジュールに追加した。

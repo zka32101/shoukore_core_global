@@ -1864,6 +1864,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 すべきかの判定のみを行い、期限管理は見ない。実際の「もうすぐ失効
 します」表示はアプリ側の責務とする。
 
+## QuestionHintOverrelianceDetectorの追加
+
+直近の出題でヒントに頼りすぎている状態に気づけるようにしたい場面向けに、
+`QuestionHintOverrelianceDetector`を`question`モジュールに追加した。
+`MasteryRapidDecayDetector`は習熟度スコアの減衰量のみを見るためヒント
+利用回数は見ない。`UnitRecommendationIgnoredDetector`は推奨単元が
+無視されているかを見るものでヒント利用とは無関係。実際のヒントUI・
+利用回数の記録はアプリ側の責務とする。
+
 ## ProfileNicknameChangeFrequencyThrottleの追加
 
 短時間に何度もニックネーム変更が繰り返されるのを制限したい場面向けに、
