@@ -484,3 +484,5 @@
 - 端末ロケール提案と異なるロケールが連続して選ばれ続けている状態を
   検知する`DeviceLocaleSuggestionIgnoredDetector`をregionalモジュール
   に追加した。
+- 未解消の弱点ノート件数の増加速度が加速しているかを検知する
+  `WeakNoteBacklogGrowthRateAlert`をweakモジュールに追加した。
