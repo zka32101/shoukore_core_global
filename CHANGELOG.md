@@ -462,3 +462,5 @@
   `ProfileNicknameChangeFrequencyThrottle`をprofileモジュールに追加した。
 - 達成共有カードが短時間に連続して共有されすぎないようクールダウンを
   判定する`AchievementShareCardCooldown`をgrowthモジュールに追加した。
+- 同期コンフリクトの解決が常に同じ側に偏っているかを検知する
+  `SyncConflictResolutionChoiceBiasDetector`をsyncモジュールに追加した。

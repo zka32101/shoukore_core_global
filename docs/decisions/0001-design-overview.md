@@ -1893,6 +1893,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 解除されたかを見るものであり、共有行動自体は見ない。実際の共有UI・
 ブロック表示はアプリ側の責務とする。
 
+## SyncConflictResolutionChoiceBiasDetectorの追加
+
+同期コンフリクトの解決結果が常に同じ側に偏っていないかに気づけるよう
+にしたい場面向けに、`SyncConflictResolutionChoiceBiasDetector`を
+`sync`モジュールに追加した。`SyncConflictSeverityClassifier`は個々の
+コンフリクトのデータ損失の深刻度のみを見るため、解決結果の偏りは
+見ない。`SyncConflictRecurrenceDetector`は同一データに対するコンフ
+リクトが繰り返し発生しているかのみを見るため、解決の選択傾向は見ない。
+実際の解決ロジックの見直し提案はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
