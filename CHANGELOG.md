@@ -462,3 +462,5 @@
   `ProfileNicknameChangeFrequencyThrottle`をprofileモジュールに追加した。
 - 達成共有カードが短時間に連続して共有されすぎないようクールダウンを
   判定する`AchievementShareCardCooldown`をgrowthモジュールに追加した。
+- 弱点ノート復習完了後の再テストスコアが悪化しているかを検知する
+  `WeakNoteReviewScoreRegressionDetector`をweakモジュールに追加した。
