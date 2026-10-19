@@ -484,3 +484,5 @@
 - 端末ロケール提案と異なるロケールが連続して選ばれ続けている状態を
   検知する`DeviceLocaleSuggestionIgnoredDetector`をregionalモジュール
   に追加した。
+- プロフィール切替の誤操作が連続して繰り返されているかを検知する
+  `ProfileSwitchRevertStreakDetector`をprofileモジュールに追加した。
