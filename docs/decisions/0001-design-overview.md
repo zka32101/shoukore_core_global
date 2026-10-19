@@ -2192,6 +2192,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 ごとに繰り返し使われているパターンのみを見るため、終了間近通知への
 反応は見ない。実際の通知方法の見直し案内はアプリ側の責務とする。
 
+## AudioCueVolumeDuckingOverrideStreakDetectorの追加
+
+ダッキング推奨音量が連続して上書きされ続けていることに気づけるように
+したい場面向けに、`AudioCueVolumeDuckingOverrideStreakDetector`を
+`audio`モジュールに追加した。
+`AudioCueVolumeDuckingOverrideFrequencyDetector`は直近件数内の上書き
+回数（頻度）のみを見るため、連続性（streak）は見ない。実際の設定
+見直し提案の表示はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

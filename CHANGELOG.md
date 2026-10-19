@@ -536,3 +536,6 @@
 - 猶予期間終了間近の通知が連続して無視され続けている状態を検知する
   `EntitlementGracePeriodEndingSoonReminderDismissalStreakDetector`を
   entitlementモジュールに追加した。
+- ダッキング推奨音量が連続して上書きされ続けている状態を検知する
+  `AudioCueVolumeDuckingOverrideStreakDetector`をaudioモジュールに
+  追加した。
