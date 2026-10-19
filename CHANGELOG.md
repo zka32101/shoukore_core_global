@@ -464,3 +464,5 @@
   判定する`AchievementShareCardCooldown`をgrowthモジュールに追加した。
 - 保護者承認申請への応答所要時間が悪化傾向にあるかを検知する
   `GuardianApprovalRequestLatencyTrend`をguardianモジュールに追加した。
+- 弱点ノート復習完了後の再テストスコアが悪化しているかを検知する
+  `WeakNoteReviewScoreRegressionDetector`をweakモジュールに追加した。
