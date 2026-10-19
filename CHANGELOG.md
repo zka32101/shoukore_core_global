@@ -454,3 +454,5 @@
   `AdaptiveDifficultyOscillationDetector`をadaptiveモジュールに追加した。
 - PINローテーション後に過去と同じPINが再利用されている状態を検知する
   `GuardianPinReuseAfterRotationDetector`をguardianモジュールに追加した。
+- ストリークフリーズトークンが失効する前に案内すべきかを判定する
+  `MissionStreakFreezeTokenExpiryWarning`をgrowthモジュールに追加した。
