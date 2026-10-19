@@ -437,3 +437,5 @@
   `OfflineSessionResumeNotice`をsyncモジュールに追加した。
 - 1日あたりのコイン消費上限に連日到達し続けている常態化状態を検知する
   `CoinSpendingLimitHabitualMaxOutDetector`をgrowthモジュールに追加した。
+- 弱点ノートの復習セッションが連続してスキップされている状態を検知する
+  `WeakNoteReviewSkipStreakDetector`をweakモジュールに追加した。
