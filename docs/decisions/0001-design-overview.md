@@ -1732,6 +1732,16 @@ JSON読み込み・エラー報告先（CI出力等）はアプリ/ツール側�
 未解除バッジの残り進捗のみを見る。実際の祝賀表示の分散・順序付けは
 アプリ側の責務とする。
 
+## ConsentAuditLogGapDetectorの追加
+
+同意履歴（`ConsentAuditLog`）に、最後のイベントから長期間何も記録
+されていない空白期間があることに気づけるようにしたい場面向けに、
+`ConsentAuditLogGapDetector`を`privacy`モジュールに追加した。
+`ConsentAuditLog`自体は履歴の追記・整理のみを行い、記録が途絶えて
+いないかは見ない。`ConsentRenewalReminder`は同意の期限切れ前の事前
+通知のみを見るため、履歴自体の空白は見ない。実際の同意状態の再確認
+案内はアプリ側の責務とする。
+
 ## OfflineSessionResumeNoticeの追加
 
 `OfflineSessionGapDetector`が長時間オフラインと判定した後、再接続して

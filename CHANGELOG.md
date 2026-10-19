@@ -426,5 +426,7 @@
   `ScreenTimeGuardOverrideFrequencyAlert`をguardianモジュールに追加した。
 - 複数のバッジが同時に解除された際に祝賀表示を分散させるべきかを判定
   する`AchievementUnlockClusterDetector`をgrowthモジュールに追加した。
+- 同意履歴に長期間イベントが記録されていない空白期間を検知する
+  `ConsentAuditLogGapDetector`をprivacyモジュールに追加した。
 - 長時間オフラインから復帰し同期が完了した際に案内すべきかを判定する
   `OfflineSessionResumeNotice`をsyncモジュールに追加した。
