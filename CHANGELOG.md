@@ -506,3 +506,5 @@
 - 単元マスターバッジ獲得後に正答率が再び悪化しているかを検知する
   `UnitMasteryBadgeAccuracyRegressionDetector`をgrowthモジュールに
   追加した。
+- 週次レポートが複数週にわたって連続で流し見されている状態を検知する
+  `WeeklyReportSkimStreakDetector`をguardianモジュールに追加した。
