@@ -538,3 +538,6 @@
   entitlementモジュールに追加した。
 - 学習ストリークの見逃し猶予が連続して使われ続けている状態を検知する
   `StreakRecoveryGraceRepeatedUsageDetector`をgrowthモジュールに追加した。
+- 保護者ゲートのPINローテーション催促が連続して無視され続けている状態
+  を検知する`GuardianPinRotationReminderDismissalStreakDetector`を
+  guardianモジュールに追加した。
