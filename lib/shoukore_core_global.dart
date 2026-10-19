@@ -96,6 +96,7 @@ export 'src/privacy/export_integrity_checker.dart';
 export 'src/privacy/export_size_estimator.dart';
 export 'src/privacy/settings_backup.dart';
 export 'src/privacy/settings_backup_staleness_notice.dart';
+export 'src/privacy/settings_backup_staleness_notice_dismissal_streak_detector.dart';
 export 'src/privacy/settings_backup_restore_failure_streak.dart';
 export 'src/entitlement/entitlement_expiry_notice.dart';
 export 'src/entitlement/entitlement_expiry_notice_dismissal_streak_detector.dart';

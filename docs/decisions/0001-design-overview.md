@@ -2223,6 +2223,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 回数（頻度）のみを見るため、連続性（streak）は見ない。実際の設定
 見直し提案の表示はアプリ側の責務とする。
 
+## SettingsBackupStalenessNoticeDismissalStreakDetectorの追加
+
+設定バックアップの催促が連続して無視され続けていることに気づけるよう
+にしたい場面向けに、
+`SettingsBackupStalenessNoticeDismissalStreakDetector`を`privacy`
+モジュールに追加した。`SettingsBackupStalenessNotice`自体は催促すべき
+かどうかの単発判定のみを行い、出した後にユーザーがどう反応したかは
+見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
