@@ -2307,6 +2307,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 の経過時間のみを見る単発判定であり、出した後にユーザーがどう反応した
 かは見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## UnitMasteryBadgeMotivationDropNoticeDismissalStreakDetectorの追加
+
+単元マスター直後の学習意欲低下通知が連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`UnitMasteryBadgeMotivationDropNoticeDismissalStreakDetector`を
+`growth`モジュールに追加した。`UnitMasteryBadgeMotivationDropNotice`
+自体はマスター達成後の経過時間のみを見る単発判定であり、出した後に
+ユーザーがどう反応したかは見ない。実際の表示方法の見直し案内はアプリ
+側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

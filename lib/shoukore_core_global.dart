@@ -119,6 +119,7 @@ export 'src/growth/achievement_share_card_data.dart';
 export 'src/growth/achievement_share_card_cooldown.dart';
 export 'src/growth/unit_mastery_badge_eligibility.dart';
 export 'src/growth/unit_mastery_badge_motivation_drop_notice.dart';
+export 'src/growth/unit_mastery_badge_motivation_drop_notice_dismissal_streak_detector.dart';
 export 'src/growth/unit_mastery_badge_accuracy_regression_detector.dart';
 export 'src/growth/answer_streak_bonus.dart';
 export 'src/growth/coin_earning_cap_habitual_hit_detector.dart';
