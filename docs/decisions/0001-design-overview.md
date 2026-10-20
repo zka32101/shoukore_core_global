@@ -2354,6 +2354,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 どう反応したかは見ない。実際の表示方法の見直し案内はアプリ側の責務と
 する。
 
+## WeeklyReportEngagementDeclineNoticeDismissalStreakDetectorの追加
+
+週次レポートの通知方法見直し提案が連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`WeeklyReportEngagementDeclineNoticeDismissalStreakDetector`を
+`guardian`モジュールに追加した。`WeeklyReportEngagementDeclineNotice`
+自体は複数回のレポートにわたる既読傾向のみを見る単発判定であり、出した
+後にユーザーがどう反応したかは見ない。実際の表示方法の見直し案内は
+アプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
