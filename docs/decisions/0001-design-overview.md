@@ -2334,6 +2334,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 少ないかどうかの単発判定のみを行い、出した後にユーザーがどう反応した
 かは見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## RegionalProfileLoadFailureFallbackNoticeDismissalStreakDetectorの追加
+
+地域プロファイル読み込み失敗通知が連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`RegionalProfileLoadFailureFallbackNoticeDismissalStreakDetector`を
+`regional`モジュールに追加した。
+`RegionalProfileLoadFailureFallbackNotice`自体は連続失敗回数のみを見る
+単発判定であり、出した後にユーザーがどう反応したかは見ない。実際の
+表示方法の見直し案内はアプリ側の責務とする。
+
 ## WeeklyReportEngagementDeclineNoticeDismissalStreakDetectorの追加
 
 週次レポートの通知方法見直し提案が連続して無視され続けていることに
