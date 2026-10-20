@@ -2307,6 +2307,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 の経過時間のみを見る単発判定であり、出した後にユーザーがどう反応した
 かは見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## TimeZoneDriftRecalibrationPromptDismissalStreakDetectorの追加
+
+タイムゾーン再確認プロンプトが連続して無視され続けていることに気づける
+ようにしたい場面向けに、
+`TimeZoneDriftRecalibrationPromptDismissalStreakDetector`を`regional`
+モジュールに追加した。`TimeZoneDriftRecalibrationPrompt`自体は連続ドリフト
+観測回数のみを見る単発判定であり、出した後にユーザーがどう反応したかは
+見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

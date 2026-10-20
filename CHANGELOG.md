@@ -571,3 +571,6 @@
 - プロフィール写真の更新案内通知が連続して無視され続けている状態を
   検知する`ProfilePhotoStalenessNoticeDismissalStreakDetector`を
   profileモジュールに追加した。
+- タイムゾーン再確認プロンプトが連続して無視され続けている状態を検知する
+  `TimeZoneDriftRecalibrationPromptDismissalStreakDetector`をregional
+  モジュールに追加した。
