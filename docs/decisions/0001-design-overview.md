@@ -2344,6 +2344,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 単発判定であり、出した後にユーザーがどう反応したかは見ない。実際の
 表示方法の見直し案内はアプリ側の責務とする。
 
+## GuardianDeliveryFailureAlternativeNoticeDismissalStreakDetectorの追加
+
+保護者向け代替通知手段の提案が連続して無視され続けていることに気づける
+ようにしたい場面向けに、
+`GuardianDeliveryFailureAlternativeNoticeDismissalStreakDetector`を
+`guardian`モジュールに追加した。`GuardianDeliveryFailureAlternativeNotice`
+自体は連続配信失敗回数のみを見る単発判定であり、出した後にユーザーが
+どう反応したかは見ない。実際の表示方法の見直し案内はアプリ側の責務と
+する。
+
 ## WeeklyReportEngagementDeclineNoticeDismissalStreakDetectorの追加
 
 週次レポートの通知方法見直し提案が連続して無視され続けていることに

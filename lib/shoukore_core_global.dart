@@ -179,6 +179,7 @@ export 'src/guardian/guardian_approval_request_reminder_escalation.dart';
 export 'src/guardian/guardian_approval_request_repeated_rejection_streak_detector.dart';
 export 'src/guardian/guardian_approval_request_stale_rejection_reminder.dart';
 export 'src/guardian/guardian_delivery_failure_alternative_notice.dart';
+export 'src/guardian/guardian_delivery_failure_alternative_notice_dismissal_streak_detector.dart';
 export 'src/guardian/guardian_gate.dart';
 export 'src/guardian/guardian_gate_lockout.dart';
 export 'src/guardian/guardian_gate_lockout_repeated_trigger_detector.dart';
