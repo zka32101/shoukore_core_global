@@ -568,3 +568,6 @@
 - 購入復元の長期未実行通知が連続して無視され続けている状態を検知する
   `EntitlementRestoreStalenessNoticeDismissalStreakDetector`を
   entitlementモジュールに追加した。
+- プロフィール写真の更新案内通知が連続して無視され続けている状態を
+  検知する`ProfilePhotoStalenessNoticeDismissalStreakDetector`を
+  profileモジュールに追加した。

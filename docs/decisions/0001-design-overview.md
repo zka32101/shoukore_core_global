@@ -2298,6 +2298,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 を起因とする`EntitlementRestorePromptDismissalStreakDetector`とは対象
 が異なる。実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## ProfilePhotoStalenessNoticeDismissalStreakDetectorの追加
+
+プロフィール写真の更新案内通知が連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`ProfilePhotoStalenessNoticeDismissalStreakDetector`を`profile`
+モジュールに追加した。`ProfilePhotoStalenessNotice`自体は最終更新から
+の経過時間のみを見る単発判定であり、出した後にユーザーがどう反応した
+かは見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
