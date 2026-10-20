@@ -579,3 +579,6 @@
   モジュールに追加した。
 - ストリーク途切れ警告が連続して無視され続けている状態を検知する
   `StreakRiskAlertDismissalStreakDetector`をgrowthモジュールに追加した。
+- 週次レポートの通知方法見直し提案が連続して無視され続けている状態を
+  検知する`WeeklyReportEngagementDeclineNoticeDismissalStreakDetector`を
+  guardianモジュールに追加した。
