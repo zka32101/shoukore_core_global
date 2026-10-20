@@ -571,3 +571,5 @@
 - プロフィール写真の更新案内通知が連続して無視され続けている状態を
   検知する`ProfilePhotoStalenessNoticeDismissalStreakDetector`を
   profileモジュールに追加した。
+- ストリーク途切れ警告が連続して無視され続けている状態を検知する
+  `StreakRiskAlertDismissalStreakDetector`をgrowthモジュールに追加した。
