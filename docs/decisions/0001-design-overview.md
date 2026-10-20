@@ -2278,6 +2278,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 どうかの単発判定のみを行い、出した後にユーザーがどう反応したかは
 見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## GuardianGateLockoutEndingSoonNoticeDismissalStreakDetectorの追加
+
+保護者ゲートのロック解除間近通知が連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`GuardianGateLockoutEndingSoonNoticeDismissalStreakDetector`を
+`guardian`モジュールに追加した。`GuardianGateLockoutEndingSoonNotice`
+自体は解除間近かどうかの単発判定のみを行い、出した後にユーザーがどう
+反応したかは見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
