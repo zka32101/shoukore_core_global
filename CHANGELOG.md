@@ -582,3 +582,6 @@
 - 地域プロファイル読み込み失敗通知が連続して無視され続けている状態を
   検知する`RegionalProfileLoadFailureFallbackNoticeDismissalStreakDetector`
   をregionalモジュールに追加した。
+- 保護者向け代替通知手段の提案が連続して無視され続けている状態を検知する
+  `GuardianDeliveryFailureAlternativeNoticeDismissalStreakDetector`を
+  guardianモジュールに追加した。
