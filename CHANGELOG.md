@@ -559,3 +559,6 @@
 - ストリークフリーズトークンの失効間近警告が連続して無視され続けている
   状態を検知する`MissionStreakFreezeTokenExpiryWarningDismissalStreakDetector`
   をgrowthモジュールに追加した。
+- ストアアイテムの値下げ通知が連続して無視され続けている状態を検知する
+  `ItemPriceDropNoticeDismissalStreakDetector`をgrowthモジュールに
+  追加した。
