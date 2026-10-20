@@ -574,3 +574,6 @@
 - 単元マスター直後の学習意欲低下通知が連続して無視され続けている状態を
   検知する`UnitMasteryBadgeMotivationDropNoticeDismissalStreakDetector`
   をgrowthモジュールに追加した。
+- タイムゾーン再確認プロンプトが連続して無視され続けている状態を検知する
+  `TimeZoneDriftRecalibrationPromptDismissalStreakDetector`をregional
+  モジュールに追加した。
