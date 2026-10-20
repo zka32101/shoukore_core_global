@@ -219,6 +219,7 @@ export 'src/regional/locale_formatter.dart';
 export 'src/regional/regional_profile_change_detector.dart';
 export 'src/regional/regional_profile_loader.dart';
 export 'src/regional/regional_profile_load_failure_fallback_notice.dart';
+export 'src/regional/regional_profile_load_failure_fallback_notice_dismissal_streak_detector.dart';
 export 'src/regional/timezone_drift_detector.dart';
 export 'src/regional/timezone_drift_recalibration_prompt.dart';
 export 'src/regional/timezone_drift_recalibration_prompt_dismissal_streak_detector.dart';
