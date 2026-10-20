@@ -2258,6 +2258,18 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 抽出する単発判定のみを行い、出した後にユーザーがどう反応したかは
 見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## MissionStreakFreezeTokenExpiryWarningDismissalStreakDetectorの追加
+
+ストリークフリーズトークンの失効間近警告が連続して無視され続けている
+ことに気づけるようにしたい場面向けに、
+`MissionStreakFreezeTokenExpiryWarningDismissalStreakDetector`を
+`growth`モジュールに追加した。
+`MissionStreakFreezeTokenExpiryWarning`自体は失効間近かどうかの単発
+判定のみを行い、出した後にユーザーがどう反応したかは見ない。
+`StreakFreezeTokenWasteDetector`は期限切れ後の未使用失効回数のみを
+見るため、失効前の事前警告への反応は見ない。実際の表示方法の見直し
+案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

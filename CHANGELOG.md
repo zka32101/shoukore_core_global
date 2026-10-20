@@ -556,3 +556,6 @@
 - 期間限定アイテムの消費期限切れ事前通知が連続して無視され続けている
   状態を検知する`InventoryItemExpiryNoticeDismissalStreakDetector`を
   growthモジュールに追加した。
+- ストリークフリーズトークンの失効間近警告が連続して無視され続けている
+  状態を検知する`MissionStreakFreezeTokenExpiryWarningDismissalStreakDetector`
+  をgrowthモジュールに追加した。
