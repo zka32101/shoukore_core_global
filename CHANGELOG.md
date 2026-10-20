@@ -579,3 +579,6 @@
   モジュールに追加した。
 - ストリーク途切れ警告が連続して無視され続けている状態を検知する
   `StreakRiskAlertDismissalStreakDetector`をgrowthモジュールに追加した。
+- 保護者向け代替通知手段の提案が連続して無視され続けている状態を検知する
+  `GuardianDeliveryFailureAlternativeNoticeDismissalStreakDetector`を
+  guardianモジュールに追加した。
