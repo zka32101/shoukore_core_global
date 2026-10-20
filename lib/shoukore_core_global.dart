@@ -78,6 +78,7 @@ export 'src/profile/profile_avatar_rotation_suggester.dart';
 export 'src/profile/profile_avatar_rotation_suggestion_ignored_detector.dart';
 export 'src/profile/profile.dart';
 export 'src/profile/profile_photo_staleness_notice.dart';
+export 'src/profile/profile_photo_staleness_notice_dismissal_streak_detector.dart';
 export 'src/profile/profile_store.dart';
 export 'src/profile/profile_switch_audit_log.dart';
 export 'src/profile/profile_switch_cooldown.dart';
