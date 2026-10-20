@@ -2287,6 +2287,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 自体は解除間近かどうかの単発判定のみを行い、出した後にユーザーがどう
 反応したかは見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## EntitlementRestoreStalenessNoticeDismissalStreakDetectorの追加
+
+購入復元の長期未実行通知が連続して無視され続けていることに気づける
+ようにしたい場面向けに、
+`EntitlementRestoreStalenessNoticeDismissalStreakDetector`を
+`entitlement`モジュールに追加した。`EntitlementRestoreStalenessNotice`
+自体は最後に復元を実行した時刻からの経過時間のみを見る単発判定であり、
+出した後にユーザーがどう反応したかは見ない。`EntitlementRestorePrompt`
+を起因とする`EntitlementRestorePromptDismissalStreakDetector`とは対象
+が異なる。実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

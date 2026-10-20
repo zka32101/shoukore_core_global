@@ -565,3 +565,6 @@
 - 保護者ゲートのロック解除間近通知が連続して無視され続けている状態を
   検知する`GuardianGateLockoutEndingSoonNoticeDismissalStreakDetector`
   をguardianモジュールに追加した。
+- 購入復元の長期未実行通知が連続して無視され続けている状態を検知する
+  `EntitlementRestoreStalenessNoticeDismissalStreakDetector`を
+  entitlementモジュールに追加した。
