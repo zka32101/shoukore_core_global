@@ -588,3 +588,6 @@
 - 週次レポートの通知方法見直し提案が連続して無視され続けている状態を
   検知する`WeeklyReportEngagementDeclineNoticeDismissalStreakDetector`を
   guardianモジュールに追加した。
+- 未使用インベントリアイテムの使用案内が連続して無視され続けている状態を
+  検知する`InventoryItemStaleUsageNoticeDismissalStreakDetector`を
+  growthモジュールに追加した。
