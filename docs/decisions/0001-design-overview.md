@@ -2364,6 +2364,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 後にユーザーがどう反応したかは見ない。実際の表示方法の見直し案内は
 アプリ側の責務とする。
 
+## GuardianApprovalRequestBatchNoticeDismissalStreakDetectorの追加
+
+保護者承認待ちまとめ通知が連続して無視され続けていることに気づける
+ようにしたい場面向けに、
+`GuardianApprovalRequestBatchNoticeDismissalStreakDetector`を
+`guardian`モジュールに追加した。`GuardianApprovalRequestBatchNotice`
+自体は承認待ち件数のみを見る単発判定であり、出した後にユーザーがどう
+反応したかは見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
