@@ -2364,6 +2364,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 後にユーザーがどう反応したかは見ない。実際の表示方法の見直し案内は
 アプリ側の責務とする。
 
+## GuardianApprovalRequestStaleRejectionReminderDismissalStreakDetectorの追加
+
+保護者承認申請の却下後の再提出案内が連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`GuardianApprovalRequestStaleRejectionReminderDismissalStreakDetector`を
+`guardian`モジュールに追加した。
+`GuardianApprovalRequestStaleRejectionReminder`自体は却下後の経過時間
+のみを見る単発判定であり、出した後にユーザーがどう反応したかは見ない。
+実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
