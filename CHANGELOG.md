@@ -606,3 +606,6 @@
 - 難易度急変アラートが連続して無視され続けている状態を検知する
   `QuestionDifficultyDriftAlertDismissalStreakDetector`をadaptive
   モジュールに追加した。
+- 保護者承認申請の滞留アラートが連続して無視され続けている状態を検知する
+  `GuardianApprovalRequestBacklogSizeAlertDismissalStreakDetector`を
+  guardianモジュールに追加した。
