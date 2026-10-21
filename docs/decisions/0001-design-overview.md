@@ -2508,6 +2508,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 判定であり、出した後にユーザーがどう反応したかは見ない。実際の
 「まとめて復習しよう」案内の表示方法の見直しはアプリ側の責務とする。
 
+## SpacedReviewOverdueBacklogAlertDismissalStreakDetectorの追加
+
+間隔反復復習の積み上がりアラートが連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`SpacedReviewOverdueBacklogAlertDismissalStreakDetector`を`weak`
+モジュールに追加した。`SpacedReviewOverdueBacklogAlert`自体は復習
+期限到来件数の積み上がりのみを見る単発判定であり、出した後に
+ユーザーがどう反応したかは見ない。実際の「まとめて復習しよう」案内
+の表示方法の見直しはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
