@@ -2479,6 +2479,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 実際の「制限の見直しを検討しますか」案内の表示方法の見直しはアプリ側
 の責務とする。
 
+## WeakNoteBacklogSizeAlertDismissalStreakDetectorの追加
+
+弱点ノート積み上がりアラートが連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`WeakNoteBacklogSizeAlertDismissalStreakDetector`を`weak`モジュールに
+追加した。`WeakNoteBacklogSizeAlert`自体は未解消件数のみを見る単発
+判定であり、出した後にユーザーがどう反応したかは見ない。実際の
+「まとめて復習しよう」案内の表示方法の見直しはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
