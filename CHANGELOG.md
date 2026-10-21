@@ -597,3 +597,6 @@
 - 保護者承認待ちまとめ通知が連続して無視され続けている状態を検知する
   `GuardianApprovalRequestBatchNoticeDismissalStreakDetector`をguardian
   モジュールに追加した。
+- 難易度急変アラートが連続して無視され続けている状態を検知する
+  `QuestionDifficultyDriftAlertDismissalStreakDetector`をadaptive
+  モジュールに追加した。
