@@ -2392,6 +2392,14 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 自体は承認待ち件数のみを見る単発判定であり、出した後にユーザーがどう
 反応したかは見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## AudioMuteStalenessNoticeDismissalStreakDetectorの追加
+
+ミュート解除確認提案が連続して無視され続けていることに気づけるように
+したい場面向けに、`AudioMuteStalenessNoticeDismissalStreakDetector`を
+`audio`モジュールに追加した。`AudioMuteStalenessNotice`自体はミュート
+の継続期間のみを見る単発判定であり、出した後にユーザーがどう反応した
+かは見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## QuestionDifficultyDriftAlertDismissalStreakDetectorの追加
 
 難易度急変アラートが連続して無視され続けていることに気づけるように
