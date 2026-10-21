@@ -2448,6 +2448,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 反応したかは見ない。実際の「基礎から見直そう」案内の表示方法の見直しは
 アプリ側の責務とする。
 
+## InventoryItemUnusedVarietyAlertDismissalStreakDetectorの追加
+
+未使用インベントリアイテム種類数アラートが連続して無視され続けている
+ことに気づけるようにしたい場面向けに、
+`InventoryItemUnusedVarietyAlertDismissalStreakDetector`を`growth`
+モジュールに追加した。`InventoryItemUnusedVarietyAlert`自体は未使用
+アイテムの種類数のみを見る単発判定であり、出した後にユーザーがどう
+反応したかは見ない。実際の「まとめて使ってみよう」案内の表示方法の
+見直しはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

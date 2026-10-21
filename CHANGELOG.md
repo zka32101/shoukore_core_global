@@ -615,3 +615,6 @@
 - 誤解多様化アラートが連続して無視され続けている状態を検知する
   `WeakNoteMisconceptionDiversityAlertDismissalStreakDetector`をweak
   モジュールに追加した。
+- 未使用インベントリアイテム種類数アラートが連続して無視され続けている
+  状態を検知する`InventoryItemUnusedVarietyAlertDismissalStreakDetector`
+  をgrowthモジュールに追加した。
