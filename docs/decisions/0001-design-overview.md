@@ -2468,6 +2468,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 反応したかは見ない。実際の「まとめて使ってみよう」案内の表示方法の
 見直しはアプリ側の責務とする。
 
+## ScreenTimeGuardOverrideFrequencyAlertDismissalStreakDetectorの追加
+
+利用時間制限の頻繁な一時解除アラートが連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`ScreenTimeGuardOverrideFrequencyAlertDismissalStreakDetector`を
+`guardian`モジュールに追加した。
+`ScreenTimeGuardOverrideFrequencyAlert`自体は直近の解除頻度のみを見る
+単発判定であり、出した後にユーザー（保護者）がどう反応したかは見ない。
+実際の「制限の見直しを検討しますか」案内の表示方法の見直しはアプリ側
+の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

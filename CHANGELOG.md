@@ -621,3 +621,7 @@
 - 未使用インベントリアイテム種類数アラートが連続して無視され続けている
   状態を検知する`InventoryItemUnusedVarietyAlertDismissalStreakDetector`
   をgrowthモジュールに追加した。
+- 利用時間制限の頻繁な一時解除アラートが連続して無視され続けている
+  状態を検知する
+  `ScreenTimeGuardOverrideFrequencyAlertDismissalStreakDetector`を
+  guardianモジュールに追加した。
