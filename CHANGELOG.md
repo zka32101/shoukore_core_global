@@ -606,3 +606,6 @@
 - 難易度急変アラートが連続して無視され続けている状態を検知する
   `QuestionDifficultyDriftAlertDismissalStreakDetector`をadaptive
   モジュールに追加した。
+- 復習モード偏りアラートが連続して無視され続けている状態を検知する
+  `SessionReviewModeRatioAlertDismissalStreakDetector`をadaptive
+  モジュールに追加した。
