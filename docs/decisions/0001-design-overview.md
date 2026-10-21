@@ -2458,6 +2458,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 単発判定であり、出した後にユーザーがどう反応したかは見ない。実際の
 まとめ送り処理の実行判断の見直しはアプリ側の責務とする。
 
+## InventoryItemUnusedVarietyAlertDismissalStreakDetectorの追加
+
+未使用インベントリアイテム種類数アラートが連続して無視され続けている
+ことに気づけるようにしたい場面向けに、
+`InventoryItemUnusedVarietyAlertDismissalStreakDetector`を`growth`
+モジュールに追加した。`InventoryItemUnusedVarietyAlert`自体は未使用
+アイテムの種類数のみを見る単発判定であり、出した後にユーザーがどう
+反応したかは見ない。実際の「まとめて使ってみよう」案内の表示方法の
+見直しはアプリ側の責務とする。
+
 ## ScreenTimeGuardOverrideFrequencyAlertDismissalStreakDetectorの追加
 
 利用時間制限の頻繁な一時解除アラートが連続して無視され続けていることに
