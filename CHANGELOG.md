@@ -612,3 +612,6 @@
 - 復習モード偏りアラートが連続して無視され続けている状態を検知する
   `SessionReviewModeRatioAlertDismissalStreakDetector`をadaptive
   モジュールに追加した。
+- 誤解多様化アラートが連続して無視され続けている状態を検知する
+  `WeakNoteMisconceptionDiversityAlertDismissalStreakDetector`をweak
+  モジュールに追加した。
