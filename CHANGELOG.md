@@ -597,3 +597,6 @@
 - 保護者承認待ちまとめ通知が連続して無視され続けている状態を検知する
   `GuardianApprovalRequestBatchNoticeDismissalStreakDetector`をguardian
   モジュールに追加した。
+- ミュート解除確認提案が連続して無視され続けている状態を検知する
+  `AudioMuteStalenessNoticeDismissalStreakDetector`をaudioモジュールに
+  追加した。
