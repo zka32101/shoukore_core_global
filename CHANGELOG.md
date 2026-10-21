@@ -625,3 +625,6 @@
   状態を検知する
   `ScreenTimeGuardOverrideFrequencyAlertDismissalStreakDetector`を
   guardianモジュールに追加した。
+- 未適用マイグレーションアラートが連続して無視され続けている状態を
+  検知する`MigrationLedgerPendingMigrationAlertDismissalStreakDetector`
+  をstoreモジュールに追加した。
