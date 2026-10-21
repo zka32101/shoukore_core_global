@@ -603,3 +603,6 @@
 - ロケール切替後のカリキュラム未読み込み通知が連続して無視され続けている
   状態を検知する`LocaleCurriculumStalenessNoticeDismissalStreakDetector`
   をregionalモジュールに追加した。
+- 難易度急変アラートが連続して無視され続けている状態を検知する
+  `QuestionDifficultyDriftAlertDismissalStreakDetector`をadaptive
+  モジュールに追加した。

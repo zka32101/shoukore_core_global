@@ -2410,6 +2410,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 判定のみを行い、出した後にユーザーがどう反応したかは見ない。実際の
 カリキュラム再読み込みの促し方の見直しはアプリ側の責務とする。
 
+## QuestionDifficultyDriftAlertDismissalStreakDetectorの追加
+
+難易度急変アラートが連続して無視され続けていることに気づけるように
+したい場面向けに、`QuestionDifficultyDriftAlertDismissalStreakDetector`
+を`adaptive`モジュールに追加した。`QuestionDifficultyDriftAlert`自体は
+直近の難易度変化量のみを見る単発判定であり、出した後にユーザー（保護者）
+がどう反応したかは見ない。実際の表示方法の見直し案内はアプリ側の責務
+とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
