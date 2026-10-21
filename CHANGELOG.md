@@ -631,3 +631,6 @@
 - 同期キュー滞留アラートが連続して無視され続けている状態を検知する
   `SyncQueueBacklogAlertDismissalStreakDetector`をsyncモジュールに
   追加した。
+- 弱点ノート積み上がりアラートが連続して無視され続けている状態を
+  検知する`WeakNoteBacklogSizeAlertDismissalStreakDetector`をweak
+  モジュールに追加した。
