@@ -2448,6 +2448,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 反応したかは見ない。実際の「基礎から見直そう」案内の表示方法の見直しは
 アプリ側の責務とする。
 
+## GuardianNotificationBacklogSizeAlertDismissalStreakDetectorの追加
+
+保護者向け通知積み上がりアラートが連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`GuardianNotificationBacklogSizeAlertDismissalStreakDetector`を
+`guardian`モジュールに追加した。
+`GuardianNotificationBacklogSizeAlert`自体は抑制済み通知件数のみを見る
+単発判定であり、出した後にユーザーがどう反応したかは見ない。実際の
+まとめ送り処理の実行判断の見直しはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
