@@ -2374,6 +2374,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 のみを見る単発判定であり、出した後にユーザーがどう反応したかは見ない。
 実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## InventoryItemStaleUsageNoticeDismissalStreakDetectorの追加
+
+未使用インベントリアイテムの使用案内が連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`InventoryItemStaleUsageNoticeDismissalStreakDetector`を`growth`
+モジュールに追加した。`InventoryItemStaleUsageNotice`自体は最終使用
+からの経過時間のみを見る単発判定であり、出した後にユーザーがどう反応
+したかは見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

@@ -591,3 +591,6 @@
 - 保護者承認申請の却下後の再提出案内が連続して無視され続けている状態を
   検知する`GuardianApprovalRequestStaleRejectionReminderDismissalStreakDetector`
   をguardianモジュールに追加した。
+- 未使用インベントリアイテムの使用案内が連続して無視され続けている状態を
+  検知する`InventoryItemStaleUsageNoticeDismissalStreakDetector`を
+  growthモジュールに追加した。
