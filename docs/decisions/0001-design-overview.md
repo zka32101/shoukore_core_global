@@ -2400,6 +2400,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 の継続期間のみを見る単発判定であり、出した後にユーザーがどう反応した
 かは見ない。実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## LocaleCurriculumStalenessNoticeDismissalStreakDetectorの追加
+
+ロケール切替後のカリキュラム未読み込み通知が連続して無視され続けている
+ことに気づけるようにしたい場面向けに、
+`LocaleCurriculumStalenessNoticeDismissalStreakDetector`を`regional`
+モジュールに追加した。`LocaleCurriculumStalenessNotice`自体は現在の
+ロケールと最後に読み込んだカリキュラムのロケールが一致するかの単発
+判定のみを行い、出した後にユーザーがどう反応したかは見ない。実際の
+カリキュラム再読み込みの促し方の見直しはアプリ側の責務とする。
+
 ## QuestionDifficultyDriftAlertDismissalStreakDetectorの追加
 
 難易度急変アラートが連続して無視され続けていることに気づけるように
