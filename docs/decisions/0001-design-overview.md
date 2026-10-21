@@ -2479,6 +2479,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 実際の「制限の見直しを検討しますか」案内の表示方法の見直しはアプリ側
 の責務とする。
 
+## MigrationLedgerPendingMigrationAlertDismissalStreakDetectorの追加
+
+未適用マイグレーションアラートが連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`MigrationLedgerPendingMigrationAlertDismissalStreakDetector`を
+`store`モジュールに追加した。
+`MigrationLedgerPendingMigrationAlert`自体は未適用マイグレーションの
+有無のみを見る単発判定であり、出した後にユーザーがどう反応したかは
+見ない。実際の再実行・強制案内の表示方法の見直しはアプリ側の責務と
+する。
+
 ## WeakNoteBacklogSizeAlertDismissalStreakDetectorの追加
 
 弱点ノート積み上がりアラートが連続して無視され続けていることに
