@@ -615,6 +615,9 @@
 - 誤解多様化アラートが連続して無視され続けている状態を検知する
   `WeakNoteMisconceptionDiversityAlertDismissalStreakDetector`をweak
   モジュールに追加した。
+- 保護者向け通知積み上がりアラートが連続して無視され続けている状態を
+  検知する`GuardianNotificationBacklogSizeAlertDismissalStreakDetector`
+  をguardianモジュールに追加した。
 - 利用時間制限の頻繁な一時解除アラートが連続して無視され続けている
   状態を検知する
   `ScreenTimeGuardOverrideFrequencyAlertDismissalStreakDetector`を
