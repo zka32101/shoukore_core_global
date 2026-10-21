@@ -2490,6 +2490,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 見ない。実際の再実行・強制案内の表示方法の見直しはアプリ側の責務と
 する。
 
+## SyncQueueBacklogAlertDismissalStreakDetectorの追加
+
+同期キュー滞留アラートが連続して無視され続けていることに気づける
+ようにしたい場面向けに、`SyncQueueBacklogAlertDismissalStreakDetector`
+を`sync`モジュールに追加した。`SyncQueueBacklogAlert`自体は未送信
+アイテムの滞留件数のみを見る単発判定であり、出した後にユーザーが
+どう反応したかは見ない。実際の同期不調の調査・案内の表示方法の
+見直しはアプリ側の責務とする。
+
 ## WeakNoteBacklogSizeAlertDismissalStreakDetectorの追加
 
 弱点ノート積み上がりアラートが連続して無視され続けていることに
