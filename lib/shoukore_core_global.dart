@@ -146,6 +146,7 @@ export 'src/growth/inventory_duplicate_gift_guard.dart';
 export 'src/growth/inventory_item_expiry_notice.dart';
 export 'src/growth/inventory_item_expiry_notice_dismissal_streak_detector.dart';
 export 'src/growth/inventory_item_stale_usage_notice.dart';
+export 'src/growth/inventory_item_stale_usage_notice_dismissal_streak_detector.dart';
 export 'src/growth/inventory_item_unused_variety_alert.dart';
 export 'src/growth/inventory_manager.dart';
 export 'src/growth/inventory_manager_insufficient_balance_streak_detector.dart';
