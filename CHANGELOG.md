@@ -615,3 +615,7 @@
 - 誤解多様化アラートが連続して無視され続けている状態を検知する
   `WeakNoteMisconceptionDiversityAlertDismissalStreakDetector`をweak
   モジュールに追加した。
+- 利用時間制限の頻繁な一時解除アラートが連続して無視され続けている
+  状態を検知する
+  `ScreenTimeGuardOverrideFrequencyAlertDismissalStreakDetector`を
+  guardianモジュールに追加した。
