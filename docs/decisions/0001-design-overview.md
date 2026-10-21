@@ -2429,6 +2429,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 単発判定であり、出した後にユーザーがどう反応したかは見ない。実際の
 表示方法の見直し案内はアプリ側の責務とする。
 
+## SessionReviewModeRatioAlertDismissalStreakDetectorの追加
+
+復習モード偏りアラートが連続して無視され続けていることに気づけるように
+したい場面向けに、`SessionReviewModeRatioAlertDismissalStreakDetector`
+を`adaptive`モジュールに追加した。`SessionReviewModeRatioAlert`自体は
+セッション内の復習モード比率のみを見る単発判定であり、出した後にユー
+ザーがどう反応したかは見ない。実際の出題モード切り替え判断の見直しは
+アプリ側の責務とする。
+
 ## WeakNoteMisconceptionDiversityAlertDismissalStreakDetectorの追加
 
 誤解多様化アラートが連続して無視され続けていることに気づけるように
