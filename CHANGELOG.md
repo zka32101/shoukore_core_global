@@ -597,3 +597,6 @@
 - 保護者承認待ちまとめ通知が連続して無視され続けている状態を検知する
   `GuardianApprovalRequestBatchNoticeDismissalStreakDetector`をguardian
   モジュールに追加した。
+- ロケール切替後のカリキュラム未読み込み通知が連続して無視され続けている
+  状態を検知する`LocaleCurriculumStalenessNoticeDismissalStreakDetector`
+  をregionalモジュールに追加した。
