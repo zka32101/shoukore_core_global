@@ -2508,6 +2508,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 判定であり、出した後にユーザーがどう反応したかは見ない。実際の
 「まとめて復習しよう」案内の表示方法の見直しはアプリ側の責務とする。
 
+## RetryBackoffExhaustionRateAlertDismissalStreakDetectorの追加
+
+システム的同期障害アラートが連続して無視され続けていることに気づける
+ようにしたい場面向けに、
+`RetryBackoffExhaustionRateAlertDismissalStreakDetector`を`sync`
+モジュールに追加した。`RetryBackoffExhaustionRateAlert`自体は枯渇
+件数の割合のみを見る単発判定であり、出した後にユーザーがどう反応
+したかは見ない。実際のサーバー状態の確認・メンテナンス通知の表示
+方法の見直しはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

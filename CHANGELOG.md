@@ -634,3 +634,6 @@
 - 弱点ノート積み上がりアラートが連続して無視され続けている状態を
   検知する`WeakNoteBacklogSizeAlertDismissalStreakDetector`をweak
   モジュールに追加した。
+- システム的同期障害アラートが連続して無視され続けている状態を検知する
+  `RetryBackoffExhaustionRateAlertDismissalStreakDetector`をsync
+  モジュールに追加した。
