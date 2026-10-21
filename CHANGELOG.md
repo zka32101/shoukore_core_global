@@ -588,3 +588,6 @@
 - 週次レポートの通知方法見直し提案が連続して無視され続けている状態を
   検知する`WeeklyReportEngagementDeclineNoticeDismissalStreakDetector`を
   guardianモジュールに追加した。
+- 保護者承認申請の却下後の再提出案内が連続して無視され続けている状態を
+  検知する`GuardianApprovalRequestStaleRejectionReminderDismissalStreakDetector`
+  をguardianモジュールに追加した。
