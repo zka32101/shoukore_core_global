@@ -41,6 +41,7 @@ export 'src/question/statistics_question_source.dart';
 export 'src/question/mastery_decay.dart';
 export 'src/question/mastery_decay_acceleration_detector.dart';
 export 'src/question/mastery_rapid_decay_detector.dart';
+export 'src/question/mastery_rapid_decay_recurrence_detector.dart';
 export 'src/question/question_hint_overreliance_detector.dart';
 export 'src/question/question_hint_overreliance_recurrence_detector.dart';
 export 'src/question/statistics_template.dart';

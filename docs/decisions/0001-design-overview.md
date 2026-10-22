@@ -2682,6 +2682,14 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 単発判定であり、繰り返しの発生自体は見ない。実際の「学習を続けよう」
 案内の表示方法の見直しはアプリ側の責務とする。
 
+## MasteryRapidDecayRecurrenceDetectorの追加
+
+習熟度の急激な減衰が繰り返し検出され続けていることに気づけるように
+したい場面向けに、`MasteryRapidDecayRecurrenceDetector`を`question`
+モジュールに追加した。`MasteryRapidDecayDetector`自体は直近1回分の
+減衰量のみを見る単発判定であり、繰り返しの発生自体は見ない。実際の
+優先表示・通知の見直しはアプリ側の責務とする。
+
 ## GuardianGateRapidAttemptRecurrenceDetectorの追加
 
 保護者ゲートへの異常に速い連続試行が繰り返し検出され続けていることに
