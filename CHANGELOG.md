@@ -678,6 +678,9 @@
   追加した。
 - タイムゾーン変更が繰り返し検出され続けている状態を検知する
   `TimeZoneDriftRecurrenceDetector`をregionalモジュールに追加した。
+- 同期待ちアイテムのスタベーションが繰り返し検出され続けている状態を
+  検知する`PendingSyncItemStarvationRecurrenceDetector`をsyncモジュール
+  に追加した。
 - 保護者承認待ち申請の重複が繰り返し検出され続けている状態を検知する
   `GuardianApprovalRequestDuplicateRecurrenceDetector`をguardianモジュール
   に追加した。

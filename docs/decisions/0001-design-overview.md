@@ -2655,6 +2655,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 判定であり、繰り返しの発生自体は見ない。実際の再確認ダイアログの表示
 方法の見直しはアプリ側の責務とする。
 
+## PendingSyncItemStarvationRecurrenceDetectorの追加
+
+同期待ちアイテムのスタベーションが繰り返し検出され続けていることに
+気づけるようにしたい場面向けに、
+`PendingSyncItemStarvationRecurrenceDetector`を`sync`モジュールに
+追加した。`PendingSyncItemStarvationDetector`自体は直近1回分の
+キュー状態のみを見る単発判定であり、繰り返しの発生自体は見ない。
+実際の優先送信・個別リトライの見直しはアプリ側の責務とする。
+
 ## GuardianApprovalRequestDuplicateRecurrenceDetectorの追加
 
 保護者承認待ち申請の重複が繰り返し検出され続けていることに気づける
