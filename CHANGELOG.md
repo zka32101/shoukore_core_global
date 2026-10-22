@@ -658,3 +658,6 @@
 - 子どもと保護者のタイムゾーン不一致が繰り返し検出され続けている状態を
   検知する`GuardianTimezoneMismatchRecurrenceDetector`をguardian
   モジュールに追加した。
+- 複数デバイスからの同時編集の可能性が繰り返し検出され続けている状態を
+  検知する`MultiDeviceConcurrentEditRecurrenceDetector`をsyncモジュール
+  に追加した。
