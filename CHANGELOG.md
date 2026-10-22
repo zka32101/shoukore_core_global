@@ -643,3 +643,6 @@
 - 間隔反復復習の積み上がりアラートが連続して無視され続けている状態を
   検知する`SpacedReviewOverdueBacklogAlertDismissalStreakDetector`を
   weakモジュールに追加した。
+- 弱点ノート急増アラートが連続して無視され続けている状態を検知する
+  `WeakNoteBacklogGrowthRateAlertDismissalStreakDetector`をweak
+  モジュールに追加した。
