@@ -661,3 +661,6 @@
 - 複数デバイスからの同時編集の可能性が繰り返し検出され続けている状態を
   検知する`MultiDeviceConcurrentEditRecurrenceDetector`をsyncモジュール
   に追加した。
+- ヒントへの過度な依存が繰り返し検出され続けている状態を検知する
+  `QuestionHintOverrelianceRecurrenceDetector`をquestionモジュールに
+  追加した。
