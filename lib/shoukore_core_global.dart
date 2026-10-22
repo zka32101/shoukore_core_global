@@ -185,6 +185,7 @@ export 'src/guardian/guardian_approval_request_backlog_size_alert_dismissal_stre
 export 'src/guardian/guardian_approval_request_batch_notice.dart';
 export 'src/guardian/guardian_approval_request_batch_notice_dismissal_streak_detector.dart';
 export 'src/guardian/guardian_approval_request_duplicate_detector.dart';
+export 'src/guardian/guardian_approval_request_duplicate_recurrence_detector.dart';
 export 'src/guardian/guardian_approval_request_latency_trend.dart';
 export 'src/guardian/guardian_approval_request_queue.dart';
 export 'src/guardian/guardian_approval_request_reminder_escalation.dart';
