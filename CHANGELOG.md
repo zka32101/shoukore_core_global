@@ -661,3 +661,5 @@
 - 複数デバイスからの同時編集の可能性が繰り返し検出され続けている状態を
   検知する`MultiDeviceConcurrentEditRecurrenceDetector`をsyncモジュール
   に追加した。
+- 単元放置が繰り返し検出され続けている状態を検知する
+  `UnitAbandonmentRecurrenceDetector`をprogressモジュールに追加した。
