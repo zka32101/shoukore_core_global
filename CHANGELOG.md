@@ -702,3 +702,6 @@
   に追加した。
 - 成長段階の停滞が解消し連続して停滞なしと判定され続けている状態を検知
   する`GrowthStageStallRecoveryDetector`をgrowthモジュールに追加した。
+- 習熟度の急激な減衰が収まり連続して急激な減衰なしと判定され続けている
+  状態を検知する`MasteryRapidDecayRecoveryDetector`をquestionモジュール
+  に追加した。
