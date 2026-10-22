@@ -637,6 +637,9 @@
 - 長時間オフライン後の同期完了案内が連続して無視され続けている状態を
   検知する`OfflineSessionResumeNoticeDismissalStreakDetector`をsync
   モジュールに追加した。
+- システム的同期障害アラートが連続して無視され続けている状態を検知する
+  `RetryBackoffExhaustionRateAlertDismissalStreakDetector`をsync
+  モジュールに追加した。
 - 間隔反復復習の積み上がりアラートが連続して無視され続けている状態を
   検知する`SpacedReviewOverdueBacklogAlertDismissalStreakDetector`を
   weakモジュールに追加した。
