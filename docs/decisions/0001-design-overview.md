@@ -2508,6 +2508,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 判定であり、出した後にユーザーがどう反応したかは見ない。実際の
 「まとめて復習しよう」案内の表示方法の見直しはアプリ側の責務とする。
 
+## OfflineSessionResumeNoticeDismissalStreakDetectorの追加
+
+長時間オフライン後の同期完了案内が連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`OfflineSessionResumeNoticeDismissalStreakDetector`を`sync`モジュールに
+追加した。`OfflineSessionResumeNotice`自体は長時間オフライン後の同期
+完了のみを見る単発判定であり、出した後にユーザーがどう反応したかは
+見ない。実際の「同期が完了しました」表示方法の見直しはアプリ側の
+責務とする。
+
 ## RetryBackoffExhaustionRateAlertDismissalStreakDetectorの追加
 
 システム的同期障害アラートが連続して無視され続けていることに気づける
