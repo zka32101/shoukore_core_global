@@ -2674,6 +2674,14 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 自体は見ない。実際の重複申請の統合・再送抑制の見直しはアプリ側の
 責務とする。
 
+## GrowthStageStallRecurrenceDetectorの追加
+
+成長段階の停滞が繰り返し検出され続けていることに気づけるようにしたい
+場面向けに、`GrowthStageStallRecurrenceDetector`を`growth`モジュールに
+追加した。`GrowthStageStallDetector`自体は直近1回分の比較のみを見る
+単発判定であり、繰り返しの発生自体は見ない。実際の「学習を続けよう」
+案内の表示方法の見直しはアプリ側の責務とする。
+
 ## MasteryRapidDecayRecurrenceDetectorの追加
 
 習熟度の急激な減衰が繰り返し検出され続けていることに気づけるように
