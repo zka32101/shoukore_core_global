@@ -2567,6 +2567,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 あり、出した後にユーザーがどう反応したかは見ない。実際の「最優先で
 確認しよう」案内の表示方法の見直しはアプリ側の責務とする。
 
+## RegionalProfileChangeRecurrenceDetectorの追加
+
+地域プロフィールの内容変化が繰り返し検出され続けていることに気づける
+ようにしたい場面向けに、`RegionalProfileChangeRecurrenceDetector`を
+`regional`モジュールに追加した。`RegionalProfileChangeDetector`自体は
+直近1回分のキャッシュと最新プロフィールの比較のみを見る単発判定であり、
+繰り返しの発生自体は見ない。実際の再確認案内の表示方法の見直しは
+アプリ側の責務とする。
+
 ## GuardianTimezoneMismatchRecurrenceDetectorの追加
 
 子どもと保護者のタイムゾーン不一致が繰り返し検出され続けていることに

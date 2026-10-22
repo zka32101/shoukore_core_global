@@ -652,6 +652,9 @@
 - 最古弱点ノート放置アラートが連続して無視され続けている状態を検知する
   `WeakNoteBacklogOldestItemAgeAlertDismissalStreakDetector`をweak
   モジュールに追加した。
+- 地域プロフィールの内容変化が繰り返し検出され続けている状態を検知する
+  `RegionalProfileChangeRecurrenceDetector`をregionalモジュールに
+  追加した。
 - 子どもと保護者のタイムゾーン不一致が繰り返し検出され続けている状態を
   検知する`GuardianTimezoneMismatchRecurrenceDetector`をguardian
   モジュールに追加した。
