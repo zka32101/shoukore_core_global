@@ -2547,6 +2547,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 を見る単発判定であり、出した後にユーザーがどう反応したかは見ない。
 実際のペイロード圧縮・送信抑制の見直しはアプリ側の責務とする。
 
+## WeakNoteBacklogGrowthRateAlertDismissalStreakDetectorの追加
+
+弱点ノート急増アラートが連続して無視され続けていることに気づける
+ようにしたい場面向けに、
+`WeakNoteBacklogGrowthRateAlertDismissalStreakDetector`を`weak`
+モジュールに追加した。`WeakNoteBacklogGrowthRateAlert`自体は未解消
+件数の増加ペースのみを見る単発判定であり、出した後にユーザーがどう
+反応したかは見ない。実際の「まとめて復習しよう」案内の表示方法の
+見直しはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

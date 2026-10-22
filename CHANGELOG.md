@@ -646,3 +646,6 @@
 - 同期ペイロードサイズ異常アラートが連続して無視され続けている状態を
   検知する`SyncPayloadSizeAlertDismissalStreakDetector`をsyncモジュール
   に追加した。
+- 弱点ノート急増アラートが連続して無視され続けている状態を検知する
+  `WeakNoteBacklogGrowthRateAlertDismissalStreakDetector`をweak
+  モジュールに追加した。
