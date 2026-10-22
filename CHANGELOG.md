@@ -666,3 +666,5 @@
   追加した。
 - 同期キュー内の重複ペイロードが繰り返し検出され続けている状態を検知する
   `DuplicateSyncPayloadRecurrenceDetector`をsyncモジュールに追加した。
+- 単元放置が繰り返し検出され続けている状態を検知する
+  `UnitAbandonmentRecurrenceDetector`をprogressモジュールに追加した。
