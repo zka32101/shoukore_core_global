@@ -2620,6 +2620,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 単発判定であり、繰り返しの発生自体は見ない。実際の「もう一度やって
 みよう」案内の表示方法の見直しはアプリ側の責務とする。
 
+## MasteryAcrossUnitsStagnationRecurrenceDetectorの追加
+
+複数単元習熟度の全体的な停滞が繰り返し検出され続けていることに
+気づけるようにしたい場面向けに、
+`MasteryAcrossUnitsStagnationRecurrenceDetector`を`progress`モジュール
+に追加した。`MasteryAcrossUnitsStagnationDetector`自体は直近2回分の
+スナップショットの比較1回分のみを見る単発判定であり、繰り返しの発生
+自体は見ない。実際の学習内容の見直し提案・通知の表示方法の見直しは
+アプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
