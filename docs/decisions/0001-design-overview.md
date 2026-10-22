@@ -2708,6 +2708,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 時点の正答率との1回分の比較のみを見る単発判定であり、繰り返しの発生
 自体は見ない。実際の再学習案の表示方法の見直しはアプリ側の責務とする。
 
+## NotificationQuietMergeCollisionRecurrenceDetectorの追加
+
+静かな時間帯明け後の通知の衝突が繰り返し検出され続けていることに気づける
+ようにしたい場面向けに、`NotificationQuietMergeCollisionRecurrenceDetector`
+を`notify`モジュールに追加した。`NotificationQuietMergeCollisionDetector`
+自体は1回のマージ処理内での衝突のみを見る単発判定であり、繰り返しの発生
+自体は見ない。実際の再スケジュール時刻の分散処理の見直しはアプリ側の
+責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
