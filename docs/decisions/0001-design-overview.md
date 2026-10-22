@@ -2647,6 +2647,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 自体は見ない。実際の学習内容の見直し提案・通知の表示方法の見直しは
 アプリ側の責務とする。
 
+## GuardianApprovalRequestDuplicateRecurrenceDetectorの追加
+
+保護者承認待ち申請の重複が繰り返し検出され続けていることに気づける
+ようにしたい場面向けに、
+`GuardianApprovalRequestDuplicateRecurrenceDetector`を`guardian`
+モジュールに追加した。`GuardianApprovalRequestDuplicateDetector`
+自体は直近1回分の申請一覧のみを見る単発判定であり、繰り返しの発生
+自体は見ない。実際の重複申請の統合・再送抑制の見直しはアプリ側の
+責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
