@@ -697,3 +697,6 @@
 - 実績の同時解除の密集が繰り返し検出され続けている状態を検知する
   `AchievementUnlockClusterRecurrenceDetector`をgrowthモジュールに追加
   した。
+- 静かな時間帯明け後の通知の衝突が繰り返し検出され続けている状態を検知
+  する`NotificationQuietMergeCollisionRecurrenceDetector`をnotifyモジュール
+  に追加した。
