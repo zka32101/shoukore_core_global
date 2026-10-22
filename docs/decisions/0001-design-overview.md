@@ -2538,6 +2538,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 ユーザーがどう反応したかは見ない。実際の「まとめて復習しよう」案内
 の表示方法の見直しはアプリ側の責務とする。
 
+## SyncPayloadSizeAlertDismissalStreakDetectorの追加
+
+同期ペイロードサイズ異常アラートが連続して無視され続けていることに
+気づけるようにしたい場面向けに、
+`SyncPayloadSizeAlertDismissalStreakDetector`を`sync`モジュールに
+追加した。`SyncPayloadSizeAlert`自体はペイロード1件分のバイト数のみ
+を見る単発判定であり、出した後にユーザーがどう反応したかは見ない。
+実際のペイロード圧縮・送信抑制の見直しはアプリ側の責務とする。
+
 ## WeakNoteBacklogOldestItemAgeAlertDismissalStreakDetectorの追加
 
 最古弱点ノート放置アラートが連続して無視され続けていることに気づける
