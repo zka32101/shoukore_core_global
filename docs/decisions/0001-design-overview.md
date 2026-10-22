@@ -2699,6 +2699,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 間隔のみを見る単発判定であり、繰り返しの発生自体は見ない。実際の
 追加ロック・保護者への通知方法の見直しはアプリ側の責務とする。
 
+## UnitMasteryBadgeAccuracyRegressionRecurrenceDetectorの追加
+
+単元マスターバッジ獲得後の正答率悪化が繰り返し検出され続けていることに
+気づけるようにしたい場面向けに、
+`UnitMasteryBadgeAccuracyRegressionRecurrenceDetector`を`growth`モジュール
+に追加した。`UnitMasteryBadgeAccuracyRegressionDetector`自体はマスター
+時点の正答率との1回分の比較のみを見る単発判定であり、繰り返しの発生
+自体は見ない。実際の再学習案の表示方法の見直しはアプリ側の責務とする。
+
 ## AchievementUnlockClusterRecurrenceDetectorの追加
 
 実績の同時解除の密集が繰り返し検出され続けていることに気づけるように
