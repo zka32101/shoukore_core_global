@@ -676,3 +676,5 @@
 - 複数単元習熟度の全体的な停滞が繰り返し検出され続けている状態を検知する
   `MasteryAcrossUnitsStagnationRecurrenceDetector`をprogressモジュールに
   追加した。
+- タイムゾーン変更が繰り返し検出され続けている状態を検知する
+  `TimeZoneDriftRecurrenceDetector`をregionalモジュールに追加した。
