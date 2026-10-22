@@ -668,6 +668,9 @@
   `DuplicateSyncPayloadRecurrenceDetector`をsyncモジュールに追加した。
 - 単元放置が繰り返し検出され続けている状態を検知する
   `UnitAbandonmentRecurrenceDetector`をprogressモジュールに追加した。
+- 復習後の再テストスコア悪化が繰り返し検出され続けている状態を検知する
+  `WeakNoteReviewScoreRegressionRecurrenceDetector`をweakモジュールに
+  追加した。
 - 複数単元習熟度の全体的な停滞が繰り返し検出され続けている状態を検知する
   `MasteryAcrossUnitsStagnationRecurrenceDetector`をprogressモジュールに
   追加した。

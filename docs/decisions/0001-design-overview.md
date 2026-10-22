@@ -2620,6 +2620,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 単発判定であり、繰り返しの発生自体は見ない。実際の「もう一度やって
 みよう」案内の表示方法の見直しはアプリ側の責務とする。
 
+## WeakNoteReviewScoreRegressionRecurrenceDetectorの追加
+
+復習後の再テストスコア悪化が繰り返し検出され続けていることに気づける
+ようにしたい場面向けに、
+`WeakNoteReviewScoreRegressionRecurrenceDetector`を`weak`モジュールに
+追加した。`WeakNoteReviewScoreRegressionDetector`自体は直近1回分の
+スコア比較のみを見る単発判定であり、繰り返しの発生自体は見ない。実際の
+再学習案の表示・保護者への報告方法の見直しはアプリ側の責務とする。
+
 ## MasteryAcrossUnitsStagnationRecurrenceDetectorの追加
 
 複数単元習熟度の全体的な停滞が繰り返し検出され続けていることに
