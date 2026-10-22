@@ -2594,6 +2594,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 ペアのみを見る単発判定であり、繰り返しの発生自体は見ない。実際の
 競合解決・保護者への通知方法の見直しはアプリ側の責務とする。
 
+## QuestionHintOverrelianceRecurrenceDetectorの追加
+
+ヒントへの過度な依存が繰り返し検出され続けていることに気づける
+ようにしたい場面向けに、
+`QuestionHintOverrelianceRecurrenceDetector`を`question`モジュールに
+追加した。`QuestionHintOverrelianceDetector`自体は直近の出題範囲
+1回分のみを見る単発判定であり、繰り返しの発生自体は見ない。実際の
+ヒント利用に関する案内の表示方法の見直しはアプリ側の責務とする。
+
 ## UnitAbandonmentRecurrenceDetectorの追加
 
 単元放置が繰り返し検出され続けていることに気づけるようにしたい場面
