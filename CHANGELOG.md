@@ -684,3 +684,5 @@
 - 保護者承認待ち申請の重複が繰り返し検出され続けている状態を検知する
   `GuardianApprovalRequestDuplicateRecurrenceDetector`をguardianモジュール
   に追加した。
+- 習熟度の急激な減衰が繰り返し検出され続けている状態を検知する
+  `MasteryRapidDecayRecurrenceDetector`をquestionモジュールに追加した。
