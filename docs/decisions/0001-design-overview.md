@@ -2603,6 +2603,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 1回分のみを見る単発判定であり、繰り返しの発生自体は見ない。実際の
 ヒント利用に関する案内の表示方法の見直しはアプリ側の責務とする。
 
+## DuplicateSyncPayloadRecurrenceDetectorの追加
+
+同期キュー内の重複ペイロードが繰り返し検出され続けていることに気づける
+ようにしたい場面向けに、`DuplicateSyncPayloadRecurrenceDetector`を
+`sync`モジュールに追加した。`DuplicateSyncPayloadDetector`自体は直近
+1回分のキュー内容のみを見る単発判定であり、繰り返しの発生自体は見ない。
+実際の重複除去・サーバー側への問い合わせ方法の見直しはアプリ側の責務
+とする。
+
 ## UnitAbandonmentRecurrenceDetectorの追加
 
 単元放置が繰り返し検出され続けていることに気づけるようにしたい場面
