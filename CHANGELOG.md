@@ -661,3 +661,5 @@
 - 複数デバイスからの同時編集の可能性が繰り返し検出され続けている状態を
   検知する`MultiDeviceConcurrentEditRecurrenceDetector`をsyncモジュール
   に追加した。
+- 同期キュー内の重複ペイロードが繰り返し検出され続けている状態を検知する
+  `DuplicateSyncPayloadRecurrenceDetector`をsyncモジュールに追加した。
