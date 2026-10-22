@@ -691,3 +691,6 @@
 - 保護者ゲートへの異常に速い連続試行が繰り返し検出され続けている状態を
   検知する`GuardianGateRapidAttemptRecurrenceDetector`をguardianモジュール
   に追加した。
+- 単元マスターバッジ獲得後の正答率悪化が繰り返し検出され続けている状態を
+  検知する`UnitMasteryBadgeAccuracyRegressionRecurrenceDetector`を
+  growthモジュールに追加した。
