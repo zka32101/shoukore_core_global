@@ -705,3 +705,6 @@
 - 習熟度の急激な減衰が収まり連続して急激な減衰なしと判定され続けている
   状態を検知する`MasteryRapidDecayRecoveryDetector`をquestionモジュール
   に追加した。
+- 同期待ちアイテムのスタベーションが解消し連続してスタベーションなしと
+  判定され続けている状態を検知する`PendingSyncItemStarvationRecoveryDetector`
+  をsyncモジュールに追加した。

@@ -2745,6 +2745,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 ているかを見るもので、本クラスはその逆軸（収まったことの確認）を見る。
 実際の優先表示・通知の解除方法の見直しはアプリ側の責務とする。
 
+## PendingSyncItemStarvationRecoveryDetectorの追加
+
+同期待ちアイテムのスタベーションが解消し連続してスタベーションなしと
+判定され続けていることに気づけるようにしたい場面向けに、
+`PendingSyncItemStarvationRecoveryDetector`を`sync`モジュールに追加
+した。`PendingSyncItemStarvationDetector`自体は直近1回分のキュー状態
+のみを見る単発判定であり、解消の確認自体は見ない。
+`PendingSyncItemStarvationRecurrenceDetector`はスタベーションが繰り
+返されているかを見るもので、本クラスはその逆軸（解消の確認）を見る。
+実際の優先送信・個別リトライの解除方法の見直しはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
