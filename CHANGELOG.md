@@ -700,3 +700,5 @@
 - 静かな時間帯明け後の通知の衝突が繰り返し検出され続けている状態を検知
   する`NotificationQuietMergeCollisionRecurrenceDetector`をnotifyモジュール
   に追加した。
+- 成長段階の停滞が解消し連続して停滞なしと判定され続けている状態を検知
+  する`GrowthStageStallRecoveryDetector`をgrowthモジュールに追加した。
