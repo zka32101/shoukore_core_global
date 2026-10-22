@@ -691,3 +691,6 @@
 - 保護者ゲートへの異常に速い連続試行が繰り返し検出され続けている状態を
   検知する`GuardianGateRapidAttemptRecurrenceDetector`をguardianモジュール
   に追加した。
+- 実績の同時解除の密集が繰り返し検出され続けている状態を検知する
+  `AchievementUnlockClusterRecurrenceDetector`をgrowthモジュールに追加
+  した。
