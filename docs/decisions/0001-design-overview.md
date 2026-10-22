@@ -2708,6 +2708,14 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 時点の正答率との1回分の比較のみを見る単発判定であり、繰り返しの発生
 自体は見ない。実際の再学習案の表示方法の見直しはアプリ側の責務とする。
 
+## AchievementUnlockClusterRecurrenceDetectorの追加
+
+実績の同時解除の密集が繰り返し検出され続けていることに気づけるように
+したい場面向けに、`AchievementUnlockClusterRecurrenceDetector`を
+`growth`モジュールに追加した。`AchievementUnlockClusterDetector`自体は
+1回の評価での同時解除数のみを見る単発判定であり、繰り返しの発生自体は
+見ない。実際の祝賀表示の分散・順序付けの見直しはアプリ側の責務とする。
+
 ## NotificationQuietMergeCollisionRecurrenceDetectorの追加
 
 静かな時間帯明け後の通知の衝突が繰り返し検出され続けていることに気づける

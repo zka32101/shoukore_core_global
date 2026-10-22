@@ -125,6 +125,7 @@ export 'src/entitlement/entitlement_restore_staleness_notice_dismissal_streak_de
 export 'src/growth/achievement.dart';
 export 'src/growth/achievement_proximity_hint.dart';
 export 'src/growth/achievement_unlock_cluster_detector.dart';
+export 'src/growth/achievement_unlock_cluster_recurrence_detector.dart';
 export 'src/growth/achievement_share_card_data.dart';
 export 'src/growth/achievement_share_card_cooldown.dart';
 export 'src/growth/unit_mastery_badge_eligibility.dart';
