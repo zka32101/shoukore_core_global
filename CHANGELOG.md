@@ -649,3 +649,6 @@
 - 弱点ノート急増アラートが連続して無視され続けている状態を検知する
   `WeakNoteBacklogGrowthRateAlertDismissalStreakDetector`をweak
   モジュールに追加した。
+- 最古弱点ノート放置アラートが連続して無視され続けている状態を検知する
+  `WeakNoteBacklogOldestItemAgeAlertDismissalStreakDetector`をweak
+  モジュールに追加した。

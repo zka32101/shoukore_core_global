@@ -2557,6 +2557,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 反応したかは見ない。実際の「まとめて復習しよう」案内の表示方法の
 見直しはアプリ側の責務とする。
 
+## WeakNoteBacklogOldestItemAgeAlertDismissalStreakDetectorの追加
+
+最古弱点ノート放置アラートが連続して無視され続けていることに気づける
+ようにしたい場面向けに、
+`WeakNoteBacklogOldestItemAgeAlertDismissalStreakDetector`を`weak`
+モジュールに追加した。`WeakNoteBacklogOldestItemAgeAlert`自体は未
+解消の弱点ノートのうち最も古いものの放置期間のみを見る単発判定で
+あり、出した後にユーザーがどう反応したかは見ない。実際の「最優先で
+確認しよう」案内の表示方法の見直しはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
