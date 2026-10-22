@@ -686,3 +686,5 @@
   に追加した。
 - 成長段階の停滞が繰り返し検出され続けている状態を検知する
   `GrowthStageStallRecurrenceDetector`をgrowthモジュールに追加した。
+- 習熟度の急激な減衰が繰り返し検出され続けている状態を検知する
+  `MasteryRapidDecayRecurrenceDetector`をquestionモジュールに追加した。
