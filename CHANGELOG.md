@@ -732,3 +732,6 @@
 - 地域プロフィールの変化が収まり連続して変化なしと判定され続けている
   状態を検知する`RegionalProfileChangeRecoveryDetector`をregionalモジュール
   に追加した。
+- 同期キュー内のペイロード重複が解消し連続して重複なしと判定され続け
+  ている状態を検知する`DuplicateSyncPayloadRecoveryDetector`をsyncモジュール
+  に追加した。
