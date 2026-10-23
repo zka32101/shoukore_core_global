@@ -743,3 +743,6 @@
 - 実績の同時解除の密集が解消し連続して密集なしと判定され続けている
   状態を検知する`AchievementUnlockClusterRecoveryDetector`をgrowthモジュール
   に追加した。
+- 同一内容の通知の重複予約が解消し連続して重複なしと判定され続けている
+  状態を検知する`DuplicateNotificationScheduleRecoveryDetector`をnotify
+  モジュールに追加した。
