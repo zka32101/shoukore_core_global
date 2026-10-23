@@ -719,3 +719,6 @@
   をweakモジュールに追加した。
 - 長時間オフラインが解消し連続して短い起動間隔が続いている状態を検知
   する`OfflineSessionGapRecoveryDetector`をsyncモジュールに追加した。
+- 保護者承認待ち申請の重複が解消し連続して重複なしと判定され続けている
+  状態を検知する`GuardianApprovalRequestDuplicateRecoveryDetector`を
+  guardianモジュールに追加した。
