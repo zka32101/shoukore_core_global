@@ -740,3 +740,6 @@
 - 同期キュー内のペイロード重複が解消し連続して重複なしと判定され続け
   ている状態を検知する`DuplicateSyncPayloadRecoveryDetector`をsyncモジュール
   に追加した。
+- 実績の同時解除の密集が解消し連続して密集なしと判定され続けている
+  状態を検知する`AchievementUnlockClusterRecoveryDetector`をgrowthモジュール
+  に追加した。
