@@ -73,6 +73,7 @@ export 'src/notify/notification_scheduler.dart';
 export 'src/privacy/consent_audit_log.dart';
 export 'src/privacy/consent_audit_log_gap_detector.dart';
 export 'src/privacy/consent_audit_log_gap_recurrence_detector.dart';
+export 'src/privacy/consent_audit_log_gap_recovery_detector.dart';
 export 'src/privacy/consent_expiry_policy.dart';
 export 'src/privacy/consent_renewal_reminder.dart';
 export 'src/privacy/consent_renewal_reminder_dismissal_streak_detector.dart';
