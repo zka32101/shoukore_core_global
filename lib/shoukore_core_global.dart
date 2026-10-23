@@ -9,6 +9,7 @@ export 'src/adaptive/answer_latency_fatigue_trend.dart';
 export 'src/adaptive/answer_latency_improvement_trend_detector.dart';
 export 'src/adaptive/answer_latency_outlier_flag.dart';
 export 'src/adaptive/answer_latency_variance_spike_detector.dart';
+export 'src/adaptive/answer_latency_variance_spike_recovery_detector.dart';
 export 'src/adaptive/question_difficulty_drift_alert.dart';
 export 'src/adaptive/question_difficulty_drift_alert_dismissal_streak_detector.dart';
 export 'src/adaptive/question_repetition_fatigue_detector.dart';
