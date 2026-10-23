@@ -2756,6 +2756,29 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 返されているかを見るもので、本クラスはその逆軸（解消の確認）を見る。
 実際の優先送信・個別リトライの解除方法の見直しはアプリ側の責務とする。
 
+## GuardianGateRapidAttemptRecoveryDetectorの追加
+
+保護者ゲートへの異常に速い連続試行が収まり連続して正常な試行間隔と
+判定され続けていることに気づけるようにしたい場面向けに、
+`GuardianGateRapidAttemptRecoveryDetector`を`guardian`モジュールに追加
+した。`GuardianGateRapidAttemptDetector`自体は直前1回分の試行間隔のみ
+を見る単発判定であり、収まったことの確認自体は見ない。
+`GuardianGateRapidAttemptRecurrenceDetector`は異常な連続試行が繰り返
+されているかを見るもので、本クラスはその逆軸（収まったことの確認）を
+見る。実際の追加ロックの解除方法の見直しはアプリ側の責務とする。
+
+## UnitMasteryBadgeAccuracyRegressionRecoveryDetectorの追加
+
+単元マスターバッジ獲得後の正答率悪化が収まり連続して悪化なしと判定
+され続けていることに気づけるようにしたい場面向けに、
+`UnitMasteryBadgeAccuracyRegressionRecoveryDetector`を`growth`
+モジュールに追加した。`UnitMasteryBadgeAccuracyRegressionDetector`
+自体はマスター時点の正答率との1回分の比較のみを見る単発判定であり、
+収まったことの確認自体は見ない。
+`UnitMasteryBadgeAccuracyRegressionRecurrenceDetector`は悪化が繰り
+返されているかを見るもので、本クラスはその逆軸（収まったことの確認）
+を見る。実際の再学習案の表示解除方法の見直しはアプリ側の責務とする。
+
 ## WeakNoteReviewScoreRegressionRecoveryDetectorの追加
 
 弱点ノート再テストスコアの悪化が収まり連続して悪化なしと判定され続け
