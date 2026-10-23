@@ -2923,6 +2923,48 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 見る。実際の競合解決・保護者への通知の解除方法の見直しはアプリ側の
 責務とする。
 
+## NotificationQuietMergeCollisionRecoveryDetectorの追加
+
+静かな時間帯明け後の通知の衝突が解消し連続して衝突なしと判定され続け
+ていることに気づけるようにしたい場面向けに、
+`NotificationQuietMergeCollisionRecoveryDetector`を`notify`モジュール
+に追加した。`NotificationQuietMergeCollisionDetector`自体は1回のマージ
+処理内での衝突のみを見る単発判定であり、解消の確認自体は見ない。
+`NotificationQuietMergeCollisionRecurrenceDetector`は衝突が繰り返さ
+れているかを見るもので、本クラスはその逆軸（解消の確認）を見る。
+実際の再スケジュール時刻の分散処理の解除方法の見直しはアプリ側の
+責務とする。
+
+## RetryBackoffExhaustionRecoveryDetectorの追加
+
+システム的な同期障害の判定が解消し連続してなしと判定され続けている
+ことに気づけるようにしたい場面向けに、
+`RetryBackoffExhaustionRecoveryDetector`を`sync`モジュールに追加した。
+`RetryBackoffExhaustionRateAlert`自体は1回の判定時点での枯渇件数の
+割合のみを見る単発判定であり、解消の確認自体は見ない。
+`RetryBackoffExhaustionRecurrenceDetector`は障害判定が繰り返されて
+いるかを見るもので、本クラスはその逆軸（解消の確認）を見る。実際の
+サーバー状態の確認・メンテナンス通知の解除方法の見直しはアプリ側の
+責務とする。
+
+## WeeklyReportSkimRecoveryDetectorの追加
+
+週次レポートの流し見状態が解消し連続してしっかり閲覧され続けている
+ことに気づけるようにしたい場面向けに、`WeeklyReportSkimRecoveryDetector`
+を`guardian`モジュールに追加した。`WeeklyReportSkimDetector`自体は
+1回の開封あたりの閲覧時間のみを見る単発判定であり、解消の確認自体は
+見ない。実際の「詳しく見る」案内の解除方法の見直しはアプリ側の責務
+とする。
+
+## ProfileSwitchRevertRecoveryDetectorの追加
+
+誤操作らしきプロフィール切替が解消し連続してなしと判定され続けている
+ことに気づけるようにしたい場面向けに、`ProfileSwitchRevertRecoveryDetector`
+を`profile`モジュールに追加した。`ProfileSwitchRevertDetector`自体は
+1回の切替操作のみを見る単発判定であり、解消の確認自体は見ない。
+実際の「間違えましたか？」案内の解除方法の見直しはアプリ側の責務と
+する。
+
 ## SyncConflictRecoveryDetectorの追加
 
 同一レコードでの同期コンフリクトの再発が解消し連続してコンフリクト
