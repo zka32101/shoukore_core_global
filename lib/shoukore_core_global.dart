@@ -71,6 +71,7 @@ export 'src/notify/in_memory_notification_scheduler.dart';
 export 'src/notify/notification_quiet_merge.dart';
 export 'src/notify/notification_quiet_merge_collision_detector.dart';
 export 'src/notify/notification_quiet_merge_collision_recurrence_detector.dart';
+export 'src/notify/notification_quiet_merge_collision_recovery_detector.dart';
 export 'src/notify/notification_schedule_clustering_detector.dart';
 export 'src/notify/notification_scheduler.dart';
 export 'src/privacy/consent_audit_log.dart';
