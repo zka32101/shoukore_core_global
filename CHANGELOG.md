@@ -708,3 +708,6 @@
 - 同期待ちアイテムのスタベーションが解消し連続してスタベーションなしと
   判定され続けている状態を検知する`PendingSyncItemStarvationRecoveryDetector`
   をsyncモジュールに追加した。
+- 単元マスターバッジ獲得後の正答率悪化が収まり連続して悪化なしと判定
+  され続けている状態を検知する`UnitMasteryBadgeAccuracyRegressionRecoveryDetector`
+  をgrowthモジュールに追加した。
