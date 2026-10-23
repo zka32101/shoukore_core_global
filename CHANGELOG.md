@@ -749,3 +749,6 @@
 - 複数デバイスからの同時編集の可能性が解消し連続してなしと判定され
   続けている状態を検知する`MultiDeviceConcurrentEditRecoveryDetector`
   をsyncモジュールに追加した。
+- 静かな時間帯明け後の通知の衝突が解消し連続して衝突なしと判定され
+  続けている状態を検知する`NotificationQuietMergeCollisionRecoveryDetector`
+  をnotifyモジュールに追加した。
