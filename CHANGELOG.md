@@ -758,3 +758,6 @@
 - 週次レポートの流し見状態が解消し連続してしっかり閲覧され続けている
   状態を検知する`WeeklyReportSkimRecoveryDetector`をguardianモジュール
   に追加した。
+- 誤操作らしきプロフィール切替が解消し連続してなしと判定され続けている
+  状態を検知する`ProfileSwitchRevertRecoveryDetector`をprofileモジュール
+  に追加した。
