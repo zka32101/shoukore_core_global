@@ -737,3 +737,6 @@
   をprogressモジュールに追加した。
 - 単元の放置状態が解消し連続して放置なしと判定され続けている状態を
   検知する`UnitAbandonmentRecoveryDetector`をprogressモジュールに追加した。
+- 同期キュー内のペイロード重複が解消し連続して重複なしと判定され続け
+  ている状態を検知する`DuplicateSyncPayloadRecoveryDetector`をsyncモジュール
+  に追加した。
