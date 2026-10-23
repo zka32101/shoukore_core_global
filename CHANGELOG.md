@@ -717,3 +717,5 @@
 - 弱点ノート再テストスコアの悪化が収まり連続して悪化なしと判定され
   続けている状態を検知する`WeakNoteReviewScoreRegressionRecoveryDetector`
   をweakモジュールに追加した。
+- タイムゾーンの変化が収まり連続して変化なしと判定され続けている状態を
+  検知する`TimeZoneDriftRecoveryDetector`をregionalモジュールに追加した。
