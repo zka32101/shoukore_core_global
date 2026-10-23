@@ -55,6 +55,7 @@ export 'src/progress/mastery_across_units_stagnation_recurrence_detector.dart';
 export 'src/progress/progress_store.dart';
 export 'src/progress/unit_abandonment_detector.dart';
 export 'src/progress/unit_abandonment_recurrence_detector.dart';
+export 'src/progress/unit_abandonment_recovery_detector.dart';
 export 'src/store/in_memory_migration_ledger.dart';
 export 'src/store/migration_ledger.dart';
 export 'src/store/migration_ledger_pending_migration_alert.dart';

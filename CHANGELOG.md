@@ -732,3 +732,5 @@
 - 地域プロフィールの変化が収まり連続して変化なしと判定され続けている
   状態を検知する`RegionalProfileChangeRecoveryDetector`をregionalモジュール
   に追加した。
+- 単元の放置状態が解消し連続して放置なしと判定され続けている状態を
+  検知する`UnitAbandonmentRecoveryDetector`をprogressモジュールに追加した。
