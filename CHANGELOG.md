@@ -717,3 +717,5 @@
 - 弱点ノート再テストスコアの悪化が収まり連続して悪化なしと判定され
   続けている状態を検知する`WeakNoteReviewScoreRegressionRecoveryDetector`
   をweakモジュールに追加した。
+- 長時間オフラインが解消し連続して短い起動間隔が続いている状態を検知
+  する`OfflineSessionGapRecoveryDetector`をsyncモジュールに追加した。
