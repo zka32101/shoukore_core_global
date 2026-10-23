@@ -2923,6 +2923,18 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 見る。実際の競合解決・保護者への通知の解除方法の見直しはアプリ側の
 責務とする。
 
+## NotificationQuietMergeCollisionRecoveryDetectorの追加
+
+静かな時間帯明け後の通知の衝突が解消し連続して衝突なしと判定され続け
+ていることに気づけるようにしたい場面向けに、
+`NotificationQuietMergeCollisionRecoveryDetector`を`notify`モジュール
+に追加した。`NotificationQuietMergeCollisionDetector`自体は1回のマージ
+処理内での衝突のみを見る単発判定であり、解消の確認自体は見ない。
+`NotificationQuietMergeCollisionRecurrenceDetector`は衝突が繰り返さ
+れているかを見るもので、本クラスはその逆軸（解消の確認）を見る。
+実際の再スケジュール時刻の分散処理の解除方法の見直しはアプリ側の
+責務とする。
+
 ## RetryBackoffExhaustionRecoveryDetectorの追加
 
 システム的な同期障害の判定が解消し連続してなしと判定され続けている
