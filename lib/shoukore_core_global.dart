@@ -264,6 +264,7 @@ export 'src/sync/multi_device_concurrent_edit_recurrence_detector.dart';
 export 'src/sync/offline_only_mode_suggestion.dart';
 export 'src/sync/offline_session_gap_detector.dart';
 export 'src/sync/offline_session_gap_recurrence_detector.dart';
+export 'src/sync/offline_session_gap_recovery_detector.dart';
 export 'src/sync/offline_session_resume_notice.dart';
 export 'src/sync/offline_session_resume_notice_dismissal_streak_detector.dart';
 export 'src/sync/offline_sync_conflict_resolver.dart';
