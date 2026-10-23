@@ -300,6 +300,7 @@ export 'src/weak/weak_note_misconception_relapse.dart';
 export 'src/weak/weak_note_review_overdue_escalation.dart';
 export 'src/weak/weak_note_review_score_regression_detector.dart';
 export 'src/weak/weak_note_review_score_regression_recurrence_detector.dart';
+export 'src/weak/weak_note_review_score_regression_recovery_detector.dart';
 export 'src/weak/weak_note_review_skip_streak_detector.dart';
 export 'src/weak/weak_note_staleness_cleanup.dart';
 export 'src/weak/weak_notes.dart';

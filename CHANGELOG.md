@@ -714,3 +714,6 @@
 - 単元マスターバッジ獲得後の正答率悪化が収まり連続して悪化なしと判定
   され続けている状態を検知する`UnitMasteryBadgeAccuracyRegressionRecoveryDetector`
   をgrowthモジュールに追加した。
+- 弱点ノート再テストスコアの悪化が収まり連続して悪化なしと判定され
+  続けている状態を検知する`WeakNoteReviewScoreRegressionRecoveryDetector`
+  をweakモジュールに追加した。
