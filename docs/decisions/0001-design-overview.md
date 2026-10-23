@@ -2823,6 +2823,28 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 を見るもので、本クラスはその逆軸（収まったことの確認）を見る。実際の
 再確認ダイアログの解除方法の見直しはアプリ側の責務とする。
 
+## GuardianTimezoneMismatchRecoveryDetectorの追加
+
+子どもと保護者の端末間のタイムゾーン不一致が解消し連続して一致と判定
+され続けていることに気づけるようにしたい場面向けに、
+`GuardianTimezoneMismatchRecoveryDetector`を`guardian`モジュールに
+追加した。`GuardianTimezoneMismatchDetector`自体は1回分のオフセット
+差の比較のみを見る単発判定であり、解消の確認自体は見ない。
+`GuardianTimezoneMismatchRecurrenceDetector`は不一致が繰り返されて
+いるかを見るもので、本クラスはその逆軸（解消の確認）を見る。実際の
+通知時刻補正の解除方法の見直しはアプリ側の責務とする。
+
+## ConsentAuditLogGapRecoveryDetectorの追加
+
+同意履歴の記録空白が解消し連続して記録が続いている状態と判定され続け
+ていることに気づけるようにしたい場面向けに、
+`ConsentAuditLogGapRecoveryDetector`を`privacy`モジュールに追加した。
+`ConsentAuditLogGapDetector`自体は直近のイベントとの1回分の比較のみを
+見る単発判定であり、解消の確認自体は見ない。
+`ConsentAuditLogGapRecurrenceDetector`は空白が繰り返されているかを
+見るもので、本クラスはその逆軸（解消の確認）を見る。実際の同意状態
+再確認案内の解除方法の見直しはアプリ側の責務とする。
+
 ## RegionalProfileChangeRecoveryDetectorの追加
 
 地域プロフィールの変化が収まり連続して変化なしと判定され続けている
