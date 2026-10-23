@@ -2888,6 +2888,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 確認）を見る。実際の重複除去・サーバー側への問い合わせの解除方法の
 見直しはアプリ側の責務とする。
 
+## AchievementUnlockClusterRecoveryDetectorの追加
+
+実績の同時解除の密集が解消し連続して密集なしと判定され続けている
+ことに気づけるようにしたい場面向けに、
+`AchievementUnlockClusterRecoveryDetector`を`growth`モジュールに
+追加した。`AchievementUnlockClusterDetector`自体は1回の評価での
+同時解除数のみを見る単発判定であり、解消の確認自体は見ない。
+`AchievementUnlockClusterRecurrenceDetector`は密集が繰り返されて
+いるかを見るもので、本クラスはその逆軸（解消の確認）を見る。実際の
+祝賀表示の分散・順序付けの解除方法の見直しはアプリ側の責務とする。
+
 ## DuplicateNotificationScheduleRecoveryDetectorの追加
 
 同一内容の通知の重複予約が解消し連続して重複なしと判定され続けている
