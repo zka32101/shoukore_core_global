@@ -724,3 +724,5 @@
   guardianモジュールに追加した。
 - タイムゾーンの変化が収まり連続して変化なしと判定され続けている状態を
   検知する`TimeZoneDriftRecoveryDetector`をregionalモジュールに追加した。
+- 同意履歴の記録空白が解消し連続して記録が続いている状態を検知する
+  `ConsentAuditLogGapRecoveryDetector`をprivacyモジュールに追加した。
