@@ -740,3 +740,6 @@
 - 同期キュー内のペイロード重複が解消し連続して重複なしと判定され続け
   ている状態を検知する`DuplicateSyncPayloadRecoveryDetector`をsyncモジュール
   に追加した。
+- 同一内容の通知の重複予約が解消し連続して重複なしと判定され続けている
+  状態を検知する`DuplicateNotificationScheduleRecoveryDetector`をnotify
+  モジュールに追加した。
