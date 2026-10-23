@@ -749,3 +749,6 @@
 - 複数デバイスからの同時編集の可能性が解消し連続してなしと判定され
   続けている状態を検知する`MultiDeviceConcurrentEditRecoveryDetector`
   をsyncモジュールに追加した。
+- 同一レコードでの同期コンフリクトの再発が解消し連続してコンフリクト
+  なしと判定され続けている状態を検知する`SyncConflictRecoveryDetector`
+  をsyncモジュールに追加した。
