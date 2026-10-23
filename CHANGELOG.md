@@ -708,3 +708,6 @@
 - 同期待ちアイテムのスタベーションが解消し連続してスタベーションなしと
   判定され続けている状態を検知する`PendingSyncItemStarvationRecoveryDetector`
   をsyncモジュールに追加した。
+- 保護者ゲートへの異常に速い連続試行が収まり連続して正常な試行間隔と
+  判定され続けている状態を検知する`GuardianGateRapidAttemptRecoveryDetector`
+  をguardianモジュールに追加した。
