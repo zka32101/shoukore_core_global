@@ -724,3 +724,6 @@
   guardianモジュールに追加した。
 - タイムゾーンの変化が収まり連続して変化なしと判定され続けている状態を
   検知する`TimeZoneDriftRecoveryDetector`をregionalモジュールに追加した。
+- 子どもと保護者の端末間のタイムゾーン不一致が解消し連続して一致と
+  判定され続けている状態を検知する`GuardianTimezoneMismatchRecoveryDetector`
+  をguardianモジュールに追加した。
