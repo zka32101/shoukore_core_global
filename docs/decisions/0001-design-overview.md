@@ -2911,6 +2911,18 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 実際の重複通知のキャンセル・統合処理の解除方法の見直しはアプリ側
 の責務とする。
 
+## MultiDeviceConcurrentEditRecoveryDetectorの追加
+
+複数デバイスからの同時編集の可能性が解消し連続してなしと判定され
+続けていることに気づけるようにしたい場面向けに、
+`MultiDeviceConcurrentEditRecoveryDetector`を`sync`モジュールに追加
+した。`MultiDeviceConcurrentEditDetector`自体は1組の更新ペアに
+ついての単発判定であり、解消の確認自体は見ない。
+`MultiDeviceConcurrentEditRecurrenceDetector`は同時編集の可能性が
+繰り返されているかを見るもので、本クラスはその逆軸（解消の確認）を
+見る。実際の競合解決・保護者への通知の解除方法の見直しはアプリ側の
+責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

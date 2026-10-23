@@ -746,3 +746,6 @@
 - 同一内容の通知の重複予約が解消し連続して重複なしと判定され続けている
   状態を検知する`DuplicateNotificationScheduleRecoveryDetector`をnotify
   モジュールに追加した。
+- 複数デバイスからの同時編集の可能性が解消し連続してなしと判定され
+  続けている状態を検知する`MultiDeviceConcurrentEditRecoveryDetector`
+  をsyncモジュールに追加した。
