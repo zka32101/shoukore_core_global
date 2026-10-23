@@ -211,6 +211,7 @@ export 'src/guardian/guardian_gate_lockout_ending_soon_notice.dart';
 export 'src/guardian/guardian_gate_lockout_ending_soon_notice_dismissal_streak_detector.dart';
 export 'src/guardian/guardian_timezone_mismatch_detector.dart';
 export 'src/guardian/guardian_timezone_mismatch_recurrence_detector.dart';
+export 'src/guardian/guardian_timezone_mismatch_recovery_detector.dart';
 export 'src/guardian/guardian_gate_rapid_attempt_detector.dart';
 export 'src/guardian/guardian_gate_rapid_attempt_recurrence_detector.dart';
 export 'src/guardian/guardian_gate_rapid_attempt_recovery_detector.dart';
