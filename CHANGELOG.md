@@ -749,6 +749,12 @@
 - 複数デバイスからの同時編集の可能性が解消し連続してなしと判定され
   続けている状態を検知する`MultiDeviceConcurrentEditRecoveryDetector`
   をsyncモジュールに追加した。
+- 静かな時間帯明け後の通知の衝突が解消し連続して衝突なしと判定され
+  続けている状態を検知する`NotificationQuietMergeCollisionRecoveryDetector`
+  をnotifyモジュールに追加した。
+- システム的な同期障害の判定が解消し連続してなしと判定され続けている
+  状態を検知する`RetryBackoffExhaustionRecoveryDetector`をsyncモジュール
+  に追加した。
 - 週次レポートの流し見状態が解消し連続してしっかり閲覧され続けている
   状態を検知する`WeeklyReportSkimRecoveryDetector`をguardianモジュール
   に追加した。
