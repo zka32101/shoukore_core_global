@@ -2767,6 +2767,18 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 されているかを見るもので、本クラスはその逆軸（収まったことの確認）を
 見る。実際の追加ロックの解除方法の見直しはアプリ側の責務とする。
 
+## UnitMasteryBadgeAccuracyRegressionRecoveryDetectorの追加
+
+単元マスターバッジ獲得後の正答率悪化が収まり連続して悪化なしと判定
+され続けていることに気づけるようにしたい場面向けに、
+`UnitMasteryBadgeAccuracyRegressionRecoveryDetector`を`growth`
+モジュールに追加した。`UnitMasteryBadgeAccuracyRegressionDetector`
+自体はマスター時点の正答率との1回分の比較のみを見る単発判定であり、
+収まったことの確認自体は見ない。
+`UnitMasteryBadgeAccuracyRegressionRecurrenceDetector`は悪化が繰り
+返されているかを見るもので、本クラスはその逆軸（収まったことの確認）
+を見る。実際の再学習案の表示解除方法の見直しはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

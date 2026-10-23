@@ -711,3 +711,6 @@
 - 保護者ゲートへの異常に速い連続試行が収まり連続して正常な試行間隔と
   判定され続けている状態を検知する`GuardianGateRapidAttemptRecoveryDetector`
   をguardianモジュールに追加した。
+- 単元マスターバッジ獲得後の正答率悪化が収まり連続して悪化なしと判定
+  され続けている状態を検知する`UnitMasteryBadgeAccuracyRegressionRecoveryDetector`
+  をgrowthモジュールに追加した。
