@@ -708,3 +708,6 @@
 - 同期待ちアイテムのスタベーションが解消し連続してスタベーションなしと
   判定され続けている状態を検知する`PendingSyncItemStarvationRecoveryDetector`
   をsyncモジュールに追加した。
+- 弱点ノート再テストスコアの悪化が収まり連続して悪化なしと判定され
+  続けている状態を検知する`WeakNoteReviewScoreRegressionRecoveryDetector`
+  をweakモジュールに追加した。

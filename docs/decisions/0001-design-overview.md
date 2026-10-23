@@ -2756,6 +2756,18 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 返されているかを見るもので、本クラスはその逆軸（解消の確認）を見る。
 実際の優先送信・個別リトライの解除方法の見直しはアプリ側の責務とする。
 
+## WeakNoteReviewScoreRegressionRecoveryDetectorの追加
+
+弱点ノート再テストスコアの悪化が収まり連続して悪化なしと判定され続け
+ていることに気づけるようにしたい場面向けに、
+`WeakNoteReviewScoreRegressionRecoveryDetector`を`weak`モジュールに
+追加した。`WeakNoteReviewScoreRegressionDetector`自体は完了時スコア
+との1回分の比較のみを見る単発判定であり、収まったことの確認自体は
+見ない。`WeakNoteReviewScoreRegressionRecurrenceDetector`は悪化が
+繰り返されているかを見るもので、本クラスはその逆軸（収まったことの
+確認）を見る。実際の再学習案の表示解除・保護者への報告はアプリ側の
+責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
