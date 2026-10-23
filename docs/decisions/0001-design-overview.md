@@ -2791,6 +2791,28 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 確認）を見る。実際の再学習案の表示解除・保護者への報告はアプリ側の
 責務とする。
 
+## OfflineSessionGapRecoveryDetectorの追加
+
+長時間オフラインが解消し連続して短い起動間隔が続いていることに気づける
+ようにしたい場面向けに、`OfflineSessionGapRecoveryDetector`を`sync`
+モジュールに追加した。`OfflineSessionGapDetector`自体は直近1回分の
+起動間隔のみを見る単発判定であり、解消の確認自体は見ない。
+`OfflineSessionGapRecurrenceDetector`は長時間オフラインが繰り返され
+ているかを見るもので、本クラスはその逆軸（解消の確認）を見る。実際の
+復帰時UI・再同期トリガーの解除方法の見直しはアプリ側の責務とする。
+
+## GuardianApprovalRequestDuplicateRecoveryDetectorの追加
+
+保護者承認待ち申請の重複が解消し連続して重複なしと判定され続けている
+ことに気づけるようにしたい場面向けに、
+`GuardianApprovalRequestDuplicateRecoveryDetector`を`guardian`
+モジュールに追加した。`GuardianApprovalRequestDuplicateDetector`自体
+は1件の候補についての単発判定であり、解消の確認自体は見ない。
+`GuardianApprovalRequestDuplicateRecurrenceDetector`は重複が繰り返
+されているかを見るもので、本クラスはその逆軸（解消の確認）を見る。
+実際の重複申請の統合・再送抑制の解除方法の見直しはアプリ側の責務と
+する。
+
 ## TimeZoneDriftRecoveryDetectorの追加
 
 タイムゾーンの変化が収まり連続して変化なしと判定され続けていることに
