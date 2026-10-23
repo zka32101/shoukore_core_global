@@ -724,3 +724,6 @@
   guardianモジュールに追加した。
 - タイムゾーンの変化が収まり連続して変化なしと判定され続けている状態を
   検知する`TimeZoneDriftRecoveryDetector`をregionalモジュールに追加した。
+- 地域プロフィールの変化が収まり連続して変化なしと判定され続けている
+  状態を検知する`RegionalProfileChangeRecoveryDetector`をregionalモジュール
+  に追加した。

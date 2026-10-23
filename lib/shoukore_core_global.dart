@@ -248,6 +248,7 @@ export 'src/regional/locale_curriculum_staleness_notice_dismissal_streak_detecto
 export 'src/regional/locale_formatter.dart';
 export 'src/regional/regional_profile_change_detector.dart';
 export 'src/regional/regional_profile_change_recurrence_detector.dart';
+export 'src/regional/regional_profile_change_recovery_detector.dart';
 export 'src/regional/regional_profile_loader.dart';
 export 'src/regional/regional_profile_load_failure_fallback_notice.dart';
 export 'src/regional/regional_profile_load_failure_fallback_notice_dismissal_streak_detector.dart';
