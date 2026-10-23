@@ -98,6 +98,7 @@ export 'src/profile/profile_store.dart';
 export 'src/profile/profile_switch_audit_log.dart';
 export 'src/profile/profile_switch_cooldown.dart';
 export 'src/profile/profile_switch_revert_detector.dart';
+export 'src/profile/profile_switch_revert_recovery_detector.dart';
 export 'src/profile/profile_switch_revert_streak_detector.dart';
 export 'src/profile/sibling_profile_switch_suggestion.dart';
 export 'src/profile/sibling_profile_usage_balance.dart';
