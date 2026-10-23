@@ -2856,6 +2856,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 を見るもので、本クラスはその逆軸（収まったことの確認）を見る。実際の
 再確認案内の解除方法の見直しはアプリ側の責務とする。
 
+## MasteryAcrossUnitsStagnationRecoveryDetectorの追加
+
+複数単元の習熟度の全体的な停滞が解消し連続して停滞なしと判定され
+続けていることに気づけるようにしたい場面向けに、
+`MasteryAcrossUnitsStagnationRecoveryDetector`を`progress`モジュール
+に追加した。`MasteryAcrossUnitsStagnationDetector`自体は2時点の
+スナップショット比較のみを見る単発判定であり、解消の確認自体は見ない。
+`MasteryAcrossUnitsStagnationRecurrenceDetector`は停滞が繰り返されて
+いるかを見るもので、本クラスはその逆軸（解消の確認）を見る。実際の
+学習内容の見直し提案・通知の解除方法はアプリ側の責務とする。
+
 ## UnitAbandonmentRecoveryDetectorの追加
 
 単元の放置状態が解消し連続して放置なしと判定され続けていることに
