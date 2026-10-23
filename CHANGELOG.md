@@ -761,3 +761,6 @@
 - 誤操作らしきプロフィール切替が解消し連続してなしと判定され続けている
   状態を検知する`ProfileSwitchRevertRecoveryDetector`をprofileモジュール
   に追加した。
+- 同一レコードでの同期コンフリクトの再発が解消し連続してコンフリクト
+  なしと判定され続けている状態を検知する`SyncConflictRecoveryDetector`
+  をsyncモジュールに追加した。

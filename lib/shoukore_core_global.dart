@@ -285,6 +285,7 @@ export 'src/sync/pending_sync_item_starvation_detector.dart';
 export 'src/sync/pending_sync_item_starvation_recurrence_detector.dart';
 export 'src/sync/pending_sync_item_starvation_recovery_detector.dart';
 export 'src/sync/sync_conflict_recurrence_detector.dart';
+export 'src/sync/sync_conflict_recovery_detector.dart';
 export 'src/sync/sync_conflict_resolution_undo_window.dart';
 export 'src/sync/sync_conflict_severity_classifier.dart';
 export 'src/sync/sync_conflict_resolution_choice_bias_detector.dart';
