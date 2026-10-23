@@ -722,3 +722,5 @@
 - 保護者承認待ち申請の重複が解消し連続して重複なしと判定され続けている
   状態を検知する`GuardianApprovalRequestDuplicateRecoveryDetector`を
   guardianモジュールに追加した。
+- タイムゾーンの変化が収まり連続して変化なしと判定され続けている状態を
+  検知する`TimeZoneDriftRecoveryDetector`をregionalモジュールに追加した。
