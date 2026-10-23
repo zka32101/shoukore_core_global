@@ -740,3 +740,6 @@
 - 同期キュー内のペイロード重複が解消し連続して重複なしと判定され続け
   ている状態を検知する`DuplicateSyncPayloadRecoveryDetector`をsyncモジュール
   に追加した。
+- 複数デバイスからの同時編集の可能性が解消し連続してなしと判定され
+  続けている状態を検知する`MultiDeviceConcurrentEditRecoveryDetector`
+  をsyncモジュールに追加した。
