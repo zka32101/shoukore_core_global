@@ -835,3 +835,6 @@
   しそうな接近状態を検知する
   `ProfileAvatarRotationSuggestionIgnoredApproachingDetector`を
   profileモジュールに追加した（ApproachingDetectorパターン）。
+- 習熟度減衰の悪化トレンド判定の閾値にあと少しで到達しそうな接近
+  状態を検知する`MasteryDecayAccelerationApproachingDetector`を
+  questionモジュールに追加した（ApproachingDetectorパターン）。
