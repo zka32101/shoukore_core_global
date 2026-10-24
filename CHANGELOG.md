@@ -770,3 +770,6 @@
 - 解答時間のバラつきの急増が解消し連続して安定していると判定され続け
   ている状態を検知する`AnswerLatencyVarianceSpikeRecoveryDetector`を
   adaptiveモジュールに追加した。
+- デイリーミッションのマンネリ化が解消し連続して種類の多様性が戻って
+  いると判定され続けている状態を検知する
+  `DailyMissionMonotonyRecoveryDetector`をgrowthモジュールに追加した。
