@@ -822,3 +822,6 @@
   そうな接近状態を検知する
   `GuardianGateLockoutRepeatedTriggerApproachingDetector`をguardian
   モジュールに追加した（新パターン：ApproachingDetector）。
+- 猶予期間の繰り返し利用パターンの閾値にあと少しで到達しそうな接近
+  状態を検知する`EntitlementGracePeriodRepeatedUsageApproachingDetector`
+  をentitlementモジュールに追加した（ApproachingDetectorパターン）。
