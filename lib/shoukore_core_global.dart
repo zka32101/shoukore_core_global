@@ -251,6 +251,7 @@ export 'src/guardian/guardian_gate_rapid_attempt_recurrence_detector.dart';
 export 'src/guardian/guardian_gate_rapid_attempt_recovery_detector.dart';
 export 'src/guardian/guardian_notification_backlog_size_alert.dart';
 export 'src/guardian/guardian_notification_backlog_size_alert_dismissal_streak_detector.dart';
+export 'src/guardian/guardian_notification_backlog_size_alert_dismissal_streak_approaching_detector.dart';
 export 'src/guardian/guardian_notification_digest_throttle.dart';
 export 'src/guardian/guardian_pin_reuse_after_rotation_detector.dart';
 export 'src/guardian/guardian_pin_rotation_reminder.dart';

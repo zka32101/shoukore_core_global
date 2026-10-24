@@ -3309,6 +3309,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 自体は閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際
 の早期の表示方法の見直し案内はアプリ側の責務とする。
 
+## GuardianNotificationBacklogSizeAlertDismissalStreakApproachingDetectorの追加
+
+通知積み上がりアラートの連続無視判定の閾値にあと少しで到達しそう
+な接近状態に気づけるようにしたい場面向けに、
+`GuardianNotificationBacklogSizeAlertDismissalStreakApproachingDetector`
+を`guardian`モジュールに追加した。
+`GuardianNotificationBacklogSizeAlertDismissalStreakDetector`自体
+は閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際の
+早期のまとめ送り処理の実行判断の見直しはアプリ側の責務とする。
+
 ## CoinWalletStagnationNoticeDismissalStreakApproachingDetectorの追加
 
 コイン残高滞留通知の連続無視判定の閾値にあと少しで到達しそうな
