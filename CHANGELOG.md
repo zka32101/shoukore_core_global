@@ -793,3 +793,7 @@
 - 正答率の悪化傾向が解消し連続して正答率が安定していると判定され
   続けている状態を検知する`AnswerAccuracyDeclineTrendRecoveryDetector`
   をadaptiveモジュールに追加した。
+- 同期コンフリクト解決の片側偏りが解消し連続してバランスが取れている
+  と判定され続けている状態を検知する
+  `SyncConflictResolutionChoiceBiasRecoveryDetector`をsyncモジュール
+  に追加した。

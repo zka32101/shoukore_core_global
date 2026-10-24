@@ -3057,6 +3057,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 ウィンドウのみを見る単発判定であり、解消の確認自体は見ない。実際の
 難易度調整・復習案の表示の解除方法の見直しはアプリ側の責務とする。
 
+## SyncConflictResolutionChoiceBiasRecoveryDetectorの追加
+
+同期コンフリクト解決の片側偏りが解消し連続してバランスが取れている
+と判定され続けていることに気づけるようにしたい場面向けに、
+`SyncConflictResolutionChoiceBiasRecoveryDetector`を`sync`モジュール
+に追加した。`SyncConflictResolutionChoiceBiasDetector`自体は1回の
+直近履歴ウィンドウのみを見る単発判定であり、解消の確認自体は見ない。
+実際の解決ロジックの見直しはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
