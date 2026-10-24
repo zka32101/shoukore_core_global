@@ -3030,6 +3030,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 出題プールからの除外・差し替えの解除方法の見直しはアプリ側の責務
 とする。
 
+## AnswerAccuracyDeclineTrendRecoveryDetectorの追加
+
+正答率の悪化傾向が解消し連続して正答率が安定していると判定され
+続けていることに気づけるようにしたい場面向けに、
+`AnswerAccuracyDeclineTrendRecoveryDetector`を`adaptive`モジュールに
+追加した。`AnswerAccuracyDeclineTrendDetector`自体は1回の直近履歴
+ウィンドウのみを見る単発判定であり、解消の確認自体は見ない。実際の
+難易度調整・復習案の表示の解除方法の見直しはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
