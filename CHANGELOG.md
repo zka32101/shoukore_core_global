@@ -805,3 +805,7 @@
   と判定され続けている状態を検知する
   `CoinSpendingLimitHabitualMaxOutRecoveryDetector`をgrowthモジュール
   に追加した。
+- 推奨ダッキング音量への頻発な手動上書きが解消し連続して上書きなし
+  と判定され続けている状態を検知する
+  `AudioCueVolumeDuckingOverrideFrequencyRecoveryDetector`をaudio
+  モジュールに追加した。
