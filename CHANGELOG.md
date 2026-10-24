@@ -916,3 +916,7 @@
   しそうな接近状態を検知する
   `SyncQueueBacklogAlertDismissalStreakApproachingDetector`を
   syncモジュールに追加した（ApproachingDetectorパターン）。
+- 課金期限切れ事前通知の連続無視判定の閾値にあと少しで到達しそう
+  な接近状態を検知する
+  `EntitlementExpiryNoticeDismissalStreakApproachingDetector`を
+  entitlementモジュールに追加した（ApproachingDetectorパターン）。

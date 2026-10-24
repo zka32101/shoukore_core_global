@@ -3400,6 +3400,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 のみを判定し、到達前の接近状態自体は見ない。実際の早期の同期
 不調の調査・案内の表示方法の見直しはアプリ側の責務とする。
 
+## EntitlementExpiryNoticeDismissalStreakApproachingDetectorの追加
+
+課金期限切れ事前通知の連続無視判定の閾値にあと少しで到達しそう
+な接近状態に気づけるようにしたい場面向けに、
+`EntitlementExpiryNoticeDismissalStreakApproachingDetector`を
+`entitlement`モジュールに追加した。
+`EntitlementExpiryNoticeDismissalStreakDetector`自体は閾値到達後
+のみを判定し、到達前の接近状態自体は見ない。実際の早期の通知
+方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
