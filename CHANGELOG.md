@@ -976,6 +976,10 @@
   到達しそうな接近状態を検知する
   `InventoryItemUnusedVarietyAlertDismissalStreakApproachingDetector`
   をgrowthモジュールに追加した（ApproachingDetectorパターン）。
+- 未使用アイテムの「使ってみよう」案内の連続無視判定の閾値にあと
+  少しで到達しそうな接近状態を検知する
+  `InventoryItemStaleUsageNoticeDismissalStreakApproachingDetector`
+  をgrowthモジュールに追加した（ApproachingDetectorパターン）。
 - 購入復元の長期未実行通知の連続無視判定の閾値にあと少しで到達
   しそうな接近状態を検知する
   `EntitlementRestoreStalenessNoticeDismissalStreakApproachingDetector`
