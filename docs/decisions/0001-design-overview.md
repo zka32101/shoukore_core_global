@@ -3522,6 +3522,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 のみを判定し、到達前の接近状態自体は見ない。実際の表示頻度の
 調整・案内文の変更はアプリ側の責務とする。
 
+## GuardianApprovalRequestBatchNoticeDismissalStreakApproachingDetectorの追加
+
+承認待ちまとめ通知の連続無視判定の閾値にあと少しで到達しそうな
+接近状態に気づけるようにしたい場面向けに、
+`GuardianApprovalRequestBatchNoticeDismissalStreakApproachingDetector`
+を`guardian`モジュールに追加した。
+`GuardianApprovalRequestBatchNoticeDismissalStreakDetector`自体は
+閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際の
+表示方法の見直し案内はアプリ側の責務とする。
+
 ## InventoryItemUnusedVarietyAlertDismissalStreakApproachingDetectorの追加
 
 未使用アイテム種類数アラートの連続無視判定の閾値にあと少しで
