@@ -936,3 +936,7 @@
   状態を検知する
   `OfflineSessionResumeNoticeDismissalStreakApproachingDetector`を
   syncモジュールに追加した（ApproachingDetectorパターン）。
+- 弱点ノート急増アラートの連続無視判定の閾値にあと少しで到達しそ
+  うな接近状態を検知する
+  `WeakNoteBacklogGrowthRateAlertDismissalStreakApproachingDetector`
+  をweakモジュールに追加した（ApproachingDetectorパターン）。
