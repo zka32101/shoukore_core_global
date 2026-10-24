@@ -146,6 +146,7 @@ export 'src/entitlement/entitlement_expiry_notice_dismissal_streak_approaching_d
 export 'src/entitlement/entitlement_grace_period.dart';
 export 'src/entitlement/entitlement_grace_period_ending_soon_reminder.dart';
 export 'src/entitlement/entitlement_grace_period_ending_soon_reminder_dismissal_streak_detector.dart';
+export 'src/entitlement/entitlement_grace_period_ending_soon_reminder_dismissal_streak_approaching_detector.dart';
 export 'src/entitlement/entitlement_grace_period_repeated_usage_detector.dart';
 export 'src/entitlement/entitlement_grace_period_repeated_usage_approaching_detector.dart';
 export 'src/entitlement/entitlement_reader.dart';

@@ -968,6 +968,10 @@
   な接近状態を検知する
   `GuardianApprovalRequestBatchNoticeDismissalStreakApproachingDetector`
   をguardianモジュールに追加した（ApproachingDetectorパターン）。
+- 猶予期間終了間近通知の連続無視判定の閾値にあと少しで到達しそう
+  な接近状態を検知する
+  `EntitlementGracePeriodEndingSoonReminderDismissalStreakApproachingDetector`
+  をentitlementモジュールに追加した（ApproachingDetectorパターン）。
 - 未使用アイテム種類数アラートの連続無視判定の閾値にあと少しで
   到達しそうな接近状態を検知する
   `InventoryItemUnusedVarietyAlertDismissalStreakApproachingDetector`
