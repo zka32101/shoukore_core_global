@@ -905,3 +905,6 @@
   到達しそうな接近状態を検知する
   `WeakNoteBacklogSizeAlertDismissalStreakApproachingDetector`を
   weakモジュールに追加した（ApproachingDetectorパターン）。
+- 値下げ通知の連続無視判定の閾値にあと少しで到達しそうな接近状態
+  を検知する`ItemPriceDropNoticeDismissalStreakApproachingDetector`
+  をgrowthモジュールに追加した（ApproachingDetectorパターン）。
