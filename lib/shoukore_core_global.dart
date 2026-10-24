@@ -298,6 +298,7 @@ export 'src/sync/sync_conflict_recovery_detector.dart';
 export 'src/sync/sync_conflict_resolution_undo_window.dart';
 export 'src/sync/sync_conflict_severity_classifier.dart';
 export 'src/sync/sync_conflict_resolution_choice_bias_detector.dart';
+export 'src/sync/sync_conflict_resolution_choice_bias_recovery_detector.dart';
 export 'src/sync/pending_sync_item.dart';
 export 'src/sync/pending_sync_queue.dart';
 export 'src/sync/retry_backoff_exhaustion_rate_alert.dart';
