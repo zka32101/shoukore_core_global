@@ -199,6 +199,7 @@ export 'src/growth/mission_streak_freeze_token_expiry_warning_dismissal_streak_d
 export 'src/growth/rapid_coin_spending_streak_detector.dart';
 export 'src/growth/seasonal_event_validity_guard.dart';
 export 'src/growth/streak_freeze_token_waste_detector.dart';
+export 'src/growth/streak_freeze_token_waste_approaching_detector.dart';
 export 'src/growth/streak_recovery_grace.dart';
 export 'src/growth/streak_recovery_grace_repeated_usage_detector.dart';
 export 'src/growth/streak_risk_alert.dart';
