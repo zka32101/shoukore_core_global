@@ -327,6 +327,7 @@ export 'src/sync/sync_queue_backlog_alert_dismissal_streak_detector.dart';
 export 'src/sync/stale_data_policy.dart';
 export 'src/weak/spaced_review.dart';
 export 'src/weak/spaced_review_box_level_regression_streak_detector.dart';
+export 'src/weak/spaced_review_box_level_regression_streak_approaching_detector.dart';
 export 'src/weak/spaced_review_overdue_backlog_alert.dart';
 export 'src/weak/spaced_review_overdue_backlog_alert_dismissal_streak_detector.dart';
 export 'src/weak/weak_note_backlog_size_alert.dart';
