@@ -905,3 +905,7 @@
   到達しそうな接近状態を検知する
   `WeakNoteBacklogSizeAlertDismissalStreakApproachingDetector`を
   weakモジュールに追加した（ApproachingDetectorパターン）。
+- 同期キュー滞留アラートの連続無視判定の閾値にあと少しで到達
+  しそうな接近状態を検知する
+  `SyncQueueBacklogAlertDismissalStreakApproachingDetector`を
+  syncモジュールに追加した（ApproachingDetectorパターン）。
