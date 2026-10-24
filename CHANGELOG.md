@@ -928,6 +928,10 @@
   な接近状態を検知する
   `EntitlementExpiryNoticeDismissalStreakApproachingDetector`を
   entitlementモジュールに追加した（ApproachingDetectorパターン）。
+- 同期ペイロードサイズ異常アラートの連続無視判定の閾値にあと少し
+  で到達しそうな接近状態を検知する
+  `SyncPayloadSizeAlertDismissalStreakApproachingDetector`を
+  syncモジュールに追加した（ApproachingDetectorパターン）。
 - 弱点ノート急増アラートの連続無視判定の閾値にあと少しで到達しそ
   うな接近状態を検知する
   `WeakNoteBacklogGrowthRateAlertDismissalStreakApproachingDetector`

@@ -340,6 +340,7 @@ export 'src/sync/retry_backoff_exhaustion_recovery_detector.dart';
 export 'src/sync/retry_backoff_policy.dart';
 export 'src/sync/sync_payload_size_alert.dart';
 export 'src/sync/sync_payload_size_alert_dismissal_streak_detector.dart';
+export 'src/sync/sync_payload_size_alert_dismissal_streak_approaching_detector.dart';
 export 'src/sync/sync_queue_backlog_alert.dart';
 export 'src/sync/sync_queue_backlog_alert_dismissal_streak_detector.dart';
 export 'src/sync/sync_queue_backlog_alert_dismissal_streak_approaching_detector.dart';
