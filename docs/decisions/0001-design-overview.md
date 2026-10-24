@@ -3250,6 +3250,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 みを判定し、到達前の接近状態自体は見ない。実際の早期の設定見直し
 提案の表示はアプリ側の責務とする。
 
+## SessionReviewModeRatioAlertDismissalStreakApproachingDetectorの追加
+
+復習モード偏りアラートの連続無視判定の閾値にあと少しで到達しそう
+な接近状態に気づけるようにしたい場面向けに、
+`SessionReviewModeRatioAlertDismissalStreakApproachingDetector`を
+`adaptive`モジュールに追加した。
+`SessionReviewModeRatioAlertDismissalStreakDetector`自体は閾値
+到達後のみを判定し、到達前の接近状態自体は見ない。実際の早期の
+出題モード切り替え判断の見直しはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
