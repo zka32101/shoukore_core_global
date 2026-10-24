@@ -828,3 +828,7 @@
 - ストリークフリーズトークンの無駄遣い判定の閾値にあと少しで到達
   しそうな接近状態を検知する`StreakFreezeTokenWasteApproachingDetector`
   をgrowthモジュールに追加した（ApproachingDetectorパターン）。
+- プロフィールアバター回転提案の連続無視判定の閾値にあと少しで到達
+  しそうな接近状態を検知する
+  `ProfileAvatarRotationSuggestionIgnoredApproachingDetector`を
+  profileモジュールに追加した（ApproachingDetectorパターン）。
