@@ -206,6 +206,7 @@ export 'src/growth/streak_freeze_token_waste_detector.dart';
 export 'src/growth/streak_freeze_token_waste_approaching_detector.dart';
 export 'src/growth/streak_recovery_grace.dart';
 export 'src/growth/streak_recovery_grace_repeated_usage_detector.dart';
+export 'src/growth/streak_recovery_grace_repeated_usage_approaching_detector.dart';
 export 'src/growth/streak_risk_alert.dart';
 export 'src/growth/streak_risk_alert_dismissal_streak_detector.dart';
 export 'src/growth/item_price_drop_notice.dart';
