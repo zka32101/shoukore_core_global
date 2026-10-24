@@ -848,3 +848,7 @@
   状態を検知する
   `SpacedReviewBoxLevelRegressionStreakApproachingDetector`を
   weakモジュールに追加した（ApproachingDetectorパターン）。
+- 保護者承認申請の連続却下判定の閾値にあと少しで到達しそうな接近
+  状態を検知する
+  `GuardianApprovalRequestRepeatedRejectionStreakApproachingDetector`を
+  guardianモジュールに追加した（ApproachingDetectorパターン）。
