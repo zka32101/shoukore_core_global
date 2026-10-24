@@ -3106,6 +3106,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 実際の設定見直し提案の表示の解除方法の見直しはアプリ側の責務と
 する。
 
+## UnitRecommendationIgnoredRecoveryDetectorの追加
+
+単元提案の無視状態が解消し連続して着手されていると判定され続けて
+いることに気づけるようにしたい場面向けに、
+`UnitRecommendationIgnoredRecoveryDetector`を`question`モジュール
+に追加した。`UnitRecommendationIgnoredDetector`自体は1回の提示回数
+のみを見る単発判定であり、解消の確認自体は見ない。実際の提案内容
+の変更・別単元への切り替えの解除方法の見直しはアプリ側の責務と
+する。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
