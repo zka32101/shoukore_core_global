@@ -16,6 +16,7 @@ export 'src/adaptive/question_difficulty_drift_alert_dismissal_streak_detector.d
 export 'src/adaptive/question_repetition_fatigue_detector.dart';
 export 'src/adaptive/question_repetition_fatigue_recovery_detector.dart';
 export 'src/adaptive/question_variety_bias_detector.dart';
+export 'src/adaptive/question_variety_bias_recovery_detector.dart';
 export 'src/adaptive/rapid_answer_streak_detector.dart';
 export 'src/adaptive/session_review_mode_ratio_alert.dart';
 export 'src/adaptive/session_review_mode_ratio_alert_dismissal_streak_detector.dart';
