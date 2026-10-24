@@ -269,6 +269,7 @@ export 'src/privacy/age_gate.dart';
 export 'src/privacy/in_memory_consent_store.dart';
 export 'src/regional/device_locale_suggester.dart';
 export 'src/regional/device_locale_suggestion_ignored_detector.dart';
+export 'src/regional/device_locale_suggestion_ignored_approaching_detector.dart';
 export 'src/regional/locale_curriculum_staleness_notice.dart';
 export 'src/regional/locale_curriculum_staleness_notice_dismissal_streak_detector.dart';
 export 'src/regional/locale_formatter.dart';
