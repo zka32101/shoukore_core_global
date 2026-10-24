@@ -299,6 +299,7 @@ export 'src/regional/timezone_drift_recurrence_detector.dart';
 export 'src/regional/timezone_drift_recovery_detector.dart';
 export 'src/regional/timezone_drift_recalibration_prompt.dart';
 export 'src/regional/timezone_drift_recalibration_prompt_dismissal_streak_detector.dart';
+export 'src/regional/timezone_drift_recalibration_prompt_dismissal_streak_approaching_detector.dart';
 export 'src/sync/duplicate_sync_payload_detector.dart';
 export 'src/sync/duplicate_sync_payload_recurrence_detector.dart';
 export 'src/sync/duplicate_sync_payload_recovery_detector.dart';

@@ -893,3 +893,7 @@
   接近状態を検知する
   `SettingsBackupStalenessNoticeDismissalStreakApproachingDetector`を
   privacyモジュールに追加した（ApproachingDetectorパターン）。
+- タイムゾーン再確認プロンプトの連続無視判定の閾値にあと少しで
+  到達しそうな接近状態を検知する
+  `TimeZoneDriftRecalibrationPromptDismissalStreakApproachingDetector`
+  をregionalモジュールに追加した（ApproachingDetectorパターン）。
