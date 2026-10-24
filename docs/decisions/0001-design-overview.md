@@ -3136,6 +3136,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 >= threshold`型）とし、`marginRatio`で指定した閾値手前の割合に入って
 いれば接近状態と判定する。
 
+## GuardianGateLockoutRepeatedTriggerApproachingDetectorの追加
+
+保護者ゲートのロックアウト繰り返し発生の閾値にあと少しで到達しそう
+な接近状態に気づけるようにしたい場面向けに、
+`GuardianGateLockoutRepeatedTriggerApproachingDetector`を`guardian`
+モジュールに追加した。`GuardianGateLockoutRepeatedTriggerDetector`
+自体は閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際の
+早期の注意喚起表示はアプリ側の責務とする。
+
 ## EntitlementGracePeriodRepeatedUsageApproachingDetectorの追加
 
 猶予期間の繰り返し利用パターンの閾値にあと少しで到達しそうな接近

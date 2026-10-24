@@ -818,6 +818,10 @@
 - 単元提案の無視状態が解消し連続して着手されていると判定され続けて
   いる状態を検知する`UnitRecommendationIgnoredRecoveryDetector`を
   questionモジュールに追加した。
+- 保護者ゲートのロックアウト繰り返し発生の閾値にあと少しで到達し
+  そうな接近状態を検知する
+  `GuardianGateLockoutRepeatedTriggerApproachingDetector`をguardian
+  モジュールに追加した（新パターン：ApproachingDetector）。
 - 猶予期間の繰り返し利用パターンの閾値にあと少しで到達しそうな接近
   状態を検知する`EntitlementGracePeriodRepeatedUsageApproachingDetector`
   をentitlementモジュールに追加した（ApproachingDetectorパターン）。
