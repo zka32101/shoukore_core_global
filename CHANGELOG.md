@@ -828,3 +828,6 @@
 - ストリークフリーズトークンの無駄遣い判定の閾値にあと少しで到達
   しそうな接近状態を検知する`StreakFreezeTokenWasteApproachingDetector`
   をgrowthモジュールに追加した（ApproachingDetectorパターン）。
+- 端末ロケール提案の連続無視判定の閾値にあと少しで到達しそうな接近
+  状態を検知する`DeviceLocaleSuggestionIgnoredApproachingDetector`を
+  regionalモジュールに追加した（ApproachingDetectorパターン）。
