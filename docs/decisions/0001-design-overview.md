@@ -3522,6 +3522,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 のみを判定し、到達前の接近状態自体は見ない。実際の表示頻度の
 調整・案内文の変更はアプリ側の責務とする。
 
+## InventoryItemUnusedVarietyAlertDismissalStreakApproachingDetectorの追加
+
+未使用アイテム種類数アラートの連続無視判定の閾値にあと少しで
+到達しそうな接近状態に気づけるようにしたい場面向けに、
+`InventoryItemUnusedVarietyAlertDismissalStreakApproachingDetector`
+を`growth`モジュールに追加した。
+`InventoryItemUnusedVarietyAlertDismissalStreakDetector`自体は
+閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際の
+「まとめて使ってみよう」案内の表示方法の見直しはアプリ側の
+責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
