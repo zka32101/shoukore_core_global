@@ -336,6 +336,7 @@ export 'src/sync/pending_sync_item.dart';
 export 'src/sync/pending_sync_queue.dart';
 export 'src/sync/retry_backoff_exhaustion_rate_alert.dart';
 export 'src/sync/retry_backoff_exhaustion_rate_alert_dismissal_streak_detector.dart';
+export 'src/sync/retry_backoff_exhaustion_rate_alert_dismissal_streak_approaching_detector.dart';
 export 'src/sync/retry_backoff_exhaustion_recurrence_detector.dart';
 export 'src/sync/retry_backoff_exhaustion_recovery_detector.dart';
 export 'src/sync/retry_backoff_policy.dart';
