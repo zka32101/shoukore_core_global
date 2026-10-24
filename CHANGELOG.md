@@ -838,3 +838,6 @@
 - 習熟度減衰の悪化トレンド判定の閾値にあと少しで到達しそうな接近
   状態を検知する`MasteryDecayAccelerationApproachingDetector`を
   questionモジュールに追加した（ApproachingDetectorパターン）。
+- 週次レポート連続未読放置判定の閾値にあと少しで到達しそうな接近
+  状態を検知する`WeeklyReportUnopenedStreakApproachingDetector`を
+  guardianモジュールに追加した（ApproachingDetectorパターン）。
