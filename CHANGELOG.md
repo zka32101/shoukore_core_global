@@ -767,3 +767,6 @@
 - 通知予定の時間的密集が解消し連続して密集なしと判定され続けている
   状態を検知する`NotificationScheduleClusteringRecoveryDetector`をnotify
   モジュールに追加した。
+- 解答時間のバラつきの急増が解消し連続して安定していると判定され続け
+  ている状態を検知する`AnswerLatencyVarianceSpikeRecoveryDetector`を
+  adaptiveモジュールに追加した。
