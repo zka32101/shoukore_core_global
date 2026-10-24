@@ -2974,6 +2974,25 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 のみを見るため、解消の確認自体は見ない。実際の再発箇所の個別調査・
 警告表示の解除方法の見直しはアプリ側の責務とする。
 
+## NotificationScheduleClusteringRecoveryDetectorの追加
+
+通知予定の時間的密集が解消し連続して密集なしと判定され続けている
+ことに気づけるようにしたい場面向けに、
+`NotificationScheduleClusteringRecoveryDetector`を`notify`モジュール
+に追加した。`NotificationScheduleClusteringDetector`自体は1回の
+スケジュール集合内での密集のみを見る単発判定であり、解消の確認自体
+は見ない。実際の通知の間引き・時間分散の実行方法の見直しはアプリ側
+の責務とする。
+
+## AnswerLatencyVarianceSpikeRecoveryDetectorの追加
+
+解答時間のバラつきの急増が解消し連続して安定していると判定され続け
+ていることに気づけるようにしたい場面向けに、
+`AnswerLatencyVarianceSpikeRecoveryDetector`を`adaptive`モジュール
+に追加した。`AnswerLatencyVarianceSpikeDetector`自体は1ウィンドウ分
+の解答時間列のみを見る単発判定であり、解消の確認自体は見ない。実際
+の集中力低下への対応・通知の解除方法の見直しはアプリ側の責務とする。
+
 ## DailyMissionMonotonyRecoveryDetectorの追加
 
 デイリーミッションのマンネリ化が解消し連続して種類の多様性が戻って
