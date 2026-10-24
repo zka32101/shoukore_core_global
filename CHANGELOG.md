@@ -808,3 +808,7 @@
 - ミュート/解除の頻発な切り替えが解消し連続して頻発なしと判定され
   続けている状態を検知する`AudioMuteToggleFrequencyRecoveryDetector`
   をaudioモジュールに追加した。
+- 推奨ダッキング音量への頻発な手動上書きが解消し連続して上書きなし
+  と判定され続けている状態を検知する
+  `AudioCueVolumeDuckingOverrideFrequencyRecoveryDetector`をaudio
+  モジュールに追加した。

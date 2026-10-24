@@ -3095,6 +3095,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 のみを見る単発判定であり、解消の確認自体は見ない。実際の設定UIの
 見直し案内の解除方法の見直しはアプリ側の責務とする。
 
+## AudioCueVolumeDuckingOverrideFrequencyRecoveryDetectorの追加
+
+推奨ダッキング音量への頻発な手動上書きが解消し連続して上書きなし
+と判定され続けていることに気づけるようにしたい場面向けに、
+`AudioCueVolumeDuckingOverrideFrequencyRecoveryDetector`を`audio`
+モジュールに追加した。
+`AudioCueVolumeDuckingOverrideFrequencyDetector`自体は1回の直近
+履歴ウィンドウのみを見る単発判定であり、解消の確認自体は見ない。
+実際の設定見直し提案の表示の解除方法の見直しはアプリ側の責務と
+する。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
