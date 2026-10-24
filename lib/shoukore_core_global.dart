@@ -343,6 +343,7 @@ export 'src/weak/spaced_review_overdue_backlog_alert.dart';
 export 'src/weak/spaced_review_overdue_backlog_alert_dismissal_streak_detector.dart';
 export 'src/weak/weak_note_backlog_size_alert.dart';
 export 'src/weak/weak_note_backlog_size_alert_dismissal_streak_detector.dart';
+export 'src/weak/weak_note_backlog_size_alert_dismissal_streak_approaching_detector.dart';
 export 'src/weak/weak_note_backlog_growth_rate_alert.dart';
 export 'src/weak/weak_note_backlog_growth_rate_alert_dismissal_streak_detector.dart';
 export 'src/weak/weak_note_backlog_oldest_item_age_alert.dart';
