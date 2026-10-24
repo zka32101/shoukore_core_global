@@ -901,3 +901,7 @@
   到達しそうな接近状態を検知する
   `TimeZoneDriftRecalibrationPromptDismissalStreakApproachingDetector`
   をregionalモジュールに追加した（ApproachingDetectorパターン）。
+- 弱点ノート積み上がりアラートの連続無視判定の閾値にあと少しで
+  到達しそうな接近状態を検知する
+  `WeakNoteBacklogSizeAlertDismissalStreakApproachingDetector`を
+  weakモジュールに追加した（ApproachingDetectorパターン）。
