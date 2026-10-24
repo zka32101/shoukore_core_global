@@ -111,6 +111,7 @@ export 'src/profile/profile_avatar_rotation_suggestion_ignored_approaching_detec
 export 'src/profile/profile.dart';
 export 'src/profile/profile_photo_staleness_notice.dart';
 export 'src/profile/profile_photo_staleness_notice_dismissal_streak_detector.dart';
+export 'src/profile/profile_photo_staleness_notice_dismissal_streak_approaching_detector.dart';
 export 'src/profile/profile_store.dart';
 export 'src/profile/profile_switch_audit_log.dart';
 export 'src/profile/profile_switch_cooldown.dart';
@@ -217,6 +218,7 @@ export 'src/growth/streak_risk_alert.dart';
 export 'src/growth/streak_risk_alert_dismissal_streak_detector.dart';
 export 'src/growth/item_price_drop_notice.dart';
 export 'src/growth/item_price_drop_notice_dismissal_streak_detector.dart';
+export 'src/growth/item_price_drop_notice_dismissal_streak_approaching_detector.dart';
 export 'src/growth/store_item.dart';
 export 'src/guardian/daily_digest.dart';
 export 'src/guardian/daily_digest_builder.dart';
