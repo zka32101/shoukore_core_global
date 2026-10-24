@@ -3339,6 +3339,26 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 到達後のみを判定し、到達前の接近状態自体は見ない。実際の早期の
 表示方法の見直し案内はアプリ側の責務とする。
 
+## InventoryItemExpiryNoticeDismissalStreakApproachingDetectorの追加
+
+期限切れ事前通知の連続無視判定の閾値にあと少しで到達しそうな接近
+状態に気づけるようにしたい場面向けに、
+`InventoryItemExpiryNoticeDismissalStreakApproachingDetector`を
+`growth`モジュールに追加した。
+`InventoryItemExpiryNoticeDismissalStreakDetector`自体は閾値
+到達後のみを判定し、到達前の接近状態自体は見ない。実際の早期の
+表示方法の見直し案内はアプリ側の責務とする。
+
+## TimeZoneDriftRecalibrationPromptDismissalStreakApproachingDetectorの追加
+
+タイムゾーン再確認プロンプトの連続無視判定の閾値にあと少しで到達
+しそうな接近状態に気づけるようにしたい場面向けに、
+`TimeZoneDriftRecalibrationPromptDismissalStreakApproachingDetector`
+を`regional`モジュールに追加した。
+`TimeZoneDriftRecalibrationPromptDismissalStreakDetector`自体は
+閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際の早期
+の表示方法の見直し案内はアプリ側の責務とする。
+
 ## WeakNoteBacklogSizeAlertDismissalStreakApproachingDetectorの追加
 
 弱点ノート積み上がりアラートの連続無視判定の閾値にあと少しで到達
