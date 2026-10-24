@@ -217,6 +217,7 @@ export 'src/growth/streak_risk_alert.dart';
 export 'src/growth/streak_risk_alert_dismissal_streak_detector.dart';
 export 'src/growth/item_price_drop_notice.dart';
 export 'src/growth/item_price_drop_notice_dismissal_streak_detector.dart';
+export 'src/growth/item_price_drop_notice_dismissal_streak_approaching_detector.dart';
 export 'src/growth/store_item.dart';
 export 'src/guardian/daily_digest.dart';
 export 'src/guardian/daily_digest_builder.dart';
