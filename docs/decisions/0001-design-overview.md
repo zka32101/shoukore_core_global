@@ -3057,6 +3057,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 ウィンドウのみを見る単発判定であり、解消の確認自体は見ない。実際の
 難易度調整・復習案の表示の解除方法の見直しはアプリ側の責務とする。
 
+## CoinSpendingLimitHabitualMaxOutRecoveryDetectorの追加
+
+日次コイン消費上限への連日到達の常態化が解消し連続して上限未到達
+と判定され続けていることに気づけるようにしたい場面向けに、
+`CoinSpendingLimitHabitualMaxOutRecoveryDetector`を`growth`モジュール
+に追加した。`CoinSpendingLimitHabitualMaxOutDetector`自体は1回の
+直近履歴ウィンドウのみを見る単発判定であり、解消の確認自体は見ない。
+実際の上限緩和提案・使い道の見直し案内の解除方法の見直しはアプリ側
+の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
