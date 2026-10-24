@@ -3106,6 +3106,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 実際の設定見直し提案の表示の解除方法の見直しはアプリ側の責務と
 する。
 
+## AdaptiveDifficultyOscillationRecoveryDetectorの追加
+
+難易度の振動状態が解消し連続して安定していると判定され続けている
+ことに気づけるようにしたい場面向けに、
+`AdaptiveDifficultyOscillationRecoveryDetector`を`adaptive`モジュール
+に追加した。`AdaptiveDifficultyOscillationDetector`自体は1回の直近
+履歴ウィンドウのみを見る単発判定であり、解消の確認自体は見ない。
+実際の難易度調整ロジックの見直し・単元切り替え提案の解除方法の
+見直しはアプリ側の責務とする。
+
 ## UnitRecommendationIgnoredRecoveryDetectorの追加
 
 単元提案の無視状態が解消し連続して着手されていると判定され続けて

@@ -3,6 +3,7 @@ library;
 
 export 'src/adaptive/adaptive_difficulty.dart';
 export 'src/adaptive/adaptive_difficulty_oscillation_detector.dart';
+export 'src/adaptive/adaptive_difficulty_oscillation_recovery_detector.dart';
 export 'src/adaptive/adaptive_difficulty_plateau_detector.dart';
 export 'src/adaptive/adaptive_difficulty_plateau_recovery_detector.dart';
 export 'src/adaptive/answer_accuracy_decline_trend_detector.dart';

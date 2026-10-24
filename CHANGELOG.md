@@ -812,6 +812,9 @@
   と判定され続けている状態を検知する
   `AudioCueVolumeDuckingOverrideFrequencyRecoveryDetector`をaudio
   モジュールに追加した。
+- 難易度の振動状態が解消し連続して安定していると判定され続けている
+  状態を検知する`AdaptiveDifficultyOscillationRecoveryDetector`を
+  adaptiveモジュールに追加した。
 - 単元提案の無視状態が解消し連続して着手されていると判定され続けて
   いる状態を検知する`UnitRecommendationIgnoredRecoveryDetector`を
   questionモジュールに追加した。
