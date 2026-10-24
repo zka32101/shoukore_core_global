@@ -29,6 +29,7 @@ export 'src/audio/audio_cue_volume_ducking_suggestion.dart';
 export 'src/audio/audio_cue_volume_ducking_override_frequency_detector.dart';
 export 'src/audio/audio_cue_volume_ducking_override_frequency_recovery_detector.dart';
 export 'src/audio/audio_cue_volume_ducking_override_streak_detector.dart';
+export 'src/audio/audio_cue_volume_ducking_override_streak_approaching_detector.dart';
 export 'src/audio/audio_mute_staleness_notice.dart';
 export 'src/audio/audio_mute_staleness_notice_dismissal_streak_detector.dart';
 export 'src/audio/audio_mute_toggle_frequency_detector.dart';
