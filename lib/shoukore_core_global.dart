@@ -21,6 +21,7 @@ export 'src/adaptive/session_review_mode_ratio_alert.dart';
 export 'src/adaptive/session_review_mode_ratio_alert_dismissal_streak_detector.dart';
 export 'src/audio/audio_cue_player.dart';
 export 'src/audio/audio_cue_repetition_fatigue_detector.dart';
+export 'src/audio/audio_cue_repetition_fatigue_recovery_detector.dart';
 export 'src/audio/audio_cue_volume_ducking_suggestion.dart';
 export 'src/audio/audio_cue_volume_ducking_override_frequency_detector.dart';
 export 'src/audio/audio_cue_volume_ducking_override_streak_detector.dart';

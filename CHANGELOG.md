@@ -783,3 +783,7 @@
   判定され続けている状態を検知する
   `QuestionRepetitionFatigueRecoveryDetector`をadaptiveモジュールに
   追加した。
+- 同一音声キューの繰り返し再生による疲労状態が解消し連続して多様な
+  再生と判定され続けている状態を検知する
+  `AudioCueRepetitionFatigueRecoveryDetector`をaudioモジュールに
+  追加した。
