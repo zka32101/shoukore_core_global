@@ -801,3 +801,7 @@
   と判定され続けている状態を検知する
   `CoinEarningCapHabitualHitRecoveryDetector`をgrowthモジュールに
   追加した。
+- 日次コイン消費上限への連日到達の常態化が解消し連続して上限未到達
+  と判定され続けている状態を検知する
+  `CoinSpendingLimitHabitualMaxOutRecoveryDetector`をgrowthモジュール
+  に追加した。
