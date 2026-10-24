@@ -3126,6 +3126,26 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 の変更・別単元への切り替えの解除方法の見直しはアプリ側の責務と
 する。
 
+## ApproachingDetectorパターンの導入
+
+これまでのRecurrenceDetector（繰り返し検知）・RecoveryDetector
+（解消確認）はいずれも「問題が起きた後」側の軸だった。新たに
+「問題が起きる前」側、すなわち閾値にまだ到達していないが接近して
+いる状態を早期に検知する`XxxApproachingDetector`パターンを導入した。
+対象は連続カウント値と閾値を比較する形のベース（`consecutiveXXXCount
+>= threshold`型）とし、`marginRatio`で指定した閾値手前の割合に入って
+いれば接近状態と判定する。
+
+## EntitlementGracePeriodRepeatedUsageApproachingDetectorの追加
+
+猶予期間の繰り返し利用パターンの閾値にあと少しで到達しそうな接近
+状態に気づけるようにしたい場面向けに、
+`EntitlementGracePeriodRepeatedUsageApproachingDetector`を
+`entitlement`モジュールに追加した。
+`EntitlementGracePeriodRepeatedUsageDetector`自体は閾値到達後のみ
+を判定し、到達前の接近状態自体は見ない。実際の早期の更新方法見直し
+案内の表示はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

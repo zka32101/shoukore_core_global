@@ -818,3 +818,6 @@
 - 単元提案の無視状態が解消し連続して着手されていると判定され続けて
   いる状態を検知する`UnitRecommendationIgnoredRecoveryDetector`を
   questionモジュールに追加した。
+- 猶予期間の繰り返し利用パターンの閾値にあと少しで到達しそうな接近
+  状態を検知する`EntitlementGracePeriodRepeatedUsageApproachingDetector`
+  をentitlementモジュールに追加した（ApproachingDetectorパターン）。
