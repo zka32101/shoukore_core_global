@@ -859,6 +859,12 @@
   そうな接近状態を検知する
   `AudioCueVolumeDuckingOverrideStreakApproachingDetector`を
   audioモジュールに追加した（ApproachingDetectorパターン）。
+- 見逃し猶予の連続利用判定の閾値にあと少しで到達しそうな接近状態
+  を検知する`StreakRecoveryGraceRepeatedUsageApproachingDetector`を
+  growthモジュールに追加した（ApproachingDetectorパターン）。
+- プロフィール切替の誤操作連続発生判定の閾値にあと少しで到達し
+  そうな接近状態を検知する`ProfileSwitchRevertStreakApproachingDetector`
+  をprofileモジュールに追加した（ApproachingDetectorパターン）。
 - 復習モード偏りアラートの連続無視判定の閾値にあと少しで到達し
   そうな接近状態を検知する
   `SessionReviewModeRatioAlertDismissalStreakApproachingDetector`を

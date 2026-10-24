@@ -3250,6 +3250,25 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 みを判定し、到達前の接近状態自体は見ない。実際の早期の設定見直し
 提案の表示はアプリ側の責務とする。
 
+## StreakRecoveryGraceRepeatedUsageApproachingDetectorの追加
+
+見逃し猶予の連続利用判定の閾値にあと少しで到達しそうな接近状態
+に気づけるようにしたい場面向けに、
+`StreakRecoveryGraceRepeatedUsageApproachingDetector`を`growth`
+モジュールに追加した。
+`StreakRecoveryGraceRepeatedUsageDetector`自体は閾値到達後のみを
+判定し、到達前の接近状態自体は見ない。実際の早期の学習習慣の
+見直し案内はアプリ側の責務とする。
+
+## ProfileSwitchRevertStreakApproachingDetectorの追加
+
+プロフィール切替の誤操作連続発生判定の閾値にあと少しで到達しそう
+な接近状態に気づけるようにしたい場面向けに、
+`ProfileSwitchRevertStreakApproachingDetector`を`profile`モジュール
+に追加した。`ProfileSwitchRevertStreakDetector`自体は閾値到達後の
+みを判定し、到達前の接近状態自体は見ない。実際の早期の「切替方法
+を見直しますか？」案内の表示はアプリ側の責務とする。
+
 ## SessionReviewModeRatioAlertDismissalStreakApproachingDetectorの追加
 
 復習モード偏りアラートの連続無視判定の閾値にあと少しで到達しそう
