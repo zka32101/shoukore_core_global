@@ -848,6 +848,13 @@
   状態を検知する
   `SpacedReviewBoxLevelRegressionStreakApproachingDetector`を
   weakモジュールに追加した（ApproachingDetectorパターン）。
+- 保護者承認申請の連続却下判定の閾値にあと少しで到達しそうな接近
+  状態を検知する
+  `GuardianApprovalRequestRepeatedRejectionStreakApproachingDetector`を
+  guardianモジュールに追加した（ApproachingDetectorパターン）。
+- 弱点ノート復習の連続スキップ判定の閾値にあと少しで到達しそうな
+  接近状態を検知する`WeakNoteReviewSkipStreakApproachingDetector`を
+  weakモジュールに追加した（ApproachingDetectorパターン）。
 - 推奨ダッキング音量への連続上書き判定の閾値にあと少しで到達し
   そうな接近状態を検知する
   `AudioCueVolumeDuckingOverrideStreakApproachingDetector`を

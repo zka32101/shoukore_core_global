@@ -3221,6 +3221,25 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 みを判定し、到達前の接近状態自体は見ない。実際の早期の「別の教え方
 で復習しよう」案内の表示はアプリ側の責務とする。
 
+## GuardianApprovalRequestRepeatedRejectionStreakApproachingDetectorの追加
+
+保護者承認申請の連続却下判定の閾値にあと少しで到達しそうな接近
+状態に気づけるようにしたい場面向けに、
+`GuardianApprovalRequestRepeatedRejectionStreakApproachingDetector`を
+`guardian`モジュールに追加した。
+`GuardianApprovalRequestRepeatedRejectionStreakDetector`自体は閾値
+到達後のみを判定し、到達前の接近状態自体は見ない。実際の早期の
+再申請制限・案内表示はアプリ側の責務とする。
+
+## WeakNoteReviewSkipStreakApproachingDetectorの追加
+
+弱点ノート復習の連続スキップ判定の閾値にあと少しで到達しそうな
+接近状態に気づけるようにしたい場面向けに、
+`WeakNoteReviewSkipStreakApproachingDetector`を`weak`モジュール
+に追加した。`WeakNoteReviewSkipStreakDetector`自体は閾値到達後の
+みを判定し、到達前の接近状態自体は見ない。実際の早期のリマインド
+強化・出題への優先的な混在はアプリ側の責務とする。
+
 ## AudioCueVolumeDuckingOverrideStreakApproachingDetectorの追加
 
 推奨ダッキング音量への連続上書き判定の閾値にあと少しで到達しそう
