@@ -76,6 +76,7 @@ export 'src/store/in_memory_migration_ledger.dart';
 export 'src/store/migration_ledger.dart';
 export 'src/store/migration_ledger_pending_migration_alert.dart';
 export 'src/store/migration_ledger_pending_migration_alert_dismissal_streak_detector.dart';
+export 'src/store/migration_ledger_pending_migration_alert_dismissal_streak_approaching_detector.dart';
 export 'src/store/migration_ledger_rollback_guard.dart';
 export 'src/notify/daily_reminder_nonresponse_streak_detector.dart';
 export 'src/notify/daily_reminder_planner.dart';
