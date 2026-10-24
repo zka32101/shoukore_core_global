@@ -928,3 +928,7 @@
   な接近状態を検知する
   `EntitlementExpiryNoticeDismissalStreakApproachingDetector`を
   entitlementモジュールに追加した（ApproachingDetectorパターン）。
+- 同期完了案内の連続無視判定の閾値にあと少しで到達しそうな接近
+  状態を検知する
+  `OfflineSessionResumeNoticeDismissalStreakApproachingDetector`を
+  syncモジュールに追加した（ApproachingDetectorパターン）。
