@@ -3460,6 +3460,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 到達後のみを判定し、到達前の接近状態自体は見ない。実際の「まと
 めて復習しよう」案内の表示方法の見直しはアプリ側の責務とする。
 
+## GuardianApprovalRequestBacklogSizeAlertDismissalStreakApproachingDetectorの追加
+
+承認待ち滞留アラートの連続無視判定の閾値にあと少しで到達しそう
+な接近状態に気づけるようにしたい場面向けに、
+`GuardianApprovalRequestBacklogSizeAlertDismissalStreakApproachingDetector`
+を`guardian`モジュールに追加した。
+`GuardianApprovalRequestBacklogSizeAlertDismissalStreakDetector`
+自体は閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際
+の表示方法の見直し案内はアプリ側の責務とする。
+
 ## RetryBackoffExhaustionRateAlertDismissalStreakApproachingDetectorの追加
 
 システム的同期障害アラートの連続無視判定の閾値にあと少しで到達
