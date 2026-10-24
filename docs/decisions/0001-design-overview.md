@@ -3491,6 +3491,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 状態の確認・メンテナンス通知の表示方法の見直しはアプリ側の責務
 とする。
 
+## ScreenTimeGuardOverrideFrequencyAlertDismissalStreakApproachingDetectorの追加
+
+利用時間制限の頻繁な一時解除アラートの連続無視判定の閾値にあと
+少しで到達しそうな接近状態に気づけるようにしたい場面向けに、
+`ScreenTimeGuardOverrideFrequencyAlertDismissalStreakApproachingDetector`
+を`guardian`モジュールに追加した。
+`ScreenTimeGuardOverrideFrequencyAlertDismissalStreakDetector`自体
+は閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際の
+「制限の見直しを検討しますか」案内の表示方法の見直しはアプリ側の
+責務とする。
+
 ## EntitlementRestorePromptDismissalStreakApproachingDetectorの追加
 
 購入復元プロンプトの連続無視判定の閾値にあと少しで到達しそうな
