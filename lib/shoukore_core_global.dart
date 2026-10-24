@@ -151,6 +151,7 @@ export 'src/growth/unit_mastery_badge_accuracy_regression_recurrence_detector.da
 export 'src/growth/unit_mastery_badge_accuracy_regression_recovery_detector.dart';
 export 'src/growth/answer_streak_bonus.dart';
 export 'src/growth/coin_earning_cap_habitual_hit_detector.dart';
+export 'src/growth/coin_earning_cap_habitual_hit_recovery_detector.dart';
 export 'src/growth/coin_earning_cap_per_day.dart';
 export 'src/growth/coin_spending_limit.dart';
 export 'src/growth/coin_spending_limit_habitual_maxout_detector.dart';
@@ -299,6 +300,7 @@ export 'src/sync/sync_conflict_recovery_detector.dart';
 export 'src/sync/sync_conflict_resolution_undo_window.dart';
 export 'src/sync/sync_conflict_severity_classifier.dart';
 export 'src/sync/sync_conflict_resolution_choice_bias_detector.dart';
+export 'src/sync/sync_conflict_resolution_choice_bias_recovery_detector.dart';
 export 'src/sync/pending_sync_item.dart';
 export 'src/sync/pending_sync_queue.dart';
 export 'src/sync/retry_backoff_exhaustion_rate_alert.dart';

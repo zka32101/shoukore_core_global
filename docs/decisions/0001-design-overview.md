@@ -3057,6 +3057,25 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 ウィンドウのみを見る単発判定であり、解消の確認自体は見ない。実際の
 難易度調整・復習案の表示の解除方法の見直しはアプリ側の責務とする。
 
+## SyncConflictResolutionChoiceBiasRecoveryDetectorの追加
+
+同期コンフリクト解決の片側偏りが解消し連続してバランスが取れている
+と判定され続けていることに気づけるようにしたい場面向けに、
+`SyncConflictResolutionChoiceBiasRecoveryDetector`を`sync`モジュール
+に追加した。`SyncConflictResolutionChoiceBiasDetector`自体は1回の
+直近履歴ウィンドウのみを見る単発判定であり、解消の確認自体は見ない。
+実際の解決ロジックの見直しはアプリ側の責務とする。
+
+## CoinEarningCapHabitualHitRecoveryDetectorの追加
+
+日次コイン獲得上限への連日到達の常態化が解消し連続して上限未到達
+と判定され続けていることに気づけるようにしたい場面向けに、
+`CoinEarningCapHabitualHitRecoveryDetector`を`growth`モジュールに
+追加した。`CoinEarningCapHabitualHitDetector`自体は1回の直近履歴
+ウィンドウのみを見る単発判定であり、解消の確認自体は見ない。実際の
+上限緩和提案・追加の獲得手段の案内の解除方法の見直しはアプリ側の
+責務とする。
+
 ## CoinSpendingLimitHabitualMaxOutRecoveryDetectorの追加
 
 日次コイン消費上限への連日到達の常態化が解消し連続して上限未到達
