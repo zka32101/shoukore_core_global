@@ -15,6 +15,7 @@ export 'src/adaptive/answer_latency_variance_spike_detector.dart';
 export 'src/adaptive/answer_latency_variance_spike_recovery_detector.dart';
 export 'src/adaptive/question_difficulty_drift_alert.dart';
 export 'src/adaptive/question_difficulty_drift_alert_dismissal_streak_detector.dart';
+export 'src/adaptive/question_difficulty_drift_alert_dismissal_streak_approaching_detector.dart';
 export 'src/adaptive/question_repetition_fatigue_detector.dart';
 export 'src/adaptive/question_repetition_fatigue_recovery_detector.dart';
 export 'src/adaptive/question_variety_bias_detector.dart';
