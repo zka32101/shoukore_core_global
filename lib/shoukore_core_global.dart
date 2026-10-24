@@ -151,6 +151,7 @@ export 'src/entitlement/entitlement_reader.dart';
 export 'src/entitlement/entitlement_restore_failure_streak.dart';
 export 'src/entitlement/entitlement_restore_prompt.dart';
 export 'src/entitlement/entitlement_restore_prompt_dismissal_streak_detector.dart';
+export 'src/entitlement/entitlement_restore_prompt_dismissal_streak_approaching_detector.dart';
 export 'src/entitlement/entitlement_restore_staleness_notice.dart';
 export 'src/entitlement/entitlement_restore_staleness_notice_dismissal_streak_detector.dart';
 export 'src/growth/achievement.dart';

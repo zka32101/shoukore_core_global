@@ -952,3 +952,7 @@
   しそうな接近状態を検知する
   `RetryBackoffExhaustionRateAlertDismissalStreakApproachingDetector`
   をsyncモジュールに追加した（ApproachingDetectorパターン）。
+- 購入復元プロンプトの連続無視判定の閾値にあと少しで到達しそう
+  な接近状態を検知する
+  `EntitlementRestorePromptDismissalStreakApproachingDetector`を
+  entitlementモジュールに追加した（ApproachingDetectorパターン）。
