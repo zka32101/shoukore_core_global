@@ -3192,6 +3192,25 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 みを判定し、到達前の接近状態自体は見ない。実際の早期の学習ペース
 見直し案内はアプリ側の責務とする。
 
+## WeeklyReportUnopenedStreakApproachingDetectorの追加
+
+週次レポート連続未読放置判定の閾値にあと少しで到達しそうな接近
+状態に気づけるようにしたい場面向けに、
+`WeeklyReportUnopenedStreakApproachingDetector`を`guardian`
+モジュールに追加した。`WeeklyReportUnopenedStreakDetector`自体
+は閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際の
+早期の通知方法見直し案内はアプリ側の責務とする。
+
+## InventoryManagerInsufficientBalanceStreakApproachingDetectorの追加
+
+残高不足購入不可連続判定の閾値にあと少しで到達しそうな接近状態に
+気づけるようにしたい場面向けに、
+`InventoryManagerInsufficientBalanceStreakApproachingDetector`を
+`growth`モジュールに追加した。
+`InventoryManagerInsufficientBalanceStreakDetector`自体は閾値到達後
+のみを判定し、到達前の接近状態自体は見ない。実際の早期の「コインを
+増やす方法」案内の表示はアプリ側の責務とする。
+
 ## SpacedReviewBoxLevelRegressionStreakApproachingDetectorの追加
 
 間隔反復の箱レベル連続退行判定の閾値にあと少しで到達しそうな接近
