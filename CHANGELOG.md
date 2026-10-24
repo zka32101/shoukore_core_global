@@ -779,3 +779,7 @@
 - 不安定な接続状態が解消し連続して安定していると判定され続けている
   状態を検知する`FlakyConnectivityRecoveryDetector`をsyncモジュール
   に追加した。
+- 同一問題の繰り返し出題による疲労状態が解消し連続して多様な出題と
+  判定され続けている状態を検知する
+  `QuestionRepetitionFatigueRecoveryDetector`をadaptiveモジュールに
+  追加した。
