@@ -908,3 +908,7 @@
 - 値下げ通知の連続無視判定の閾値にあと少しで到達しそうな接近状態
   を検知する`ItemPriceDropNoticeDismissalStreakApproachingDetector`
   をgrowthモジュールに追加した（ApproachingDetectorパターン）。
+- プロフィール写真更新案内の連続無視判定の閾値にあと少しで到達
+  しそうな接近状態を検知する
+  `ProfilePhotoStalenessNoticeDismissalStreakApproachingDetector`を
+  profileモジュールに追加した（ApproachingDetectorパターン）。
