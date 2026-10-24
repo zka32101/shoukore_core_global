@@ -773,3 +773,6 @@
 - デイリーミッションのマンネリ化が解消し連続して種類の多様性が戻って
   いると判定され続けている状態を検知する
   `DailyMissionMonotonyRecoveryDetector`をgrowthモジュールに追加した。
+- 難易度の停滞が解消し連続して難易度が変化していると判定され続けて
+  いる状態を検知する`AdaptiveDifficultyPlateauRecoveryDetector`を
+  adaptiveモジュールに追加した。
