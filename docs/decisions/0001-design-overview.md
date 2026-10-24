@@ -3470,6 +3470,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 自体は閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際
 の表示方法の見直し案内はアプリ側の責務とする。
 
+## MigrationLedgerPendingMigrationAlertDismissalStreakApproachingDetectorの追加
+
+未適用マイグレーションアラートの連続無視判定の閾値にあと少しで
+到達しそうな接近状態に気づけるようにしたい場面向けに、
+`MigrationLedgerPendingMigrationAlertDismissalStreakApproachingDetector`
+を`store`モジュールに追加した。
+`MigrationLedgerPendingMigrationAlertDismissalStreakDetector`自体は
+閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際の
+再実行・強制案内の表示方法の見直しはアプリ側の責務とする。
+
 ## RetryBackoffExhaustionRateAlertDismissalStreakApproachingDetectorの追加
 
 システム的同期障害アラートの連続無視判定の閾値にあと少しで到達
