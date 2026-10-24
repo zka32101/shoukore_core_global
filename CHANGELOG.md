@@ -877,3 +877,7 @@
   そうな接近状態を検知する
   `WeeklyReportEngagementDeclineNoticeDismissalStreakApproachingDetector`
   をguardianモジュールに追加した（ApproachingDetectorパターン）。
+- 代替通知手段案内の連続無視判定の閾値にあと少しで到達しそうな
+  接近状態を検知する
+  `GuardianDeliveryFailureAlternativeNoticeDismissalStreakApproachingDetector`
+  をguardianモジュールに追加した（ApproachingDetectorパターン）。
