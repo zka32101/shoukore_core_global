@@ -275,6 +275,7 @@ export 'src/guardian/review_session_pacer.dart';
 export 'src/guardian/screen_time_guard.dart';
 export 'src/guardian/screen_time_guard_override_frequency_alert.dart';
 export 'src/guardian/screen_time_guard_override_frequency_alert_dismissal_streak_detector.dart';
+export 'src/guardian/screen_time_guard_override_frequency_alert_dismissal_streak_approaching_detector.dart';
 export 'src/guardian/screen_time_warning_threshold.dart';
 export 'src/guardian/screen_time_snapshot.dart';
 export 'src/guardian/screen_time_store.dart';
