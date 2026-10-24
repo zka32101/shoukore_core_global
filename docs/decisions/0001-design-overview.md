@@ -3221,6 +3221,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 みを判定し、到達前の接近状態自体は見ない。実際の早期の「別の教え方
 で復習しよう」案内の表示はアプリ側の責務とする。
 
+## GuardianApprovalRequestRepeatedRejectionStreakApproachingDetectorの追加
+
+保護者承認申請の連続却下判定の閾値にあと少しで到達しそうな接近
+状態に気づけるようにしたい場面向けに、
+`GuardianApprovalRequestRepeatedRejectionStreakApproachingDetector`を
+`guardian`モジュールに追加した。
+`GuardianApprovalRequestRepeatedRejectionStreakDetector`自体は閾値
+到達後のみを判定し、到達前の接近状態自体は見ない。実際の早期の
+再申請制限・案内表示はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
