@@ -58,6 +58,7 @@ export 'src/question/statistics_template.dart';
 export 'src/question/unit_difficulty_order_validator.dart';
 export 'src/question/unit_recommendation.dart';
 export 'src/question/unit_recommendation_ignored_detector.dart';
+export 'src/question/unit_recommendation_ignored_recovery_detector.dart';
 export 'src/progress/in_memory_progress_store.dart';
 export 'src/progress/mastery_across_units_stagnation_detector.dart';
 export 'src/progress/mastery_across_units_stagnation_recurrence_detector.dart';
