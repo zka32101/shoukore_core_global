@@ -948,3 +948,7 @@
   到達しそうな接近状態を検知する
   `MigrationLedgerPendingMigrationAlertDismissalStreakApproachingDetector`
   をstoreモジュールに追加した（ApproachingDetectorパターン）。
+- システム的同期障害アラートの連続無視判定の閾値にあと少しで到達
+  しそうな接近状態を検知する
+  `RetryBackoffExhaustionRateAlertDismissalStreakApproachingDetector`
+  をsyncモジュールに追加した（ApproachingDetectorパターン）。
