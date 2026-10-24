@@ -805,3 +805,6 @@
   と判定され続けている状態を検知する
   `CoinSpendingLimitHabitualMaxOutRecoveryDetector`をgrowthモジュール
   に追加した。
+- ミュート/解除の頻発な切り替えが解消し連続して頻発なしと判定され
+  続けている状態を検知する`AudioMuteToggleFrequencyRecoveryDetector`
+  をaudioモジュールに追加した。
