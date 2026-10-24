@@ -3400,6 +3400,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 のみを判定し、到達前の接近状態自体は見ない。実際の早期の同期
 不調の調査・案内の表示方法の見直しはアプリ側の責務とする。
 
+## AudioMuteStalenessNoticeDismissalStreakApproachingDetectorの追加
+
+ミュート解除確認提案の連続無視判定の閾値にあと少しで到達しそう
+な接近状態に気づけるようにしたい場面向けに、
+`AudioMuteStalenessNoticeDismissalStreakApproachingDetector`を
+`audio`モジュールに追加した。
+`AudioMuteStalenessNoticeDismissalStreakDetector`自体は閾値
+到達後のみを判定し、到達前の接近状態自体は見ない。実際の早期の
+表示方法の見直し案内はアプリ側の責務とする。
+
 ## ConsentRenewalReminderDismissalStreakApproachingDetectorの追加
 
 再同意リマインドの連続無視判定の閾値にあと少しで到達しそうな
