@@ -97,6 +97,7 @@ export 'src/privacy/consent_audit_log_gap_recovery_detector.dart';
 export 'src/privacy/consent_expiry_policy.dart';
 export 'src/privacy/consent_renewal_reminder.dart';
 export 'src/privacy/consent_renewal_reminder_dismissal_streak_detector.dart';
+export 'src/privacy/consent_renewal_reminder_dismissal_streak_approaching_detector.dart';
 export 'src/privacy/consent_store.dart';
 export 'src/privacy/photo_consent_expiry_cascade.dart';
 export 'src/privacy/profile_photo_consent_gate.dart';
