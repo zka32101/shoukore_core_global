@@ -3250,6 +3250,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 みを判定し、到達前の接近状態自体は見ない。実際の早期の設定見直し
 提案の表示はアプリ側の責務とする。
 
+## ProfileSwitchRevertStreakApproachingDetectorの追加
+
+プロフィール切替の誤操作連続発生判定の閾値にあと少しで到達しそう
+な接近状態に気づけるようにしたい場面向けに、
+`ProfileSwitchRevertStreakApproachingDetector`を`profile`モジュール
+に追加した。`ProfileSwitchRevertStreakDetector`自体は閾値到達後の
+みを判定し、到達前の接近状態自体は見ない。実際の早期の「切替方法
+を見直しますか？」案内の表示はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
