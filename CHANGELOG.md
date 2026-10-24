@@ -797,3 +797,7 @@
   と判定され続けている状態を検知する
   `SyncConflictResolutionChoiceBiasRecoveryDetector`をsyncモジュール
   に追加した。
+- 日次コイン獲得上限への連日到達の常態化が解消し連続して上限未到達
+  と判定され続けている状態を検知する
+  `CoinEarningCapHabitualHitRecoveryDetector`をgrowthモジュールに
+  追加した。
