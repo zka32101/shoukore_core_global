@@ -838,3 +838,6 @@
 - 習熟度減衰の悪化トレンド判定の閾値にあと少しで到達しそうな接近
   状態を検知する`MasteryDecayAccelerationApproachingDetector`を
   questionモジュールに追加した（ApproachingDetectorパターン）。
+- 残高不足購入不可連続判定の閾値にあと少しで到達しそうな接近状態を
+  検知する`InventoryManagerInsufficientBalanceStreakApproachingDetector`
+  をgrowthモジュールに追加した（ApproachingDetectorパターン）。
