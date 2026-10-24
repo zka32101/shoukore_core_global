@@ -3279,6 +3279,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 到達後のみを判定し、到達前の接近状態自体は見ない。実際の早期の
 出題モード切り替え判断の見直しはアプリ側の責務とする。
 
+## QuestionDifficultyDriftAlertDismissalStreakApproachingDetectorの追加
+
+難易度急変アラートの連続無視判定の閾値にあと少しで到達しそうな
+接近状態に気づけるようにしたい場面向けに、
+`QuestionDifficultyDriftAlertDismissalStreakApproachingDetector`を
+`adaptive`モジュールに追加した。
+`QuestionDifficultyDriftAlertDismissalStreakDetector`自体は閾値
+到達後のみを判定し、到達前の接近状態自体は見ない。実際の早期の
+表示方法の見直し案内はアプリ側の責務とする。
+
 ## WeeklyReportEngagementDeclineNoticeDismissalStreakApproachingDetectorの追加
 
 週次レポート見直し提案の連続無視判定の閾値にあと少しで到達しそう
