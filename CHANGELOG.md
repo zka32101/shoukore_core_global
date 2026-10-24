@@ -818,3 +818,6 @@
 - 単元提案の無視状態が解消し連続して着手されていると判定され続けて
   いる状態を検知する`UnitRecommendationIgnoredRecoveryDetector`を
   questionモジュールに追加した。
+- ストリークフリーズトークンの無駄遣い判定の閾値にあと少しで到達
+  しそうな接近状態を検知する`StreakFreezeTokenWasteApproachingDetector`
+  をgrowthモジュールに追加した（ApproachingDetectorパターン）。
