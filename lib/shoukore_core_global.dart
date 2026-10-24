@@ -269,6 +269,7 @@ export 'src/guardian/session_timeout_policy.dart';
 export 'src/guardian/weekly_report.dart';
 export 'src/guardian/weekly_report_engagement_decline_notice.dart';
 export 'src/guardian/weekly_report_engagement_decline_notice_dismissal_streak_detector.dart';
+export 'src/guardian/weekly_report_engagement_decline_notice_dismissal_streak_approaching_detector.dart';
 export 'src/guardian/weekly_report_skim_detector.dart';
 export 'src/guardian/weekly_report_skim_recovery_detector.dart';
 export 'src/guardian/weekly_report_skim_streak_detector.dart';

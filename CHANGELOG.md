@@ -869,3 +869,7 @@
   そうな接近状態を検知する
   `SessionReviewModeRatioAlertDismissalStreakApproachingDetector`を
   adaptiveモジュールに追加した（ApproachingDetectorパターン）。
+- 週次レポート見直し提案の連続無視判定の閾値にあと少しで到達し
+  そうな接近状態を検知する
+  `WeeklyReportEngagementDeclineNoticeDismissalStreakApproachingDetector`
+  をguardianモジュールに追加した（ApproachingDetectorパターン）。
