@@ -852,3 +852,6 @@
   状態を検知する
   `GuardianApprovalRequestRepeatedRejectionStreakApproachingDetector`を
   guardianモジュールに追加した（ApproachingDetectorパターン）。
+- 弱点ノート復習の連続スキップ判定の閾値にあと少しで到達しそうな
+  接近状態を検知する`WeakNoteReviewSkipStreakApproachingDetector`を
+  weakモジュールに追加した（ApproachingDetectorパターン）。
