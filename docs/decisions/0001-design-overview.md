@@ -3512,6 +3512,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 のみを判定し、到達前の接近状態自体は見ない。実際の表示方法の
 見直し案内はアプリ側の責務とする。
 
+## EntitlementRestorePromptDismissalStreakApproachingDetectorの追加
+
+購入復元プロンプトの連続無視判定の閾値にあと少しで到達しそうな
+接近状態に気づけるようにしたい場面向けに、
+`EntitlementRestorePromptDismissalStreakApproachingDetector`を
+`entitlement`モジュールに追加した。
+`EntitlementRestorePromptDismissalStreakDetector`自体は閾値到達後
+のみを判定し、到達前の接近状態自体は見ない。実際の表示頻度の
+調整・案内文の変更はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
