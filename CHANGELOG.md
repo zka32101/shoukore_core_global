@@ -956,3 +956,7 @@
   あと少しで到達しそうな接近状態を検知する
   `ScreenTimeGuardOverrideFrequencyAlertDismissalStreakApproachingDetector`
   をguardianモジュールに追加した（ApproachingDetectorパターン）。
+- 学習記録書き出しの再発行提案の連続無視判定の閾値にあと少しで
+  到達しそうな接近状態を検知する
+  `DataExportRenewalNoticeDismissalStreakApproachingDetector`を
+  privacyモジュールに追加した（ApproachingDetectorパターン）。

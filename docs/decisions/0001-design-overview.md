@@ -3502,6 +3502,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 「制限の見直しを検討しますか」案内の表示方法の見直しはアプリ側の
 責務とする。
 
+## DataExportRenewalNoticeDismissalStreakApproachingDetectorの追加
+
+学習記録書き出しの再発行提案の連続無視判定の閾値にあと少しで
+到達しそうな接近状態に気づけるようにしたい場面向けに、
+`DataExportRenewalNoticeDismissalStreakApproachingDetector`を
+`privacy`モジュールに追加した。
+`DataExportRenewalNoticeDismissalStreakDetector`自体は閾値到達後
+のみを判定し、到達前の接近状態自体は見ない。実際の表示方法の
+見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
