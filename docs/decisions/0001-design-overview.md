@@ -3030,6 +3030,24 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 出題プールからの除外・差し替えの解除方法の見直しはアプリ側の責務
 とする。
 
+## AudioCueRepetitionFatigueRecoveryDetectorの追加
+
+同一音声キューの繰り返し再生による疲労状態が解消し連続して多様な
+再生と判定され続けていることに気づけるようにしたい場面向けに、
+`AudioCueRepetitionFatigueRecoveryDetector`を`audio`モジュールに
+追加した。`AudioCueRepetitionFatigueDetector`自体は1回の直近履歴
+ウィンドウのみを見る単発判定であり、解消の確認自体は見ない。実際の
+音声バリエーション切り替え・再生間引きの解除方法の見直しはアプリ側
+の責務とする。
+
+## QuestionVarietyBiasRecoveryDetectorの追加
+
+出題タグの偏りが解消し連続して多様性が戻っていることに気づける
+ようにしたい場面向けに、`QuestionVarietyBiasRecoveryDetector`を
+`adaptive`モジュールに追加した。`QuestionVarietyBiasDetector`自体は
+1回の直近履歴ウィンドウのみを見る単発判定であり、解消の確認自体は
+見ない。実際の出題選定ロジックの見直しはアプリ側の責務とする。
+
 ## AnswerAccuracyDeclineTrendRecoveryDetectorの追加
 
 正答率の悪化傾向が解消し連続して正答率が安定していると判定され
