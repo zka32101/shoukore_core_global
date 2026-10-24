@@ -274,6 +274,7 @@ export 'src/sync/duplicate_sync_payload_detector.dart';
 export 'src/sync/duplicate_sync_payload_recurrence_detector.dart';
 export 'src/sync/duplicate_sync_payload_recovery_detector.dart';
 export 'src/sync/flaky_connectivity_detector.dart';
+export 'src/sync/flaky_connectivity_recovery_detector.dart';
 export 'src/sync/in_memory_pending_sync_queue.dart';
 export 'src/sync/multi_device_concurrent_edit_detector.dart';
 export 'src/sync/multi_device_concurrent_edit_recurrence_detector.dart';
