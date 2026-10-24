@@ -952,6 +952,10 @@
   しそうな接近状態を検知する
   `RetryBackoffExhaustionRateAlertDismissalStreakApproachingDetector`
   をsyncモジュールに追加した（ApproachingDetectorパターン）。
+- 利用時間制限の頻繁な一時解除アラートの連続無視判定の閾値に
+  あと少しで到達しそうな接近状態を検知する
+  `ScreenTimeGuardOverrideFrequencyAlertDismissalStreakApproachingDetector`
+  をguardianモジュールに追加した（ApproachingDetectorパターン）。
 - 学習記録書き出しの再発行提案の連続無視判定の閾値にあと少しで
   到達しそうな接近状態を検知する
   `DataExportRenewalNoticeDismissalStreakApproachingDetector`を
