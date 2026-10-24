@@ -321,6 +321,7 @@ export 'src/sync/offline_session_gap_recurrence_detector.dart';
 export 'src/sync/offline_session_gap_recovery_detector.dart';
 export 'src/sync/offline_session_resume_notice.dart';
 export 'src/sync/offline_session_resume_notice_dismissal_streak_detector.dart';
+export 'src/sync/offline_session_resume_notice_dismissal_streak_approaching_detector.dart';
 export 'src/sync/offline_sync_conflict_resolver.dart';
 export 'src/sync/pending_sync_item_starvation_detector.dart';
 export 'src/sync/pending_sync_item_starvation_recurrence_detector.dart';
