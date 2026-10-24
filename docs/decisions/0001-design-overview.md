@@ -3563,6 +3563,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際の
 表示方法の見直し案内はアプリ側の責務とする。
 
+## EntitlementRestoreStalenessNoticeDismissalStreakApproachingDetectorの追加
+
+購入復元の長期未実行通知の連続無視判定の閾値にあと少しで到達
+しそうな接近状態に気づけるようにしたい場面向けに、
+`EntitlementRestoreStalenessNoticeDismissalStreakApproachingDetector`
+を`entitlement`モジュールに追加した。
+`EntitlementRestoreStalenessNoticeDismissalStreakDetector`自体は
+閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際の
+表示方法の見直し案内はアプリ側の責務とする。
+
 ## GuardianApprovalRequestStaleRejectionReminderDismissalStreakApproachingDetectorの追加
 
 却下後の再提出案内の連続無視判定の閾値にあと少しで到達しそう
