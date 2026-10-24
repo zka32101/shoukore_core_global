@@ -881,3 +881,7 @@
   接近状態を検知する
   `GuardianDeliveryFailureAlternativeNoticeDismissalStreakApproachingDetector`
   をguardianモジュールに追加した（ApproachingDetectorパターン）。
+- 設定バックアップ催促の連続無視判定の閾値にあと少しで到達しそうな
+  接近状態を検知する
+  `SettingsBackupStalenessNoticeDismissalStreakApproachingDetector`を
+  privacyモジュールに追加した（ApproachingDetectorパターン）。
