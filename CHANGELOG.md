@@ -848,3 +848,7 @@
   状態を検知する
   `SpacedReviewBoxLevelRegressionStreakApproachingDetector`を
   weakモジュールに追加した（ApproachingDetectorパターン）。
+- 推奨ダッキング音量への連続上書き判定の閾値にあと少しで到達し
+  そうな接近状態を検知する
+  `AudioCueVolumeDuckingOverrideStreakApproachingDetector`を
+  audioモジュールに追加した（ApproachingDetectorパターン）。

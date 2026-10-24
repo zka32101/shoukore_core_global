@@ -3221,6 +3221,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 みを判定し、到達前の接近状態自体は見ない。実際の早期の「別の教え方
 で復習しよう」案内の表示はアプリ側の責務とする。
 
+## AudioCueVolumeDuckingOverrideStreakApproachingDetectorの追加
+
+推奨ダッキング音量への連続上書き判定の閾値にあと少しで到達しそう
+な接近状態に気づけるようにしたい場面向けに、
+`AudioCueVolumeDuckingOverrideStreakApproachingDetector`を`audio`
+モジュールに追加した。
+`AudioCueVolumeDuckingOverrideStreakDetector`自体は閾値到達後の
+みを判定し、到達前の接近状態自体は見ない。実際の早期の設定見直し
+提案の表示はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
