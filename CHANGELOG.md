@@ -773,6 +773,12 @@
 - デイリーミッションのマンネリ化が解消し連続して種類の多様性が戻って
   いると判定され続けている状態を検知する
   `DailyMissionMonotonyRecoveryDetector`をgrowthモジュールに追加した。
+- 難易度の停滞が解消し連続して難易度が変化していると判定され続けて
+  いる状態を検知する`AdaptiveDifficultyPlateauRecoveryDetector`を
+  adaptiveモジュールに追加した。
+- 不安定な接続状態が解消し連続して安定していると判定され続けている
+  状態を検知する`FlakyConnectivityRecoveryDetector`をsyncモジュール
+  に追加した。
 - 同一問題の繰り返し出題による疲労状態が解消し連続して多様な出題と
   判定され続けている状態を検知する
   `QuestionRepetitionFatigueRecoveryDetector`をadaptiveモジュールに

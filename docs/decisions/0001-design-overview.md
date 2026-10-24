@@ -3002,6 +3002,24 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 単発判定であり、解消の確認自体は見ない。実際のミッション種類の選定
 ロジックの見直しはアプリ側の責務とする。
 
+## AdaptiveDifficultyPlateauRecoveryDetectorの追加
+
+難易度の停滞が解消し連続して難易度が変化していると判定され続けている
+ことに気づけるようにしたい場面向けに、
+`AdaptiveDifficultyPlateauRecoveryDetector`を`adaptive`モジュールに
+追加した。`AdaptiveDifficultyPlateauDetector`自体は1回の直近履歴
+ウィンドウのみを見る単発判定であり、解消の確認自体は見ない。実際の
+単元切り替え提案・休憩提案の解除方法の見直しはアプリ側の責務とする。
+
+## FlakyConnectivityRecoveryDetectorの追加
+
+不安定な接続状態が解消し連続して安定していると判定され続けている
+ことに気づけるようにしたい場面向けに、
+`FlakyConnectivityRecoveryDetector`を`sync`モジュールに追加した。
+`FlakyConnectivityDetector`自体は1回の直近履歴ウィンドウのみを見る
+単発判定であり、解消の確認自体は見ない。実際のオフライン専用モード
+の解除方法の見直しはアプリ側の責務とする。
+
 ## QuestionRepetitionFatigueRecoveryDetectorの追加
 
 同一問題の繰り返し出題による疲労状態が解消し連続して多様な出題と
