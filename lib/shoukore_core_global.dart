@@ -171,6 +171,7 @@ export 'src/growth/coin_wallet.dart';
 export 'src/growth/coin_wallet_overdraft_guard.dart';
 export 'src/growth/coin_wallet_stagnation_notice.dart';
 export 'src/growth/coin_wallet_stagnation_notice_dismissal_streak_detector.dart';
+export 'src/growth/coin_wallet_stagnation_notice_dismissal_streak_approaching_detector.dart';
 export 'src/growth/daily_boundary.dart';
 export 'src/growth/daily_mission.dart';
 export 'src/growth/daily_mission_monotony_detector.dart';
