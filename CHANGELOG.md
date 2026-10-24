@@ -865,3 +865,7 @@
 - プロフィール切替の誤操作連続発生判定の閾値にあと少しで到達し
   そうな接近状態を検知する`ProfileSwitchRevertStreakApproachingDetector`
   をprofileモジュールに追加した（ApproachingDetectorパターン）。
+- 復習モード偏りアラートの連続無視判定の閾値にあと少しで到達し
+  そうな接近状態を検知する
+  `SessionReviewModeRatioAlertDismissalStreakApproachingDetector`を
+  adaptiveモジュールに追加した（ApproachingDetectorパターン）。
