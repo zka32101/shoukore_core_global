@@ -3370,6 +3370,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 「まとめて復習しよう」案内の表示方法の見直しはアプリ側の責務と
 する。
 
+## ItemPriceDropNoticeDismissalStreakApproachingDetectorの追加
+
+値下げ通知の連続無視判定の閾値にあと少しで到達しそうな接近状態
+に気づけるようにしたい場面向けに、
+`ItemPriceDropNoticeDismissalStreakApproachingDetector`を
+`growth`モジュールに追加した。
+`ItemPriceDropNoticeDismissalStreakDetector`自体は閾値到達後の
+みを判定し、到達前の接近状態自体は見ない。実際の早期の表示方法
+の見直し案内はアプリ側の責務とする。
+
 ## ProfilePhotoStalenessNoticeDismissalStreakApproachingDetectorの追加
 
 プロフィール写真更新案内の連続無視判定の閾値にあと少しで到達
