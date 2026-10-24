@@ -940,3 +940,7 @@
   うな接近状態を検知する
   `WeakNoteBacklogGrowthRateAlertDismissalStreakApproachingDetector`
   をweakモジュールに追加した（ApproachingDetectorパターン）。
+- 未適用マイグレーションアラートの連続無視判定の閾値にあと少しで
+  到達しそうな接近状態を検知する
+  `MigrationLedgerPendingMigrationAlertDismissalStreakApproachingDetector`
+  をstoreモジュールに追加した（ApproachingDetectorパターン）。
