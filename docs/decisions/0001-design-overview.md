@@ -3758,6 +3758,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 を見る単発判定であり、解消の確認自体は見ない。実際のリマインド
 強化・出題への優先的な混在の解除方法はアプリ側の責務とする。
 
+## EntitlementGracePeriodRepeatedUsageRecoveryDetectorの追加
+
+猶予期間の繰り返し利用パターンに対する更新方法の見直し案内
+を、解消後も出し続けないようにしたい場面向けに、
+`EntitlementGracePeriodRepeatedUsageRecoveryDetector`
+を`entitlement`モジュールに追加した。
+`EntitlementGracePeriodRepeatedUsageDetector`自体は繰り返し
+パターンの有無のみを見る単発判定であり、解消の確認自体は
+見ない。実際の更新方法の見直し案内の解除方法はアプリ側の
+責務とする。
+
 ## ProfileAvatarRotationSuggestionIgnoredRecoveryDetectorの追加
 
 アバター変更提案の連続無視に対する表示頻度調整を、解消後も
