@@ -3820,6 +3820,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 残高不足の有無のみを見る単発判定であり、解消の確認自体は
 見ない。実際の案内の解除方法はアプリ側の責務とする。
 
+## StreakRecoveryGraceRepeatedUsageRecoveryDetectorの追加
+
+ストリーク見逃し猶予の繰り返し利用パターンに対する学習習慣
+の見直し案内を、解消後も出し続けないようにしたい場面向けに、
+`StreakRecoveryGraceRepeatedUsageRecoveryDetector`
+を`growth`モジュールに追加した。
+`StreakRecoveryGraceRepeatedUsageDetector`自体は繰り返しパターン
+の有無のみを見る単発判定であり、解消の確認自体は見ない。実際
+の学習習慣の見直し案内の解除方法はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

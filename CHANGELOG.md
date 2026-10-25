@@ -1060,3 +1060,6 @@
 - 残高不足による連続購入失敗状態が解消したかを検知する
   `InventoryManagerInsufficientBalanceStreakRecoveryDetector`を
   growthモジュールに追加した（RecoveryDetectorパターン）。
+- ストリーク見逃し猶予の繰り返し利用パターンが解消したかを検知する
+  `StreakRecoveryGraceRepeatedUsageRecoveryDetector`をgrowth
+  モジュールに追加した（RecoveryDetectorパターン）。
