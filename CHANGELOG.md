@@ -1033,6 +1033,9 @@
 - 端末ロケール提案の連続無視状態が解消したかを検知する
   `DeviceLocaleSuggestionIgnoredRecoveryDetector`をregionalモジュール
   に追加した（RecoveryDetectorパターン）。
+- 定着度減衰の悪化トレンドが解消したかを検知する
+  `MasteryDecayAccelerationRecoveryDetector`をquestionモジュールに
+  追加した（RecoveryDetectorパターン）。
 - 週次レポートの連続流し見状態が解消したかを検知する
   `WeeklyReportSkimStreakRecoveryDetector`をguardianモジュールに
   追加した（RecoveryDetectorパターン）。

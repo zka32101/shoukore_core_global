@@ -3727,6 +3727,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 を見る単発判定であり、解消の確認自体は見ない。実際の提案方法
 の見直し・表示頻度の調整はアプリ側の責務とする。
 
+## MasteryDecayAccelerationRecoveryDetectorの追加
+
+定着度減衰の悪化トレンドに対する学習ペースの見直し案内を、
+解消後も出し続けないようにしたい場面向けに、
+`MasteryDecayAccelerationRecoveryDetector`
+を`question`モジュールに追加した。
+`MasteryDecayAccelerationDetector`自体は悪化トレンドの有無のみ
+を見る単発判定であり、解消の確認自体は見ない。実際の学習ペース
+の見直し案内の解除方法はアプリ側の責務とする。
+
 ## WeeklyReportSkimStreakRecoveryDetectorの追加
 
 週次レポートの連続流し見状態に対する通知方法の見直し案内を、
