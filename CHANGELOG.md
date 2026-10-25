@@ -1012,3 +1012,6 @@
 - 間隔反復滞留アラートの連続無視判定の閾値にあと少しで到達しそうな
   接近状態を検知する`SpacedReviewOverdueBacklogAlertDismissalStreakApproachingDetector`
   をweakモジュールに追加した（ApproachingDetectorパターン）。
+- 意欲低下通知の連続無視判定の閾値にあと少しで到達しそうな
+  接近状態を検知する`UnitMasteryBadgeMotivationDropNoticeDismissalStreakApproachingDetector`
+  をgrowthモジュールに追加した（ApproachingDetectorパターン）。
