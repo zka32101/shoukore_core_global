@@ -3615,6 +3615,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 自体は閾値到達後のみを判定し、到達前の接近状態自体は見ない。
 実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## StreakRiskAlertDismissalStreakApproachingDetectorの追加
+
+ストリーク途切れ警告の連続無視判定の閾値にあと少しで到達
+しそうな接近状態に気づけるようにしたい場面向けに、
+`StreakRiskAlertDismissalStreakApproachingDetector`
+を`growth`モジュールに追加した。
+`StreakRiskAlertDismissalStreakDetector`自体は閾値到達後
+のみを判定し、到達前の接近状態自体は見ない。実際の表示
+方法の見直し案内はアプリ側の責務とする。
+
 ## WeakNoteMisconceptionDiversityAlertDismissalStreakApproachingDetectorの追加
 
 誤解多様化アラートの連続無視判定の閾値にあと少しで到達
