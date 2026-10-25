@@ -3646,6 +3646,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 到達後のみを判定し、到達前の接近状態自体は見ない。実際の表示
 方法の見直し案内はアプリ側の責務とする。
 
+## UnitMasteryBadgeMotivationDropNoticeDismissalStreakApproachingDetectorの追加
+
+意欲低下通知の連続無視判定の閾値にあと少しで到達しそうな
+接近状態に気づけるようにしたい場面向けに、
+`UnitMasteryBadgeMotivationDropNoticeDismissalStreakApproachingDetector`
+を`growth`モジュールに追加した。
+`UnitMasteryBadgeMotivationDropNoticeDismissalStreakDetector`
+自体は閾値到達後のみを判定し、到達前の接近状態自体は見ない。
+実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
