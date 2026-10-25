@@ -301,6 +301,7 @@ export 'src/guardian/weekly_report_skim_detector.dart';
 export 'src/guardian/weekly_report_skim_recovery_detector.dart';
 export 'src/guardian/weekly_report_skim_streak_detector.dart';
 export 'src/guardian/weekly_report_unopened_streak_detector.dart';
+export 'src/guardian/weekly_report_unopened_streak_recovery_detector.dart';
 export 'src/guardian/weekly_report_unopened_streak_approaching_detector.dart';
 export 'src/privacy/age_gate.dart';
 export 'src/privacy/in_memory_consent_store.dart';
