@@ -988,3 +988,7 @@
   な接近状態を検知する
   `GuardianApprovalRequestStaleRejectionReminderDismissalStreakApproachingDetector`
   をguardianモジュールに追加した（ApproachingDetectorパターン）。
+- ロケール切替後のカリキュラム未読み込み通知の連続無視判定の
+  閾値にあと少しで到達しそうな接近状態を検知する
+  `LocaleCurriculumStalenessNoticeDismissalStreakApproachingDetector`
+  をregionalモジュールに追加した（ApproachingDetectorパターン）。
