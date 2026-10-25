@@ -1018,3 +1018,6 @@
 - 地域プロファイル読み込み失敗通知の連続無視判定の閾値にあと少しで
   到達しそうな接近状態を検知する`RegionalProfileLoadFailureFallbackNoticeDismissalStreakApproachingDetector`
   をregionalモジュールに追加した（ApproachingDetectorパターン）。
+- 最古弱点ノート放置アラートの連続無視判定の閾値にあと少しで到達
+  しそうな接近状態を検知する`WeakNoteBacklogOldestItemAgeAlertDismissalStreakApproachingDetector`
+  をweakモジュールに追加した（ApproachingDetectorパターン）。
