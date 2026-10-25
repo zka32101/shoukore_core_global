@@ -305,6 +305,7 @@ export 'src/regional/device_locale_suggestion_ignored_detector.dart';
 export 'src/regional/device_locale_suggestion_ignored_approaching_detector.dart';
 export 'src/regional/locale_curriculum_staleness_notice.dart';
 export 'src/regional/locale_curriculum_staleness_notice_dismissal_streak_detector.dart';
+export 'src/regional/locale_curriculum_staleness_notice_dismissal_streak_approaching_detector.dart';
 export 'src/regional/locale_formatter.dart';
 export 'src/regional/regional_profile_change_detector.dart';
 export 'src/regional/regional_profile_change_recurrence_detector.dart';
