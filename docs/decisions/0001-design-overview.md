@@ -3646,6 +3646,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 到達後のみを判定し、到達前の接近状態自体は見ない。実際の表示
 方法の見直し案内はアプリ側の責務とする。
 
+## RegionalProfileLoadFailureFallbackNoticeDismissalStreakApproachingDetectorの追加
+
+地域プロファイル読み込み失敗通知の連続無視判定の閾値にあと
+少しで到達しそうな接近状態に気づけるようにしたい場面向けに、
+`RegionalProfileLoadFailureFallbackNoticeDismissalStreakApproachingDetector`
+を`regional`モジュールに追加した。
+`RegionalProfileLoadFailureFallbackNoticeDismissalStreakDetector`
+自体は閾値到達後のみを判定し、到達前の接近状態自体は見ない。
+実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
