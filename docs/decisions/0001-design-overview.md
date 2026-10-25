@@ -3593,6 +3593,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 自体は閾値到達後のみを判定し、到達前の接近状態自体は見ない。
 実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## LocaleCurriculumStalenessNoticeDismissalStreakApproachingDetectorの追加
+
+ロケール切替後のカリキュラム未読み込み通知の連続無視判定の
+閾値にあと少しで到達しそうな接近状態に気づけるようにしたい
+場面向けに、
+`LocaleCurriculumStalenessNoticeDismissalStreakApproachingDetector`
+を`regional`モジュールに追加した。
+`LocaleCurriculumStalenessNoticeDismissalStreakDetector`自体は
+閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際の
+カリキュラム再読み込みの促し方の見直しはアプリ側の責務とする。
+
 ## MissionStreakFreezeTokenExpiryWarningDismissalStreakApproachingDetectorの追加
 
 ストリークフリーズトークンの失効間近警告の連続無視判定の閾値
