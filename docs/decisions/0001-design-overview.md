@@ -3646,6 +3646,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 到達後のみを判定し、到達前の接近状態自体は見ない。実際の表示
 方法の見直し案内はアプリ側の責務とする。
 
+## SpacedReviewOverdueBacklogAlertDismissalStreakApproachingDetectorの追加
+
+間隔反復滞留アラートの連続無視判定の閾値にあと少しで到達
+しそうな接近状態に気づけるようにしたい場面向けに、
+`SpacedReviewOverdueBacklogAlertDismissalStreakApproachingDetector`
+を`weak`モジュールに追加した。
+`SpacedReviewOverdueBacklogAlertDismissalStreakDetector`自体は
+閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際の
+表示方法の見直し案内はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
