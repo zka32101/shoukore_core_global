@@ -1057,3 +1057,6 @@
 - 間隔反復箱レベルの連続退行状態が解消したかを検知する
   `SpacedReviewBoxLevelRegressionStreakRecoveryDetector`をweak
   モジュールに追加した（RecoveryDetectorパターン）。
+- 残高不足による連続購入失敗状態が解消したかを検知する
+  `InventoryManagerInsufficientBalanceStreakRecoveryDetector`を
+  growthモジュールに追加した（RecoveryDetectorパターン）。

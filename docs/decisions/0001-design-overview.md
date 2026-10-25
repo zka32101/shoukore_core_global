@@ -3810,6 +3810,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 有無のみを見る単発判定であり、解消の確認自体は見ない。実際の
 案内の解除方法はアプリ側の責務とする。
 
+## InventoryManagerInsufficientBalanceStreakRecoveryDetectorの追加
+
+残高不足による連続購入失敗に対する「コインを増やす方法」案内
+を、解消後も出し続けないようにしたい場面向けに、
+`InventoryManagerInsufficientBalanceStreakRecoveryDetector`
+を`growth`モジュールに追加した。
+`InventoryManagerInsufficientBalanceStreakDetector`自体は連続
+残高不足の有無のみを見る単発判定であり、解消の確認自体は
+見ない。実際の案内の解除方法はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
