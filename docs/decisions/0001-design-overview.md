@@ -3747,6 +3747,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 見る単発判定であり、解消の確認自体は見ない。実際の通知方法の
 見直し案内の解除方法はアプリ側の責務とする。
 
+## WeakNoteReviewSkipStreakRecoveryDetectorの追加
+
+弱点ノート復習セッションの連続スキップに対するリマインド強化
+・出題への優先的な混在を、解消後も続けないようにしたい場面
+向けに、
+`WeakNoteReviewSkipStreakRecoveryDetector`
+を`weak`モジュールに追加した。
+`WeakNoteReviewSkipStreakDetector`自体は連続スキップの有無のみ
+を見る単発判定であり、解消の確認自体は見ない。実際のリマインド
+強化・出題への優先的な混在の解除方法はアプリ側の責務とする。
+
 ## EntitlementGracePeriodRepeatedUsageRecoveryDetectorの追加
 
 猶予期間の繰り返し利用パターンに対する更新方法の見直し案内
