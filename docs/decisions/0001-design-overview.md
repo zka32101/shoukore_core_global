@@ -3687,6 +3687,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 「最優先で確認しよう」案内の表示方法の見直しはアプリ側の責務と
 する。
 
+## GuardianGateLockoutRepeatedTriggerRecoveryDetectorの追加
+
+ガーディアンゲートの繰り返しロックアウト発生の警戒表示を、
+解消後も出し続けないようにしたい場面向けに、
+`GuardianGateLockoutRepeatedTriggerRecoveryDetector`
+を`guardian`モジュールに追加した。
+`GuardianGateLockoutRepeatedTriggerDetector`自体は繰り返し発生
+の有無のみを見る単発判定であり、解消の確認自体は見ない。実際の
+警戒表示の解除方法の見直しはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

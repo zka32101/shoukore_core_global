@@ -1021,3 +1021,6 @@
 - 最古弱点ノート放置アラートの連続無視判定の閾値にあと少しで到達
   しそうな接近状態を検知する`WeakNoteBacklogOldestItemAgeAlertDismissalStreakApproachingDetector`
   をweakモジュールに追加した（ApproachingDetectorパターン）。
+- ガーディアンゲートの繰り返しロックアウト発生が解消したかを検知する
+  `GuardianGateLockoutRepeatedTriggerRecoveryDetector`をguardianモジュール
+  に追加した（RecoveryDetectorパターン）。

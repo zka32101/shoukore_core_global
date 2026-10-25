@@ -261,6 +261,7 @@ export 'src/guardian/guardian_delivery_failure_alternative_notice_dismissal_stre
 export 'src/guardian/guardian_gate.dart';
 export 'src/guardian/guardian_gate_lockout.dart';
 export 'src/guardian/guardian_gate_lockout_repeated_trigger_detector.dart';
+export 'src/guardian/guardian_gate_lockout_repeated_trigger_recovery_detector.dart';
 export 'src/guardian/guardian_gate_lockout_repeated_trigger_approaching_detector.dart';
 export 'src/guardian/guardian_gate_lockout_ending_soon_notice.dart';
 export 'src/guardian/guardian_gate_lockout_ending_soon_notice_dismissal_streak_detector.dart';
