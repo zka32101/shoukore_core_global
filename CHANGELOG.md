@@ -1042,3 +1042,6 @@
 - 弱点ノート復習セッションの連続スキップ状態が解消したかを検知する
   `WeakNoteReviewSkipStreakRecoveryDetector`をweakモジュールに
   追加した（RecoveryDetectorパターン）。
+- 猶予期間の繰り返し利用パターンが解消したかを検知する
+  `EntitlementGracePeriodRepeatedUsageRecoveryDetector`をentitlement
+  モジュールに追加した（RecoveryDetectorパターン）。
