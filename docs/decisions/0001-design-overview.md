@@ -3625,6 +3625,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 のみを判定し、到達前の接近状態自体は見ない。実際の表示
 方法の見直し案内はアプリ側の責務とする。
 
+## WeakNoteMisconceptionDiversityAlertDismissalStreakApproachingDetectorの追加
+
+誤解多様化アラートの連続無視判定の閾値にあと少しで到達
+しそうな接近状態に気づけるようにしたい場面向けに、
+`WeakNoteMisconceptionDiversityAlertDismissalStreakApproachingDetector`
+を`weak`モジュールに追加した。
+`WeakNoteMisconceptionDiversityAlertDismissalStreakDetector`
+自体は閾値到達後のみを判定し、到達前の接近状態自体は見ない。
+実際の「基礎から見直そう」案内の表示方法の見直しはアプリ側の
+責務とする。
+
 ## ProfilePhotoConsentRenewalDismissalStreakApproachingDetectorの追加
 
 写真利用同意再確認の連続無視判定の閾値にあと少しで到達しそうな
