@@ -3747,6 +3747,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 見る単発判定であり、解消の確認自体は見ない。実際の通知方法の
 見直し案内の解除方法はアプリ側の責務とする。
 
+## EntitlementGracePeriodRepeatedUsageRecoveryDetectorの追加
+
+猶予期間の繰り返し利用パターンに対する更新方法の見直し案内
+を、解消後も出し続けないようにしたい場面向けに、
+`EntitlementGracePeriodRepeatedUsageRecoveryDetector`
+を`entitlement`モジュールに追加した。
+`EntitlementGracePeriodRepeatedUsageDetector`自体は繰り返し
+パターンの有無のみを見る単発判定であり、解消の確認自体は
+見ない。実際の更新方法の見直し案内の解除方法はアプリ側の
+責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
