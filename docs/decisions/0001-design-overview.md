@@ -3583,6 +3583,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 自体は閾値到達後のみを判定し、到達前の接近状態自体は見ない。
 実際の表示方法の見直し案内はアプリ側の責務とする。
 
+## GuardianGateLockoutEndingSoonNoticeDismissalStreakApproachingDetectorの追加
+
+保護者ゲートのロック解除間近通知の連続無視判定の閾値にあと
+少しで到達しそうな接近状態に気づけるようにしたい場面向けに、
+`GuardianGateLockoutEndingSoonNoticeDismissalStreakApproachingDetector`
+を`guardian`モジュールに追加した。
+`GuardianGateLockoutEndingSoonNoticeDismissalStreakDetector`
+自体は閾値到達後のみを判定し、到達前の接近状態自体は見ない。
+実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## LocaleCurriculumStalenessNoticeDismissalStreakApproachingDetectorの追加
 
 ロケール切替後のカリキュラム未読み込み通知の連続無視判定の
