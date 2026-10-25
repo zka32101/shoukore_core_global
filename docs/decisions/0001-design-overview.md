@@ -3717,6 +3717,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 の有無のみを見る単発判定であり、解消の確認自体は見ない。実際の
 警戒表示の解除方法の見直しはアプリ側の責務とする。
 
+## DeviceLocaleSuggestionIgnoredRecoveryDetectorの追加
+
+端末ロケール提案の連続無視に対する表示頻度調整を、解消後も
+続けないようにしたい場面向けに、
+`DeviceLocaleSuggestionIgnoredRecoveryDetector`
+を`regional`モジュールに追加した。
+`DeviceLocaleSuggestionIgnoredDetector`自体は連続無視の有無のみ
+を見る単発判定であり、解消の確認自体は見ない。実際の提案方法
+の見直し・表示頻度の調整はアプリ側の責務とする。
+
 ## MasteryDecayAccelerationRecoveryDetectorの追加
 
 定着度減衰の悪化トレンドに対する学習ペースの見直し案内を、

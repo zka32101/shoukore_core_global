@@ -1030,6 +1030,9 @@
 - ガーディアンゲートの繰り返しロックアウト発生が解消したかを検知する
   `GuardianGateLockoutRepeatedTriggerRecoveryDetector`をguardianモジュール
   に追加した（RecoveryDetectorパターン）。
+- 端末ロケール提案の連続無視状態が解消したかを検知する
+  `DeviceLocaleSuggestionIgnoredRecoveryDetector`をregionalモジュール
+  に追加した（RecoveryDetectorパターン）。
 - 定着度減衰の悪化トレンドが解消したかを検知する
   `MasteryDecayAccelerationRecoveryDetector`をquestionモジュールに
   追加した（RecoveryDetectorパターン）。
