@@ -1045,3 +1045,6 @@
 - 猶予期間の繰り返し利用パターンが解消したかを検知する
   `EntitlementGracePeriodRepeatedUsageRecoveryDetector`をentitlement
   モジュールに追加した（RecoveryDetectorパターン）。
+- アバター変更提案の連続無視状態が解消したかを検知する
+  `ProfileAvatarRotationSuggestionIgnoredRecoveryDetector`をprofile
+  モジュールに追加した（RecoveryDetectorパターン）。

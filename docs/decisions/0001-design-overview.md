@@ -3769,6 +3769,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 見ない。実際の更新方法の見直し案内の解除方法はアプリ側の
 責務とする。
 
+## ProfileAvatarRotationSuggestionIgnoredRecoveryDetectorの追加
+
+アバター変更提案の連続無視に対する表示頻度調整を、解消後も
+続けないようにしたい場面向けに、
+`ProfileAvatarRotationSuggestionIgnoredRecoveryDetector`
+を`profile`モジュールに追加した。
+`ProfileAvatarRotationSuggestionIgnoredDetector`自体は連続無視
+の有無のみを見る単発判定であり、解消の確認自体は見ない。実際
+の提案方法の見直し・表示頻度の調整はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
