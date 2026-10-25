@@ -1024,6 +1024,9 @@
 - 週次レポート連続未読放置状態が解消したかを検知する
   `WeeklyReportUnopenedStreakRecoveryDetector`をguardianモジュールに
   追加した（RecoveryDetectorパターン）。
+- ストリークフリーズトークンの無駄遣い状態が解消したかを検知する
+  `StreakFreezeTokenWasteRecoveryDetector`をgrowthモジュールに追加した
+  （RecoveryDetectorパターン）。
 - ガーディアンゲートの繰り返しロックアウト発生が解消したかを検知する
   `GuardianGateLockoutRepeatedTriggerRecoveryDetector`をguardianモジュール
   に追加した（RecoveryDetectorパターン）。
