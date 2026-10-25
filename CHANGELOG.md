@@ -1003,3 +1003,6 @@
 - ストリーク途切れ警告の連続無視判定の閾値にあと少しで到達しそうな
   接近状態を検知する`StreakRiskAlertDismissalStreakApproachingDetector`
   をgrowthモジュールに追加した（ApproachingDetectorパターン）。
+- 誤解多様化アラートの連続無視判定の閾値にあと少しで到達しそうな
+  接近状態を検知する`WeakNoteMisconceptionDiversityAlertDismissalStreakApproachingDetector`
+  をweakモジュールに追加した（ApproachingDetectorパターン）。
