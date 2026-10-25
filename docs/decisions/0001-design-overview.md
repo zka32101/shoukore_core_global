@@ -3779,6 +3779,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 の有無のみを見る単発判定であり、解消の確認自体は見ない。実際
 の提案方法の見直し・表示頻度の調整はアプリ側の責務とする。
 
+## AudioCueVolumeDuckingOverrideStreakRecoveryDetectorの追加
+
+推奨ダッキング音量の連続上書きに対する設定見直し提案を、
+解消後も出し続けないようにしたい場面向けに、
+`AudioCueVolumeDuckingOverrideStreakRecoveryDetector`
+を`audio`モジュールに追加した。
+`AudioCueVolumeDuckingOverrideStreakDetector`自体は連続上書き
+の有無のみを見る単発判定であり、解消の確認自体は見ない。実際
+の設定見直し提案の解除方法はアプリ側の責務とする。
+
 ## GuardianApprovalRequestRepeatedRejectionStreakRecoveryDetectorの追加
 
 保護者承認申請の連続却下に対する再申請制限・案内表示を、
