@@ -317,6 +317,7 @@ export 'src/regional/regional_profile_change_recovery_detector.dart';
 export 'src/regional/regional_profile_loader.dart';
 export 'src/regional/regional_profile_load_failure_fallback_notice.dart';
 export 'src/regional/regional_profile_load_failure_fallback_notice_dismissal_streak_detector.dart';
+export 'src/regional/regional_profile_load_failure_fallback_notice_dismissal_streak_approaching_detector.dart';
 export 'src/regional/timezone_drift_detector.dart';
 export 'src/regional/timezone_drift_recurrence_detector.dart';
 export 'src/regional/timezone_drift_recovery_detector.dart';
