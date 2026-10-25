@@ -1048,3 +1048,6 @@
 - アバター変更提案の連続無視状態が解消したかを検知する
   `ProfileAvatarRotationSuggestionIgnoredRecoveryDetector`をprofile
   モジュールに追加した（RecoveryDetectorパターン）。
+- 間隔反復箱レベルの連続退行状態が解消したかを検知する
+  `SpacedReviewBoxLevelRegressionStreakRecoveryDetector`をweak
+  モジュールに追加した（RecoveryDetectorパターン）。
