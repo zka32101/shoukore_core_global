@@ -168,6 +168,7 @@ export 'src/growth/achievement_share_card_cooldown.dart';
 export 'src/growth/unit_mastery_badge_eligibility.dart';
 export 'src/growth/unit_mastery_badge_motivation_drop_notice.dart';
 export 'src/growth/unit_mastery_badge_motivation_drop_notice_dismissal_streak_detector.dart';
+export 'src/growth/unit_mastery_badge_motivation_drop_notice_dismissal_streak_approaching_detector.dart';
 export 'src/growth/unit_mastery_badge_accuracy_regression_detector.dart';
 export 'src/growth/unit_mastery_badge_accuracy_regression_recurrence_detector.dart';
 export 'src/growth/unit_mastery_badge_accuracy_regression_recovery_detector.dart';

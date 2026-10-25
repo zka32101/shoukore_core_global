@@ -3656,6 +3656,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 閾値到達後のみを判定し、到達前の接近状態自体は見ない。実際の
 表示方法の見直し案内はアプリ側の責務とする。
 
+## UnitMasteryBadgeMotivationDropNoticeDismissalStreakApproachingDetectorの追加
+
+意欲低下通知の連続無視判定の閾値にあと少しで到達しそうな
+接近状態に気づけるようにしたい場面向けに、
+`UnitMasteryBadgeMotivationDropNoticeDismissalStreakApproachingDetector`
+を`growth`モジュールに追加した。
+`UnitMasteryBadgeMotivationDropNoticeDismissalStreakDetector`
+自体は閾値到達後のみを判定し、到達前の接近状態自体は見ない。
+実際の表示方法の見直し案内はアプリ側の責務とする。
+
 ## RegionalProfileLoadFailureFallbackNoticeDismissalStreakApproachingDetectorの追加
 
 地域プロファイル読み込み失敗通知の連続無視判定の閾値にあと
