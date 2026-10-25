@@ -3779,6 +3779,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 の有無のみを見る単発判定であり、解消の確認自体は見ない。実際
 の提案方法の見直し・表示頻度の調整はアプリ側の責務とする。
 
+## GuardianApprovalRequestRepeatedRejectionStreakRecoveryDetectorの追加
+
+保護者承認申請の連続却下に対する再申請制限・案内表示を、
+解消後も出し続けないようにしたい場面向けに、
+`GuardianApprovalRequestRepeatedRejectionStreakRecoveryDetector`
+を`guardian`モジュールに追加した。
+`GuardianApprovalRequestRepeatedRejectionStreakDetector`自体は
+連続却下の有無のみを見る単発判定であり、解消の確認自体は
+見ない。実際の再申請制限・案内表示の解除方法はアプリ側の
+責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
