@@ -1030,3 +1030,6 @@
 - ガーディアンゲートの繰り返しロックアウト発生が解消したかを検知する
   `GuardianGateLockoutRepeatedTriggerRecoveryDetector`をguardianモジュール
   に追加した（RecoveryDetectorパターン）。
+- 週次レポートの連続流し見状態が解消したかを検知する
+  `WeeklyReportSkimStreakRecoveryDetector`をguardianモジュールに
+  追加した（RecoveryDetectorパターン）。
