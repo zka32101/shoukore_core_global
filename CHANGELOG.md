@@ -1009,6 +1009,9 @@
 - 写真利用同意再確認の連続無視判定の閾値にあと少しで到達しそうな
   接近状態を検知する`ProfilePhotoConsentRenewalDismissalStreakApproachingDetector`
   をprivacyモジュールに追加した（ApproachingDetectorパターン）。
+- 間隔反復滞留アラートの連続無視判定の閾値にあと少しで到達しそうな
+  接近状態を検知する`SpacedReviewOverdueBacklogAlertDismissalStreakApproachingDetector`
+  をweakモジュールに追加した（ApproachingDetectorパターン）。
 - 地域プロファイル読み込み失敗通知の連続無視判定の閾値にあと少しで
   到達しそうな接近状態を検知する`RegionalProfileLoadFailureFallbackNoticeDismissalStreakApproachingDetector`
   をregionalモジュールに追加した（ApproachingDetectorパターン）。
