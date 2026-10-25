@@ -988,3 +988,7 @@
   な接近状態を検知する
   `GuardianApprovalRequestStaleRejectionReminderDismissalStreakApproachingDetector`
   をguardianモジュールに追加した（ApproachingDetectorパターン）。
+- 保護者ゲートのロック解除間近通知の連続無視判定の閾値にあと
+  少しで到達しそうな接近状態を検知する
+  `GuardianGateLockoutEndingSoonNoticeDismissalStreakApproachingDetector`
+  をguardianモジュールに追加した（ApproachingDetectorパターン）。
