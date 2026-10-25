@@ -1054,3 +1054,6 @@
 - 保護者承認申請の連続却下状態が解消したかを検知する
   `GuardianApprovalRequestRepeatedRejectionStreakRecoveryDetector`を
   guardianモジュールに追加した（RecoveryDetectorパターン）。
+- 間隔反復箱レベルの連続退行状態が解消したかを検知する
+  `SpacedReviewBoxLevelRegressionStreakRecoveryDetector`をweak
+  モジュールに追加した（RecoveryDetectorパターン）。

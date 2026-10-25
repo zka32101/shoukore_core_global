@@ -3800,6 +3800,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 見ない。実際の再申請制限・案内表示の解除方法はアプリ側の
 責務とする。
 
+## SpacedReviewBoxLevelRegressionStreakRecoveryDetectorの追加
+
+間隔反復箱レベルの連続退行に対する「別の教え方で復習しよう」
+案内を、解消後も出し続けないようにしたい場面向けに、
+`SpacedReviewBoxLevelRegressionStreakRecoveryDetector`
+を`weak`モジュールに追加した。
+`SpacedReviewBoxLevelRegressionStreakDetector`自体は連続退行の
+有無のみを見る単発判定であり、解消の確認自体は見ない。実際の
+案内の解除方法はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
