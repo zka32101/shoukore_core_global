@@ -1051,3 +1051,6 @@
 - 推奨ダッキング音量の連続上書き状態が解消したかを検知する
   `AudioCueVolumeDuckingOverrideStreakRecoveryDetector`をaudio
   モジュールに追加した（RecoveryDetectorパターン）。
+- 保護者承認申請の連続却下状態が解消したかを検知する
+  `GuardianApprovalRequestRepeatedRejectionStreakRecoveryDetector`を
+  guardianモジュールに追加した（RecoveryDetectorパターン）。
