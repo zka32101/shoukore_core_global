@@ -1063,3 +1063,6 @@
 - ストリーク見逃し猶予の繰り返し利用パターンが解消したかを検知する
   `StreakRecoveryGraceRepeatedUsageRecoveryDetector`をgrowth
   モジュールに追加した（RecoveryDetectorパターン）。
+- 猶予期間の繰り返し利用が深刻域まで達したかを検知する
+  `EntitlementGracePeriodRepeatedUsageSeverityDetector`を
+  entitlementモジュールに追加した（SeverityDetectorパターン）。
