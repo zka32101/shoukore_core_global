@@ -1090,6 +1090,8 @@
 - 見逃し猶予の繰り返し利用が深刻域まで達したかを検知する
   `StreakRecoveryGraceRepeatedUsageSeverityDetector`をgrowth
   モジュールに追加した（SeverityDetectorパターン）。
+- 問題文の読み上げ機能を自動提示すべきかを判定する
+  `ReadAloudEligibilityDetector`をquestionモジュールに追加した。
 - シリーズ内の他教科・他アプリへのクロスプロモ案内を表示すべきかを
   判定する`CrossPromoEligibilityDetector`をentitlementモジュールに
   追加した。
