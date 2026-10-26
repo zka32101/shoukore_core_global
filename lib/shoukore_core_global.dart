@@ -262,6 +262,7 @@ export 'src/guardian/guardian_approval_request_latency_trend.dart';
 export 'src/guardian/guardian_approval_request_queue.dart';
 export 'src/guardian/guardian_approval_request_reminder_escalation.dart';
 export 'src/guardian/guardian_approval_request_repeated_rejection_streak_detector.dart';
+export 'src/guardian/guardian_approval_request_repeated_rejection_streak_severity_detector.dart';
 export 'src/guardian/guardian_approval_request_repeated_rejection_streak_recovery_detector.dart';
 export 'src/guardian/guardian_approval_request_repeated_rejection_streak_approaching_detector.dart';
 export 'src/guardian/guardian_approval_request_stale_rejection_reminder.dart';
