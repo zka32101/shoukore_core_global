@@ -3901,6 +3901,17 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 閾値を超えたかどうかの単発判定のみを見るため、どの程度深刻かは
 見ない。実際の案内の強さの切り分けはアプリ側の責務とする。
 
+## InventoryManagerInsufficientBalanceStreakSeverityDetector
+の追加
+
+連続残高不足が単発閾値を超えただけでなく、さらに深刻な域まで
+達しているかを区別したい場面向けに、
+`InventoryManagerInsufficientBalanceStreakSeverityDetector`を
+`growth`モジュールに追加した（SeverityDetectorパターン）。
+`InventoryManagerInsufficientBalanceStreakDetector`自体は閾値を
+超えたかどうかの単発判定のみを見るため、どの程度深刻かは見ない。
+実際の案内の強さの切り分けはアプリ側の責務とする。
+
 ## StreakRecoveryGraceRepeatedUsageSeverityDetectorの追加
 
 見逃し猶予の繰り返し利用が単発閾値を超えただけでなく、さらに
