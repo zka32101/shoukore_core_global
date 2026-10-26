@@ -3840,6 +3840,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 かどうかの単発判定のみを見るため、どの程度深刻かは見ない。実際
 の案内の強さの切り分けはアプリ側の責務とする。
 
+## SpacedReviewBoxLevelRegressionStreakSeverityDetectorの追加
+
+間隔反復（Leitner方式）の箱レベル連続退行が単発閾値を超えた
+だけでなく、さらに深刻な域まで達しているかを区別したい場面向け
+に、`SpacedReviewBoxLevelRegressionStreakSeverityDetector`
+を`weak`モジュールに追加した（SeverityDetectorパターン）。
+`SpacedReviewBoxLevelRegressionStreakDetector`自体は閾値を超えた
+かどうかの単発判定のみを見るため、どの程度深刻かは見ない。実際
+の案内の強さの切り分けはアプリ側の責務とする。
+
 ## EntitlementGracePeriodRepeatedUsageSeverityDetectorの追加
 
 猶予期間の繰り返し利用が単発閾値を超えただけでなく、さらに
