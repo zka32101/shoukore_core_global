@@ -3850,6 +3850,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 かどうかの単発判定のみを見るため、どの程度深刻かは見ない。実際
 の案内の強さの切り分けはアプリ側の責務とする。
 
+## EntitlementGracePeriodRepeatedUsageSeverityDetectorの追加
+
+猶予期間の繰り返し利用が単発閾値を超えただけでなく、さらに
+深刻な域まで達しているかを区別したい場面向けに、
+`EntitlementGracePeriodRepeatedUsageSeverityDetector`
+を`entitlement`モジュールに追加した（SeverityDetectorパターン）。
+`EntitlementGracePeriodRepeatedUsageDetector`自体は閾値を超えた
+かどうかの単発判定のみを見るため、どの程度深刻かは見ない。実際
+の案内の強さの切り分けはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

@@ -1069,3 +1069,6 @@
 - 間隔反復箱レベルの連続退行が深刻域まで達したかを検知する
   `SpacedReviewBoxLevelRegressionStreakSeverityDetector`をweak
   モジュールに追加した（SeverityDetectorパターン）。
+- 猶予期間の繰り返し利用が深刻域まで達したかを検知する
+  `EntitlementGracePeriodRepeatedUsageSeverityDetector`を
+  entitlementモジュールに追加した（SeverityDetectorパターン）。
