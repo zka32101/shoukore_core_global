@@ -1072,6 +1072,9 @@
 - 猶予期間の繰り返し利用が深刻域まで達したかを検知する
   `EntitlementGracePeriodRepeatedUsageSeverityDetector`を
   entitlementモジュールに追加した（SeverityDetectorパターン）。
+- ストリークフリーズトークンの無駄遣いが深刻域まで達したかを検知する
+  `StreakFreezeTokenWasteSeverityDetector`をgrowthモジュールに追加した
+  （SeverityDetectorパターン）。
 - ロックアウトの繰り返し発生が深刻域まで達したかを検知する
   `GuardianGateLockoutRepeatedTriggerSeverityDetector`をguardian
   モジュールに追加した（SeverityDetectorパターン）。

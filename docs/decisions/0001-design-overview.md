@@ -3860,6 +3860,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 かどうかの単発判定のみを見るため、どの程度深刻かは見ない。実際
 の案内の強さの切り分けはアプリ側の責務とする。
 
+## StreakFreezeTokenWasteSeverityDetectorの追加
+
+ストリークフリーズトークンの無駄遣いが単発閾値を超えただけで
+なく、さらに深刻な域まで達しているかを区別したい場面向けに、
+`StreakFreezeTokenWasteSeverityDetector`を`growth`モジュールに
+追加した（SeverityDetectorパターン）。
+`StreakFreezeTokenWasteDetector`自体は閾値を超えたかどうかの
+単発判定のみを見るため、どの程度深刻かは見ない。実際の案内の
+強さの切り分けはアプリ側の責務とする。
+
 ## GuardianGateLockoutRepeatedTriggerSeverityDetectorの追加
 
 ロックアウトの繰り返し発生が単発閾値を超えただけでなく、さらに
