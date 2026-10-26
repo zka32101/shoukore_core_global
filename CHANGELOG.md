@@ -1087,3 +1087,6 @@
 - 連続残高不足が深刻域まで達したかを検知する
   `InventoryManagerInsufficientBalanceStreakSeverityDetector`を
   growthモジュールに追加した（SeverityDetectorパターン）。
+- 見逃し猶予の繰り返し利用が深刻域まで達したかを検知する
+  `StreakRecoveryGraceRepeatedUsageSeverityDetector`をgrowth
+  モジュールに追加した（SeverityDetectorパターン）。

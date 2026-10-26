@@ -3912,6 +3912,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 超えたかどうかの単発判定のみを見るため、どの程度深刻かは見ない。
 実際の案内の強さの切り分けはアプリ側の責務とする。
 
+## StreakRecoveryGraceRepeatedUsageSeverityDetectorの追加
+
+見逃し猶予の繰り返し利用が単発閾値を超えただけでなく、さらに
+深刻な域まで達しているかを区別したい場面向けに、
+`StreakRecoveryGraceRepeatedUsageSeverityDetector`を`growth`
+モジュールに追加した（SeverityDetectorパターン）。
+`StreakRecoveryGraceRepeatedUsageDetector`自体は閾値を超えた
+かどうかの単発判定のみを見るため、どの程度深刻かは見ない。実際
+の案内の強さの切り分けはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
