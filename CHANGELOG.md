@@ -1063,3 +1063,6 @@
 - ストリーク見逃し猶予の繰り返し利用パターンが解消したかを検知する
   `StreakRecoveryGraceRepeatedUsageRecoveryDetector`をgrowth
   モジュールに追加した（RecoveryDetectorパターン）。
+- 間隔反復箱レベルの連続退行が深刻域まで達したかを検知する
+  `SpacedReviewBoxLevelRegressionStreakSeverityDetector`をweak
+  モジュールに追加した（SeverityDetectorパターン）。

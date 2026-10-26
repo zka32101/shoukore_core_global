@@ -3830,6 +3830,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 の有無のみを見る単発判定であり、解消の確認自体は見ない。実際
 の学習習慣の見直し案内の解除方法はアプリ側の責務とする。
 
+## SpacedReviewBoxLevelRegressionStreakSeverityDetectorの追加
+
+間隔反復（Leitner方式）の箱レベル連続退行が単発閾値を超えた
+だけでなく、さらに深刻な域まで達しているかを区別したい場面向け
+に、`SpacedReviewBoxLevelRegressionStreakSeverityDetector`
+を`weak`モジュールに追加した（SeverityDetectorパターン）。
+`SpacedReviewBoxLevelRegressionStreakDetector`自体は閾値を超えた
+かどうかの単発判定のみを見るため、どの程度深刻かは見ない。実際
+の案内の強さの切り分けはアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
