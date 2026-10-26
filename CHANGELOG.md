@@ -1081,3 +1081,6 @@
 - 弱点ノートの連続レビュースキップが深刻域まで達したかを検知する
   `WeakNoteReviewSkipStreakSeverityDetector`をweakモジュールに
   追加した（SeverityDetectorパターン）。
+- 連続残高不足が深刻域まで達したかを検知する
+  `InventoryManagerInsufficientBalanceStreakSeverityDetector`を
+  growthモジュールに追加した（SeverityDetectorパターン）。
