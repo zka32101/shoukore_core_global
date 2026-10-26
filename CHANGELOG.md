@@ -1072,3 +1072,6 @@
 - 猶予期間の繰り返し利用が深刻域まで達したかを検知する
   `EntitlementGracePeriodRepeatedUsageSeverityDetector`を
   entitlementモジュールに追加した（SeverityDetectorパターン）。
+- 弱点ノートの連続レビュースキップが深刻域まで達したかを検知する
+  `WeakNoteReviewSkipStreakSeverityDetector`をweakモジュールに
+  追加した（SeverityDetectorパターン）。
