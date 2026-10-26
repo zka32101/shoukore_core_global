@@ -407,6 +407,7 @@ export 'src/weak/weak_note_review_score_regression_detector.dart';
 export 'src/weak/weak_note_review_score_regression_recurrence_detector.dart';
 export 'src/weak/weak_note_review_score_regression_recovery_detector.dart';
 export 'src/weak/weak_note_review_skip_streak_detector.dart';
+export 'src/weak/weak_note_review_skip_streak_severity_detector.dart';
 export 'src/weak/weak_note_review_skip_streak_recovery_detector.dart';
 export 'src/weak/weak_note_review_skip_streak_approaching_detector.dart';
 export 'src/weak/weak_note_staleness_cleanup.dart';

@@ -1078,3 +1078,6 @@
 - ロックアウトの繰り返し発生が深刻域まで達したかを検知する
   `GuardianGateLockoutRepeatedTriggerSeverityDetector`をguardian
   モジュールに追加した（SeverityDetectorパターン）。
+- 弱点ノートの連続レビュースキップが深刻域まで達したかを検知する
+  `WeakNoteReviewSkipStreakSeverityDetector`をweakモジュールに
+  追加した（SeverityDetectorパターン）。
