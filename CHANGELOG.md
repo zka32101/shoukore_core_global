@@ -1084,3 +1084,6 @@
 - 承認リクエストの連続拒否が深刻域まで達したかを検知する
   `GuardianApprovalRequestRepeatedRejectionStreakSeverityDetector`を
   guardianモジュールに追加した（SeverityDetectorパターン）。
+- 連続残高不足が深刻域まで達したかを検知する
+  `InventoryManagerInsufficientBalanceStreakSeverityDetector`を
+  growthモジュールに追加した（SeverityDetectorパターン）。

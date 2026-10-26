@@ -217,6 +217,7 @@ export 'src/growth/inventory_item_unused_variety_alert_dismissal_streak_detector
 export 'src/growth/inventory_item_unused_variety_alert_dismissal_streak_approaching_detector.dart';
 export 'src/growth/inventory_manager.dart';
 export 'src/growth/inventory_manager_insufficient_balance_streak_detector.dart';
+export 'src/growth/inventory_manager_insufficient_balance_streak_severity_detector.dart';
 export 'src/growth/inventory_manager_insufficient_balance_streak_recovery_detector.dart';
 export 'src/growth/inventory_manager_insufficient_balance_streak_approaching_detector.dart';
 export 'src/growth/inventory_snapshot.dart';
