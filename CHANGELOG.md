@@ -1066,3 +1066,6 @@
 - 音声キューのダッキングオーバーライド連続発生が深刻域まで達したかを
   検知する`AudioCueVolumeDuckingOverrideStreakSeverityDetector`を
   audioモジュールに追加した（SeverityDetectorパターン）。
+- 間隔反復箱レベルの連続退行が深刻域まで達したかを検知する
+  `SpacedReviewBoxLevelRegressionStreakSeverityDetector`をweak
+  モジュールに追加した（SeverityDetectorパターン）。
