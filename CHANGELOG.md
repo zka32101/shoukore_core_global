@@ -1081,6 +1081,9 @@
 - 弱点ノートの連続レビュースキップが深刻域まで達したかを検知する
   `WeakNoteReviewSkipStreakSeverityDetector`をweakモジュールに
   追加した（SeverityDetectorパターン）。
+- 承認リクエストの連続拒否が深刻域まで達したかを検知する
+  `GuardianApprovalRequestRepeatedRejectionStreakSeverityDetector`を
+  guardianモジュールに追加した（SeverityDetectorパターン）。
 - 見逃し猶予の繰り返し利用が深刻域まで達したかを検知する
   `StreakRecoveryGraceRepeatedUsageSeverityDetector`をgrowth
   モジュールに追加した（SeverityDetectorパターン）。
