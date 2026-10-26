@@ -3830,6 +3830,16 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 の有無のみを見る単発判定であり、解消の確認自体は見ない。実際
 の学習習慣の見直し案内の解除方法はアプリ側の責務とする。
 
+## AudioCueVolumeDuckingOverrideStreakSeverityDetectorの追加
+
+音声キューのダッキングオーバーライド連続発生が単発閾値を超えた
+だけでなく、さらに深刻な域まで達しているかを区別したい場面向け
+に、`AudioCueVolumeDuckingOverrideStreakSeverityDetector`
+を`audio`モジュールに追加した（SeverityDetectorパターン）。
+`AudioCueVolumeDuckingOverrideStreakDetector`自体は閾値を超えた
+かどうかの単発判定のみを見るため、どの程度深刻かは見ない。実際
+の案内の強さの切り分けはアプリ側の責務とする。
+
 ## SpacedReviewBoxLevelRegressionStreakSeverityDetectorの追加
 
 間隔反復（Leitner方式）の箱レベル連続退行が単発閾値を超えた
