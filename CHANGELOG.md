@@ -1063,3 +1063,6 @@
 - ストリーク見逃し猶予の繰り返し利用パターンが解消したかを検知する
   `StreakRecoveryGraceRepeatedUsageRecoveryDetector`をgrowth
   モジュールに追加した（RecoveryDetectorパターン）。
+- 音声キューのダッキングオーバーライド連続発生が深刻域まで達したかを
+  検知する`AudioCueVolumeDuckingOverrideStreakSeverityDetector`を
+  audioモジュールに追加した（SeverityDetectorパターン）。
