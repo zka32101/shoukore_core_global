@@ -1090,5 +1090,7 @@
 - 見逃し猶予の繰り返し利用が深刻域まで達したかを検知する
   `StreakRecoveryGraceRepeatedUsageSeverityDetector`をgrowth
   モジュールに追加した（SeverityDetectorパターン）。
+- 問題文の読み上げ機能を自動提示すべきかを判定する
+  `ReadAloudEligibilityDetector`をquestionモジュールに追加した。
 - 保護者が一緒に参加した学習セッションかを判定する
   `CoParentPlaySessionDetector`をgrowthモジュールに追加した。
