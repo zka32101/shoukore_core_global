@@ -69,6 +69,7 @@ export 'src/question/unit_recommendation_ignored_detector.dart';
 export 'src/question/unit_recommendation_ignored_recovery_detector.dart';
 export 'src/question/read_aloud_eligibility_detector.dart';
 export 'src/question/choice_order_randomizer.dart';
+export 'src/question/curriculum_coverage_validator.dart';
 export 'src/question/experiential_content_link_eligibility_detector.dart';
 export 'src/progress/in_memory_progress_store.dart';
 export 'src/progress/mastery_across_units_stagnation_detector.dart';

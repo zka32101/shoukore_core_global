@@ -3966,6 +3966,14 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 `CollectionCompletionDetector`を`growth`モジュールに追加した。
 実際の達成演出・通知表示自体はアプリ側の責務とする。
 
+## CurriculumCoverageValidatorの追加
+
+「クイズはすべての範囲をカバーする」という共通要件の検証向けに、
+単元内の小項目のうち一度も出題されていないものを検出する
+`CurriculumCoverageValidator`を`question`モジュールに追加した。
+既存の`UnitDifficultyOrderValidator`等と同様、カリキュラムJSON
+読み込みや出題履歴の集計自体はアプリ/ツール側の責務とする。
+
 ## ExperientialContentLinkEligibilityDetectorの追加
 
 「実体験のイメージとリンク」「体験型コンテンツ」という共通要件
