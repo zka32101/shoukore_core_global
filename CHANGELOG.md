@@ -1108,3 +1108,6 @@
 - 実体験に紐づく体験型コンテンツを提示すべき単元かを判定する
   `ExperientialContentLinkEligibilityDetector`をquestionモジュール
   に追加した。
+- 学習セッション完了時に「やった感」フィードバックを出すべきかを
+  判定する`AccomplishmentFeedbackEligibilityDetector`をgrowth
+  モジュールに追加した。
