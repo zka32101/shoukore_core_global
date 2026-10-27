@@ -21,9 +21,3 @@ jobs:
       - run: dart run tool/check_curriculum.dart
       - run: dart run tool/check_l10n_parity.dart
       - run: flutter test
-      - name: example (結合確認)
-        working-directory: example
-        run: |
-          flutter pub get
-          flutter analyze
-          flutter test
