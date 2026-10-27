@@ -3966,6 +3966,14 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 `CollectionCompletionDetector`を`growth`モジュールに追加した。
 実際の達成演出・通知表示自体はアプリ側の責務とする。
 
+## AccomplishmentFeedbackEligibilityDetectorの追加
+
+「やった感を味わえるもの」という共通要件向けに、学習セッション
+完了時に達成フィードバック（達成演出・称賛メッセージ等）を出す
+べきタイミングかを、セッション内の解答数から判定する
+`AccomplishmentFeedbackEligibilityDetector`を`growth`モジュール
+に追加した。実際の演出・メッセージ表示自体はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
