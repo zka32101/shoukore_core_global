@@ -1099,3 +1099,5 @@
   `CoParentPlaySessionDetector`をgrowthモジュールに追加した。
 - クイズの選択肢をランダムに並び替える`ChoiceOrderRandomizer`を
   questionモジュールに追加した。
+- 第二言語として英語を選択可能にすべきかを判定する
+  `SecondLanguageEligibilityDetector`をregionalモジュールに追加した。
