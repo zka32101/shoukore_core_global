@@ -1128,6 +1128,8 @@
   追加した。
 - 週次の計画振り返りタイミングを判定する
   `WeeklyStudyPlanReviewPrompt`をplanningモジュールに追加した。
+- 計画タスクを期限超過・期限が近い順に並べ替える
+  `StudyPlanTaskPriorityOrder`をplanningモジュールに追加した。
 - 直近の正答率履歴から改善/悪化傾向を3値で判定する
   `AccuracyTrendDetector`をprogressモジュールに追加した。
 - キャラ進化の次の段階までの残り正答数を算出する

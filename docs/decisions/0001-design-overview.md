@@ -4072,6 +4072,12 @@ declining）を3値で返す`AccuracyTrendDetector`を`progress`モジュール
 既定では週の最後の曜日（日曜日）を振り返り対象とする。実際の
 振り返りUI・通知自体はアプリ側の責務とする。
 
+## StudyPlanTaskPriorityOrderの追加
+
+複数の`StudyPlanTask`を「期限超過→期限が近い→通常→完了済み」の
+優先順に並べ替える`StudyPlanTaskPriorityOrder`を`planning`モジュール
+に追加した。実際の一覧UI表示自体はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
