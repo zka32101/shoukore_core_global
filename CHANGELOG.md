@@ -1148,3 +1148,7 @@
   `GuardianTaskApprovalGate`をplanningモジュールに追加した。
 - クロスプロモ案内を無視した後のクールダウン期間を判定する
   `CrossPromoDismissalCooldown`をentitlementモジュールに追加した。
+- 算数（ブラジル・BNCC）固有のコード（`ArithmeticQuestionSource`等の
+  `QuestionSource`実装群、`CurriculumLoader`、`curriculum/{ja,pt_BR}.json`、
+  `example/`）を`shoukore_br_matematica`リポジトリへ移設し、本コアから
+  削除した。

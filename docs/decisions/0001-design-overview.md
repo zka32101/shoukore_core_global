@@ -4115,6 +4115,26 @@ Firestore等外部サービスに密結合しない。
 `CrossPromoDismissalCooldown`を`entitlement`モジュールに追加した。
 実際の案内表示自体はアプリ側の責務とする。
 
+## 算数アプリの独立レポジトリへの切り出し（shoukore_br_matematica）
+
+「教科別アプリ/レポジトリ分割と本コアの境界」で決めていた切り出しを
+実施した。`ArithmeticQuestionSource`/`GeometryQuestionSource`/
+`MeasurementQuestionSource`/`SequenceQuestionSource`/
+`StatisticsQuestionSource`とその`*Template`群、これらが依存する
+`CurriculumLoader`（`CurriculumData`/`parseCurriculum`）、
+`curriculum/{ja,pt_BR}.json`、及び算数アプリの雛形だった`example/`を
+`shoukore_br_matematica`（ブラジル×算数、国略称を真ん中に置く
+`shoukore_<国略称>_<教科>`命名規則）へ移設し、本コアから削除した。
+
+本コアには`QuestionSource`インターフェース自体（契約）と、教科を問わず
+使うカリキュラムJSONスキーマの検証ツール（`tool/check_curriculum.dart`、
+`validateCurriculumDoc`）のみを残した。後者はunits/templatesの構造的な
+整合性のみを見る教科非依存の検証であり、具体的なテンプレ種別には
+依存しない。
+
+展開方針（1国1教科から開始し、流行ったら2教科目を作る、等）は
+ユーザーの記憶（CLAUDE.md）側に記録済みのため、本ADRには記載しない。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
