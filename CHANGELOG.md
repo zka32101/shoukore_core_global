@@ -1115,3 +1115,5 @@
   をquestionモジュールに追加した。
 - 誤答が続く問題でイメージ画像ヒントを提示すべきかを判定する
   `ImageHintEligibilityDetector`をquestionモジュールに追加した。
+- 収集コレクションの次の節目までの残り個数を算出する
+  `CollectionCompletionProximityHint`をgrowthモジュールに追加した。
