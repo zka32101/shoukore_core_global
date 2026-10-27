@@ -4140,3 +4140,16 @@ Firestore等外部サービスに密結合しない。
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
 screen_time連携、cross_app、Firebase直接利用、analytics SDK（既定なし）、freezed、
 キット内の価格/無料期間ロジック、広告。
+
+## オンボーディング（ウェルカム→Ahaモーメント→ペイウォール）の共通基盤への追加
+
+`shoukore_br_matematica`でオンボーディングフローを実装する過程で、以下の
+教科非依存の要素を本コアに切り出した。
+
+- `OnboardingCompletionStore`: オンボーディング完了フラグの保持のみを担う
+  抽象IF（`InMemoryOnboardingCompletionStore`実装を提供）。
+- `AhaMomentTracker`: 「初回正解体験への新規到達」を一度だけ検出する純関数
+  （`reachedOnThisAnswer`）。到達済みフラグの永続化自体は関与しない。
+
+オンボーディングのページ構成（ウェルカム/クイズ/ペイウォールの画面）、
+クイズの問題内容、価格・トライアル期間の表示は教科・国固有のためアプリ側に残す。

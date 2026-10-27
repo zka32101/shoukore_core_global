@@ -1152,3 +1152,7 @@
   `QuestionSource`実装群、`CurriculumLoader`、`curriculum/{ja,pt_BR}.json`、
   `example/`）を`shoukore_br_matematica`リポジトリへ移設し、本コアから
   削除した。
+- `OnboardingCompletionStore`（初回オンボーディング完了フラグの抽象IF＋
+  `InMemoryOnboardingCompletionStore`）、`AhaMomentTracker`（Ahaモーメントへの
+  新規到達を一度だけ検出する純関数）をonboardingモジュールに追加した。
+  オンボーディングのページ構成・問題内容・価格表示はアプリ側の責務。
