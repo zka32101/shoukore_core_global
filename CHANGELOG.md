@@ -1142,5 +1142,7 @@
   `GrowthStageProximityHint`をgrowthモジュールに追加した。
 - 収集コレクションの次の節目までの残り個数を算出する
   `CollectionCompletionProximityHint`をgrowthモジュールに追加した。
+- 複数教科間の学習量の偏りを判定する`MultiSubjectStudyBalance`を
+  planningモジュールに追加した。
 - 計画タスクの短時間バースト完了を検知する
   `GuardianTaskApprovalGate`をplanningモジュールに追加した。
