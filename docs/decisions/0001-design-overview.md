@@ -3991,6 +3991,14 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 `AccomplishmentFeedbackEligibilityDetector`を`growth`モジュール
 に追加した。実際の演出・メッセージ表示自体はアプリ側の責務とする。
 
+## ExplanationDepthSelectorの追加
+
+「教科書より分かりやすい丁寧な解説」という共通要件向けに、同一
+問題・同一単元での連続誤答数に応じて解説を`brief`/`standard`/
+`detailed`の3段階から選ぶ`ExplanationDepthSelector`を`question`
+モジュールに追加した。実際の解説文の内容・表示自体はアプリ側の
+責務とする。
+
 ## ImageHintEligibilityDetectorの追加
 
 「わかりやすいイメージ画像」という共通要件向けに、誤答が続く
