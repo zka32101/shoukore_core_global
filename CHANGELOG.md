@@ -1131,6 +1131,8 @@
 - `StudyPlanTask`の保存先を抽象化する`StudyPlanTaskStore`と、その
   端末内メモリ実装`InMemoryStudyPlanTaskStore`をplanningモジュール
   に追加した。
+- 計画タスクを期限超過・期限が近い順に並べ替える
+  `StudyPlanTaskPriorityOrder`をplanningモジュールに追加した。
 - 週次振り返りを連続で無視している状態を検知する
   `WeeklyStudyPlanReviewPromptDismissalStreakDetector`をplanning
   モジュールに追加した。
