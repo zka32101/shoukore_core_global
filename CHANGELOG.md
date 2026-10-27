@@ -1117,6 +1117,8 @@
   `ImageHintEligibilityDetector`をquestionモジュールに追加した。
 - 期限付き学習タスクを表す`StudyPlanTask`を新設のplanning
   モジュールに追加した。
+- 毎日の出題数目標と達成判定を行う`DailyQuestionGoal`を新設の
+  planningモジュールに追加した。
 - 直近の正答率履歴から改善/悪化傾向を3値で判定する
   `AccuracyTrendDetector`をprogressモジュールに追加した。
 - キャラ進化の次の段階までの残り正答数を算出する
