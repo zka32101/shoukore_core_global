@@ -1121,6 +1121,8 @@
   planningモジュールに追加した。
 - 期限が近い学習タスクを検出する`StudyPlanTaskDueSoonDetector`を
   planningモジュールに追加した。
+- 計画タスク一覧の完了数・期限超過数・完了率を集計する
+  `StudyPlanTaskListSummary`をplanningモジュールに追加した。
 - 計画タスクを期限内に連続して完了できているかを判定する
   `StudyPlanTaskCompletionStreakDetector`をplanningモジュールに
   追加した。
