@@ -4072,6 +4072,13 @@ declining）を3値で返す`AccuracyTrendDetector`を`progress`モジュール
 既定では週の最後の曜日（日曜日）を振り返り対象とする。実際の
 振り返りUI・通知自体はアプリ側の責務とする。
 
+## StudyPlanTaskStoreの追加
+
+既存の`ProgressStore`等と同じ抽象IFパターンに倣い、`StudyPlanTask`
+の保存先を抽象化する`StudyPlanTaskStore`と、その端末内メモリ実装
+`InMemoryStudyPlanTaskStore`を`planning`モジュールに追加した。
+Firestore等外部サービスに密結合しない。
+
 ## WeeklyStudyPlanReviewPromptDismissalStreakDetectorの追加
 
 `WeeklyStudyPlanReviewPrompt`による週次振り返りの案内を、複数週に

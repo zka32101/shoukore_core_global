@@ -1128,6 +1128,9 @@
   追加した。
 - 週次の計画振り返りタイミングを判定する
   `WeeklyStudyPlanReviewPrompt`をplanningモジュールに追加した。
+- `StudyPlanTask`の保存先を抽象化する`StudyPlanTaskStore`と、その
+  端末内メモリ実装`InMemoryStudyPlanTaskStore`をplanningモジュール
+  に追加した。
 - 週次振り返りを連続で無視している状態を検知する
   `WeeklyStudyPlanReviewPromptDismissalStreakDetector`をplanning
   モジュールに追加した。
