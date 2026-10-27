@@ -4085,6 +4085,14 @@ Firestore等外部サービスに密結合しない。
 優先順に並べ替える`StudyPlanTaskPriorityOrder`を`planning`モジュール
 に追加した。実際の一覧UI表示自体はアプリ側の責務とする。
 
+## WeeklyStudyPlanReviewPromptDismissalStreakDetectorの追加
+
+`WeeklyStudyPlanReviewPrompt`による週次振り返りの案内を、複数週に
+わたって連続で無視している状態を検知する
+`WeeklyStudyPlanReviewPromptDismissalStreakDetector`を`planning`
+モジュールに追加した。実際の案内方法の見直し提案自体はアプリ側の
+責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
