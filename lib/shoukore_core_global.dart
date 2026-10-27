@@ -256,6 +256,7 @@ export 'src/growth/store_item.dart';
 export 'src/growth/co_parent_play_session_detector.dart';
 export 'src/growth/collection_completion_detector.dart';
 export 'src/growth/accomplishment_feedback_eligibility_detector.dart';
+export 'src/growth/growth_stage_proximity_hint.dart';
 export 'src/guardian/daily_digest.dart';
 export 'src/guardian/daily_digest_builder.dart';
 export 'src/guardian/daily_digest_duplicate_suppression.dart';

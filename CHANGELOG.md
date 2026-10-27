@@ -1115,3 +1115,5 @@
   をquestionモジュールに追加した。
 - 誤答が続く問題でイメージ画像ヒントを提示すべきかを判定する
   `ImageHintEligibilityDetector`をquestionモジュールに追加した。
+- キャラ進化の次の段階までの残り正答数を算出する
+  `GrowthStageProximityHint`をgrowthモジュールに追加した。
