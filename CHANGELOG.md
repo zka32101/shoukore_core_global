@@ -1095,3 +1095,5 @@
 - シリーズ内の他教科・他アプリへのクロスプロモ案内を表示すべきかを
   判定する`CrossPromoEligibilityDetector`をentitlementモジュールに
   追加した。
+- 保護者が一緒に参加した学習セッションかを判定する
+  `CoParentPlaySessionDetector`をgrowthモジュールに追加した。
