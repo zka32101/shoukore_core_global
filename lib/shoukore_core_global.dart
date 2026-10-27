@@ -160,6 +160,7 @@ export 'src/planning/study_plan_task_completion_streak_detector.dart';
 export 'src/planning/weekly_study_plan_review_prompt.dart';
 export 'src/planning/study_plan_task_store.dart';
 export 'src/planning/in_memory_study_plan_task_store.dart';
+export 'src/planning/study_plan_task_priority_order.dart';
 export 'src/entitlement/entitlement_expiry_notice.dart';
 export 'src/entitlement/entitlement_expiry_notice_dismissal_streak_detector.dart';
 export 'src/entitlement/entitlement_expiry_notice_dismissal_streak_approaching_detector.dart';
