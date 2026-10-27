@@ -4058,6 +4058,13 @@ declining）を3値で返す`AccuracyTrendDetector`を`progress`モジュール
 タスク一覧の進捗を一目で把握できるようにする集計値を返す。実際の
 一覧UI表示自体はアプリ側の責務とする。
 
+## StudyPlanTaskCompletionStreakDetectorの追加
+
+既存のストリーク系検出器と同じ考え方を、計画タスクの継続達成に
+適用し、期限内に連続して完了できているかを判定する
+`StudyPlanTaskCompletionStreakDetector`を`planning`モジュールに
+追加した。実際の継続表示・称賛演出自体はアプリ側の責務とする。
+
 ## WeeklyStudyPlanReviewPromptの追加
 
 今週の学習計画タスクを振り返るべきタイミングかどうかを判定する
