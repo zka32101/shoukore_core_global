@@ -1142,3 +1142,5 @@
   `GrowthStageProximityHint`をgrowthモジュールに追加した。
 - 収集コレクションの次の節目までの残り個数を算出する
   `CollectionCompletionProximityHint`をgrowthモジュールに追加した。
+- クロスプロモ案内を無視した後のクールダウン期間を判定する
+  `CrossPromoDismissalCooldown`をentitlementモジュールに追加した。

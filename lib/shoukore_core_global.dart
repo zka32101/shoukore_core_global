@@ -182,6 +182,7 @@ export 'src/entitlement/entitlement_restore_staleness_notice.dart';
 export 'src/entitlement/entitlement_restore_staleness_notice_dismissal_streak_detector.dart';
 export 'src/entitlement/entitlement_restore_staleness_notice_dismissal_streak_approaching_detector.dart';
 export 'src/entitlement/cross_promo_eligibility_detector.dart';
+export 'src/entitlement/cross_promo_dismissal_cooldown.dart';
 export 'src/growth/achievement.dart';
 export 'src/growth/achievement_proximity_hint.dart';
 export 'src/growth/achievement_unlock_cluster_detector.dart';
