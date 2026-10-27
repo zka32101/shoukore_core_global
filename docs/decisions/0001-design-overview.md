@@ -3944,6 +3944,14 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 `CoParentPlaySessionDetector`を`growth`モジュールに追加した。
 実際の親向け参加UI・案内表示自体はアプリ側の責務とする。
 
+## ChoiceOrderRandomizerの追加
+
+クイズの選択肢の位置を記憶しての不正解率低下を防ぐため、選択肢の
+表示順をランダムに並び替える`ChoiceOrderRandomizer`を`question`
+モジュールに追加した。既存の`arithmetic_question_source.dart`等
+と同様に`Random`を注入可能にし、テストで決定的な挙動を確認できる
+ようにした。
+
 ## SecondLanguageEligibilityDetectorの追加
 
 第二言語として英語を選択できる機能向けに、主言語が既に英語である

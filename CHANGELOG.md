@@ -1097,5 +1097,7 @@
   追加した。
 - 保護者が一緒に参加した学習セッションかを判定する
   `CoParentPlaySessionDetector`をgrowthモジュールに追加した。
+- クイズの選択肢をランダムに並び替える`ChoiceOrderRandomizer`を
+  questionモジュールに追加した。
 - 第二言語として英語を選択可能にすべきかを判定する
   `SecondLanguageEligibilityDetector`をregionalモジュールに追加した。
