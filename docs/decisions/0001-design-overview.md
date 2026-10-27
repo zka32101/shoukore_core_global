@@ -4014,6 +4014,13 @@ declining）を3値で返す`AccuracyTrendDetector`を`progress`モジュール
 に追加した。実際の傾向表示・励ましメッセージ自体はアプリ側の
 責務とする。
 
+## GrowthStageProximityHintの追加
+
+`AchievementProximityHint`と同様の考え方を`GrowthStage`に適用し、
+キャラ進化の次の段階まで残り何回正答が必要かを算出する
+`GrowthStageProximityHint`を`growth`モジュールに追加した。実際の
+「もうすぐ進化！」のようなUI表示自体はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
