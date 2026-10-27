@@ -4107,6 +4107,14 @@ Firestore等外部サービスに密結合しない。
 する`GuardianTaskApprovalGate`を`planning`モジュールに追加した。
 実際の確認UI・承認フロー自体はアプリ側の責務とする。
 
+## CrossPromoDismissalCooldownの追加
+
+`CrossPromoEligibilityDetector`は無視した累計回数のみを見るため、
+直近いつ無視されたかは見ない。クロスプロモ案内を無視した直後の
+再表示を防ぐため、クールダウン期間が過ぎたかを判定する
+`CrossPromoDismissalCooldown`を`entitlement`モジュールに追加した。
+実際の案内表示自体はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

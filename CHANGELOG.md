@@ -1146,3 +1146,5 @@
   planningモジュールに追加した。
 - 計画タスクの短時間バースト完了を検知する
   `GuardianTaskApprovalGate`をplanningモジュールに追加した。
+- クロスプロモ案内を無視した後のクールダウン期間を判定する
+  `CrossPromoDismissalCooldown`をentitlementモジュールに追加した。
