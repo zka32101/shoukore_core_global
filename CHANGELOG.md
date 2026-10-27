@@ -1097,5 +1097,7 @@
   追加した。
 - 保護者が一緒に参加した学習セッションかを判定する
   `CoParentPlaySessionDetector`をgrowthモジュールに追加した。
+- クイズの選択肢をランダムに並び替える`ChoiceOrderRandomizer`を
+  questionモジュールに追加した。
 - 収集コレクションが達成通知を出すべき節目に達したかを判定する
   `CollectionCompletionDetector`をgrowthモジュールに追加した。
