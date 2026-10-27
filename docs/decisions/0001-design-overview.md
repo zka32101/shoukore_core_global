@@ -4036,6 +4036,13 @@ declining）を3値で返す`AccuracyTrendDetector`を`progress`モジュール
 `planning`モジュールに追加した。保存・一覧表示・通知自体はアプリ
 側の責務とする。
 
+## DailyQuestionGoalの追加（planningモジュール新設）
+
+「毎日何問やる」という要件向けに、日次の出題数目標とその日の実施
+数から達成判定・残り問題数を算出する`DailyQuestionGoal`を新設の
+`planning`モジュールに追加した。目標数の設定UI・達成演出自体は
+アプリ側の責務とする。
+
 ## StudyPlanTaskDueSoonDetectorの追加
 
 `StudyPlanTask`のうち、未完了・未超過で期限まで残り日数が少ない

@@ -153,6 +153,7 @@ export 'src/privacy/settings_backup_staleness_notice_dismissal_streak_detector.d
 export 'src/privacy/settings_backup_staleness_notice_dismissal_streak_approaching_detector.dart';
 export 'src/privacy/settings_backup_restore_failure_streak.dart';
 export 'src/planning/study_plan_task.dart';
+export 'src/planning/daily_question_goal.dart';
 export 'src/planning/study_plan_task_due_soon_detector.dart';
 export 'src/entitlement/entitlement_expiry_notice.dart';
 export 'src/entitlement/entitlement_expiry_notice_dismissal_streak_detector.dart';
