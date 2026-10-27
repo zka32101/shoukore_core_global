@@ -1117,5 +1117,7 @@
   `ImageHintEligibilityDetector`をquestionモジュールに追加した。
 - 直近の正答率履歴から改善/悪化傾向を3値で判定する
   `AccuracyTrendDetector`をprogressモジュールに追加した。
+- キャラ進化の次の段階までの残り正答数を算出する
+  `GrowthStageProximityHint`をgrowthモジュールに追加した。
 - 収集コレクションの次の節目までの残り個数を算出する
   `CollectionCompletionProximityHint`をgrowthモジュールに追加した。
