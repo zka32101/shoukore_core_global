@@ -73,6 +73,7 @@ export 'src/question/curriculum_coverage_validator.dart';
 export 'src/question/experiential_content_link_eligibility_detector.dart';
 export 'src/question/explanation_depth_selector.dart';
 export 'src/question/image_hint_eligibility_detector.dart';
+export 'src/progress/accuracy_trend_detector.dart';
 export 'src/progress/in_memory_progress_store.dart';
 export 'src/progress/mastery_across_units_stagnation_detector.dart';
 export 'src/progress/mastery_across_units_stagnation_recurrence_detector.dart';

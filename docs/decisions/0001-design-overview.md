@@ -4006,6 +4006,14 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 `ImageHintEligibilityDetector`を`question`モジュールに追加した。
 実際の画像の内容・表示自体はアプリ側の責務とする。
 
+## AccuracyTrendDetectorの追加
+
+既存の検出器群は単発の閾値判定が中心だったため、直近の正答率
+履歴を前半・後半に分けて比較し、傾向（improving / steady /
+declining）を3値で返す`AccuracyTrendDetector`を`progress`モジュール
+に追加した。実際の傾向表示・励ましメッセージ自体はアプリ側の
+責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
