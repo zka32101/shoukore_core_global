@@ -1113,3 +1113,5 @@
   モジュールに追加した。
 - 連続誤答数に応じて解説の詳しさを選ぶ`ExplanationDepthSelector`
   をquestionモジュールに追加した。
+- 誤答が続く問題でイメージ画像ヒントを提示すべきかを判定する
+  `ImageHintEligibilityDetector`をquestionモジュールに追加した。
