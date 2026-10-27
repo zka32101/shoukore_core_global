@@ -1119,3 +1119,5 @@
   `AccuracyTrendDetector`をprogressモジュールに追加した。
 - キャラ進化の次の段階までの残り正答数を算出する
   `GrowthStageProximityHint`をgrowthモジュールに追加した。
+- 収集コレクションの次の節目までの残り個数を算出する
+  `CollectionCompletionProximityHint`をgrowthモジュールに追加した。

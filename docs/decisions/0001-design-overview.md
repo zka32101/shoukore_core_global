@@ -4021,6 +4021,14 @@ declining）を3値で返す`AccuracyTrendDetector`を`progress`モジュール
 `GrowthStageProximityHint`を`growth`モジュールに追加した。実際の
 「もうすぐ進化！」のようなUI表示自体はアプリ側の責務とする。
 
+## CollectionCompletionProximityHintの追加
+
+`AchievementProximityHint`と同様の考え方を`CollectionCompletionDetector`
+に適用し、収集コレクションの次の節目まで残り何個の収集が必要かを
+算出する`CollectionCompletionProximityHint`を`growth`モジュールに
+追加した。実際の「もうすぐコンプリート！」のようなUI表示自体は
+アプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
