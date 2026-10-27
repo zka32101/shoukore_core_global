@@ -4043,6 +4043,14 @@ declining）を3値で返す`AccuracyTrendDetector`を`progress`モジュール
 `planning`モジュールに追加した。目標数の設定UI・達成演出自体は
 アプリ側の責務とする。
 
+## StudyPlanTaskDueSoonDetectorの追加
+
+`StudyPlanTask`のうち、未完了・未超過で期限まで残り日数が少ない
+タスクを検出する`StudyPlanTaskDueSoonDetector`を`planning`モジュール
+に追加した。期限超過自体は`StudyPlanTask.isOverdue`が判定するため、
+本クラスは超過前の警告のみを対象とする。実際の通知・UI表示自体は
+アプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
