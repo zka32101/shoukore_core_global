@@ -4051,6 +4051,13 @@ declining）を3値で返す`AccuracyTrendDetector`を`progress`モジュール
 本クラスは超過前の警告のみを対象とする。実際の通知・UI表示自体は
 アプリ側の責務とする。
 
+## WeeklyStudyPlanReviewPromptの追加
+
+今週の学習計画タスクを振り返るべきタイミングかどうかを判定する
+`WeeklyStudyPlanReviewPrompt`を`planning`モジュールに追加した。
+既定では週の最後の曜日（日曜日）を振り返り対象とする。実際の
+振り返りUI・通知自体はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
