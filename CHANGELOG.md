@@ -1111,3 +1111,5 @@
 - 学習セッション完了時に「やった感」フィードバックを出すべきかを
   判定する`AccomplishmentFeedbackEligibilityDetector`をgrowth
   モジュールに追加した。
+- 連続誤答数に応じて解説の詳しさを選ぶ`ExplanationDepthSelector`
+  をquestionモジュールに追加した。
