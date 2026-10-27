@@ -3944,6 +3944,13 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 `CoParentPlaySessionDetector`を`growth`モジュールに追加した。
 実際の親向け参加UI・案内表示自体はアプリ側の責務とする。
 
+## SecondLanguageEligibilityDetectorの追加
+
+第二言語として英語を選択できる機能向けに、主言語が既に英語である
+ロケールを対象外とする`SecondLanguageEligibilityDetector`を
+`regional`モジュールに追加した。実際の言語選択UI・翻訳コンテンツ
+の提供自体はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
