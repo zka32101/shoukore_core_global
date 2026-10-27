@@ -3991,6 +3991,13 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 `AccomplishmentFeedbackEligibilityDetector`を`growth`モジュール
 に追加した。実際の演出・メッセージ表示自体はアプリ側の責務とする。
 
+## ImageHintEligibilityDetectorの追加
+
+「わかりやすいイメージ画像」という共通要件向けに、誤答が続く
+問題についてイメージ画像ヒントを提示すべきかを判定する
+`ImageHintEligibilityDetector`を`question`モジュールに追加した。
+実際の画像の内容・表示自体はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

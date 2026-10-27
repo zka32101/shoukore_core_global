@@ -1111,3 +1111,5 @@
 - 学習セッション完了時に「やった感」フィードバックを出すべきかを
   判定する`AccomplishmentFeedbackEligibilityDetector`をgrowth
   モジュールに追加した。
+- 誤答が続く問題でイメージ画像ヒントを提示すべきかを判定する
+  `ImageHintEligibilityDetector`をquestionモジュールに追加した。
