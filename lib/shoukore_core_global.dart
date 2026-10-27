@@ -249,6 +249,7 @@ export 'src/growth/item_price_drop_notice_dismissal_streak_detector.dart';
 export 'src/growth/item_price_drop_notice_dismissal_streak_approaching_detector.dart';
 export 'src/growth/store_item.dart';
 export 'src/growth/co_parent_play_session_detector.dart';
+export 'src/growth/collection_completion_detector.dart';
 export 'src/guardian/daily_digest.dart';
 export 'src/guardian/daily_digest_builder.dart';
 export 'src/guardian/daily_digest_duplicate_suppression.dart';
