@@ -1103,3 +1103,6 @@
   `SecondLanguageEligibilityDetector`をregionalモジュールに追加した。
 - 収集コレクションが達成通知を出すべき節目に達したかを判定する
   `CollectionCompletionDetector`をgrowthモジュールに追加した。
+- 実体験に紐づく体験型コンテンツを提示すべき単元かを判定する
+  `ExperientialContentLinkEligibilityDetector`をquestionモジュール
+  に追加した。
