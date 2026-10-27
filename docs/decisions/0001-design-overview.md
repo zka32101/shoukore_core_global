@@ -4029,6 +4029,13 @@ declining）を3値で返す`AccuracyTrendDetector`を`progress`モジュール
 追加した。実際の「もうすぐコンプリート！」のようなUI表示自体は
 アプリ側の責務とする。
 
+## StudyPlanTaskの追加（planningモジュール新設）
+
+「やること、タスク化して期限設定できる」という要件向けに、期限
+付き学習タスク1件を表す不変モデル`StudyPlanTask`を新設の
+`planning`モジュールに追加した。保存・一覧表示・通知自体はアプリ
+側の責務とする。
+
 ## DailyQuestionGoalの追加（planningモジュール新設）
 
 「毎日何問やる」という要件向けに、日次の出題数目標とその日の実施
