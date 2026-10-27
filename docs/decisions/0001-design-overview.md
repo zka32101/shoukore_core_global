@@ -4093,6 +4093,12 @@ Firestore等外部サービスに密結合しない。
 モジュールに追加した。実際の案内方法の見直し提案自体はアプリ側の
 責務とする。
 
+## MultiSubjectStudyBalanceの追加
+
+小学コレ！は複数教科を横断するシリーズのため、1教科に極端に
+偏った学習を検知する`MultiSubjectStudyBalance`を`planning`モジュール
+に追加した。実際のバランス表示・促し方自体はアプリ側の責務とする。
+
 ## CrossPromoDismissalCooldownの追加
 
 `CrossPromoEligibilityDetector`は無視した累計回数のみを見るため、
