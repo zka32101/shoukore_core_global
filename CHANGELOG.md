@@ -1128,6 +1128,9 @@
   追加した。
 - 週次の計画振り返りタイミングを判定する
   `WeeklyStudyPlanReviewPrompt`をplanningモジュールに追加した。
+- `StudyPlanTask`の保存先を抽象化する`StudyPlanTaskStore`と、その
+  端末内メモリ実装`InMemoryStudyPlanTaskStore`をplanningモジュール
+  に追加した。
 - 計画タスクを期限超過・期限が近い順に並べ替える
   `StudyPlanTaskPriorityOrder`をplanningモジュールに追加した。
 - 直近の正答率履歴から改善/悪化傾向を3値で判定する
