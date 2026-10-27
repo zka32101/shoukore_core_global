@@ -4051,6 +4051,13 @@ declining）を3値で返す`AccuracyTrendDetector`を`progress`モジュール
 本クラスは超過前の警告のみを対象とする。実際の通知・UI表示自体は
 アプリ側の責務とする。
 
+## StudyPlanTaskListSummaryの追加
+
+複数の`StudyPlanTask`から、未完了数・期限超過数・完了率を集計する
+`StudyPlanTaskListSummary`を`planning`モジュールに追加した。計画
+タスク一覧の進捗を一目で把握できるようにする集計値を返す。実際の
+一覧UI表示自体はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、
