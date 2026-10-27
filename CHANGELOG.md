@@ -1121,6 +1121,8 @@
   planningモジュールに追加した。
 - 期限が近い学習タスクを検出する`StudyPlanTaskDueSoonDetector`を
   planningモジュールに追加した。
+- 計画タスク一覧の完了数・期限超過数・完了率を集計する
+  `StudyPlanTaskListSummary`をplanningモジュールに追加した。
 - 直近の正答率履歴から改善/悪化傾向を3値で判定する
   `AccuracyTrendDetector`をprogressモジュールに追加した。
 - キャラ進化の次の段階までの残り正答数を算出する
