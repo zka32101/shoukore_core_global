@@ -3974,6 +3974,15 @@ PINローテーション後に設定された新しいPINが、過去に使用�
 既存の`UnitDifficultyOrderValidator`等と同様、カリキュラムJSON
 読み込みや出題履歴の集計自体はアプリ/ツール側の責務とする。
 
+## ExperientialContentLinkEligibilityDetectorの追加
+
+「実体験のイメージとリンク」「体験型コンテンツ」という共通要件
+向けに、カリキュラム側で体験型コンテンツが用意されている単元の
+うち、基礎的な理解が一定水準に達した単元でのみ提示する
+`ExperientialContentLinkEligibilityDetector`を`question`モジュール
+に追加した。実際の体験型コンテンツの内容・表示自体はアプリ側の
+責務とする。
+
 ## AccomplishmentFeedbackEligibilityDetectorの追加
 
 「やった感を味わえるもの」という共通要件向けに、学習セッション
