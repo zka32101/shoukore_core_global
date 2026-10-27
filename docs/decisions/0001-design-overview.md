@@ -4099,6 +4099,14 @@ Firestore等外部サービスに密結合しない。
 偏った学習を検知する`MultiSubjectStudyBalance`を`planning`モジュール
 に追加した。実際のバランス表示・促し方自体はアプリ側の責務とする。
 
+## GuardianTaskApprovalGateの追加
+
+`GuardianGate`（即時PINチャレンジ）や`GuardianApprovalRequestQueue`
+（非同期の承認申請）とは異なる軸として、学習計画タスクが短時間に
+不自然な数だけ連続完了した場合に保護者の確認を要求すべきかを判定
+する`GuardianTaskApprovalGate`を`planning`モジュールに追加した。
+実際の確認UI・承認フロー自体はアプリ側の責務とする。
+
 ## 引き継がない・作らないもの
 
 友達・ランキング・リーグ・マルチ対戦・マッチング、A/Bテスト、リテンション/動的価格、

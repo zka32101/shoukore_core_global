@@ -1144,3 +1144,5 @@
   `CollectionCompletionProximityHint`をgrowthモジュールに追加した。
 - 複数教科間の学習量の偏りを判定する`MultiSubjectStudyBalance`を
   planningモジュールに追加した。
+- 計画タスクの短時間バースト完了を検知する
+  `GuardianTaskApprovalGate`をplanningモジュールに追加した。
