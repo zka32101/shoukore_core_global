@@ -1103,3 +1103,5 @@
   `SecondLanguageEligibilityDetector`をregionalモジュールに追加した。
 - 収集コレクションが達成通知を出すべき節目に達したかを判定する
   `CollectionCompletionDetector`をgrowthモジュールに追加した。
+- 単元内の小項目に出題漏れがないかを検証する
+  `CurriculumCoverageValidator`をquestionモジュールに追加した。
