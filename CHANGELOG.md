@@ -1156,3 +1156,10 @@
   `InMemoryOnboardingCompletionStore`）、`AhaMomentTracker`（Ahaモーメントへの
   新規到達を一度だけ検出する純関数）をonboardingモジュールに追加した。
   オンボーディングのページ構成・問題内容・価格表示はアプリ側の責務。
+- `purchases_flutter`(RevenueCat)を使った`EntitlementReader`実装
+  `RevenueCatEntitlementReader`を追加した（`shoukore_core_global_entitlement_revenuecat.dart`
+  に分離、コア本体はRevenueCat SDKに依存しない）。RevenueCatのentitlement識別子と
+  教科ID・premiumの対応はアプリ側が渡す（`subjectEntitlementIds`/`premiumEntitlementId`）。
+  変換ロジック自体は純関数`entitlementFromCustomerInfo`として切り出し、単体テスト可能にした。
+  `Purchases.configure`（APIキー設定）・商品/価格定義・RevenueCatダッシュボード設定は
+  アプリ側の責務のまま。

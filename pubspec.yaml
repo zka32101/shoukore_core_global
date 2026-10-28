@@ -19,6 +19,7 @@ dependencies:
   yaml: ^3.1.2
   flutter_local_notifications: ^20.1.0
   timezone: ^0.10.1
+  purchases_flutter: ^10.19.0
 
 dev_dependencies:
   flutter_test:

@@ -4153,3 +4153,19 @@ screen_time連携、cross_app、Firebase直接利用、analytics SDK（既定な
 
 オンボーディングのページ構成（ウェルカム/クイズ/ペイウォールの画面）、
 クイズの問題内容、価格・トライアル期間の表示は教科・国固有のためアプリ側に残す。
+
+## 実課金（RevenueCat）導入
+
+教科非依存の実課金ロジックとして、本コアに`RevenueCatEntitlementReader`
+（`shoukore_core_global_entitlement_revenuecat.dart`、`purchases_flutter`依存）を追加した。
+`EntitlementReader.current()`に加え、購入実行(`purchasePackage`)・復元(`restorePurchases`)の
+結果も同じ変換ロジックで`Entitlement`に変換する。
+
+引き続きアプリ側の責務とするもの:
+
+- `Purchases.configure`呼び出し（RevenueCat APIキー、アプリ起動時）
+- RevenueCatダッシュボードでの商品(Offering/Package)・entitlement識別子の設定
+- 価格・無料期間・ペイウォールのUI/訴求文言
+
+これらはApp Store Connect/Google Play Console/RevenueCatダッシュボードでの
+手作業が必要なため、各アプリ側でまとめて行う。
