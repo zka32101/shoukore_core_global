@@ -1163,3 +1163,9 @@
   変換ロジック自体は純関数`entitlementFromCustomerInfo`として切り出し、単体テスト可能にした。
   `Purchases.configure`（APIキー設定）・商品/価格定義・RevenueCatダッシュボード設定は
   アプリ側の責務のまま。
+- `CharacterCollectionStore`（複数キャラクターを収集・育成する「集めるたのしみ」
+  要素の抽象IF、所持キャラID→育成レベルのみを保持）と
+  `InMemoryCharacterCollectionStore`実装をgrowthモジュールに追加した。
+  キャラの一覧・モチーフ・見た目、レベルアップ/新規解除の条件はアプリ側の
+  責務とする。既存の`CollectionCompletionDetector`と組み合わせて進捗の
+  節目判定に使える。
