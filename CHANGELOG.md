@@ -1169,3 +1169,9 @@
   キャラの一覧・モチーフ・見た目、レベルアップ/新規解除の条件はアプリ側の
   責務とする。既存の`CollectionCompletionDetector`と組み合わせて進捗の
   節目判定に使える。
+- `CharacterGrowthCalculator`（カテゴリ内の累積正解数から複数キャラが
+  順送りで育つ際の各キャラのレベルを計算する純関数）と
+  `CharacterCollectionChangeDetector`（2つの`CharacterCollectionSnapshot`を
+  比較し新規所持・レベルアップを検出する純関数）をgrowthモジュールに追加した。
+  「何をカテゴリとするか」（教科のeixo等）・正解数の集計方法・演出自体は
+  アプリ側の責務のまま。
