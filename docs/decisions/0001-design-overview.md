@@ -4169,3 +4169,18 @@ screen_time連携、cross_app、Firebase直接利用、analytics SDK（既定な
 
 これらはApp Store Connect/Google Play Console/RevenueCatダッシュボードでの
 手作業が必要なため、各アプリ側でまとめて行う。
+
+## キャラクターコレクション要素の共通基盤への追加
+
+日本版が「複数キャラをLv1〜5で育てて集める」コレクション要素を持つのに対し、
+`shoukore_br_matematica`の既存実装は単一キャラの成長段階（`GrowthStage`）のみ
+だった。ブラジル版にもコレクション要素を入れる方針としたため、教科非依存の
+部分を本コアに追加した。
+
+- `CharacterCollectionSnapshot`/`CharacterCollectionStore`
+  （`InMemoryCharacterCollectionStore`実装）: 「どのキャラを所持しているか」
+  「各キャラの育成レベル」のみを保持する。
+
+アプリ側に残るもの: キャラの一覧・モチーフ・見た目（ブラジル版は現地の
+動物・文化モチーフと日本版から流用可能なものを混在させる方針）、
+レベルアップ/新規解除の条件（学習量・コイン等）。
