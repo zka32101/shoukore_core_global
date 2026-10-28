@@ -4184,3 +4184,17 @@ screen_time連携、cross_app、Firebase直接利用、analytics SDK（既定な
 アプリ側に残るもの: キャラの一覧・モチーフ・見た目（ブラジル版は現地の
 動物・文化モチーフと日本版から流用可能なものを混在させる方針）、
 レベルアップ/新規解除の条件（学習量・コイン等）。
+
+## コレクション画面の強化（キャラ育成ロジックの共通基盤への追加）
+
+`shoukore_br_matematica`のコレクション画面を独立・強化する過程で、教科非依存の
+計算ロジックを本コアに追加した。
+
+- `CharacterGrowthCalculator`: カテゴリ内の累積正解数から、複数キャラが
+  [order]順に育つ際の各キャラのレベルを計算する（1体あたり一定数正解すると
+  次のキャラの育成が始まる「順送り」方式）。
+- `CharacterCollectionChangeDetector`: before/afterの`CharacterCollectionSnapshot`
+  を比較し、新規所持・レベルアップを検出する（演出のトリガー判定用）。
+
+アプリ側に残るもの: 何をカテゴリとするか（教科のeixo等）、正解数の集計方法
+（`ProgressStore`のAttempt履歴の読み方）、演出・文言・画面構成。
