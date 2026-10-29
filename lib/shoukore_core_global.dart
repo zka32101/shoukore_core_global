@@ -196,6 +196,7 @@ export 'src/growth/answer_streak_bonus.dart';
 export 'src/growth/coin_earning_cap_habitual_hit_detector.dart';
 export 'src/growth/coin_earning_cap_habitual_hit_recovery_detector.dart';
 export 'src/growth/coin_earning_cap_per_day.dart';
+export 'src/growth/daily_coin_earning_rules.dart';
 export 'src/growth/coin_spending_limit.dart';
 export 'src/growth/coin_spending_limit_habitual_maxout_detector.dart';
 export 'src/growth/coin_spending_limit_habitual_maxout_recovery_detector.dart';
