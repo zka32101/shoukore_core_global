@@ -186,6 +186,7 @@ export 'src/growth/achievement_unlock_cluster_recovery_detector.dart';
 export 'src/growth/achievement_share_card_data.dart';
 export 'src/growth/achievement_share_card_cooldown.dart';
 export 'src/growth/unit_mastery_badge_eligibility.dart';
+export 'src/growth/unit_test_pass_eligibility.dart';
 export 'src/growth/unit_mastery_badge_motivation_drop_notice.dart';
 export 'src/growth/unit_mastery_badge_motivation_drop_notice_dismissal_streak_detector.dart';
 export 'src/growth/unit_mastery_badge_motivation_drop_notice_dismissal_streak_approaching_detector.dart';
