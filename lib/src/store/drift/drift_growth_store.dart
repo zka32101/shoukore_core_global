@@ -26,6 +26,8 @@ class DriftGrowthStore implements GrowthStore {
       missionRewardClaimed: row.missionRewardClaimed,
       currentStreakDays: row.currentStreakDays,
       lastStudiedDay: row.lastStudiedDay,
+      bonusCoinsEarnedToday: row.bonusCoinsEarnedToday,
+      bonusCoinsDay: row.bonusCoinsDay,
     );
   }
 
@@ -41,6 +43,8 @@ class DriftGrowthStore implements GrowthStore {
             missionRewardClaimed: Value(snapshot.missionRewardClaimed),
             currentStreakDays: Value(snapshot.currentStreakDays),
             lastStudiedDay: Value(snapshot.lastStudiedDay),
+            bonusCoinsEarnedToday: Value(snapshot.bonusCoinsEarnedToday),
+            bonusCoinsDay: Value(snapshot.bonusCoinsDay),
           ),
         );
   }

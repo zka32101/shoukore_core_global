@@ -10,6 +10,8 @@ class GrowthSnapshot {
     this.missionRewardClaimed = false,
     this.currentStreakDays = 0,
     this.lastStudiedDay,
+    this.bonusCoinsEarnedToday = 0,
+    this.bonusCoinsDay,
   });
 
   /// 未保存・初回起動時の既定状態。
@@ -26,4 +28,11 @@ class GrowthSnapshot {
   /// 現在の学習ストリーク（何日連続で学習したか）。`LearningStreak`の状態。
   final int currentStreakDays;
   final DateTime? lastStudiedDay;
+
+  /// デイリーミッション報酬とは別枠のボーナスコイン（例: 解説を読むと
+  /// もらえるコイン）について、[bonusCoinsDay]の日に獲得した累計額。
+  /// `CoinEarningCapPerDay`による1日あたりの上限判定にアプリ側が使う
+  /// （上限の対象・値自体はアプリ側の責務。コア側は状態の保持のみ担う）。
+  final int bonusCoinsEarnedToday;
+  final DateTime? bonusCoinsDay;
 }

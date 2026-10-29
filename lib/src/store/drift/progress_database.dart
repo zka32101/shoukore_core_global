@@ -41,6 +41,8 @@ class GrowthStates extends Table {
   BoolColumn get missionRewardClaimed => boolean().withDefault(const Constant(false))();
   IntColumn get currentStreakDays => integer().withDefault(const Constant(0))();
   DateTimeColumn get lastStudiedDay => dateTime().nullable()();
+  IntColumn get bonusCoinsEarnedToday => integer().withDefault(const Constant(0))();
+  DateTimeColumn get bonusCoinsDay => dateTime().nullable()();
 
   @override
   Set<Column> get primaryKey => {id};
@@ -139,7 +141,7 @@ class ProgressDatabase extends _$ProgressDatabase {
   ProgressDatabase(super.e);
 
   @override
-  int get schemaVersion => 10;
+  int get schemaVersion => 11;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -173,6 +175,10 @@ class ProgressDatabase extends _$ProgressDatabase {
           }
           if (from < 10) {
             await m.createTable(appliedMigrations);
+          }
+          if (from < 11) {
+            await m.addColumn(growthStates, growthStates.bonusCoinsEarnedToday);
+            await m.addColumn(growthStates, growthStates.bonusCoinsDay);
           }
         },
       );
