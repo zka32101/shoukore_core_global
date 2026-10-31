@@ -29,10 +29,19 @@ class RevenueCatEntitlementReader implements EntitlementReader {
         premiumEntitlementId: premiumEntitlementId,
       );
 
+  /// オフライン時や初回起動直後でRevenueCatのキャッシュがまだ無い場合に
+  /// 投げられ得る例外を捕まえ、ロック状態（無料学年のみ利用可能）に
+  /// フォールバックする。アプリ全体が起動できなくなることを防ぐのが目的で、
+  /// 実際の権利状態はネットワーク/キャッシュが揃い次第、次回の[current]
+  /// 呼び出しで正しく反映される。
   @override
   Future<Entitlement> current() async {
-    final info = await Purchases.getCustomerInfo();
-    return _fromCustomerInfo(info);
+    try {
+      final info = await Purchases.getCustomerInfo();
+      return _fromCustomerInfo(info);
+    } catch (_) {
+      return const Entitlement(unlockedSubjectIds: {});
+    }
   }
 
   /// 指定のパッケージを購入し、更新後の`Entitlement`を返す。
